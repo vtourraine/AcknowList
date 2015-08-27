@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs'
+use_frameworks!
+
+target 'AcknowExample' do
+  pod 'AcknowList', :path => '../'
+end
+
+target 'AcknowExampleTests' do
+  pod 'AcknowList', :path => '../'
+end
+

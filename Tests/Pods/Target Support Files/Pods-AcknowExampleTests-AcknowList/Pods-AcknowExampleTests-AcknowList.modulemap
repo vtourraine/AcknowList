@@ -1,0 +1,6 @@
+framework module AcknowList {
+  umbrella header "Pods-AcknowExampleTests-AcknowList-umbrella.h"
+
+  export *
+  module * { export * }
+}

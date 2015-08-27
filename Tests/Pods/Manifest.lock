@@ -1,0 +1,14 @@
+PODS:
+  - AcknowList (0.1)
+
+DEPENDENCIES:
+  - AcknowList (from `../`)
+
+EXTERNAL SOURCES:
+  AcknowList:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AcknowList: d6e08c1cc384242973cb08c435bd46d4fe7f6f5f
+
+COCOAPODS: 0.37.2
