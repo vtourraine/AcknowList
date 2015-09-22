@@ -1,6 +1,6 @@
 # AcknowList
 
-_Ready to use “Acknowledgements”/“Licenses”/“Credits” view controller for [CocoaPods](http://cocoapods.org/), written in Swift “2.0” (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController)._
+_Ready to use “Acknowledgements”/“Licenses”/“Credits” view controller for [CocoaPods](http://cocoapods.org/), written in Swift “2.0” (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
 ![iPhone screenshot 1](http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-300-01.png)
 ![iPhone screenshot 2](http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-300-02.png)
