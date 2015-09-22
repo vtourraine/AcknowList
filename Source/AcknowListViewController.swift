@@ -249,7 +249,7 @@ public class AcknowListViewController: UITableViewController {
                 "** AcknowList Warning **\n" +
                 "No acknowledgements found.\n" +
                 "This probably means that you didn’t import the `Pods-acknowledgements.plist` to your main target.\n" +
-                "Please take a look at https://github.com/vtourraine/AcknowLister for instructions.", appendNewline: true)
+                "Please take a look at https://github.com/vtourraine/AcknowLister for instructions.", terminator: "\n")
         }
     }
 
