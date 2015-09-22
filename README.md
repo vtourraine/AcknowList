@@ -4,6 +4,8 @@ _Ready to use “Acknowledgements”/“Licenses”/“Credits” view controlle
 
 _Written in Swift “2.0” (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
+Tested on Travis CI: [![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
+
 ![iPhone screenshot 1](http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-300-01.png)
 ![iPhone screenshot 2](http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-300-02.png)
 
