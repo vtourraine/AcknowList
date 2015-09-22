@@ -1,5 +1,5 @@
 framework module AcknowList {
-  umbrella header "Pods-AcknowExample-AcknowList-umbrella.h"
+  umbrella header "AcknowList-umbrella.h"
 
   export *
   module * { export * }
