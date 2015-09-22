@@ -23,11 +23,22 @@
 
 
 /**
+ Responsible for parsing a CocoaPods acknowledgements plist file.
 */
 public class AcknowParser {
 
+    /**
+    The root dictionary from the loaded plist file.
+    */
     let rootDictionary: [String: AnyObject]
 
+    /**
+    Initializes the `AcknowParser` instance with a plist path.
+
+    - parameter plistPath: The path to the acknowledgements plist file.
+
+    - returns: The new `AcknowParser` instance.
+    */
     public init(plistPath: String) {
         let root = NSDictionary(contentsOfFile: plistPath)
         if let root = root where root is [String: AnyObject] {
@@ -38,6 +49,11 @@ public class AcknowParser {
         }
     }
 
+    /**
+    Parses the header and footer values.
+
+    - return: a tuple with the header and footer values.
+    */
     public func parseHeaderAndFooter() -> (header: String?, footer: String?) {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 
@@ -54,6 +70,11 @@ public class AcknowParser {
         return (nil, nil)
     }
 
+    /**
+    Parses the array of acknowledgements.
+
+    - return: an array of `Acknow` instances.
+    */
     public func parseAcknowledgements() -> [Acknow] {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 

@@ -24,13 +24,12 @@
 import UIKit
 
 /**
- `AcknowListViewController` is a subclass of `UITableViewController` that displays
- a list of acknowledgements.
+ Subclass of `UITableViewController` that displays a list of acknowledgements.
  */
 public class AcknowListViewController: UITableViewController {
 
     /**
-    Array of `Acknow`.
+    The represented array of `Acknow`.
     */
     var acknowledgements: [Acknow]?
 
@@ -55,21 +54,21 @@ public class AcknowListViewController: UITableViewController {
     @IBInspectable var acknowledgementsPlistName: String?
 
     /**
-    Creates a new acknowledgements view controller
+    Initializes the `AcknowListViewController` instance based on default configuration.
 
-    @return A newly created `VTAcknowledgementsViewController` instance.
+    - returns: The new `AcknowListViewController` instance.
     */
     public convenience init() {
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
         self.init(acknowledgementsPlistPath: path)
     }
-    
+
     /**
-    Initializes an acknowledgements view controller with the content of the `Pods-acknowledgements.plist`.
-    
-    @param acknowledgementsPlistPath The path to the `Pods-acknowledgements.plist`.
-    
-    @return A newly created `VTAcknowledgementsViewController` instance.
+    Initializes the `AcknowListViewController` instance for a plist file path.
+
+    - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
+
+    - returns: The new `AcknowListViewController` instance.
     */
     public init(acknowledgementsPlistPath: String?) {
         super.init(style: .Grouped)
@@ -77,6 +76,13 @@ public class AcknowListViewController: UITableViewController {
         self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath)
     }
 
+    /**
+    Initializes the `AcknowListViewController` instance with a coder.
+
+    - parameter aDecoder: The archive coder.
+
+    - returns: The new `AcknowListViewController` instance.
+    */
     required public convenience init(coder aDecoder: NSCoder) {
         self.init()
     }
@@ -128,8 +134,8 @@ public class AcknowListViewController: UITableViewController {
     /**
     The localized version of “Acknowledgements”.
     You can use this value for the button presenting the `VTAcknowledgementsViewController`, for instance.
-    
-    @return The localized title.
+
+    - return: The localized title.
     */
     public class func localizedTitle() -> String {
         return self.localizedString(forKey: "VTAckAcknowledgements", defaultString: "Acknowledgements")
@@ -162,7 +168,7 @@ public class AcknowListViewController: UITableViewController {
 
 
     // MARK: - Localization
-    
+
     class func localizedString(forKey key: String, defaultString: String) -> String {
         var bundlePath = NSBundle.mainBundle().pathForResource("AcknowLister", ofType: "bundle")
         let languageBundle: NSBundle
@@ -256,6 +262,11 @@ public class AcknowListViewController: UITableViewController {
 
     // MARK: - Actions
 
+    /**
+    Opens the CocoaPods website with Safari.
+
+    - parameter sender: The event sender.
+    */
     @IBAction public func openCocoaPodsWebsite(sender: AnyObject) {
         let url = NSURL(string: AcknowListViewController.CocoaPodsURLString())
         if let url = url {
@@ -263,6 +274,11 @@ public class AcknowListViewController: UITableViewController {
         }
     }
 
+    /**
+    Dismisses the view controller.
+
+    - parameter sender: The event sender.
+    */
     @IBAction public func dismissViewController(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -274,7 +290,7 @@ public class AcknowListViewController: UITableViewController {
     func configureHeaderView() {
         let font = UIFont.systemFontOfSize(12)
         let labelWidth = CGRectGetWidth(self.view.frame) - 2 * AcknowListViewController.LabelMargin()
-        
+
         if let headerText = self.headerText {
             let labelHeight = self.heightForLabel(text: headerText, width: labelWidth)
             let labelFrame = CGRectMake(
@@ -282,7 +298,7 @@ public class AcknowListViewController: UITableViewController {
                 AcknowListViewController.LabelMargin(),
                 labelWidth,
                 labelHeight)
-    
+
             let label = UILabel(frame: labelFrame)
             label.text             = self.headerText
             label.font             = font

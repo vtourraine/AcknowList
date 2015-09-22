@@ -24,8 +24,7 @@
 import UIKit
 
 /**
-`VTAcknowledgementViewController` is a subclass of `UIViewController` that displays
-a single acknowledgement.
+ Subclass of `UIViewController` that displays a single acknowledgement.
 */
 public class AcknowViewController: UIViewController {
 
@@ -34,15 +33,17 @@ public class AcknowViewController: UIViewController {
     */
     public var textView: UITextView?
 
+    /**
+    The represented acknowledgement.
+    */
     var acknowledgement: Acknow?
 
     /**
-    Initializes an acknowledgement view controller with a title and a body text.
+    Initializes the `AcknowViewController` instance with an acknowledgement.
 
-    @param title The acknowledgement title.
-    @param text The acknowledgement body text.
+    - parameter acknowledgement: The represented acknowledgement.
 
-    @return A newly created `VTAcknowledgementViewController` instance.
+    - returns: The new `AcknowViewController` instance.
     */
     public init(acknowledgement: Acknow) {
         super.init(nibName: nil, bundle: nil)
@@ -51,6 +52,13 @@ public class AcknowViewController: UIViewController {
         self.acknowledgement = acknowledgement
     }
 
+    /**
+    Initializes the `AcknowViewController` instance with a coder.
+
+    - parameter aDecoder: The archive coder.
+
+    - returns: The new `AcknowViewController` instance.
+    */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.acknowledgement = Acknow(title: "", text: "")
@@ -74,7 +82,7 @@ public class AcknowViewController: UIViewController {
         self.view = textView
         self.textView = textView
     }
-    
+
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if let textView = self.textView {

@@ -23,7 +23,7 @@
 
 
 /**
- The `Acknow` class represents a single acknowledgement.
+ Represents a single acknowledgement.
 */
 public struct Acknow {
 
@@ -37,6 +37,14 @@ public struct Acknow {
     */
     public let text: String
 
+    /**
+    Initializes the `Acknow` instance with a title and a text.
+
+    - parameter title: The acknowledgement title (for instance the pod’s name).
+    - parameter text:  The acknowledgement body text (for instance the pod’s license).
+
+    - returns: The new `Acknow` instance.
+    */
     public init(title: String, text: String) {
         self.title = title
         self.text  = text
