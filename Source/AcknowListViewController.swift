@@ -123,8 +123,7 @@ public class AcknowListViewController: UITableViewController {
                     options: [],
                     range: nil,
                     locale: NSLocale.currentLocale())
-
-                return (result.rawValue == NSComparisonResult.OrderedDescending.rawValue)
+                return (result.rawValue == NSComparisonResult.OrderedAscending.rawValue)
              })
 
             self.acknowledgements = sortedAcknowledgements
