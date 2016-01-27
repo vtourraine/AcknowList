@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2 (work in progress)
+## 0.2 (27 January 2016)
 
 - Fixed list sort order
 - Updated default footer text for CocoaPods 1.0
