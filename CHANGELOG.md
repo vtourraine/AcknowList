@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 (30 January 2016)
+
+- Fixed selector for dismiss bar button item
+
+
 ## 0.2 (27 January 2016)
 
 - Fixed list sort order
