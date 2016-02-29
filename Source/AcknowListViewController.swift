@@ -341,7 +341,7 @@ public class AcknowListViewController: UITableViewController {
             if let CocoaPodsURL = CocoaPodsURL,
                 let CocoaPodsURLHost = CocoaPodsURL.host {
                     if footerText.rangeOfString(CocoaPodsURLHost) != nil {
-                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "openCocoaPodsWebsite")
+                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "openCocoaPodsWebsite:")
                         label.addGestureRecognizer(tapGestureRecognizer)
                     }
             }
