@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 (3 March 2016)
+
+- Fixed selector for CocoaPods website
+
+
 ## 0.2.1 (30 January 2016)
 
 - Fixed selector for dismiss bar button item
