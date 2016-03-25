@@ -287,6 +287,10 @@ public class AcknowListViewController: UITableViewController {
     class func LabelMargin () -> CGFloat {
         return 20
     }
+    
+    class func FooterBottomMargin() -> CGFloat {
+        return 20
+    }
 
     func configureHeaderView() {
         let font = UIFont.systemFontOfSize(12)
@@ -346,7 +350,7 @@ public class AcknowListViewController: UITableViewController {
                     }
             }
 
-            let footerFrame = CGRectMake(0, 0, CGRectGetWidth(label.frame), CGRectGetHeight(label.frame))
+            let footerFrame = CGRectMake(0, 0, CGRectGetWidth(label.frame), CGRectGetHeight(label.frame) + AcknowListViewController.FooterBottomMargin())
             let footerView = UIView(frame: footerFrame)
             footerView.userInteractionEnabled = true
             footerView .addSubview(label)
