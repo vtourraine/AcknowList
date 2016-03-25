@@ -234,7 +234,7 @@ public class AcknowListViewController: UITableViewController {
         if let navigationController = self.navigationController {
             if self.presentingViewController != nil &&
                 navigationController.viewControllers.first == self {
-                    let item = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "dismissViewController:")
+                let item = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
                     self.navigationItem.leftBarButtonItem = item
             }
         }
@@ -341,7 +341,7 @@ public class AcknowListViewController: UITableViewController {
             if let CocoaPodsURL = CocoaPodsURL,
                 let CocoaPodsURLHost = CocoaPodsURL.host {
                     if footerText.rangeOfString(CocoaPodsURLHost) != nil {
-                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "openCocoaPodsWebsite:")
+                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
                         label.addGestureRecognizer(tapGestureRecognizer)
                     }
             }
