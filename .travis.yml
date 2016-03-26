@@ -2,4 +2,4 @@ language: objective-c
 xcode_workspace: Tests/AcknowExample.xcworkspace
 xcode_scheme: AcknowExample
 xcode_sdk: iphonesimulator
-osx_image: xcode7
+osx_image: xcode7.3
