@@ -1,14 +1,14 @@
 PODS:
-  - AcknowList (0.1)
+  - AcknowList (0.2.2)
 
 DEPENDENCIES:
   - AcknowList (from `../`)
 
 EXTERNAL SOURCES:
   AcknowList:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AcknowList: d6e08c1cc384242973cb08c435bd46d4fe7f6f5f
+  AcknowList: ae681142ad1fd724424e08dbd5877ff8e19015b8
 
-COCOAPODS: 0.39.0.beta.4
+COCOAPODS: 0.39.0

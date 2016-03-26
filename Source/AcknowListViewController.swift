@@ -171,7 +171,7 @@ public class AcknowListViewController: UITableViewController {
     // MARK: - Localization
 
     class func localizedString(forKey key: String, defaultString: String) -> String {
-        var bundlePath = NSBundle.mainBundle().pathForResource("AcknowLister", ofType: "bundle")
+        var bundlePath = NSBundle(forClass: AcknowListViewController.self).pathForResource("AcknowList", ofType: "bundle")
         let languageBundle: NSBundle
 
         if let currentBundlePath = bundlePath {
