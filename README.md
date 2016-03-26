@@ -43,7 +43,7 @@ let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 
 ## Requirements
 
-AcknowList is written in Swift 2.0, requires iOS 8.0 and above, Xcode 7.0 and above, and uses ARC.
+AcknowList is written in Swift 2.0, requires iOS 8.0 and above, Xcode 7.3 and above, and uses ARC.
 
 
 ## Credits
