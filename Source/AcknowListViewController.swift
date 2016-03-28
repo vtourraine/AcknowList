@@ -83,8 +83,10 @@ public class AcknowListViewController: UITableViewController {
 
     - returns: The new `AcknowListViewController` instance.
     */
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    public required init(coder aDecoder: NSCoder) {
+        super.init(style: .Grouped)
+        let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
+        self.commonInit(acknowledgementsPlistPath: path)
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
