@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-import AcknowList
+@testable import AcknowList
 
 class AcknowViewControllerTests: XCTestCase {
 
