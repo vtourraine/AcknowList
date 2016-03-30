@@ -205,19 +205,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				fr,
-				de,
-				es,
-				da,
-				it,
-				ja,
-				nl,
-				"pt-BR",
-				"pt-PT",
-				sv,
-				"zh-Hans",
-				"zh-Hant",
 			);
 			mainGroup = 1AA3C36A1CAC35190071A7FD;
 			productRefGroup = 1AA3C3751CAC35190071A7FD /* Products */;
