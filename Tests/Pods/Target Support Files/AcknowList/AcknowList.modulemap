@@ -1,6 +1,0 @@
-framework module AcknowList {
-  umbrella header "AcknowList-umbrella.h"
-
-  export *
-  module * { export * }
-}

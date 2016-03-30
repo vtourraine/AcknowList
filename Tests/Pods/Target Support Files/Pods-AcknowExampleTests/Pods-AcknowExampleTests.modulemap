@@ -1,6 +1,0 @@
-framework module Pods_AcknowExampleTests {
-  umbrella header "Pods-AcknowExampleTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
