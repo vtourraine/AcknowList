@@ -83,8 +83,10 @@ public class AcknowListViewController: UITableViewController {
 
     - returns: The new `AcknowListViewController` instance.
     */
-    required public convenience init(coder aDecoder: NSCoder) {
-        self.init()
+    public required init(coder aDecoder: NSCoder) {
+        super.init(style: .Grouped)
+        let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
+        self.commonInit(acknowledgementsPlistPath: path)
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -169,16 +171,20 @@ public class AcknowListViewController: UITableViewController {
 
 
     // MARK: - Localization
+    
+    class func preferredLanguageCode() -> String? {
+        return NSLocale.preferredLanguages().first
+    }
 
     class func localizedString(forKey key: String, defaultString: String) -> String {
-        var bundlePath = NSBundle.mainBundle().pathForResource("AcknowLister", ofType: "bundle")
+        var bundlePath = NSBundle(forClass: AcknowListViewController.self).pathForResource("AcknowList", ofType: "bundle")
         let languageBundle: NSBundle
 
         if let currentBundlePath = bundlePath {
             let bundle = NSBundle(path: currentBundlePath)
             var language = "en"
 
-            if let firstLanguage = NSLocale.preferredLanguages().first {
+            if let firstLanguage = self.preferredLanguageCode() {
                 language = firstLanguage
             }
 

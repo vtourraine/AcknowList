@@ -16,6 +16,7 @@
     "tag": "0.2.2"
   },
   "source_files": "Source/*.swift",
+  "resources": "Resources/AcknowList.bundle",
   "platforms": {
     "ios": "8.0"
   },
