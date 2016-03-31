@@ -48,7 +48,7 @@ AcknowList is written in Swift 2.0, requires iOS 8.0 and above, Xcode 7.3 and ab
 
 ## Credits
 
-AcknowList was created by [Vincent Tourraine](http://www.vtourraine.net).
+AcknowList was created by [Vincent Tourraine](http://www.vtourraine.net), and improved by a growing [list of contributors](https://github.com/vtourraine/AcknowList/contributors).
 
 
 ## License
