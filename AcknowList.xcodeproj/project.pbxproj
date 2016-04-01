@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1420A2E41CAEC92200D98F9C /* AcknowLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */; };
 		1A74216E1CAC3616007E44FD /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216A1CAC3616007E44FD /* Acknow.swift */; };
 		1A74216F1CAC3616007E44FD /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */; };
 		1A7421701CAC3616007E44FD /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216C1CAC3616007E44FD /* AcknowParser.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalizationTests.swift; sourceTree = "<group>"; };
 		1A74216A1CAC3616007E44FD /* Acknow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acknow.swift; sourceTree = "<group>"; };
 		1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListViewController.swift; sourceTree = "<group>"; };
 		1A74216C1CAC3616007E44FD /* AcknowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParser.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				1A7421721CAC3685007E44FD /* AcknowListViewControllerTests.swift */,
+				1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */,
 				1A7421731CAC3685007E44FD /* AcknowParserTests.swift */,
 				1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */,
 				1AD73B8F1CAC3AEB0084F8CA /* Supporting Files */,
@@ -204,8 +207,6 @@
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
-			knownRegions = (
-			);
 			mainGroup = 1AA3C36A1CAC35190071A7FD;
 			productRefGroup = 1AA3C3751CAC35190071A7FD /* Products */;
 			projectDirPath = "";
@@ -255,6 +256,7 @@
 				1A7421771CAC3685007E44FD /* AcknowViewControllerTests.swift in Sources */,
 				1A7421751CAC3685007E44FD /* AcknowListViewControllerTests.swift in Sources */,
 				1A7421761CAC3685007E44FD /* AcknowParserTests.swift in Sources */,
+				1420A2E41CAEC92200D98F9C /* AcknowLocalizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
