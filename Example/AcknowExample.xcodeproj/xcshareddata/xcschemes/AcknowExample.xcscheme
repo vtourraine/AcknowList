@@ -20,20 +20,6 @@
                ReferencedContainer = "container:AcknowExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F6C52BB1B7F495700B9A7CC"
-               BuildableName = "AcknowExampleTests.xctest"
-               BlueprintName = "AcknowExampleTests"
-               ReferencedContainer = "container:AcknowExample.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -46,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F6C52BB1B7F495700B9A7CC"
-               BuildableName = "AcknowExampleTests.xctest"
-               BlueprintName = "AcknowExampleTests"
-               ReferencedContainer = "container:AcknowExample.xcodeproj">
+               BlueprintIdentifier = "1AA3C37D1CAC35190071A7FD"
+               BuildableName = "AcknowListTests.xctest"
+               BlueprintName = "AcknowListTests"
+               ReferencedContainer = "container:../AcknowList.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
