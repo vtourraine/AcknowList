@@ -53,6 +53,9 @@ public class AcknowListViewController: UITableViewController {
     */
     @IBInspectable var acknowledgementsPlistName: String?
 
+
+    // MARK: - Initialization
+
     /**
     Initializes the `AcknowListViewController` instance based on default configuration.
 
@@ -134,15 +137,8 @@ public class AcknowListViewController: UITableViewController {
         }
     }
 
-    /**
-    The localized version of “Acknowledgements”.
-    You can use this value for the button presenting the `VTAcknowledgementsViewController`, for instance.
 
-    - return: The localized title.
-    */
-    public class func localizedTitle() -> String {
-        return self.localizedString(forKey: "VTAckAcknowledgements", defaultString: "Acknowledgements")
-    }
+    // MARK: - Paths
 
     class func acknowledgementsPlistPath(name name:String) -> String? {
         return NSBundle.mainBundle().pathForResource(name, ofType: "plist")
@@ -153,25 +149,19 @@ public class AcknowListViewController: UITableViewController {
         return self.acknowledgementsPlistPath(name: DefaultAcknowledgementsPlistName)
     }
 
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-
-        let path: String?
-        if let acknowledgementsPlistName = self.acknowledgementsPlistName {
-            path = AcknowListViewController.acknowledgementsPlistPath(name: acknowledgementsPlistName)
-        }
-        else {
-            path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        }
-        
-        if let path = path {
-            self.commonInit(acknowledgementsPlistPath: path)
-        }
-    }
-
 
     // MARK: - Localization
-    
+
+    /**
+     The localized version of “Acknowledgements”.
+     You can use this value for the button presenting the `VTAcknowledgementsViewController`, for instance.
+
+     - return: The localized title.
+     */
+    public class func localizedTitle() -> String {
+        return self.localizedString(forKey: "VTAckAcknowledgements", defaultString: "Acknowledgements")
+    }
+
     class func preferredLanguageCode() -> String? {
         return NSLocale.preferredLanguages().first
     }
@@ -229,7 +219,23 @@ public class AcknowListViewController: UITableViewController {
     }
 
 
-    // MARK: - View lifecycle
+    // MARK: - View life cycle
+
+    override public func awakeFromNib() {
+        super.awakeFromNib()
+
+        let path: String?
+        if let acknowledgementsPlistName = self.acknowledgementsPlistName {
+            path = AcknowListViewController.acknowledgementsPlistPath(name: acknowledgementsPlistName)
+        }
+        else {
+            path = AcknowListViewController.defaultAcknowledgementsPlistPath()
+        }
+
+        if let path = path {
+            self.commonInit(acknowledgementsPlistPath: path)
+        }
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -289,6 +295,9 @@ public class AcknowListViewController: UITableViewController {
     @IBAction public func dismissViewController(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+
+
+    // MARK: - Configuration
 
     class func LabelMargin () -> CGFloat {
         return 20
