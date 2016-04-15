@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1420A2E41CAEC92200D98F9C /* AcknowLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */; };
+		144210351CB657F200E958F1 /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144210341CB657F200E958F1 /* AcknowLocalization.swift */; };
 		1A74216E1CAC3616007E44FD /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216A1CAC3616007E44FD /* Acknow.swift */; };
 		1A74216F1CAC3616007E44FD /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */; };
 		1A7421701CAC3616007E44FD /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216C1CAC3616007E44FD /* AcknowParser.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalizationTests.swift; sourceTree = "<group>"; };
+		144210341CB657F200E958F1 /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
 		1A74216A1CAC3616007E44FD /* Acknow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acknow.swift; sourceTree = "<group>"; };
 		1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListViewController.swift; sourceTree = "<group>"; };
 		1A74216C1CAC3616007E44FD /* AcknowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParser.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				1A74216A1CAC3616007E44FD /* Acknow.swift */,
 				1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */,
+				144210341CB657F200E958F1 /* AcknowLocalization.swift */,
 				1A74216C1CAC3616007E44FD /* AcknowParser.swift */,
 				1A74216D1CAC3616007E44FD /* AcknowViewController.swift */,
 				1AD73BBC1CAC53BD0084F8CA /* Resources */,
@@ -207,6 +210,9 @@
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 1AA3C36A1CAC35190071A7FD;
 			productRefGroup = 1AA3C3751CAC35190071A7FD /* Products */;
 			projectDirPath = "";
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A74216E1CAC3616007E44FD /* Acknow.swift in Sources */,
+				144210351CB657F200E958F1 /* AcknowLocalization.swift in Sources */,
 				1A74216F1CAC3616007E44FD /* AcknowListViewController.swift in Sources */,
 				1A7421701CAC3616007E44FD /* AcknowParser.swift in Sources */,
 				1A7421711CAC3616007E44FD /* AcknowViewController.swift in Sources */,

@@ -3,6 +3,7 @@
 ## 0.3 (work in progress)
 
 - Add localization bundle for default header and footer, by James White (@gerbiljames)
+- Refactor localization to new `AcknowLocalization` class
 - Updated to Swift 2.2 (requires Xcode 7.3), by James White (@gerbiljames)
 - Fixed `AcknowListViewController` footer margin, by James White (@gerbiljames)
 - Fixed project URL in warning message, by James White (@gerbiljames)
