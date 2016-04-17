@@ -4,7 +4,6 @@ _Ready to use “Acknowledgements”/“Licenses”/“Credits” view controlle
 
 _Written in Swift 2.2 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
-
 ![Platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg)
 [![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)

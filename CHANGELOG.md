@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3 (work in progress)
+## 0.3 (17 April 2016)
 
 - Add localization bundle for default header and footer, by James White (@gerbiljames)
 - Refactor localization to new `AcknowLocalization` class
