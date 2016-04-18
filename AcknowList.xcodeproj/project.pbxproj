@@ -45,7 +45,7 @@
 		1AA3C3791CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA3C37E1CAC35190071A7FD /* AcknowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcknowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3C3851CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Tests/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
