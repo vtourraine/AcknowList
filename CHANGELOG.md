@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 (30 April 2016)
+
+- Improve documentation
+
+
 ## 0.3 (17 April 2016)
 
 - Add localization bundle for default header and footer, by James White (@gerbiljames)
