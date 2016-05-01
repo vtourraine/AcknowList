@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.2 (1 May 2016)
+
+- Improve documentation
+
+
 ## 0.3.1 (30 April 2016)
 
 - Improve documentation
