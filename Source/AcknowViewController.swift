@@ -23,28 +23,26 @@
 
 import UIKit
 
-/**
- Subclass of `UIViewController` that displays a single acknowledgement.
-*/
+/// Subclass of `UIViewController` that displays a single acknowledgement.
 public class AcknowViewController: UIViewController {
 
     /**
-    The main text view.
-    */
+     The main text view.
+     */
     public var textView: UITextView?
 
     /**
-    The represented acknowledgement.
-    */
+     The represented acknowledgement.
+     */
     var acknowledgement: Acknow?
 
     /**
-    Initializes the `AcknowViewController` instance with an acknowledgement.
+     Initializes the `AcknowViewController` instance with an acknowledgement.
 
-    - parameter acknowledgement: The represented acknowledgement.
+     - parameter acknowledgement: The represented acknowledgement.
 
-    - returns: The new `AcknowViewController` instance.
-    */
+     - returns: The new `AcknowViewController` instance.
+     */
     public init(acknowledgement: Acknow) {
         super.init(nibName: nil, bundle: nil)
 
@@ -53,12 +51,12 @@ public class AcknowViewController: UIViewController {
     }
 
     /**
-    Initializes the `AcknowViewController` instance with a coder.
+     Initializes the `AcknowViewController` instance with a coder.
 
-    - parameter aDecoder: The archive coder.
+     - parameter aDecoder: The archive coder.
 
-    - returns: The new `AcknowViewController` instance.
-    */
+     - returns: The new `AcknowViewController` instance.
+     */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.acknowledgement = Acknow(title: "", text: "")
@@ -67,6 +65,9 @@ public class AcknowViewController: UIViewController {
 
     // MARK: - View lifecycle
 
+    /**
+     Creates the view that the controller manages.
+     */
     override public func loadView() {
         let textView = UITextView(frame: CGRectZero)
         textView.alwaysBounceVertical = true;
@@ -83,6 +84,11 @@ public class AcknowViewController: UIViewController {
         self.textView = textView
     }
 
+    /**
+     Notifies the view controller that its view is about to be added to a view hierarchy.
+
+     - parameter animated: If `YES`, the view is being added to the window using an animation.
+     */
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if let textView = self.textView {

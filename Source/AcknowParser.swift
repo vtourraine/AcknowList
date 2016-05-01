@@ -23,23 +23,21 @@
 
 import Foundation
 
-/**
- Responsible for parsing a CocoaPods acknowledgements plist file.
-*/
+/// Responsible for parsing a CocoaPods acknowledgements plist file.
 public class AcknowParser {
 
     /**
-    The root dictionary from the loaded plist file.
-    */
+     The root dictionary from the loaded plist file.
+     */
     let rootDictionary: [String: AnyObject]
 
     /**
-    Initializes the `AcknowParser` instance with a plist path.
+     Initializes the `AcknowParser` instance with a plist path.
 
-    - parameter plistPath: The path to the acknowledgements plist file.
+     - parameter plistPath: The path to the acknowledgements plist file.
 
-    - returns: The new `AcknowParser` instance.
-    */
+     - returns: The new `AcknowParser` instance.
+     */
     public init(plistPath: String) {
         let root = NSDictionary(contentsOfFile: plistPath)
         if let root = root where root is [String: AnyObject] {
@@ -51,10 +49,10 @@ public class AcknowParser {
     }
 
     /**
-    Parses the header and footer values.
+     Parses the header and footer values.
 
-    - return: a tuple with the header and footer values.
-    */
+     - return: a tuple with the header and footer values.
+     */
     public func parseHeaderAndFooter() -> (header: String?, footer: String?) {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 
@@ -72,10 +70,10 @@ public class AcknowParser {
     }
 
     /**
-    Parses the array of acknowledgements.
+     Parses the array of acknowledgements.
 
-    - return: an array of `Acknow` instances.
-    */
+     - return: an array of `Acknow` instances.
+     */
     public func parseAcknowledgements() -> [Acknow] {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 

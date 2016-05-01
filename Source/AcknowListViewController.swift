@@ -23,56 +23,54 @@
 
 import UIKit
 
-/**
- Subclass of `UITableViewController` that displays a list of acknowledgements.
- */
+/// Subclass of `UITableViewController` that displays a list of acknowledgements.
 public class AcknowListViewController: UITableViewController {
 
     /**
-    The represented array of `Acknow`.
-    */
+     The represented array of `Acknow`.
+     */
     var acknowledgements: [Acknow]?
 
     /**
-    Header text to be displayed above the list of the acknowledgements.
-    It needs to get set before `viewDidLoad` gets called.
-    Its value can be defined in the header of the plist file.
-    */
+     Header text to be displayed above the list of the acknowledgements.
+     It needs to get set before `viewDidLoad` gets called.
+     Its value can be defined in the header of the plist file.
+     */
     @IBInspectable var headerText: String?
 
     /**
-    Footer text to be displayed below the list of the acknowledgements.
-    It needs to get set before `viewDidLoad` gets called.
-    Its value can be defined in the header of the plist file.
-    */
+     Footer text to be displayed below the list of the acknowledgements.
+     It needs to get set before `viewDidLoad` gets called.
+     Its value can be defined in the header of the plist file.
+     */
     @IBInspectable var footerText: String?
 
     /**
-    Acknowledgements plist file name whose contents to be loaded.
-    It expects to get set by "User Defined Runtime Attributes" in Interface Builder.
-    */
+     Acknowledgements plist file name whose contents to be loaded.
+     It expects to get set by "User Defined Runtime Attributes" in Interface Builder.
+     */
     @IBInspectable var acknowledgementsPlistName: String?
 
 
     // MARK: - Initialization
 
     /**
-    Initializes the `AcknowListViewController` instance based on default configuration.
+     Initializes the `AcknowListViewController` instance based on default configuration.
 
-    - returns: The new `AcknowListViewController` instance.
-    */
+     - returns: The new `AcknowListViewController` instance.
+     */
     public convenience init() {
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
         self.init(acknowledgementsPlistPath: path)
     }
 
     /**
-    Initializes the `AcknowListViewController` instance for a plist file path.
+     Initializes the `AcknowListViewController` instance for a plist file path.
 
-    - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
+     - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
 
-    - returns: The new `AcknowListViewController` instance.
-    */
+     - returns: The new `AcknowListViewController` instance.
+     */
     public init(acknowledgementsPlistPath: String?) {
         super.init(style: .Grouped)
 
@@ -80,12 +78,12 @@ public class AcknowListViewController: UITableViewController {
     }
 
     /**
-    Initializes the `AcknowListViewController` instance with a coder.
+     Initializes the `AcknowListViewController` instance with a coder.
 
-    - parameter aDecoder: The archive coder.
+     - parameter aDecoder: The archive coder.
 
-    - returns: The new `AcknowListViewController` instance.
-    */
+     - returns: The new `AcknowListViewController` instance.
+     */
     public required init(coder aDecoder: NSCoder) {
         super.init(style: .Grouped)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
@@ -152,6 +150,9 @@ public class AcknowListViewController: UITableViewController {
 
     // MARK: - View life cycle
 
+    /**
+     Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
+     */
     override public func awakeFromNib() {
         super.awakeFromNib()
 
@@ -168,6 +169,9 @@ public class AcknowListViewController: UITableViewController {
         }
     }
 
+    /**
+     Called after the controller's view is loaded into memory.
+     */
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -183,6 +187,11 @@ public class AcknowListViewController: UITableViewController {
         }
     }
 
+    /**
+     Notifies the view controller that its view is about to be added to a view hierarchy.
+
+     - parameter animated: If `YES`, the view is being added to the window using an animation.
+     */
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -191,6 +200,11 @@ public class AcknowListViewController: UITableViewController {
         }
     }
 
+    /**
+     Notifies the view controller that its view was added to a view hierarchy.
+
+     - parameter animated: If `YES`, the view is being added to the window using an animation.
+     */
     public override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -207,10 +221,10 @@ public class AcknowListViewController: UITableViewController {
     // MARK: - Actions
 
     /**
-    Opens the CocoaPods website with Safari.
+     Opens the CocoaPods website with Safari.
 
-    - parameter sender: The event sender.
-    */
+     - parameter sender: The event sender.
+     */
     @IBAction public func openCocoaPodsWebsite(sender: AnyObject) {
         let url = NSURL(string: AcknowLocalization.CocoaPodsURLString())
         if let url = url {
@@ -219,10 +233,10 @@ public class AcknowListViewController: UITableViewController {
     }
 
     /**
-    Dismisses the view controller.
+     Dismisses the view controller.
 
-    - parameter sender: The event sender.
-    */
+     - parameter sender: The event sender.
+     */
     @IBAction public func dismissViewController(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -319,6 +333,13 @@ public class AcknowListViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /**
+     Asks the data source to return the number of sections in the table view.
+
+     - parameter tableView: An object representing the table view requesting this information.
+
+     - returns: The number of sections in `tableView`. The default value is 1.
+     */
     public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let acknowledgements = self.acknowledgements {
             return acknowledgements.count
@@ -327,10 +348,14 @@ public class AcknowListViewController: UITableViewController {
         return 0
     }
 
-    public override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
+    /**
+     Asks the data source for a cell to insert in a particular location of the table view.
 
+     - parameter tableView: The table-view object requesting the cell.
+     - parameter indexPath: An index path that locates a row in `tableView`.
+
+     - returns: An object inheriting from `UITableViewCell` that the table view can use for the specified row. An assertion is raised if you return `nil`.
+     */
     public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let CellIdentifier = "Cell"
         let dequeuedCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
@@ -354,6 +379,12 @@ public class AcknowListViewController: UITableViewController {
 
     // MARK: Table view delegate
 
+    /**
+     Tells the delegate that the specified row is now selected.
+
+     - parameter tableView: A table-view object informing the delegate about the new row selection.
+     - parameter indexPath: An index path locating the new selected row in `tableView`.
+     */
     public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let acknowledgements = self.acknowledgements,
         let acknowledgement = acknowledgements[indexPath.row] as Acknow?,
@@ -361,5 +392,17 @@ public class AcknowListViewController: UITableViewController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
                 navigationController.pushViewController(viewController, animated: true)
         }
+    }
+
+    /**
+     Asks the delegate for the estimated height of a row in a specified location.
+
+     - parameter tableView: The table-view object requesting this information.
+     - parameter indexPath: An index path that locates a row in `tableView`.
+
+     - returns: A nonnegative floating-point value that estimates the height (in points) that `row` should be. Return `UITableViewAutomaticDimension` if you have no estimate.
+     */
+    public override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
