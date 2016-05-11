@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0 (11 May 2016)
+
+- Ready for CocoaPods 1.0.0
+
+
 ## 0.3.2 (1 May 2016)
 
 - Improve documentation
