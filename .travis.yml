@@ -1,5 +1,5 @@
 language: objective-c
-xcode_workspace: AcknowList.xcworkspace
-xcode_scheme: AcknowList
-xcode_sdk: iphonesimulator
 osx_image: xcode8
+
+script:
+ - xcodebuild test -workspace AcknowList.xcworkspace -scheme AcknowList -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
