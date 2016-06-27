@@ -12,7 +12,7 @@ import AcknowList
 
 class ViewController: UIViewController {
 
-    @IBAction func pushAcknowList(sender: AnyObject) {
+    @IBAction func pushAcknowList(_ sender: AnyObject) {
         let viewController = AcknowListViewController()
 
         if let navigationController = self.navigationController {

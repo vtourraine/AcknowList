@@ -72,7 +72,7 @@ public class AcknowListViewController: UITableViewController {
      - returns: The new `AcknowListViewController` instance.
      */
     public init(acknowledgementsPlistPath: String?) {
-        super.init(style: .Grouped)
+        super.init(style: .grouped)
 
         self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath)
     }
@@ -85,16 +85,16 @@ public class AcknowListViewController: UITableViewController {
      - returns: The new `AcknowListViewController` instance.
      */
     public required init(coder aDecoder: NSCoder) {
-        super.init(style: .Grouped)
+        super.init(style: .grouped)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
         self.commonInit(acknowledgementsPlistPath: path)
     }
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    func commonInit(acknowledgementsPlistPath acknowledgementsPlistPath: String?) {
+    func commonInit(acknowledgementsPlistPath: String?) {
         self.title = AcknowLocalization.localizedTitle()
 
         if let acknowledgementsPlistPath = acknowledgementsPlistPath {
@@ -121,14 +121,14 @@ public class AcknowListViewController: UITableViewController {
             }
 
             let acknowledgements = parser.parseAcknowledgements()
-            let sortedAcknowledgements = acknowledgements.sort({
+            let sortedAcknowledgements = acknowledgements.sorted(isOrderedBefore: {
                 (ack1: Acknow, ack2: Acknow) -> Bool in
                 let result = ack1.title.compare(
                     ack2.title,
                     options: [],
                     range: nil,
-                    locale: NSLocale.currentLocale())
-                return (result.rawValue == NSComparisonResult.OrderedAscending.rawValue)
+                    locale: Locale.current())
+                return (result.rawValue == ComparisonResult.orderedAscending.rawValue)
              })
 
             self.acknowledgements = sortedAcknowledgements
@@ -138,8 +138,8 @@ public class AcknowListViewController: UITableViewController {
 
     // MARK: - Paths
 
-    class func acknowledgementsPlistPath(name name:String) -> String? {
-        return NSBundle.mainBundle().pathForResource(name, ofType: "plist")
+    class func acknowledgementsPlistPath(name:String) -> String? {
+        return Bundle.main().pathForResource(name, ofType: "plist")
     }
 
     class func defaultAcknowledgementsPlistPath() -> String? {
@@ -181,7 +181,7 @@ public class AcknowListViewController: UITableViewController {
         if let navigationController = self.navigationController {
             if self.presentingViewController != nil &&
                 navigationController.viewControllers.first == self {
-                let item = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
+                let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
                     self.navigationItem.leftBarButtonItem = item
             }
         }
@@ -192,11 +192,11 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
      */
-    public override func viewWillAppear(animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            self.tableView.deselectRowAtIndexPath(indexPath, animated: animated)
+            self.tableView.deselectRow(at: indexPath, animated: animated)
         }
     }
 
@@ -205,7 +205,7 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
      */
-    public override func viewDidAppear(animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         if self.acknowledgements == nil {
@@ -225,10 +225,10 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter sender: The event sender.
      */
-    @IBAction public func openCocoaPodsWebsite(sender: AnyObject) {
-        let url = NSURL(string: AcknowLocalization.CocoaPodsURLString())
+    @IBAction public func openCocoaPodsWebsite(_ sender: AnyObject) {
+        let url = URL(string: AcknowLocalization.CocoaPodsURLString())
         if let url = url {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared().openURL(url)
         }
     }
 
@@ -237,8 +237,8 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter sender: The event sender.
      */
-    @IBAction public func dismissViewController(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction public func dismissViewController(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 
@@ -253,30 +253,30 @@ public class AcknowListViewController: UITableViewController {
     }
 
     func configureHeaderView() {
-        let font = UIFont.systemFontOfSize(12)
-        let labelWidth = CGRectGetWidth(self.view.frame) - 2 * AcknowListViewController.LabelMargin()
+        let font = UIFont.systemFont(ofSize: 12)
+        let labelWidth = self.view.frame.width - 2 * AcknowListViewController.LabelMargin()
 
         if let headerText = self.headerText {
             let labelHeight = self.heightForLabel(text: headerText, width: labelWidth)
-            let labelFrame = CGRectMake(
-                AcknowListViewController.LabelMargin(),
-                AcknowListViewController.LabelMargin(),
-                labelWidth,
-                labelHeight)
+            let labelFrame = CGRect(
+                x: AcknowListViewController.LabelMargin(),
+                y: AcknowListViewController.LabelMargin(),
+                width: labelWidth,
+                height: labelHeight)
 
             let label = UILabel(frame: labelFrame)
             label.text             = self.headerText
             label.font             = font
-            label.textColor        = UIColor.grayColor()
-            label.backgroundColor  = UIColor.clearColor()
+            label.textColor        = UIColor.gray()
+            label.backgroundColor  = UIColor.clear()
             label.numberOfLines    = 0
-            label.textAlignment    = .Center
-            label.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
+            label.textAlignment    = .center
+            label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
 
-            let headerFrame = CGRectMake(
-                0, 0,
-                CGRectGetWidth(self.view.frame),
-                CGRectGetHeight(label.frame) + 2 * AcknowListViewController.LabelMargin())
+            let headerFrame = CGRect(
+                x: 0, y: 0,
+                width: self.view.frame.width,
+                height: label.frame.height + 2 * AcknowListViewController.LabelMargin())
             let headerView = UIView(frame: headerFrame)
             headerView.addSubview(label)
             self.tableView.tableHeaderView = headerView
@@ -284,48 +284,48 @@ public class AcknowListViewController: UITableViewController {
     }
 
     func configureFooterView() {
-        let font = UIFont.systemFontOfSize(12)
-        let labelWidth = CGRectGetWidth(self.view.frame) - 2 * AcknowListViewController.LabelMargin()
+        let font = UIFont.systemFont(ofSize: 12)
+        let labelWidth = self.view.frame.width - 2 * AcknowListViewController.LabelMargin()
 
         if let footerText = self.footerText {
             let labelHeight = self.heightForLabel(text: footerText, width: labelWidth)
-            let labelFrame = CGRectMake(AcknowListViewController.LabelMargin(), 0, labelWidth, labelHeight);
+            let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
 
             let label = UILabel(frame: labelFrame)
             label.text             = self.footerText
             label.font             = font
-            label.textColor        = UIColor.grayColor()
-            label.backgroundColor  = UIColor.clearColor()
+            label.textColor        = UIColor.gray()
+            label.backgroundColor  = UIColor.clear()
             label.numberOfLines    = 0
-            label.textAlignment    = .Center
-            label.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
-            label.userInteractionEnabled = true;
+            label.textAlignment    = .center
+            label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
+            label.isUserInteractionEnabled = true
 
-            let CocoaPodsURL = NSURL(string: AcknowLocalization.CocoaPodsURLString())
+            let CocoaPodsURL = URL(string: AcknowLocalization.CocoaPodsURLString())
             if let CocoaPodsURL = CocoaPodsURL,
                 let CocoaPodsURLHost = CocoaPodsURL.host {
-                    if footerText.rangeOfString(CocoaPodsURLHost) != nil {
+                    if footerText.range(of: CocoaPodsURLHost) != nil {
                         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
                         label.addGestureRecognizer(tapGestureRecognizer)
                     }
             }
 
-            let footerFrame = CGRectMake(0, 0, CGRectGetWidth(label.frame), CGRectGetHeight(label.frame) + AcknowListViewController.FooterBottomMargin())
+            let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + AcknowListViewController.FooterBottomMargin())
             let footerView = UIView(frame: footerFrame)
-            footerView.userInteractionEnabled = true
-            footerView .addSubview(label)
-            label.frame = CGRectMake(0, 0, CGRectGetWidth(label.frame), CGRectGetHeight(label.frame));
+            footerView.isUserInteractionEnabled = true
+            footerView.addSubview(label)
+            label.frame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height);
 
             self.tableView.tableFooterView = footerView
         }
     }
 
     func heightForLabel(text labelText: NSString, width labelWidth: CGFloat) -> CGFloat {
-        let font = UIFont.systemFontOfSize(12)
-        let options: NSStringDrawingOptions = NSStringDrawingOptions.UsesLineFragmentOrigin
+        let font = UIFont.systemFont(ofSize: 12)
+        let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRectWithSize(CGSizeMake(labelWidth, CGFloat.max), options: options, attributes: [NSFontAttributeName: font], context: nil)
-        let labelHeight = CGRectGetHeight(labelBounds)
+        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSFontAttributeName: font], context: nil)
+        let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))
     }
@@ -340,7 +340,7 @@ public class AcknowListViewController: UITableViewController {
 
      - returns: The number of sections in `tableView`. The default value is 1.
      */
-    public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let acknowledgements = self.acknowledgements {
             return acknowledgements.count
         }
@@ -356,22 +356,22 @@ public class AcknowListViewController: UITableViewController {
 
      - returns: An object inheriting from `UITableViewCell` that the table view can use for the specified row. An assertion is raised if you return `nil`.
      */
-    public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let CellIdentifier = "Cell"
-        let dequeuedCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
+        let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
         let cell: UITableViewCell
         if let dequeuedCell = dequeuedCell {
             cell = dequeuedCell
         }
         else {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
         }
 
         if let acknowledgements = self.acknowledgements,
-            let acknowledgement = acknowledgements[indexPath.row] as Acknow?,
+            let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
             let textLabel = cell.textLabel as UILabel? {
                 textLabel.text = acknowledgement.title
-                cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         }
 
         return cell
@@ -385,9 +385,9 @@ public class AcknowListViewController: UITableViewController {
      - parameter tableView: A table-view object informing the delegate about the new row selection.
      - parameter indexPath: An index path locating the new selected row in `tableView`.
      */
-    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgements = self.acknowledgements,
-        let acknowledgement = acknowledgements[indexPath.row] as Acknow?,
+        let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
         let navigationController = self.navigationController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
                 navigationController.pushViewController(viewController, animated: true)
@@ -402,7 +402,7 @@ public class AcknowListViewController: UITableViewController {
 
      - returns: A nonnegative floating-point value that estimates the height (in points) that `row` should be. Return `UITableViewAutomaticDimension` if you have no estimate.
      */
-    public override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 }

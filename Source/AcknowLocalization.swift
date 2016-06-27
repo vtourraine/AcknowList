@@ -42,7 +42,7 @@ public class AcknowLocalization {
      - returns: The preferred language ID.
      */
     class func preferredLanguageCode() -> String? {
-        return NSLocale.preferredLanguages().first
+        return Locale.preferredLanguages().first
     }
 
     /**
@@ -54,11 +54,11 @@ public class AcknowLocalization {
      - returns: The localized string.
      */
     class func localizedString(forKey key: String, defaultString: String) -> String {
-        var bundlePath = NSBundle(forClass: AcknowListViewController.self).pathForResource("AcknowList", ofType: "bundle")
-        let languageBundle: NSBundle
+        var bundlePath = Bundle(for: AcknowListViewController.self).pathForResource("AcknowList", ofType: "bundle")
+        let languageBundle: Bundle
 
         if let currentBundlePath = bundlePath {
-            let bundle = NSBundle(path: currentBundlePath)
+            let bundle = Bundle(path: currentBundlePath)
             var language = "en"
 
             if let firstLanguage = self.preferredLanguageCode() {
@@ -68,7 +68,7 @@ public class AcknowLocalization {
             if let bundle = bundle {
                 let localizations = bundle.localizations
                 if localizations.contains(language) == false {
-                    language = language.componentsSeparatedByString("-").first!
+                    language = language.components(separatedBy: "-").first!
                 }
 
                 if localizations.contains(language) {
@@ -78,20 +78,20 @@ public class AcknowLocalization {
         }
 
         if let bundlePath = bundlePath {
-            let bundleWithPath = NSBundle(path: bundlePath)
+            let bundleWithPath = Bundle(path: bundlePath)
             if let bundleWithPath = bundleWithPath {
                 languageBundle = bundleWithPath
             }
             else {
-                languageBundle = NSBundle.mainBundle()
+                languageBundle = Bundle.main()
             }
         }
         else {
-            languageBundle = NSBundle.mainBundle()
+            languageBundle = Bundle.main()
         }
 
-        let localizedDefaultString = languageBundle.localizedStringForKey(key, value:defaultString, table:nil)
-        return NSBundle.mainBundle().localizedStringForKey(key, value:localizedDefaultString, table:nil)
+        let localizedDefaultString = languageBundle.localizedString(forKey: key, value:defaultString, table:nil)
+        return Bundle.main().localizedString(forKey: key, value:localizedDefaultString, table:nil)
     }
 
     /**

@@ -14,7 +14,7 @@ import AcknowList
 class AcknowParserTests: XCTestCase {
 
     func testHeaderFooter() {
-        let bundle = NSBundle(forClass: AcknowParserTests.self)
+        let bundle = Bundle(for: AcknowParserTests.self)
         let path = bundle.pathForResource("Pods-acknowledgements", ofType: "plist")
         if let path = path {
             let parser = AcknowParser(plistPath: path)
@@ -36,7 +36,7 @@ class AcknowParserTests: XCTestCase {
     }
 
     func testAcknowledgements() {
-        let bundle = NSBundle(forClass: AcknowParserTests.self)
+        let bundle = Bundle(for: AcknowParserTests.self)
         let path = bundle.pathForResource("Pods-acknowledgements", ofType: "plist")
         if let path = path {
             let parser = AcknowParser(plistPath: path)
@@ -60,14 +60,14 @@ class AcknowParserTests: XCTestCase {
     }
     
     func testGeneralPerformance() {
-        let bundle = NSBundle(forClass: AcknowParserTests.self)
+        let bundle = Bundle(for: AcknowParserTests.self)
         let path = bundle.pathForResource("Pods-AcknowExampleTests-acknowledgements", ofType: "plist")
 
-        self.measureBlock() {
+        self.measure() {
             if let path = path {
                 let parser = AcknowParser(plistPath: path)
-                parser.parseHeaderAndFooter()
-                parser.parseAcknowledgements()
+                _ = parser.parseHeaderAndFooter()
+                _ = parser.parseAcknowledgements()
             }
         }
     }

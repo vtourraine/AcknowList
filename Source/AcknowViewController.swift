@@ -69,11 +69,11 @@ public class AcknowViewController: UIViewController {
      Creates the view that the controller manages.
      */
     override public func loadView() {
-        let textView = UITextView(frame: CGRectZero)
+        let textView = UITextView(frame: CGRect.zero)
         textView.alwaysBounceVertical = true;
-        textView.font                 = UIFont.systemFontOfSize(17)
-        textView.editable             = false
-        textView.dataDetectorTypes    = UIDataDetectorTypes.Link
+        textView.font                 = UIFont.systemFont(ofSize: 17)
+        textView.isEditable             = false
+        textView.dataDetectorTypes    = UIDataDetectorTypes.link
         textView.textContainerInset   = UIEdgeInsetsMake(12, 10, 12, 10)
 
         if let acknowledgement = self.acknowledgement {
@@ -89,10 +89,10 @@ public class AcknowViewController: UIViewController {
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
      */
-    public override func viewWillAppear(animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let textView = self.textView {
-            textView.contentOffset = CGPointMake(textView.contentInset.top, 0)
+            textView.contentOffset = CGPoint(x: textView.contentInset.top, y: 0)
         }
     }
 }
