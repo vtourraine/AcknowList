@@ -93,9 +93,7 @@ public class AcknowParser {
                 (preferenceSpecifier: AnyObject) -> Acknow in
                 if let title = preferenceSpecifier["Title"] as! String?,
                     text = preferenceSpecifier["FooterText"] as! String? {
-                        return Acknow(
-                            title: title,
-                            text: text)
+                        return Acknow(title: title, text: text)
                 }
                 else {
                     return Acknow(title: "", text: "")
