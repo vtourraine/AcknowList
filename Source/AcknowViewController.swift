@@ -70,9 +70,9 @@ public class AcknowViewController: UIViewController {
      */
     override public func loadView() {
         let textView = UITextView(frame: CGRect.zero)
-        textView.alwaysBounceVertical = true;
+        textView.alwaysBounceVertical = true
         textView.font                 = UIFont.systemFont(ofSize: 17)
-        textView.isEditable             = false
+        textView.isEditable           = false
         textView.dataDetectorTypes    = UIDataDetectorTypes.link
         textView.textContainerInset   = UIEdgeInsetsMake(12, 10, 12, 10)
 

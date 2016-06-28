@@ -26,12 +26,12 @@
 public struct Acknow {
 
     /**
-     The acknowledgement title (for instance the pod’s name).
+     The acknowledgement title (for instance: the pod’s name).
      */
     public let title: String
 
     /**
-     The acknowledgement body text (for instance the pod’s license).
+     The acknowledgement body text (for instance: the pod’s license).
      */
     public let text: String
 }
