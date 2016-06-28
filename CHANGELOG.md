@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1 (work in progress)
+
+- Update to Swift 3.0 (requires Xcode 8.0)
+
+
 ## 1.0 (11 May 2016)
 
 - Ready for CocoaPods 1.0.0
