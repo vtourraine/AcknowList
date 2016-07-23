@@ -36,20 +36,20 @@ public class AcknowListViewController: UITableViewController {
      It needs to get set before `viewDidLoad` gets called.
      Its value can be defined in the header of the plist file.
      */
-    @IBInspectable var headerText: String?
+    @IBInspectable public var headerText: String?
 
     /**
      Footer text to be displayed below the list of the acknowledgements.
      It needs to get set before `viewDidLoad` gets called.
      Its value can be defined in the header of the plist file.
      */
-    @IBInspectable var footerText: String?
+    @IBInspectable public var footerText: String?
 
     /**
      Acknowledgements plist file name whose contents to be loaded.
      It expects to get set by "User Defined Runtime Attributes" in Interface Builder.
      */
-    @IBInspectable var acknowledgementsPlistName: String?
+    @IBInspectable public var acknowledgementsPlistName: String?
 
 
     // MARK: - Initialization
