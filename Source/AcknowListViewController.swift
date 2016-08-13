@@ -68,13 +68,14 @@ public class AcknowListViewController: UITableViewController {
      Initializes the `AcknowListViewController` instance for a plist file path.
 
      - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
+     - parameter licenses: The licenses to be shown.
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPath: String?) {
+    public init(acknowledgementsPlistPath: String?, licenses: [String]? = nil) {
         super.init(style: .Grouped)
 
-        self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath)
+        self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath, licenses: licenses)
     }
 
     /**
@@ -87,14 +88,14 @@ public class AcknowListViewController: UITableViewController {
     public required init(coder aDecoder: NSCoder) {
         super.init(style: .Grouped)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        self.commonInit(acknowledgementsPlistPath: path)
+        self.commonInit(acknowledgementsPlistPath: path, licenses: nil)
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    func commonInit(acknowledgementsPlistPath acknowledgementsPlistPath: String?) {
+    func commonInit(acknowledgementsPlistPath acknowledgementsPlistPath: String?, licenses: [String]?) {
         self.title = AcknowLocalization.localizedTitle()
 
         if let acknowledgementsPlistPath = acknowledgementsPlistPath {
@@ -120,7 +121,16 @@ public class AcknowListViewController: UITableViewController {
                 self.footerText = headerFooter.footer
             }
 
-            let acknowledgements = parser.parseAcknowledgements()
+            var acknowledgements = parser.parseAcknowledgements()
+            if let licenses = licenses {
+                acknowledgements = acknowledgements.filter { ack in
+                    if let license = ack.license {
+                        return licenses.contains(license)
+                    } else {
+                        return false
+                    }
+                }
+            }
             let sortedAcknowledgements = acknowledgements.sort({
                 (ack1: Acknow, ack2: Acknow) -> Bool in
                 let result = ack1.title.compare(
@@ -165,7 +175,7 @@ public class AcknowListViewController: UITableViewController {
         }
 
         if let path = path {
-            self.commonInit(acknowledgementsPlistPath: path)
+            self.commonInit(acknowledgementsPlistPath: path, licenses: nil)
         }
     }
 

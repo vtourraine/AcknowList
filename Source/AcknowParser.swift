@@ -95,10 +95,11 @@ public class AcknowParser {
                     text = preferenceSpecifier["FooterText"] as! String? {
                         return Acknow(
                             title: title,
-                            text: text)
+                            text: text,
+                            license: preferenceSpecifier["License"] as? String)
                 }
                 else {
-                    return Acknow(title: "", text: "")
+                    return Acknow(title: "", text: "", license: "")
                 }
             })
 

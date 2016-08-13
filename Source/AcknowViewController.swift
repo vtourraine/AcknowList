@@ -59,7 +59,7 @@ public class AcknowViewController: UIViewController {
      */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.acknowledgement = Acknow(title: "", text: "")
+        self.acknowledgement = Acknow(title: "", text: "", license: nil)
     }
 
 

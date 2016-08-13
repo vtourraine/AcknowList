@@ -36,15 +36,22 @@ public struct Acknow {
     public let text: String
 
     /**
+     The acknowledgement license (for instance the pod' s license type).
+     */
+    public let license: String?
+
+    /**
      Initializes the `Acknow` instance with a title and a text.
 
      - parameter title: The acknowledgement title (for instance the pod’s name).
      - parameter text:  The acknowledgement body text (for instance the pod’s license).
+     - parameter license: The acknowledgement license (for instance the pod' s license type).
 
      - returns: The new `Acknow` instance.
      */
-    public init(title: String, text: String) {
+    public init(title: String, text: String, license: String?) {
         self.title = title
         self.text  = text
+        self.license = license
     }
 }
