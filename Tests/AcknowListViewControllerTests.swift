@@ -15,7 +15,7 @@ class AcknowListViewControllerTests: XCTestCase {
 
     func testConfigureTableView() {
         let bundle = Bundle(for: AcknowListViewControllerTests.self)
-        let plistPath = bundle.pathForResource("Pods-acknowledgements", ofType: "plist")
+        let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
 
@@ -28,7 +28,7 @@ class AcknowListViewControllerTests: XCTestCase {
 
     func testSortsAcknowledgementsByTitle() {
         let bundle = Bundle(for: AcknowListViewControllerTests.self)
-        let plistPath = bundle.pathForResource("Pods-acknowledgements-multi", ofType: "plist")
+        let plistPath = bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist")
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
         XCTAssertEqual(viewController.acknowledgements?.count, 3)

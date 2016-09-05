@@ -40,7 +40,7 @@ public class AcknowParser {
      */
     public init(plistPath: String) {
         let root = NSDictionary(contentsOfFile: plistPath)
-        if let root = root where root is [String: AnyObject] {
+        if let root = root, root is [String: AnyObject] {
             self.rootDictionary = root as! [String: AnyObject]
         }
         else {
@@ -56,12 +56,12 @@ public class AcknowParser {
     public func parseHeaderAndFooter() -> (header: String?, footer: String?) {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 
-        if let preferenceSpecifiers = preferenceSpecifiers where preferenceSpecifiers is [AnyObject] {
+        if let preferenceSpecifiers = preferenceSpecifiers, preferenceSpecifiers is [AnyObject] {
             let preferenceSpecifiersArray = preferenceSpecifiers as! [AnyObject]
             if let headerItem = preferenceSpecifiersArray.first,
                 let footerItem = preferenceSpecifiersArray.last,
-                let headerText = headerItem["FooterText"] where headerItem is [String: String],
-                let footerText = footerItem["FooterText"] where footerItem is [String: String] {
+                let headerText = headerItem["FooterText"], headerItem is [String: String],
+                let footerText = footerItem["FooterText"], footerItem is [String: String] {
                     return (headerText as! String?, footerText as! String?)
             }
         }
@@ -77,7 +77,7 @@ public class AcknowParser {
     public func parseAcknowledgements() -> [Acknow] {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 
-        if let preferenceSpecifiers = preferenceSpecifiers where preferenceSpecifiers is [AnyObject] {
+        if let preferenceSpecifiers = preferenceSpecifiers, preferenceSpecifiers is [AnyObject] {
             let preferenceSpecifiersArray = preferenceSpecifiers as! [AnyObject]
 
             // Remove the header and footer
@@ -92,7 +92,7 @@ public class AcknowParser {
             let acknowledgements = ackPreferenceSpecifiers.map({
                 (preferenceSpecifier: AnyObject) -> Acknow in
                 if let title = preferenceSpecifier["Title"] as! String?,
-                    text = preferenceSpecifier["FooterText"] as! String? {
+                    let text = preferenceSpecifier["FooterText"] as! String? {
                         return Acknow(title: title, text: text)
                 }
                 else {

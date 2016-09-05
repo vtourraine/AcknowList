@@ -121,13 +121,13 @@ public class AcknowListViewController: UITableViewController {
             }
 
             let acknowledgements = parser.parseAcknowledgements()
-            let sortedAcknowledgements = acknowledgements.sorted(isOrderedBefore: {
+            let sortedAcknowledgements = acknowledgements.sorted(by: {
                 (ack1: Acknow, ack2: Acknow) -> Bool in
                 let result = ack1.title.compare(
                     ack2.title,
                     options: [],
                     range: nil,
-                    locale: Locale.current())
+                    locale: Locale.current)
                 return (result == ComparisonResult.orderedAscending)
              })
 
@@ -139,7 +139,7 @@ public class AcknowListViewController: UITableViewController {
     // MARK: - Paths
 
     class func acknowledgementsPlistPath(name:String) -> String? {
-        return Bundle.main().pathForResource(name, ofType: "plist")
+        return Bundle.main.path(forResource: name, ofType: "plist")
     }
 
     class func defaultAcknowledgementsPlistPath() -> String? {
@@ -228,7 +228,7 @@ public class AcknowListViewController: UITableViewController {
     @IBAction public func openCocoaPodsWebsite(_ sender: AnyObject) {
         let url = URL(string: AcknowLocalization.CocoaPodsURLString())
         if let url = url {
-            UIApplication.shared().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
 
@@ -257,7 +257,7 @@ public class AcknowListViewController: UITableViewController {
         let labelWidth = self.view.frame.width - 2 * AcknowListViewController.LabelMargin()
 
         if let headerText = self.headerText {
-            let labelHeight = self.heightForLabel(text: headerText, width: labelWidth)
+            let labelHeight = self.heightForLabel(text: headerText as NSString, width: labelWidth)
             let labelFrame = CGRect(
                 x: AcknowListViewController.LabelMargin(),
                 y: AcknowListViewController.LabelMargin(),
@@ -267,8 +267,8 @@ public class AcknowListViewController: UITableViewController {
             let label = UILabel(frame: labelFrame)
             label.text             = self.headerText
             label.font             = font
-            label.textColor        = UIColor.gray()
-            label.backgroundColor  = UIColor.clear()
+            label.textColor        = UIColor.gray
+            label.backgroundColor  = UIColor.clear
             label.numberOfLines    = 0
             label.textAlignment    = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
@@ -288,14 +288,14 @@ public class AcknowListViewController: UITableViewController {
         let labelWidth = self.view.frame.width - 2 * AcknowListViewController.LabelMargin()
 
         if let footerText = self.footerText {
-            let labelHeight = self.heightForLabel(text: footerText, width: labelWidth)
+            let labelHeight = self.heightForLabel(text: footerText as NSString, width: labelWidth)
             let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
 
             let label = UILabel(frame: labelFrame)
             label.text             = self.footerText
             label.font             = font
-            label.textColor        = UIColor.gray()
-            label.backgroundColor  = UIColor.clear()
+            label.textColor        = UIColor.gray
+            label.backgroundColor  = UIColor.clear
             label.numberOfLines    = 0
             label.textAlignment    = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]

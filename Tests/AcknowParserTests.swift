@@ -15,7 +15,7 @@ class AcknowParserTests: XCTestCase {
 
     func testHeaderFooter() {
         let bundle = Bundle(for: AcknowParserTests.self)
-        let path = bundle.pathForResource("Pods-acknowledgements", ofType: "plist")
+        let path = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
         if let path = path {
             let parser = AcknowParser(plistPath: path)
             XCTAssertNotNil(parser)
@@ -37,7 +37,7 @@ class AcknowParserTests: XCTestCase {
 
     func testAcknowledgements() {
         let bundle = Bundle(for: AcknowParserTests.self)
-        let path = bundle.pathForResource("Pods-acknowledgements", ofType: "plist")
+        let path = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
         if let path = path {
             let parser = AcknowParser(plistPath: path)
             XCTAssertNotNil(parser)
@@ -61,7 +61,7 @@ class AcknowParserTests: XCTestCase {
     
     func testGeneralPerformance() {
         let bundle = Bundle(for: AcknowParserTests.self)
-        let path = bundle.pathForResource("Pods-AcknowExampleTests-acknowledgements", ofType: "plist")
+        let path = bundle.path(forResource: "Pods-AcknowExampleTests-acknowledgements", ofType: "plist")
 
         self.measure() {
             if let path = path {

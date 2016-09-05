@@ -42,7 +42,7 @@ public class AcknowLocalization {
      - returns: The preferred language ID.
      */
     class func preferredLanguageCode() -> String? {
-        return Locale.preferredLanguages().first
+        return Locale.preferredLanguages.first
     }
 
     /**
@@ -54,7 +54,7 @@ public class AcknowLocalization {
      - returns: The localized string.
      */
     class func localizedString(forKey key: String, defaultString: String) -> String {
-        var bundlePath = Bundle(for: AcknowListViewController.self).pathForResource("AcknowList", ofType: "bundle")
+        var bundlePath = Bundle(for: AcknowListViewController.self).path(forResource: "AcknowList", ofType: "bundle")
         let languageBundle: Bundle
 
         if let currentBundlePath = bundlePath {
@@ -72,7 +72,7 @@ public class AcknowLocalization {
                 }
 
                 if localizations.contains(language) {
-                    bundlePath = bundle.pathForResource(language, ofType: "lproj")
+                    bundlePath = bundle.path(forResource: language, ofType: "lproj")
                 }
             }
         }
@@ -83,15 +83,15 @@ public class AcknowLocalization {
                 languageBundle = bundleWithPath
             }
             else {
-                languageBundle = Bundle.main()
+                languageBundle = Bundle.main
             }
         }
         else {
-            languageBundle = Bundle.main()
+            languageBundle = Bundle.main
         }
 
         let localizedDefaultString = languageBundle.localizedString(forKey: key, value:defaultString, table:nil)
-        return Bundle.main().localizedString(forKey: key, value:localizedDefaultString, table:nil)
+        return Bundle.main.localizedString(forKey: key, value:localizedDefaultString, table:nil)
     }
 
     /**
