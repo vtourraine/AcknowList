@@ -5,7 +5,7 @@
   "homepage": "https://github.com/vtourraine/AcknowList",
   "license": {
     "type": "MIT",
-    "file": "LICENSE"
+    "file": "LICENSE.txt"
   },
   "authors": {
     "Vincent Tourraine": "me@vtourraine.net"
