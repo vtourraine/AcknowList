@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 (5 September 2016)
+
+- Mark `headerText` and `footerText` properties as public, by Bas Broek (@basthomas)
+
+
 ## 1.0 (11 May 2016)
 
 - Ready for CocoaPods 1.0.0
