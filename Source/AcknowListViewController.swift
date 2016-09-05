@@ -49,7 +49,7 @@ public class AcknowListViewController: UITableViewController {
      Acknowledgements plist file name whose contents to be loaded.
      It expects to get set by "User Defined Runtime Attributes" in Interface Builder.
      */
-    @IBInspectable public var acknowledgementsPlistName: String?
+    @IBInspectable var acknowledgementsPlistName: String?
 
 
     // MARK: - Initialization
