@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 (19 September 2016)
+
+- Update to Swift 2.3
+
+
 ## 1.0.1 (5 September 2016)
 
 - Mark `headerText` and `footerText` properties as public, by Bas Broek (@basthomas)
