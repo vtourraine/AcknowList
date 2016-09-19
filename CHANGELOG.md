@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1 (work in progress)
+## 1.1 (19 September 2016)
 
 - Update to Swift 3.0
 
