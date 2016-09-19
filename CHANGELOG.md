@@ -2,7 +2,18 @@
 
 ## 1.1 (work in progress)
 
-- Update to Swift 3.0 (requires Xcode 8.0)
+- Update to Swift 3.0
+
+
+## 1.0.2 (19 September 2016)
+
+- Update to Swift 2.3
+
+
+## 1.0.1 (5 September 2016)
+
+- Mark `headerText` and `footerText` properties as public, by Bas Broek (@basthomas)
+>>>>>>> master
 
 
 ## 1.0 (11 May 2016)
