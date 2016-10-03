@@ -2,7 +2,7 @@
 
 _Ready to use “Acknowledgements”/“Licenses”/“Credits” view controller for [CocoaPods](http://cocoapods.org/)._
 
-_Written in Swift 2.3 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
+_Written in Swift 2.3 (you can find the Swift 3 version on the `master` branch, for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
 ![Platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg)
 ![Swift 2.3](https://img.shields.io/badge/Swift-2.3-blue.svg)
