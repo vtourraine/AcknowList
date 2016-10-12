@@ -34,4 +34,9 @@ public struct Acknow {
      The acknowledgement body text (for instance: the pod’s license).
      */
     public let text: String
+
+    /**
+     The acknowledgement license (for instance the pod' s license type).
+     */
+    public let license: String?
 }

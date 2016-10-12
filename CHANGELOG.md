@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2 (work in progress)
+
+- Add `license` property on `Acknow`, by Naoto Kaneko (@naoty)
+
+
 ## 1.1 (19 September 2016)
 
 - Update to Swift 3.0

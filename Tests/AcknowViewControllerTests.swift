@@ -14,7 +14,7 @@ import XCTest
 class AcknowViewControllerTests: XCTestCase {
 
     func testLoadView() {
-        let acknow = Acknow(title: "Title", text: "Text...")
+        let acknow = Acknow(title: "Title", text: "Text...", license: "MIT")
         let viewController = AcknowViewController(acknowledgement: acknow)
         viewController.loadView()
 
