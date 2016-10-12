@@ -68,7 +68,6 @@ public class AcknowListViewController: UITableViewController {
      Initializes the `AcknowListViewController` instance for a plist file path.
 
      - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
-     - parameter licenses: The licenses to be shown.
 
      - returns: The new `AcknowListViewController` instance.
      */
