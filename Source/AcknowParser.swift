@@ -99,7 +99,7 @@ public class AcknowParser {
                             license: preferenceSpecifier["License"] as? String)
                 }
                 else {
-                    return Acknow(title: "", text: "", license: "")
+                    return Acknow(title: "", text: "", license: nil)
                 }
             })
 
