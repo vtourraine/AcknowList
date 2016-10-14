@@ -3,6 +3,7 @@
 ## 1.2 (work in progress)
 
 - Add `license` property on `Acknow`, by Naoto Kaneko (@naoty)
+- Update classes to `open` access level, by Oliver Ziegler (@oliverziegler)
 
 
 ## 1.1 (19 September 2016)
