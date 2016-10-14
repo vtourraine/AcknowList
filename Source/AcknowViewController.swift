@@ -24,12 +24,12 @@
 import UIKit
 
 /// Subclass of `UIViewController` that displays a single acknowledgement.
-public class AcknowViewController: UIViewController {
+open class AcknowViewController: UIViewController {
 
     /**
      The main text view.
      */
-    public var textView: UITextView?
+    open var textView: UITextView?
 
     /**
      The represented acknowledgement.
@@ -68,7 +68,7 @@ public class AcknowViewController: UIViewController {
     /**
      Creates the view that the controller manages.
      */
-    override public func loadView() {
+    override open func loadView() {
         let textView = UITextView(frame: CGRect.zero)
         textView.alwaysBounceVertical = true
         textView.font                 = UIFont.systemFont(ofSize: 17)
@@ -89,7 +89,7 @@ public class AcknowViewController: UIViewController {
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
      */
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let textView = self.textView {
             textView.contentOffset = CGPoint(x: textView.contentInset.top, y: 0)
