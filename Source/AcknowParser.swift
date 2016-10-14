@@ -24,7 +24,7 @@
 import Foundation
 
 /// Responsible for parsing a CocoaPods acknowledgements plist file.
-public class AcknowParser {
+open class AcknowParser {
 
     /**
      The root dictionary from the loaded plist file.
@@ -53,7 +53,7 @@ public class AcknowParser {
 
      - return: a tuple with the header and footer values.
      */
-    public func parseHeaderAndFooter() -> (header: String?, footer: String?) {
+    open func parseHeaderAndFooter() -> (header: String?, footer: String?) {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 
         if let preferenceSpecifiers = preferenceSpecifiers, preferenceSpecifiers is [AnyObject] {
@@ -74,7 +74,7 @@ public class AcknowParser {
 
      - return: an array of `Acknow` instances.
      */
-    public func parseAcknowledgements() -> [Acknow] {
+    open func parseAcknowledgements() -> [Acknow] {
         let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
 
         if let preferenceSpecifiers = preferenceSpecifiers, preferenceSpecifiers is [AnyObject] {
