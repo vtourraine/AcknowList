@@ -24,7 +24,7 @@
 import Foundation
 
 /// Manages the localization for the main acknowledgements labels and strings.
-public class AcknowLocalization {
+open class AcknowLocalization {
 
     /**
      The localized version of “Acknowledgements”.
@@ -32,7 +32,7 @@ public class AcknowLocalization {
 
      - returns: The localized title.
      */
-    public class func localizedTitle() -> String {
+    open class func localizedTitle() -> String {
         return self.localizedString(forKey: "VTAckAcknowledgements", defaultString: "Acknowledgements")
     }
 
