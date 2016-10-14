@@ -24,7 +24,7 @@
 import UIKit
 
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
-public class AcknowListViewController: UITableViewController {
+open class AcknowListViewController: UITableViewController {
 
     /**
      The represented array of `Acknow`.
@@ -36,14 +36,14 @@ public class AcknowListViewController: UITableViewController {
      It needs to get set before `viewDidLoad` gets called.
      Its value can be defined in the header of the plist file.
      */
-    @IBInspectable public var headerText: String?
+    @IBInspectable open var headerText: String?
 
     /**
      Footer text to be displayed below the list of the acknowledgements.
      It needs to get set before `viewDidLoad` gets called.
      Its value can be defined in the header of the plist file.
      */
-    @IBInspectable public var footerText: String?
+    @IBInspectable open var footerText: String?
 
     /**
      Acknowledgements plist file name whose contents to be loaded.
@@ -153,7 +153,7 @@ public class AcknowListViewController: UITableViewController {
     /**
      Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
      */
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
 
         let path: String?
@@ -172,7 +172,7 @@ public class AcknowListViewController: UITableViewController {
     /**
      Called after the controller's view is loaded into memory.
      */
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configureHeaderView()
@@ -192,7 +192,7 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
      */
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -205,7 +205,7 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
      */
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         if self.acknowledgements == nil {
@@ -225,7 +225,7 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter sender: The event sender.
      */
-    @IBAction public func openCocoaPodsWebsite(_ sender: AnyObject) {
+    @IBAction open func openCocoaPodsWebsite(_ sender: AnyObject) {
         let url = URL(string: AcknowLocalization.CocoaPodsURLString())
         if let url = url {
             UIApplication.shared.openURL(url)
@@ -237,7 +237,7 @@ public class AcknowListViewController: UITableViewController {
 
      - parameter sender: The event sender.
      */
-    @IBAction public func dismissViewController(_ sender: AnyObject) {
+    @IBAction open func dismissViewController(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -340,7 +340,7 @@ public class AcknowListViewController: UITableViewController {
 
      - returns: The number of sections in `tableView`. The default value is 1.
      */
-    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let acknowledgements = self.acknowledgements {
             return acknowledgements.count
         }
@@ -356,7 +356,7 @@ public class AcknowListViewController: UITableViewController {
 
      - returns: An object inheriting from `UITableViewCell` that the table view can use for the specified row. An assertion is raised if you return `nil`.
      */
-    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let CellIdentifier = "Cell"
         let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
         let cell: UITableViewCell
@@ -385,7 +385,7 @@ public class AcknowListViewController: UITableViewController {
      - parameter tableView: A table-view object informing the delegate about the new row selection.
      - parameter indexPath: An index path locating the new selected row in `tableView`.
      */
-    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgements = self.acknowledgements,
         let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
         let navigationController = self.navigationController {
@@ -402,7 +402,7 @@ public class AcknowListViewController: UITableViewController {
 
      - returns: A nonnegative floating-point value that estimates the height (in points) that `row` should be. Return `UITableViewAutomaticDimension` if you have no estimate.
      */
-    public override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    open override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 }
