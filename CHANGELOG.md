@@ -3,10 +3,11 @@
 ## 1.2 (work in progress)
 
 - Add `license` property on `Acknow`, by Naoto Kaneko (@naoty)
-- Update classes to `open` access level, by Oliver Ziegler (@oliverziegler)
+- Update classes to `open` access level, by Oliver Ziegler (@oliverziegler) and Naoto Kaneko (@naoty)
 
 
 ## 1.1 (19 September 2016)
+
 
 - Update to Swift 3.0
 
