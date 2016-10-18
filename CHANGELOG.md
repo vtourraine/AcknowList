@@ -3,6 +3,7 @@
 ## 1.0.3 (work in progress)
 
 - Add `license` property on `Acknow`, by Naoto Kaneko (@naoty)
+- Update `acknowledgements` property on `AcknowListViewController` to `public` access level, by Naoto Kaneko (@naoty)
 
 
 ## 1.0.2 (19 September 2016)
