@@ -41,7 +41,7 @@ if let navigationController = self.navigationController {
 If your `.plist` file is named something other than `Pods-acknowledgements.plist` (_e.g._ if you’re using fancy build targets), you can initialize the view controller with a custom path.
 
 ``` swift
-let path = NSBundle.mainBundle().pathForResource("Pods-AcknowExample-acknowledgements", ofType: "plist")
+let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", ofType: "plist")
 let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 ```
 
