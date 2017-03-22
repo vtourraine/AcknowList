@@ -39,4 +39,10 @@ public struct Acknow {
      The acknowledgement license (for instance the pod' s license type).
      */
     public let license: String?
+
+    public init(title: String, text: String, license: String? = nil) {
+        self.title = title
+        self.text = text
+        self.license = license
+    }
 }

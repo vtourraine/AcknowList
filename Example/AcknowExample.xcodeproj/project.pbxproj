@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AD73B8E1CAC3A990084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */; };
-		1AD73BAC1CAC45BD0084F8CA /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD73BAB1CAC45BD0084F8CA /* AcknowList.framework */; };
+		1D941D8F1E82E6CF009AA99D /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D941D8E1E82E6CF009AA99D /* AcknowList.framework */; };
 		1F6C52AD1B7F495700B9A7CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C52AC1B7F495700B9A7CC /* AppDelegate.swift */; };
 		1F6C52AF1B7F495700B9A7CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C52AE1B7F495700B9A7CC /* ViewController.swift */; };
 		1F6C52B21B7F495700B9A7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B01B7F495700B9A7CC /* Main.storyboard */; };
@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../Tests/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		1AD73BAB1CAC45BD0084F8CA /* AcknowList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AcknowList.framework; path = "../../../../Library/Developer/Xcode/DerivedData/AcknowList-hcxjausribyixhgxamdenioijlba/Build/Products/Debug-iphonesimulator/AcknowList.framework"; sourceTree = "<group>"; };
+		1D941D8E1E82E6CF009AA99D /* AcknowList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AcknowList.framework; path = "../../../../Library/Developer/Xcode/DerivedData/AcknowList-ccmltgmppxtqmdgjguhnprnuujfd/Build/Products/Debug-iphonesimulator/AcknowList.framework"; sourceTree = "<group>"; };
 		1F6C52A71B7F495700B9A7CC /* AcknowExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcknowExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C52AB1B7F495700B9A7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C52AC1B7F495700B9A7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD73BAC1CAC45BD0084F8CA /* AcknowList.framework in Frameworks */,
+				1D941D8F1E82E6CF009AA99D /* AcknowList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +83,7 @@
 		D473FA81574D35010E2892B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D941D8E1E82E6CF009AA99D /* AcknowList.framework */,
 				1AD73BAB1CAC45BD0084F8CA /* AcknowList.framework */,
 			);
 			name = Frameworks;
