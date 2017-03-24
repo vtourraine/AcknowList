@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1 (work in progress)
+
+- Update `Acknow` initializer to `public` access level, by Chope (@yoonhg84)
+
+
 ## 1.2 (20 October 2016)
 
 - Add `license` property on `Acknow`, by Naoto Kaneko (@naoty)
