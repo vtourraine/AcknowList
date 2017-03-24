@@ -8,13 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1AD73B8E1CAC3A990084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */; };
-		1AD73BAC1CAC45BD0084F8CA /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD73BAB1CAC45BD0084F8CA /* AcknowList.framework */; };
 		1F6C52AD1B7F495700B9A7CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C52AC1B7F495700B9A7CC /* AppDelegate.swift */; };
 		1F6C52AF1B7F495700B9A7CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C52AE1B7F495700B9A7CC /* ViewController.swift */; };
 		1F6C52B21B7F495700B9A7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B01B7F495700B9A7CC /* Main.storyboard */; };
 		1F6C52B41B7F495700B9A7CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B31B7F495700B9A7CC /* Images.xcassets */; };
 		1F6C52B71B7F495700B9A7CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B51B7F495700B9A7CC /* LaunchScreen.xib */; };
+		D7F4DAA91E8579FF003F0540 /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; };
+		D7F4DAAA1E8579FF003F0540 /* AcknowList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D7F4DAAB1E857A00003F0540 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D7F4DAAA1E8579FF003F0540 /* AcknowList.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../Tests/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -26,6 +41,7 @@
 		1F6C52B11B7F495700B9A7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F6C52B31B7F495700B9A7CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F6C52B61B7F495700B9A7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D7F4DAA81E8579FF003F0540 /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD73BAC1CAC45BD0084F8CA /* AcknowList.framework in Frameworks */,
+				D7F4DAA91E8579FF003F0540 /* AcknowList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +59,7 @@
 		1F6C529E1B7F495700B9A7CC = {
 			isa = PBXGroup;
 			children = (
+				D7F4DAA81E8579FF003F0540 /* AcknowList.framework */,
 				1F6C52A91B7F495700B9A7CC /* AcknowExample */,
 				1F6C52A81B7F495700B9A7CC /* Products */,
 				D473FA81574D35010E2892B4 /* Frameworks */,
@@ -97,6 +114,7 @@
 				1F6C52A31B7F495700B9A7CC /* Sources */,
 				1F6C52A41B7F495700B9A7CC /* Frameworks */,
 				1F6C52A51B7F495700B9A7CC /* Resources */,
+				D7F4DAAB1E857A00003F0540 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
