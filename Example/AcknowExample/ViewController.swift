@@ -14,9 +14,6 @@ class ViewController: UIViewController {
 
     @IBAction func pushAcknowList(_ sender: AnyObject) {
         let viewController = AcknowListViewController()
-
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(viewController, animated: true)
-        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
