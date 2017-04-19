@@ -71,5 +71,11 @@ class AcknowParserTests: XCTestCase {
             }
         }
     }
-    
+
+    func testParseNonExistentFile() {
+        let parser = AcknowParser(plistPath: "/404")
+        XCTAssertNil(parser.parseHeaderAndFooter().header)
+        XCTAssertNil(parser.parseHeaderAndFooter().footer)
+        XCTAssertTrue(parser.parseAcknowledgements().isEmpty)
+    }
 }
