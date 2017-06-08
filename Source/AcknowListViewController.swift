@@ -324,7 +324,7 @@ open class AcknowListViewController: UITableViewController {
         let font = UIFont.systemFont(ofSize: 12)
         let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSFontAttributeName: font], context: nil)
+        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedStringKey.font: font], context: nil)
         let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))
