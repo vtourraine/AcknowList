@@ -11,8 +11,7 @@ _Written in Swift 3 (for Objective-C, you can use [VTAcknowledgementsViewControl
 [![CocoaPods documentation](https://img.shields.io/cocoapods/metrics/doc-percent/AcknowList.svg)](http://cocoadocs.org/docsets/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
 
-<img alt="iPhone screenshot 1" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-01.png" width="300px">
-<img alt="iPhone screenshot 2" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-02.png" width="300px">
+<img alt="iPhone screenshot 1" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-01.png" width="300px"> <img alt="iPhone screenshot 2" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-02.png" width="300px">
 
 
 ## How to Install
