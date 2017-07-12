@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.1 (work in progress)
+## 1.2.1 (12 July 2017)
 
 - Update `Acknow` initializer to `public` access level, by Chope (@yoonhg84)
 
