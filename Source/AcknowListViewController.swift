@@ -30,6 +30,11 @@ open class AcknowListViewController: UITableViewController {
      The represented array of `Acknow`.
      */
     open var acknowledgements: [Acknow]?
+    
+    /**
+     Color used for links
+     */
+    open var linkColor:UIColor = UIView().tintColor
 
     /**
      Header text to be displayed above the list of the acknowledgements.
@@ -390,6 +395,7 @@ open class AcknowListViewController: UITableViewController {
         let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
         let navigationController = self.navigationController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
+                viewController.linkColor = linkColor
                 navigationController.pushViewController(viewController, animated: true)
         }
     }
