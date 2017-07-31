@@ -30,6 +30,11 @@ open class AcknowViewController: UIViewController {
      The main text view.
      */
     open var textView: UITextView?
+    
+    /**
+     Color used for links
+     */
+    open var linkColor:UIColor = UIView().tintColor
 
     /**
      The represented acknowledgement.
@@ -75,6 +80,7 @@ open class AcknowViewController: UIViewController {
         textView.isEditable           = false
         textView.dataDetectorTypes    = UIDataDetectorTypes.link
         textView.textContainerInset   = UIEdgeInsetsMake(12, 10, 12, 10)
+        textView.linkTextAttributes   = [NSForegroundColorAttributeName: linkColor]
 
         if let acknowledgement = self.acknowledgement {
             textView.text = acknowledgement.text
