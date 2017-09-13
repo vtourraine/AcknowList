@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3 (13 September 2017)
+
+- Update to Swift 4.0
+
+
 ## 1.2.1 (12 July 2017)
 
 - Update `Acknow` initializer to `public` access level, by Chope (@yoonhg84)

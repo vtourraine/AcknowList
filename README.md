@@ -2,10 +2,10 @@
 
 _Ready to use “Acknowledgements”/“Licenses”/“Credits” view controller for [CocoaPods](http://cocoapods.org/)._
 
-_Written in Swift 3 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
+_Written in Swift 4 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
 ![Platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg)
-![Swift 3](https://img.shields.io/badge/Swift-3-blue.svg)
+![Swift 4](https://img.shields.io/badge/Swift-4-blue.svg)
 [![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![CocoaPods documentation](https://img.shields.io/cocoapods/metrics/doc-percent/AcknowList.svg)](http://cocoadocs.org/docsets/AcknowList)
@@ -47,7 +47,7 @@ let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 
 ## Requirements
 
-AcknowList is written in Swift 3, requires iOS 8.0 and above, Xcode 8.0 and above, and uses ARC.
+AcknowList is written in Swift 4, requires iOS 8.0 and above, Xcode 8.0 and above, and uses ARC.
 
 
 ## Credits
