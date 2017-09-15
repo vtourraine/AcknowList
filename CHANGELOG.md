@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4
+
+- Support “readable content guide” on `AcknowViewController`
+- Fix iPhone X layout
+
+
 ## 1.3 (13 September 2017)
 
 - Update to Swift 4.0
