@@ -16,7 +16,8 @@ class AcknowViewControllerTests: XCTestCase {
     func testLoadView() {
         let acknow = Acknow(title: "Title", text: "Text...", license: "MIT")
         let viewController = AcknowViewController(acknowledgement: acknow)
-        viewController.loadView()
+        viewController.viewDidLoad()
+        viewController.viewDidLayoutSubviews()
 
         XCTAssertEqual(viewController.title, "Title")
         XCTAssertEqual(viewController.textView!.text, "Text...")

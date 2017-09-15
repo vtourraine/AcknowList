@@ -26,14 +26,10 @@ import UIKit
 /// Subclass of `UIViewController` that displays a single acknowledgement.
 open class AcknowViewController: UIViewController {
 
-    /**
-     The main text view.
-     */
+    /// The main text view.
     open var textView: UITextView?
 
-    /**
-     The represented acknowledgement.
-     */
+    /// The represented acknowledgement.
     var acknowledgement: Acknow?
 
     /**
@@ -62,37 +58,46 @@ open class AcknowViewController: UIViewController {
         self.acknowledgement = Acknow(title: "", text: "", license: nil)
     }
 
-
     // MARK: - View lifecycle
 
-    /**
-     Creates the view that the controller manages.
-     */
-    override open func loadView() {
-        let textView = UITextView(frame: CGRect.zero)
+    /// Called after the controller's view is loaded into memory.
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let textView = UITextView(frame: view.bounds)
         textView.alwaysBounceVertical = true
-        textView.font                 = UIFont.systemFont(ofSize: 17)
-        textView.isEditable           = false
-        textView.dataDetectorTypes    = UIDataDetectorTypes.link
-        textView.textContainerInset   = UIEdgeInsetsMake(12, 10, 12, 10)
+        textView.font = UIFont.preferredFont(forTextStyle: .body)
+        textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        textView.isEditable = false
+        textView.dataDetectorTypes = .link
 
-        if let acknowledgement = self.acknowledgement {
-            textView.text = acknowledgement.text
-        }
+        view.backgroundColor = UIColor.white
+        view.addSubview(textView)
 
-        self.view = textView
         self.textView = textView
+
+        if #available(iOS 9.0, *) {
+            textView.translatesAutoresizingMaskIntoConstraints = false
+
+            let marginGuide = view.readableContentGuide
+            NSLayoutConstraint.activate([
+                textView.topAnchor.constraint(equalTo: marginGuide.topAnchor),
+                textView.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor),
+                textView.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
+                textView.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor)])
+        }
+        else {
+            textView.textContainerInset = UIEdgeInsetsMake(12, 10, 12, 10)
+        }
     }
 
-    /**
-     Notifies the view controller that its view is about to be added to a view hierarchy.
+    /// Called to notify the view controller that its view has just laid out its subviews.
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
 
-     - parameter animated: If `YES`, the view is being added to the window using an animation.
-     */
-    open override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let textView = self.textView {
-            textView.contentOffset = CGPoint(x: textView.contentInset.top, y: 0)
+        // Need to set the textView text after the layout is completed, so that the content inset and offset properties can be adjusted automatically.
+        if let acknowledgement = self.acknowledgement {
+            textView?.text = acknowledgement.text
         }
     }
 }
