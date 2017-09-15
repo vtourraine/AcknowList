@@ -26,9 +26,7 @@ import UIKit
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
 open class AcknowListViewController: UITableViewController {
 
-    /**
-     The represented array of `Acknow`.
-     */
+    /// The represented array of `Acknow`.
     open var acknowledgements: [Acknow]?
 
     /**
@@ -135,7 +133,6 @@ open class AcknowListViewController: UITableViewController {
         }
     }
 
-
     // MARK: - Paths
 
     class func acknowledgementsPlistPath(name:String) -> String? {
@@ -147,12 +144,9 @@ open class AcknowListViewController: UITableViewController {
         return self.acknowledgementsPlistPath(name: DefaultAcknowledgementsPlistName)
     }
 
-
     // MARK: - View life cycle
 
-    /**
-     Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
-     */
+    /// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
     override open func awakeFromNib() {
         super.awakeFromNib()
 
@@ -169,9 +163,7 @@ open class AcknowListViewController: UITableViewController {
         }
     }
 
-    /**
-     Called after the controller's view is loaded into memory.
-     */
+    /// Called after the controller's view is loaded into memory.
     open override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -217,7 +209,6 @@ open class AcknowListViewController: UITableViewController {
         }
     }
 
-
     // MARK: - Actions
 
     /**
@@ -240,7 +231,6 @@ open class AcknowListViewController: UITableViewController {
     @IBAction open func dismissViewController(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
-
 
     // MARK: - Configuration
 

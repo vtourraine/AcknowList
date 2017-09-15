@@ -26,9 +26,7 @@ import Foundation
 /// Responsible for parsing a CocoaPods acknowledgements plist file.
 open class AcknowParser {
 
-    /**
-     The root dictionary from the loaded plist file.
-     */
+    /// The root dictionary from the loaded plist file.
     let rootDictionary: [String: AnyObject]
 
     /**
