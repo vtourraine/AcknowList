@@ -13,7 +13,7 @@ import AcknowList
 class ViewController: UIViewController {
 
     @IBAction func pushAcknowList(_ sender: AnyObject) {
-        let viewController = AcknowListViewController()
+        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -63,6 +63,16 @@ open class AcknowListViewController: UITableViewController {
     }
 
     /**
+     Initializes the `AcknowListViewController` instance for the plist file based on its name.
+
+     - returns: The new `AcknowListViewController` instance.
+     */
+    public convenience init(fileNamed fileName: String) {
+        let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName)
+        self.init(acknowledgementsPlistPath: path)
+    }
+
+    /**
      Initializes the `AcknowListViewController` instance for a plist file path.
 
      - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.

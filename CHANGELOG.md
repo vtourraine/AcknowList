@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5 (work in progress)
+
+- Add convenience initializer with file name for `AcknowViewController`
+
+
 ## 1.4 (15 September 2017)
 
 - Support “readable content guide” on `AcknowViewController`
