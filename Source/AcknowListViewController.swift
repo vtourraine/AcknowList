@@ -155,7 +155,16 @@ open class AcknowListViewController: UITableViewController {
         }
 
         let defaultAcknowledgementsPlistName = "Pods-\(bundleName)-acknowledgements"
-        return self.acknowledgementsPlistPath(name: defaultAcknowledgementsPlistName)
+        let defaultAcknowledgementsPlistPath = self.acknowledgementsPlistPath(name: defaultAcknowledgementsPlistName)
+
+        if let defaultAcknowledgementsPlistPath = defaultAcknowledgementsPlistPath,
+            FileManager.default.fileExists(atPath: defaultAcknowledgementsPlistPath) == true {
+            return defaultAcknowledgementsPlistPath
+        }
+        else {
+            // Legacy value
+            return self.acknowledgementsPlistPath(name: "Pods-acknowledgements")
+        }
     }
 
     // MARK: - View life cycle
