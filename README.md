@@ -29,9 +29,7 @@ The `AcknowListViewController` instance is usually pushed to an existing `UINavi
 
 ``` swift
 let viewController = AcknowListViewController()
-if let navigationController = self.navigationController {
-  navigationController.pushViewController(viewController, animated: true)
-}
+navigationController?.pushViewController(viewController, animated: true)
 ```
 
 

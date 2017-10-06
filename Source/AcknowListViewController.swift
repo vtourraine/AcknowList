@@ -150,8 +150,12 @@ open class AcknowListViewController: UITableViewController {
     }
 
     class func defaultAcknowledgementsPlistPath() -> String? {
-        let DefaultAcknowledgementsPlistName = "Pods-acknowledgements"
-        return self.acknowledgementsPlistPath(name: DefaultAcknowledgementsPlistName)
+        guard let bundleName = Bundle.main.infoDictionary?["CFBundleName"] as? String else {
+            return nil
+        }
+
+        let defaultAcknowledgementsPlistName = "Pods-\(bundleName)-acknowledgements"
+        return self.acknowledgementsPlistPath(name: defaultAcknowledgementsPlistName)
     }
 
     // MARK: - View life cycle

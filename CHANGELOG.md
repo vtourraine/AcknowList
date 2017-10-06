@@ -3,6 +3,7 @@
 ## 1.5 (work in progress)
 
 - Add convenience initializer with file name for `AcknowViewController`
+- Update `AcknowViewController.init` with default plist file name based on bundle name (`Pods-#BUNDLE-NAME#-acknowledgements.plist`), by Simon Bromberg (@simonbromberg)
 
 
 ## 1.4 (15 September 2017)
