@@ -242,11 +242,11 @@ open class AcknowListViewController: UITableViewController {
     @IBAction open func openCocoaPodsWebsite(_ sender: AnyObject) {
         let url = URL(string: AcknowLocalization.CocoaPodsURLString())
         if let url = url {
-			if #available(iOS 10.0, *) {
-				UIApplication.shared.open(url, options: [:], completionHandler: nil)
-			} else {
-				UIApplication.shared.openURL(url)
-			}
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         }
     }
 
