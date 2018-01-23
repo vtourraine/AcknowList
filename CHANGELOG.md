@@ -1,9 +1,10 @@
 # Changelog
 
-## 1.5 (work in progress)
+## 1.5 (23 January 2018)
 
 - Add convenience initializer with file name for `AcknowViewController`
 - Update `AcknowViewController.init` with default plist file name based on bundle name (`Pods-#BUNDLE-NAME#-acknowledgements.plist`), by Simon Bromberg (@simonbromberg)
+- Update `AcknowListViewController` with new `UIApplication` “open URL” method for iOS 10, by Morten Gregersen (@mortengregersen)
 
 
 ## 1.4 (15 September 2017)
