@@ -68,10 +68,12 @@ open class AcknowViewController: UIViewController {
         textView.alwaysBounceVertical = true
         textView.font = UIFont.preferredFont(forTextStyle: .body)
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        textView.isEditable = false
-        textView.dataDetectorTypes = .link
-
-        view.backgroundColor = UIColor.white
+        #if os(iOS)
+            textView.isEditable = false
+            textView.dataDetectorTypes = .link
+            
+            view.backgroundColor = UIColor.white
+        #endif
         view.addSubview(textView)
 
         self.textView = textView
