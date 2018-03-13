@@ -1,5 +1,5 @@
 //
-// ViewController.swift
+// AppDelegate.swift
 //
 // Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
@@ -23,12 +23,9 @@
 
 import UIKit
 
-import AcknowList
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-class ViewController: UIViewController {
-
-    @IBAction func pushAcknowList(_ sender: AnyObject) {
-        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+    var window: UIWindow?
 }
+

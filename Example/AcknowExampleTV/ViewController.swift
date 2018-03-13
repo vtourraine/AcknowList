@@ -22,13 +22,12 @@
 // THE SOFTWARE.
 
 import UIKit
-
 import AcknowList
 
 class ViewController: UIViewController {
 
-    @IBAction func pushAcknowList(_ sender: AnyObject) {
-        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+    @IBAction func pushAcknowList(_ sender: Any) {
+        let viewController = AcknowListViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

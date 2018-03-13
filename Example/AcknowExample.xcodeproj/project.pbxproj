@@ -13,11 +13,29 @@
 		1F6C52B21B7F495700B9A7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B01B7F495700B9A7CC /* Main.storyboard */; };
 		1F6C52B41B7F495700B9A7CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B31B7F495700B9A7CC /* Images.xcassets */; };
 		1F6C52B71B7F495700B9A7CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B51B7F495700B9A7CC /* LaunchScreen.xib */; };
+		D7A999442058275600A3F668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A999432058275600A3F668 /* AppDelegate.swift */; };
+		D7A999462058275600A3F668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A999452058275600A3F668 /* ViewController.swift */; };
+		D7A999492058275600A3F668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A999472058275600A3F668 /* Main.storyboard */; };
+		D7A9994B2058275600A3F668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A9994A2058275600A3F668 /* Assets.xcassets */; };
+		D7A999502058277C00A3F668 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */; };
+		D7A99951205827D600A3F668 /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; };
+		D7A99952205827D600A3F668 /* AcknowList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7F4DAA91E8579FF003F0540 /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; };
 		D7F4DAAA1E8579FF003F0540 /* AcknowList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D7A99953205827D600A3F668 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D7A99952205827D600A3F668 /* AcknowList.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7F4DAAB1E857A00003F0540 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +59,12 @@
 		1F6C52B11B7F495700B9A7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F6C52B31B7F495700B9A7CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F6C52B61B7F495700B9A7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D7A999412058275600A3F668 /* AcknowExampleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcknowExampleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A999432058275600A3F668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7A999452058275600A3F668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7A999482058275600A3F668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7A9994A2058275600A3F668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7A9994C2058275600A3F668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7F4DAA81E8579FF003F0540 /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,6 +77,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7A9993E2058275600A3F668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A99951205827D600A3F668 /* AcknowList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +93,7 @@
 			children = (
 				D7F4DAA81E8579FF003F0540 /* AcknowList.framework */,
 				1F6C52A91B7F495700B9A7CC /* AcknowExample */,
+				D7A999422058275600A3F668 /* AcknowExampleTV */,
 				1F6C52A81B7F495700B9A7CC /* Products */,
 				D473FA81574D35010E2892B4 /* Frameworks */,
 			);
@@ -70,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6C52A71B7F495700B9A7CC /* AcknowExample.app */,
+				D7A999412058275600A3F668 /* AcknowExampleTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +138,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D7A999422058275600A3F668 /* AcknowExampleTV */ = {
+			isa = PBXGroup;
+			children = (
+				D7A999432058275600A3F668 /* AppDelegate.swift */,
+				D7A999452058275600A3F668 /* ViewController.swift */,
+				D7A999472058275600A3F668 /* Main.storyboard */,
+				D7A9994A2058275600A3F668 /* Assets.xcassets */,
+				D7A9994C2058275600A3F668 /* Info.plist */,
+			);
+			path = AcknowExampleTV;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +171,24 @@
 			productReference = 1F6C52A71B7F495700B9A7CC /* AcknowExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D7A999402058275600A3F668 /* AcknowExampleTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7A9994F2058275600A3F668 /* Build configuration list for PBXNativeTarget "AcknowExampleTV" */;
+			buildPhases = (
+				D7A9993D2058275600A3F668 /* Sources */,
+				D7A9993E2058275600A3F668 /* Frameworks */,
+				D7A9993F2058275600A3F668 /* Resources */,
+				D7A99953205827D600A3F668 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcknowExampleTV;
+			productName = AcknowExampleTV;
+			productReference = D7A999412058275600A3F668 /* AcknowExampleTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,13 +196,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = VTourraine;
 				TargetAttributes = {
 					1F6C52A61B7F495700B9A7CC = {
 						CreatedOnToolsVersion = 6.4;
 						LastSwiftMigration = 0900;
+					};
+					D7A999402058275600A3F668 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -156,6 +224,7 @@
 			projectRoot = "";
 			targets = (
 				1F6C52A61B7F495700B9A7CC /* AcknowExample */,
+				D7A999402058275600A3F668 /* AcknowExampleTV */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +241,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7A9993F2058275600A3F668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A999502058277C00A3F668 /* Pods-acknowledgements.plist in Resources */,
+				D7A9994B2058275600A3F668 /* Assets.xcassets in Resources */,
+				D7A999492058275600A3F668 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -181,6 +260,15 @@
 			files = (
 				1F6C52AF1B7F495700B9A7CC /* ViewController.swift in Sources */,
 				1F6C52AD1B7F495700B9A7CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7A9993D2058275600A3F668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A999462058275600A3F668 /* ViewController.swift in Sources */,
+				D7A999442058275600A3F668 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +289,14 @@
 				1F6C52B61B7F495700B9A7CC /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D7A999472058275600A3F668 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7A999482058275600A3F668 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -339,6 +435,54 @@
 			};
 			name = Release;
 		};
+		D7A9994D2058275600A3F668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AcknowExampleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.vourraine.AcknowExampleTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		D7A9994E2058275600A3F668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AcknowExampleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.vourraine.AcknowExampleTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -356,6 +500,15 @@
 			buildConfigurations = (
 				1F6C52C71B7F495700B9A7CC /* Debug */,
 				1F6C52C81B7F495700B9A7CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7A9994F2058275600A3F668 /* Build configuration list for PBXNativeTarget "AcknowExampleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7A9994D2058275600A3F668 /* Debug */,
+				D7A9994E2058275600A3F668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

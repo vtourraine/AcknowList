@@ -20,20 +20,6 @@
                ReferencedContainer = "container:../AcknowList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
-               BuildableName = "AcknowExample.app"
-               BlueprintName = "AcknowExample"
-               ReferencedContainer = "container:AcknowExample.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -44,23 +30,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AA3C37D1CAC35190071A7FD"
-               BuildableName = "AcknowListTests.xctest"
-               BlueprintName = "AcknowListTests"
-               ReferencedContainer = "container:../AcknowList.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
-            BuildableName = "AcknowExample.app"
-            BlueprintName = "AcknowExample"
+            BlueprintIdentifier = "D7A999402058275600A3F668"
+            BuildableName = "AcknowExampleTV.app"
+            BlueprintName = "AcknowExampleTV"
             ReferencedContainer = "container:AcknowExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +58,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
-            BuildableName = "AcknowExample.app"
-            BlueprintName = "AcknowExample"
+            BlueprintIdentifier = "D7A999402058275600A3F668"
+            BuildableName = "AcknowExampleTV.app"
+            BlueprintName = "AcknowExampleTV"
             ReferencedContainer = "container:AcknowExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -97,16 +73,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
-            BuildableName = "AcknowExample.app"
-            BlueprintName = "AcknowExample"
-            ReferencedContainer = "container:AcknowExample.xcodeproj">
+            BlueprintIdentifier = "1AA3C3731CAC35190071A7FD"
+            BuildableName = "AcknowList.framework"
+            BlueprintName = "AcknowList"
+            ReferencedContainer = "container:../AcknowList.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
