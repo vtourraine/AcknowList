@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6 (work in progress)
+
+- Add tvOS support, by Tobias Tiemerding (@honkmaster)
+
+
 ## 1.5 (23 January 2018)
 
 - Add convenience initializer with file name for `AcknowViewController`
