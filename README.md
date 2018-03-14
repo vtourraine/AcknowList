@@ -45,6 +45,12 @@ let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", 
 let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 ```
 
+## Apple TV
+
+AcknowList is also compatible with tvOS for Apple TV apps.
+
+<img alt="Apple TV screenshot 1" src="https://user-images.githubusercontent.com/886053/37403710-07901b2e-2790-11e8-975f-b779fcfc3fbe.png" width="300px"> <img alt="Apple TV screenshot 2" src="https://user-images.githubusercontent.com/886053/37403711-07c83d38-2790-11e8-9f2e-84fe2d5f6bad.png" width="300px">
+
 
 ## Requirements
 
