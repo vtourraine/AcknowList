@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.6 (work in progress)
+## 1.6 (20 March 2018)
 
 - Add tvOS support, by Tobias Tiemerding (@honkmaster)
 
