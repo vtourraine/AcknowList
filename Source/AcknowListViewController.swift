@@ -197,7 +197,7 @@ open class AcknowListViewController: UITableViewController {
             if self.presentingViewController != nil &&
                 navigationController.viewControllers.first == self {
                 let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
-                    self.navigationItem.leftBarButtonItem = item
+                    self.navigationItem.rightBarButtonItem = item
             }
         }
     }
