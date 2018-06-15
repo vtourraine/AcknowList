@@ -1,5 +1,12 @@
 # Changelog
 
+
+## 1.6.1 (work in progress)
+
+- Fix text view inset on `AcknowViewController` (support layout margins, safe area insets)
+- Remove support for “readable content guide” on `AcknowViewController`
+
+
 ## 1.6 (20 March 2018)
 
 - Add tvOS support, by Tobias Tiemerding (@honkmaster)
