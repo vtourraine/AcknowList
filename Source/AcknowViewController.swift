@@ -97,7 +97,7 @@ open class AcknowViewController: UIViewController {
         }
     }
 
-    @available(iOS 11.0, *) open override func viewLayoutMarginsDidChange() {
+    @available(iOS 11.0, tvOS 11.0, *) open override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
 
         if let textView = textView {
