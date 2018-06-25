@@ -1,7 +1,6 @@
 # Changelog
 
-
-## 1.6.1 (work in progress)
+## 1.6.1 (25 June 2018)
 
 - Fix text view inset on `AcknowViewController` (support layout margins, safe area insets)
 - Remove support for “readable content guide” on `AcknowViewController`
