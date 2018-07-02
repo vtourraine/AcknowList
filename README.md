@@ -10,7 +10,7 @@ _Written in Swift 4 (for Objective-C, you can use [VTAcknowledgementsViewControl
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
 
-<img alt="iPhone screenshot 1" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-01.png" width="300px"> <img alt="iPhone screenshot 2" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-02.png" width="300px">
+<img alt="iPhone screenshot 1" src="https://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-X-01.png" width="300px"> <img alt="iPhone screenshot 2" src="https://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-X-02.png" width="300px">
 
 
 ## How to Install
