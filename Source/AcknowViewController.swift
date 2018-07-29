@@ -60,9 +60,6 @@ open class AcknowViewController: UIViewController {
 
     // MARK: - View lifecycle
 
-    let TopBottomDefaultMargin: CGFloat = 20
-    let LeftRightDefaultMargin: CGFloat = 10
-
     /// Called after the controller's view is loaded into memory.
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +74,15 @@ open class AcknowViewController: UIViewController {
             
             view.backgroundColor = UIColor.white
         #endif
-        textView.textContainerInset = UIEdgeInsetsMake(TopBottomDefaultMargin, LeftRightDefaultMargin, TopBottomDefaultMargin, LeftRightDefaultMargin)
+
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        let marginGuide = view.readableContentGuide
+        NSLayoutConstraint.activate([
+            textView.topAnchor.constraint(equalTo: marginGuide.topAnchor),
+            textView.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor),
+            textView.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
+            textView.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor)])
+
         view.addSubview(textView)
 
         self.textView = textView
@@ -87,25 +92,9 @@ open class AcknowViewController: UIViewController {
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        if let textView = textView {
-            updateTextViewInsets(textView)
-        }
-
         // Need to set the textView text after the layout is completed, so that the content inset and offset properties can be adjusted automatically.
         if let acknowledgement = self.acknowledgement {
             textView?.text = acknowledgement.text
         }
-    }
-
-    @available(iOS 11.0, tvOS 11.0, *) open override func viewLayoutMarginsDidChange() {
-        super.viewLayoutMarginsDidChange()
-
-        if let textView = textView {
-            updateTextViewInsets(textView)
-        }
-    }
-
-    func updateTextViewInsets(_ textView: UITextView) {
-        textView.textContainerInset = UIEdgeInsetsMake(TopBottomDefaultMargin, self.view.layoutMargins.left, TopBottomDefaultMargin, self.view.layoutMargins.right);
     }
 }
