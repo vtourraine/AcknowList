@@ -74,6 +74,9 @@ open class AcknowViewController: UIViewController {
             
             view.backgroundColor = UIColor.white
         #endif
+        view.addSubview(textView)
+
+        self.textView = textView
 
         textView.translatesAutoresizingMaskIntoConstraints = false
         let marginGuide = view.readableContentGuide
@@ -82,10 +85,6 @@ open class AcknowViewController: UIViewController {
             textView.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor),
             textView.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
             textView.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor)])
-
-        view.addSubview(textView)
-
-        self.textView = textView
     }
 
     /// Called to notify the view controller that its view has just laid out its subviews.
