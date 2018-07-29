@@ -18,7 +18,7 @@
   "source_files": "Source/*.swift",
   "resources": "Resources/AcknowList.bundle",
   "platforms": {
-    "ios": "8.0",
+    "ios": "11.0",
     "tvos": "9.0"
   },
   "frameworks": "UIKit",
