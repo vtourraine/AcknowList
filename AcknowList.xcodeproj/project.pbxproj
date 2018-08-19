@@ -19,6 +19,7 @@
 		1AA3C37F1CAC35190071A7FD /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA3C3741CAC35190071A7FD /* AcknowList.framework */; };
 		1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */; };
 		1AD73BBE1CAC54C60084F8CA /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */; };
+		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
 		D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		1AA3C3851CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Tests/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = SOURCE_ROOT; };
+		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
 		D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-multi.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */,
 				D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */,
+				503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */,
 				1AA3C3851CAC35190071A7FD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -242,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */,
 				1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */,
 				D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */,
 			);
