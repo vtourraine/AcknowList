@@ -58,6 +58,67 @@ class AcknowParserTests: XCTestCase {
             XCTAssert(false, "Plist not found")
         }
     }
+
+    // To test the somewhat complicated extraneous-newline-removing regex, I have:
+    //
+    //  (1) Made a temporary project and installed the 5 most popular pods that
+    //      had no dependencies (loosely based on https://trendingcocoapods.github.io -
+    //      scroll down to the "Top CocoaPods" section). I skipped pods with duplicate
+    //      licenses.
+    //
+    //      Ultimately, I installed: TYPFontAwesome (SIL OFL 1.1), pop (BSD),
+    //      Alamofire (MIT), Charts (Apache 2), and TPKeyboardAvoiding (zLib)
+    //
+    //  (2) Copied the acknowledgements file over to Pods-acknowledgements-RegexTesting.plist
+    //
+    //  (3) Created this test, which parses the plist and applies the regex, then
+    //      verifies that the generated strings are correct verus a manually edited
+    //      "ground truth"
+    func testNewlineRegex() {
+        let bundle = Bundle(for: AcknowParserTests.self)
+        let plistPath = bundle.path(forResource: "Pods-acknowledgements-RegexTesting", ofType: "plist")
+        let gtPath = bundle.path(forResource: "Pods-acknowledgements-RegexTesting-GroundTruth", ofType: "strings")
+
+        if let plistPath = plistPath, let gtPath = gtPath {
+            let parser = AcknowParser(plistPath: plistPath)
+            XCTAssertNotNil(parser)
+
+            let acknowledgements = parser.parseAcknowledgements()
+            XCTAssertEqual(acknowledgements.count, 5)
+
+            // For each acknowledgement, load the ground truth and compare...
+
+            // Decode our very crude way of encoding ground truths...
+            // Components are seperated by "///", in the format:
+            //       /// TEST <Number> /// <Pod Name> /// <License Text>
+            var gtStrings: [String]
+            do {
+                gtStrings = try String(contentsOfFile: gtPath).components(separatedBy: "///")
+            } catch {
+                return XCTAssert(false, "Ground truth file not found or not readable")
+            }
+            gtStrings.removeFirst() // The 1st entry will be an empty string
+
+            for i in 0..<acknowledgements.count {
+                // For each i value, gtStrings[i * 3 + 0] is the test number,
+                //                   gtStrings[i * 3 + 1] is the pod name,
+                //                   gtStrings[i * 3 + 2] is the license text to compare
+                //
+                // We trim newlines and whitespace **surrounding** the content to avoid
+                // encoding discrepencies, but not within the string itself (obviously).
+                let testNumberHeader = gtStrings[i * 3].trimmingCharacters(in: .whitespaces)
+                let testTitle = gtStrings[i * 3 + 1].trimmingCharacters(in: .whitespaces)
+                let testLicenseText = gtStrings[i * 3 + 2].trimmingCharacters(in: .whitespacesAndNewlines)
+
+                XCTAssertEqual(testNumberHeader, "TEST \(i + 1)")
+                XCTAssertEqual(testTitle, acknowledgements[i].title)
+                XCTAssertEqual(testLicenseText, acknowledgements[i].text.trimmingCharacters(in: .whitespacesAndNewlines))
+            }
+        }
+        else {
+            XCTAssert(false, "Plist not found")
+        }
+    }
     
     func testGeneralPerformance() {
         let bundle = Bundle(for: AcknowParserTests.self)
