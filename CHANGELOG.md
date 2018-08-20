@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7 (work in progress)
+
+- Filter out manual line wrapping from licenses text, by Albert Zhang (@azhang66)
+
+
 ## 1.6.1 (25 June 2018)
 
 - Fix text view inset on `AcknowViewController` (support layout margins, safe area insets)
@@ -53,7 +58,6 @@
 ## 1.0.1 (5 September 2016)
 
 - Mark `headerText` and `footerText` properties as public, by Bas Broek (@basthomas)
->>>>>>> master
 
 
 ## 1.0 (11 May 2016)
