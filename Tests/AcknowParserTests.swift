@@ -73,13 +73,12 @@ class AcknowParserTests: XCTestCase {
     //
     //  (3) Created this test, which parses the plist and applies the regex, then
     //      verifies that the generated strings are correct verus a manually edited
-    //      "ground truth"
-    func testNewlineRegex() {
+    //      "ground truth" text file.
+    func testFilterOutPrematureLineBreaks() {
         let bundle = Bundle(for: AcknowParserTests.self)
         let plistPath = bundle.path(forResource: "Pods-acknowledgements-RegexTesting", ofType: "plist")
-        let gtPath = bundle.path(forResource: "Pods-acknowledgements-RegexTesting-GroundTruth", ofType: "strings")
 
-        if let plistPath = plistPath, let gtPath = gtPath {
+        if let plistPath = plistPath {
             let parser = AcknowParser(plistPath: plistPath)
             XCTAssertNotNil(parser)
 
@@ -87,32 +86,16 @@ class AcknowParserTests: XCTestCase {
             XCTAssertEqual(acknowledgements.count, 5)
 
             // For each acknowledgement, load the ground truth and compare...
+            for acknowledgement in acknowledgements {
+                let groundTruthPath = bundle.url(forResource: "RegexTesting-GroundTruth-\(acknowledgement.title)", withExtension: "txt")
+                do {
+                    let groundTruth = try String(contentsOf: groundTruthPath!, encoding: .utf8)
+                    XCTAssertEqual(acknowledgement.text, groundTruth)
+                }
+                catch {
+                    XCTFail("Cannot load ground truth")
+                }
 
-            // Decode our very crude way of encoding ground truths...
-            // Components are seperated by "///", in the format:
-            //       /// TEST <Number> /// <Pod Name> /// <License Text>
-            var gtStrings: [String]
-            do {
-                gtStrings = try String(contentsOfFile: gtPath).components(separatedBy: "///")
-            } catch {
-                return XCTAssert(false, "Ground truth file not found or not readable")
-            }
-            gtStrings.removeFirst() // The 1st entry will be an empty string
-
-            for i in 0..<acknowledgements.count {
-                // For each i value, gtStrings[i * 3 + 0] is the test number,
-                //                   gtStrings[i * 3 + 1] is the pod name,
-                //                   gtStrings[i * 3 + 2] is the license text to compare
-                //
-                // We trim newlines and whitespace **surrounding** the content to avoid
-                // encoding discrepencies, but not within the string itself (obviously).
-                let testNumberHeader = gtStrings[i * 3].trimmingCharacters(in: .whitespaces)
-                let testTitle = gtStrings[i * 3 + 1].trimmingCharacters(in: .whitespaces)
-                let testLicenseText = gtStrings[i * 3 + 2].trimmingCharacters(in: .whitespacesAndNewlines)
-
-                XCTAssertEqual(testNumberHeader, "TEST \(i + 1)")
-                XCTAssertEqual(testTitle, acknowledgements[i].title)
-                XCTAssertEqual(testLicenseText, acknowledgements[i].text.trimmingCharacters(in: .whitespacesAndNewlines))
             }
         }
         else {

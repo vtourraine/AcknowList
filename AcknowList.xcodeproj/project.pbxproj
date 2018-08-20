@@ -20,7 +20,11 @@
 		1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */; };
 		1AD73BBE1CAC54C60084F8CA /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */; };
 		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
-		503E61EB212999FB00322F6C /* Pods-acknowledgements-RegexTesting-GroundTruth.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503E61EA212999FB00322F6C /* Pods-acknowledgements-RegexTesting-GroundTruth.strings */; };
+		D70B427D212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */; };
+		D70B427F212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */; };
+		D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */; };
+		D70B4283212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */; };
+		D70B4285212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */; };
 		D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +55,11 @@
 		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Tests/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = SOURCE_ROOT; };
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
-		503E61EA212999FB00322F6C /* Pods-acknowledgements-RegexTesting-GroundTruth.strings */ = {isa = PBXFileReference; explicitFileType = text; path = "Pods-acknowledgements-RegexTesting-GroundTruth.strings"; sourceTree = "<group>"; };
+		D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Alamofire.txt"; sourceTree = "<group>"; };
+		D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Charts.txt"; sourceTree = "<group>"; };
+		D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"; sourceTree = "<group>"; };
+		D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TYPFontAwesome.txt"; sourceTree = "<group>"; };
+		D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-pop.txt"; sourceTree = "<group>"; };
 		D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-multi.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +122,7 @@
 				1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */,
 				1A7421731CAC3685007E44FD /* AcknowParserTests.swift */,
 				1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */,
+				D70B4286212B2EFF007B6A81 /* Resources */,
 				1AD73B8F1CAC3AEB0084F8CA /* Supporting Files */,
 			);
 			name = AcknowListTests;
@@ -123,10 +132,6 @@
 		1AD73B8F1CAC3AEB0084F8CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */,
-				D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */,
-				503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */,
-				503E61EA212999FB00322F6C /* Pods-acknowledgements-RegexTesting-GroundTruth.strings */,
 				1AA3C3851CAC35190071A7FD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -144,6 +149,21 @@
 			isa = PBXGroup;
 			children = (
 				1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D70B4286212B2EFF007B6A81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */,
+				D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */,
+				503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */,
+				D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */,
+				D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */,
+				D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */,
+				D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */,
+				D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -248,10 +268,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				503E61EB212999FB00322F6C /* Pods-acknowledgements-RegexTesting-GroundTruth.strings in Resources */,
+				D70B427D212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt in Resources */,
 				503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */,
+				D70B427F212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt in Resources */,
 				1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */,
+				D70B4283212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt in Resources */,
 				D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */,
+				D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */,
+				D70B4285212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
