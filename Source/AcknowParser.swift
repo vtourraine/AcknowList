@@ -91,7 +91,8 @@ open class AcknowParser {
                 (preferenceSpecifier: AnyObject) -> Acknow in
                 if let title = preferenceSpecifier["Title"] as! String?,
                     let text = preferenceSpecifier["FooterText"] as! String? {
-                        return Acknow(title: title, text: text, license: preferenceSpecifier["License"] as? String)
+                    let textWithoutNewlines = AcknowParser.filterOutPrematureLineBreaks(text: text)
+                        return Acknow(title: title, text: textWithoutNewlines, license: preferenceSpecifier["License"] as? String)
                 }
                 else {
                     return Acknow(title: "", text: "", license: nil)
@@ -102,5 +103,30 @@ open class AcknowParser {
         }
 
         return []
+    }
+
+    /**
+     Filters out all premature line breaks (i.e. removes manual wrapping).
+
+     - parameter text: The text to process.
+
+     - returns: The text without the premature line breaks.
+     */
+    class func filterOutPrematureLineBreaks(text: String) -> String {
+        // This regex replaces single newlines with spaces, while preserving multiple newlines used for formatting.
+        // This prevents issues such as https://github.com/vtourraine/AcknowList/issues/41
+        //
+        // The issue arises when licenses contain premature line breaks in the middle of a sentance, often used
+        // to limit license texts to 80 characters. When applied on an iPad, the resulting licenses are misaligned.
+        //
+        // The expression (?<=.)(\h)*(\R)(\h)*(?=.) can be broken down as:
+        //
+        //    (?<=.)  Positive lookbehind matching any non-newline character (matches but does not capture)
+        //    (\h)*   Matches and captures zero or more horizontal spaces (trailing newlines)
+        //    (\R)    Matches and captures any single Unicode-compliant newline character
+        //    (\h)*   Matches and captures zero or more horizontal spaces (leading newlines)
+        //    (?=.)   Positive lookahead matching any non-newline character (matches but does not capture)
+        let singleNewLineFinder = try! NSRegularExpression(pattern: "(?<=.)(\\h)*(\\R)(\\h)*(?=.)")
+        return singleNewLineFinder.stringByReplacingMatches(in: text, range: NSRange(0..<text.count), withTemplate: " ")
     }
 }

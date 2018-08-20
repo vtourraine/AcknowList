@@ -58,6 +58,50 @@ class AcknowParserTests: XCTestCase {
             XCTAssert(false, "Plist not found")
         }
     }
+
+    // To test the somewhat complicated extraneous-newline-removing regex, I have:
+    //
+    //  (1) Made a temporary project and installed the 5 most popular pods that
+    //      had no dependencies (loosely based on https://trendingcocoapods.github.io -
+    //      scroll down to the "Top CocoaPods" section). I skipped pods with duplicate
+    //      licenses.
+    //
+    //      Ultimately, I installed: TYPFontAwesome (SIL OFL 1.1), pop (BSD),
+    //      Alamofire (MIT), Charts (Apache 2), and TPKeyboardAvoiding (zLib)
+    //
+    //  (2) Copied the acknowledgements file over to Pods-acknowledgements-RegexTesting.plist
+    //
+    //  (3) Created this test, which parses the plist and applies the regex, then
+    //      verifies that the generated strings are correct verus a manually edited
+    //      "ground truth" text file.
+    func testFilterOutPrematureLineBreaks() {
+        let bundle = Bundle(for: AcknowParserTests.self)
+        let plistPath = bundle.path(forResource: "Pods-acknowledgements-RegexTesting", ofType: "plist")
+
+        if let plistPath = plistPath {
+            let parser = AcknowParser(plistPath: plistPath)
+            XCTAssertNotNil(parser)
+
+            let acknowledgements = parser.parseAcknowledgements()
+            XCTAssertEqual(acknowledgements.count, 5)
+
+            // For each acknowledgement, load the ground truth and compare...
+            for acknowledgement in acknowledgements {
+                let groundTruthPath = bundle.url(forResource: "RegexTesting-GroundTruth-\(acknowledgement.title)", withExtension: "txt")
+                do {
+                    let groundTruth = try String(contentsOf: groundTruthPath!, encoding: .utf8)
+                    XCTAssertEqual(acknowledgement.text, groundTruth)
+                }
+                catch {
+                    XCTFail("Cannot load ground truth")
+                }
+
+            }
+        }
+        else {
+            XCTAssert(false, "Plist not found")
+        }
+    }
     
     func testGeneralPerformance() {
         let bundle = Bundle(for: AcknowParserTests.self)
