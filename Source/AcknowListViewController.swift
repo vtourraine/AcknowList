@@ -341,7 +341,7 @@ open class AcknowListViewController: UITableViewController {
         let font = UIFont.preferredFont(forTextStyle: .footnote)
         let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedString.Key.font: font], context: nil)
         let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))
@@ -381,14 +381,14 @@ open class AcknowListViewController: UITableViewController {
             cell = dequeuedCell
         }
         else {
-            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier)
         }
 
         if let acknowledgements = self.acknowledgements,
             let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
             let textLabel = cell.textLabel as UILabel? {
                 textLabel.text = acknowledgement.title
-                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+                cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         }
 
         return cell
@@ -420,6 +420,6 @@ open class AcknowListViewController: UITableViewController {
      - returns: A nonnegative floating-point value that estimates the height (in points) that `row` should be. Return `UITableViewAutomaticDimension` if you have no estimate.
      */
     open override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 }

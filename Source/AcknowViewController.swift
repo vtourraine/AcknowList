@@ -77,7 +77,7 @@ open class AcknowViewController: UIViewController {
             
             view.backgroundColor = UIColor.white
         #endif
-        textView.textContainerInset = UIEdgeInsetsMake(TopBottomDefaultMargin, LeftRightDefaultMargin, TopBottomDefaultMargin, LeftRightDefaultMargin)
+        textView.textContainerInset = UIEdgeInsets.init(top: TopBottomDefaultMargin, left: LeftRightDefaultMargin, bottom: TopBottomDefaultMargin, right: LeftRightDefaultMargin)
         view.addSubview(textView)
 
         self.textView = textView
@@ -106,6 +106,6 @@ open class AcknowViewController: UIViewController {
     }
 
     func updateTextViewInsets(_ textView: UITextView) {
-        textView.textContainerInset = UIEdgeInsetsMake(TopBottomDefaultMargin, self.view.layoutMargins.left, TopBottomDefaultMargin, self.view.layoutMargins.right);
+        textView.textContainerInset = UIEdgeInsets.init(top: TopBottomDefaultMargin, left: self.view.layoutMargins.left, bottom: TopBottomDefaultMargin, right: self.view.layoutMargins.right);
     }
 }
