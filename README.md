@@ -54,7 +54,7 @@ AcknowList is also compatible with tvOS for Apple TV apps.
 
 ## Requirements
 
-AcknowList is written in Swift 4.2, requires iOS 8.0 or tvOS 9.0 and above, Xcode 9.0 and above.
+AcknowList is written in Swift 4.2, requires iOS 8.0 or tvOS 9.0 and above, Xcode 10.0 and above.
 
 
 ## Credits

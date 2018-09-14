@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.7 (work in progress)
+## 1.7 (14 September 2018)
 
 - Update to Swift 4.2
 - Filter out manual line wrapping from licenses text, by Albert Zhang (@azhang66)
