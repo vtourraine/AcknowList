@@ -82,7 +82,12 @@ open class AcknowListViewController: UITableViewController {
     public init(acknowledgementsPlistPath: String?) {
         super.init(style: .grouped)
 
-        self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath)
+        if let acknowledgementsPlistPath = acknowledgementsPlistPath {
+            self.commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath])
+        }
+        else {
+            self.commonInit(acknowledgementsPlistPaths: [])
+        }
     }
     
     /**
@@ -110,19 +115,16 @@ open class AcknowListViewController: UITableViewController {
     public required init(coder aDecoder: NSCoder) {
         super.init(style: .grouped)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        self.commonInit(acknowledgementsPlistPath: path)
+        if let path = path {
+            self.commonInit(acknowledgementsPlistPaths: [path])
+        }
+        else {
+            self.commonInit(acknowledgementsPlistPaths: [])
+        }
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
-    func commonInit(acknowledgementsPlistPath: String?) {
-        if let path = acknowledgementsPlistPath {
-            commonInit(acknowledgementsPlistPaths: [path])
-        } else {
-            commonInit(acknowledgementsPlistPaths: [])
-        }
     }
 
     func commonInit(acknowledgementsPlistPaths: [String]) {
@@ -217,7 +219,7 @@ open class AcknowListViewController: UITableViewController {
         }
 
         if let path = path {
-            self.commonInit(acknowledgementsPlistPath: path)
+            self.commonInit(acknowledgementsPlistPaths: [path])
         }
     }
 
