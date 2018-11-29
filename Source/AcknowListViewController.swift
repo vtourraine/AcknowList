@@ -282,12 +282,12 @@ open class AcknowListViewController: UITableViewController {
                 height: labelHeight)
 
             let label = UILabel(frame: labelFrame)
-            label.text             = self.headerText
-            label.font             = font
-            label.textColor        = UIColor.gray
-            label.backgroundColor  = UIColor.clear
-            label.numberOfLines    = 0
-            label.textAlignment    = .center
+            label.text = self.headerText
+            label.font = font
+            label.textColor = UIColor.gray
+            label.backgroundColor = UIColor.clear
+            label.numberOfLines = 0
+            label.textAlignment = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
             if #available(iOS 10.0, *) {
                 label.adjustsFontForContentSizeCategory = true
@@ -312,12 +312,12 @@ open class AcknowListViewController: UITableViewController {
             let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
 
             let label = UILabel(frame: labelFrame)
-            label.text             = self.footerText
-            label.font             = font
-            label.textColor        = UIColor.gray
-            label.backgroundColor  = UIColor.clear
-            label.numberOfLines    = 0
-            label.textAlignment    = .center
+            label.text = self.footerText
+            label.font = font
+            label.textColor = UIColor.gray
+            label.backgroundColor = UIColor.clear
+            label.numberOfLines = 0
+            label.textAlignment = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
             label.isUserInteractionEnabled = true
             if #available(iOS 10.0, *) {
