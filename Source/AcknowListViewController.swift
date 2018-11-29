@@ -89,19 +89,18 @@ open class AcknowListViewController: UITableViewController {
             self.commonInit(acknowledgementsPlistPaths: [])
         }
     }
-    
+
     /**
      Initializes the `AcknowListViewController` instance for a set of plist file paths.
-     
+
      The first path is the "main" one which will be used for any custom header/footer.
-     
+
      - parameter acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
-     
+
      - returns: The new `AcknowListViewController` instance.
      */
     public init(acknowledgementsPlistPaths: [String]) {
         super.init(style: .grouped)
-        
         self.commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths)
     }
 
@@ -129,14 +128,11 @@ open class AcknowListViewController: UITableViewController {
 
     func commonInit(acknowledgementsPlistPaths: [String]) {
         self.title = AcknowLocalization.localizedTitle()
-        
+
         guard !acknowledgementsPlistPaths.isEmpty else { return }
-        
-        // Parse the main plist source
-        var mainAcknowledgements = [Acknow]()
-        if let mainPath = acknowledgementsPlistPaths.first {
-            
-            let parser = AcknowParser(plistPath: mainPath)
+
+        if let mainPlistPath = acknowledgementsPlistPaths.first {
+            let parser = AcknowParser(plistPath: mainPlistPath)
             let headerFooter = parser.parseHeaderAndFooter()
 
             let DefaultHeaderText = "This application makes use of the following third party libraries:"
@@ -146,29 +142,25 @@ open class AcknowListViewController: UITableViewController {
             if (headerFooter.header == DefaultHeaderText) {
                 self.headerText = nil
             }
-            else if (headerFooter.header !=  "") {
+            else if (headerFooter.header != "") {
                 self.headerText = headerFooter.header
             }
 
-            if (headerFooter.footer == DefaultFooterText ||
-                headerFooter.footer == DefaultFooterTextLegacy) {
+            if (headerFooter.footer == DefaultFooterText || headerFooter.footer == DefaultFooterTextLegacy) {
                 self.footerText = AcknowLocalization.localizedCocoaPodsFooterText()
             }
             else if (headerFooter.footer != "") {
                 self.footerText = headerFooter.footer
             }
-            
-            mainAcknowledgements.append(contentsOf: parser.parseAcknowledgements())
         }
-        
-        // Parse any extra sources
-        for path in acknowledgementsPlistPaths.dropFirst() {
+
+        var acknowledgements: [Acknow] = []
+        for path in acknowledgementsPlistPaths {
             let parser = AcknowParser(plistPath: path)
-            mainAcknowledgements.append(contentsOf: parser.parseAcknowledgements())
+            acknowledgements.append(contentsOf: parser.parseAcknowledgements())
         }
-        
-        // Combine the sources and sort
-        let sortedAcknowledgements = mainAcknowledgements.sorted(by: {
+
+        let sortedAcknowledgements = acknowledgements.sorted(by: {
             (ack1: Acknow, ack2: Acknow) -> Bool in
             let result = ack1.title.compare(
                 ack2.title,
