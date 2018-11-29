@@ -82,7 +82,26 @@ open class AcknowListViewController: UITableViewController {
     public init(acknowledgementsPlistPath: String?) {
         super.init(style: .grouped)
 
-        self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath)
+        if let acknowledgementsPlistPath = acknowledgementsPlistPath {
+            self.commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath])
+        }
+        else {
+            self.commonInit(acknowledgementsPlistPaths: [])
+        }
+    }
+
+    /**
+     Initializes the `AcknowListViewController` instance for a set of plist file paths.
+
+     The first path is the "main" one which will be used for any custom header/footer.
+
+     - parameter acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
+
+     - returns: The new `AcknowListViewController` instance.
+     */
+    public init(acknowledgementsPlistPaths: [String]) {
+        super.init(style: .grouped)
+        self.commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths)
     }
 
     /**
@@ -95,18 +114,25 @@ open class AcknowListViewController: UITableViewController {
     public required init(coder aDecoder: NSCoder) {
         super.init(style: .grouped)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        self.commonInit(acknowledgementsPlistPath: path)
+        if let path = path {
+            self.commonInit(acknowledgementsPlistPaths: [path])
+        }
+        else {
+            self.commonInit(acknowledgementsPlistPaths: [])
+        }
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    func commonInit(acknowledgementsPlistPath: String?) {
+    func commonInit(acknowledgementsPlistPaths: [String]) {
         self.title = AcknowLocalization.localizedTitle()
-        
-        if let acknowledgementsPlistPath = acknowledgementsPlistPath {
-            let parser = AcknowParser(plistPath: acknowledgementsPlistPath)
+
+        guard !acknowledgementsPlistPaths.isEmpty else { return }
+
+        if let mainPlistPath = acknowledgementsPlistPaths.first {
+            let parser = AcknowParser(plistPath: mainPlistPath)
             let headerFooter = parser.parseHeaderAndFooter()
 
             let DefaultHeaderText = "This application makes use of the following third party libraries:"
@@ -116,31 +142,34 @@ open class AcknowListViewController: UITableViewController {
             if (headerFooter.header == DefaultHeaderText) {
                 self.headerText = nil
             }
-            else if (headerFooter.header !=  "") {
+            else if (headerFooter.header != "") {
                 self.headerText = headerFooter.header
             }
 
-            if (headerFooter.footer == DefaultFooterText ||
-                headerFooter.footer == DefaultFooterTextLegacy) {
+            if (headerFooter.footer == DefaultFooterText || headerFooter.footer == DefaultFooterTextLegacy) {
                 self.footerText = AcknowLocalization.localizedCocoaPodsFooterText()
             }
             else if (headerFooter.footer != "") {
                 self.footerText = headerFooter.footer
             }
-
-            let acknowledgements = parser.parseAcknowledgements()
-            let sortedAcknowledgements = acknowledgements.sorted(by: {
-                (ack1: Acknow, ack2: Acknow) -> Bool in
-                let result = ack1.title.compare(
-                    ack2.title,
-                    options: [],
-                    range: nil,
-                    locale: Locale.current)
-                return (result == ComparisonResult.orderedAscending)
-             })
-
-            self.acknowledgements = sortedAcknowledgements
         }
+
+        var acknowledgements: [Acknow] = []
+        for path in acknowledgementsPlistPaths {
+            let parser = AcknowParser(plistPath: path)
+            acknowledgements.append(contentsOf: parser.parseAcknowledgements())
+        }
+
+        let sortedAcknowledgements = acknowledgements.sorted(by: {
+            (ack1: Acknow, ack2: Acknow) -> Bool in
+            let result = ack1.title.compare(
+                ack2.title,
+                options: [],
+                range: nil,
+                locale: Locale.current)
+            return (result == ComparisonResult.orderedAscending)
+        })
+        self.acknowledgements = sortedAcknowledgements
     }
 
     // MARK: - Paths
@@ -182,7 +211,7 @@ open class AcknowListViewController: UITableViewController {
         }
 
         if let path = path {
-            self.commonInit(acknowledgementsPlistPath: path)
+            self.commonInit(acknowledgementsPlistPaths: [path])
         }
     }
 

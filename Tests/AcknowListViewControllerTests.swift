@@ -3,7 +3,7 @@
 //  AcknowExample
 //
 //  Created by Vincent Tourraine on 22/08/15.
-//  Copyright © 2015-2017 Vincent Tourraine. All rights reserved.
+//  Copyright © 2015-2018 Vincent Tourraine. All rights reserved.
 //
 
 import UIKit
@@ -35,5 +35,23 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.acknowledgements?[0].title, "A title")
         XCTAssertEqual(viewController.acknowledgements?[1].title, "B title")
         XCTAssertEqual(viewController.acknowledgements?[2].title, "C title")
+    }
+
+    func testLoadFromMultiplePlist() {
+        let bundle = Bundle(for: AcknowListViewControllerTests.self)
+        let plistPath1 = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
+        let plistPath2 = bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist")
+
+        if let plistPath1 = plistPath1, let plistPath2 = plistPath2 {
+            let viewController = AcknowListViewController(acknowledgementsPlistPaths: [plistPath1, plistPath2])
+            XCTAssertEqual(viewController.acknowledgements?.count, 4)
+            XCTAssertEqual(viewController.acknowledgements?[0].title, "A title")
+            XCTAssertEqual(viewController.acknowledgements?[1].title, "AcknowList")
+            XCTAssertEqual(viewController.acknowledgements?[2].title, "B title")
+            XCTAssertEqual(viewController.acknowledgements?[3].title, "C title")
+        }
+        else {
+            XCTFail()
+        }
     }
 }
