@@ -289,6 +289,9 @@ open class AcknowListViewController: UITableViewController {
             label.numberOfLines    = 0
             label.textAlignment    = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
+            if #available(iOS 10.0, *) {
+                label.adjustsFontForContentSizeCategory = true
+            }
 
             let headerFrame = CGRect(
                 x: 0, y: 0,
@@ -317,6 +320,9 @@ open class AcknowListViewController: UITableViewController {
             label.textAlignment    = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
             label.isUserInteractionEnabled = true
+            if #available(iOS 10.0, *) {
+                label.adjustsFontForContentSizeCategory = true
+            }
 
             let CocoaPodsURL = URL(string: AcknowLocalization.CocoaPodsURLString())
             if let CocoaPodsURL = CocoaPodsURL,

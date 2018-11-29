@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.1 (work in progress)
+
+- Improve Dynamic Type support
+
+
 ## 1.7 (14 September 2018)
 
 - Update to Swift 4.2
