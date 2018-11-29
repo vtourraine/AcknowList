@@ -1,7 +1,8 @@
 # Changelog
 
-## 1.7.1 (work in progress)
+## 1.8 (work in progress)
 
+- Add `AcknowListViewController` initializer for multiple plist paths, by Kieran Harper @KieranHarper
 - Improve Dynamic Type support
 
 
