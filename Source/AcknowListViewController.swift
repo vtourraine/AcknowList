@@ -318,7 +318,7 @@ open class AcknowListViewController: UITableViewController {
             label.numberOfLines = 0
             label.textAlignment = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-            if #available(iOS 10.0, *) {
+            if #available(iOS 10.0, tvOS 10.0, *) {
                 label.adjustsFontForContentSizeCategory = true
             }
 
@@ -349,7 +349,7 @@ open class AcknowListViewController: UITableViewController {
             label.textAlignment = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
             label.isUserInteractionEnabled = true
-            if #available(iOS 10.0, *) {
+            if #available(iOS 10.0, tvOS 10.0, *) {
                 label.adjustsFontForContentSizeCategory = true
             }
 
