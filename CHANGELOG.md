@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9 (2 April 2019)
+
+- Update to Swift 5.0, by Oscar Gorog @OkiRules
+
 ## 1.8 (4 December 2018)
 
 - Add `AcknowListViewController` initializer for multiple plist paths, by Kieran Harper @KieranHarper
