@@ -2,10 +2,10 @@
 
 _Ready to use “Acknowledgements”/“Licenses”/“Credits” view controller for [CocoaPods](http://cocoapods.org/)._
 
-_Written in Swift 4.2 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
+_Written in Swift 5 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
 ![Platform iOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
-![Swift 4.2](https://img.shields.io/badge/Swift-4.2-blue.svg)
+![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
 [![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
@@ -54,7 +54,7 @@ AcknowList is also compatible with tvOS for Apple TV apps.
 
 ## Requirements
 
-AcknowList is written in Swift 4.2, requires iOS 8.0 or tvOS 9.0 and above, Xcode 10.0 and above.
+AcknowList is written in Swift 5, requires iOS 8.0 or tvOS 9.0 and above, Xcode 10.2 and above.
 
 
 ## Credits
