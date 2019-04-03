@@ -1,8 +1,9 @@
 # Changelog
 
-## 1.9 (2 April 2019)
+## 1.9 (3 April 2019)
 
-- Update to Swift 5.0, by Oscar Gorog (@OkiRules)
+- Update to Swift 5, by Oscar Gorog (@OkiRules)
+
 
 ## 1.8 (4 December 2018)
 
@@ -42,7 +43,7 @@
 
 ## 1.3 (13 September 2017)
 
-- Update to Swift 4.0
+- Update to Swift 4
 
 
 ## 1.2.1 (12 July 2017)
@@ -58,7 +59,7 @@
 
 ## 1.1 (19 September 2016)
 
-- Update to Swift 3.0
+- Update to Swift 3
 
 
 ## 1.0.2 (19 September 2016)
