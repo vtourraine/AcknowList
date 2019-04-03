@@ -48,7 +48,7 @@ class AcknowParserTests: XCTestCase {
             let acknow = acknowledgements.first
             if let acknow = acknow {
                 XCTAssertEqual(acknow.title, "AcknowList")
-                XCTAssertTrue(acknow.text.hasPrefix("Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)"))
+                XCTAssertTrue(acknow.text.hasPrefix("Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)"))
             }
             else {
                 XCTAssert(false, "Acknowledgement not found")
