@@ -1,7 +1,7 @@
 //
 // ViewController.swift
 //
-// Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,31 @@ class ViewController: UIViewController {
 
     @IBAction func pushAcknowList(_ sender: AnyObject) {
         let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @IBAction func pushThemedAcknowList(_ sender: Any) {
+        let viewController = AcknowListViewController()
+
+        viewController.title = "Customized Acknowledgements Title"
+
+        viewController.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.magenta, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
+
+        viewController.footerTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
+
+        viewController.backgroundColor = .black
+
+        viewController.licenceCellBackgroundColor = .lightGray
+        viewController.licenceCellHighlightColor = .orange
+
+        viewController.licenceCellFont = UIFont.systemFont(ofSize: 8)
+        viewController.licenceCellFontColor = .white
+        viewController.licenceCellFontHighlightColor = .yellow
+
+        viewController.licenceDetailViewBackgroundColor = .black
+        viewController.licenceDetailViewFont = UIFont.systemFont(ofSize: 12)
+        viewController.licenceDetailViewFontColor = .cyan
+
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

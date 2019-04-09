@@ -1,7 +1,7 @@
 //
 // AcknowListViewController.swift
 //
-// Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -49,6 +49,43 @@ open class AcknowListViewController: UITableViewController {
      */
     @IBInspectable var acknowledgementsPlistName: String?
 
+    /// Display attributes for the views title text.
+    open var titleTextAttributes: [NSAttributedString.Key : Any]?
+
+    /// Display attributes for the views footer text.
+    open var footerTextAttributes: [NSAttributedString.Key : Any]?
+
+    /// The views background color.
+    open var backgroundColor: UIColor?
+
+    /// The table cells background color.
+    open var licenceCellBackgroundColor: UIColor?
+
+    /// The color to use as a virtual light source on the selected table cell.
+    open var licenceCellHighlightColor: UIColor?
+
+    /// The font used to display the library name.
+    open var licenceCellFont: UIFont?
+
+    /// The font color used to display the library name.
+    open var licenceCellFontColor: UIColor?
+
+    /// The highlight font color used to display the library name.
+    open var licenceCellFontHighlightColor: UIColor?
+
+    /// The background color of the licence detail view.
+    open var licenceDetailViewBackgroundColor: UIColor?
+
+    /// The font of the licence detail view.
+    open var licenceDetailViewFont: UIFont?
+
+    /// The font color of the licence detail view.
+    open var licenceDetailViewFontColor: UIColor?
+
+    /// Determines if the table cell should be customized.
+    private var isLicenceCellCustomized: Bool {
+        return licenceCellBackgroundColor != nil || licenceCellHighlightColor != nil || licenceCellFont != nil || licenceCellFontColor != nil || licenceCellFontHighlightColor != nil
+    }
 
     // MARK: - Initialization
 
@@ -223,6 +260,15 @@ open class AcknowListViewController: UITableViewController {
         self.configureFooterView()
 
         if let navigationController = self.navigationController {
+
+            if let textAttributes = self.titleTextAttributes {
+                navigationController.navigationBar.titleTextAttributes = textAttributes
+            }
+
+            if let backgroundColor = self.backgroundColor {
+                self.tableView.backgroundColor = backgroundColor
+            }
+
             if self.presentingViewController != nil &&
                 navigationController.viewControllers.first == self {
                 let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
@@ -344,6 +390,12 @@ open class AcknowListViewController: UITableViewController {
             label.text = self.footerText
             label.font = font
             label.textColor = UIColor.gray
+
+            if let footerTextAttributes = self.footerTextAttributes {
+                let attrString = NSAttributedString(string: footerText, attributes: footerTextAttributes)
+                label.attributedText = attrString
+            }
+
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 0
             label.textAlignment = .center
@@ -416,14 +468,24 @@ open class AcknowListViewController: UITableViewController {
             cell = dequeuedCell
         }
         else {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier)
+            if isLicenceCellCustomized {
+                #if os(tvOS)
+                    tableView.mask = nil
+                    cell = TVOSAcknowledgementCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier, backgroundColor: self.licenceCellBackgroundColor, highlightColor: self.licenceCellHighlightColor, licenceCellFont: self.licenceCellFont, licenceCellFontColor: self.licenceCellFontColor, licenceCellFontHighlightColor: self.licenceCellFontHighlightColor)
+                #else
+                    cell = IOSAcknowledgementCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier, backgroundColor: self.licenceCellBackgroundColor, highlightColor: self.licenceCellHighlightColor, licenceCellFont: self.licenceCellFont, licenceCellFontColor: self.licenceCellFontColor, licenceCellFontHighlightColor: self.licenceCellFontHighlightColor)
+                #endif
+
+            } else {
+                cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier)
+                cell.accessoryType = .disclosureIndicator
+            }
         }
 
         if let acknowledgements = self.acknowledgements,
             let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
             let textLabel = cell.textLabel as UILabel? {
-                textLabel.text = acknowledgement.title
-                cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            textLabel.text = acknowledgement.title
         }
 
         return cell
@@ -439,10 +501,14 @@ open class AcknowListViewController: UITableViewController {
      */
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgements = self.acknowledgements,
-        let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
-        let navigationController = self.navigationController {
-                let viewController = AcknowViewController(acknowledgement: acknowledgement)
-                navigationController.pushViewController(viewController, animated: true)
+            let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
+            let navigationController = self.navigationController {
+            let viewController = AcknowViewController(acknowledgement: acknowledgement)
+            viewController.backgroundColor = licenceDetailViewBackgroundColor
+            viewController.font = licenceDetailViewFont
+            viewController.fontColor = licenceDetailViewFontColor
+
+            navigationController.pushViewController(viewController, animated: true)
         }
     }
 
@@ -458,3 +524,124 @@ open class AcknowListViewController: UITableViewController {
         return UITableView.automaticDimension
     }
 }
+
+
+// MARK: TVOsAcknowledgementCell
+
+fileprivate class TVOSAcknowledgementCell: UITableViewCell {
+
+    fileprivate var customBackgroundColor: UIColor?
+    fileprivate var customHighlightColor: UIColor?
+    fileprivate var  parallaxMotionEffect: UIMotionEffectGroup
+    fileprivate var licenceCellFontColor: UIColor?
+    fileprivate var licenceCellFontHighlightColor: UIColor?
+
+    init(style: UITableViewCell.CellStyle, reuseIdentifier: String?, backgroundColor: UIColor?, highlightColor: UIColor?, licenceCellFont:UIFont?, licenceCellFontColor: UIColor?, licenceCellFontHighlightColor: UIColor?) {
+        self.parallaxMotionEffect = TVOSAcknowledgementCell.createParallaxMotionEffects()
+
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.customBackgroundColor = backgroundColor
+        self.customHighlightColor = highlightColor
+        if #available(iOS 9.0, *) {
+            self.focusStyle = .custom
+        }
+
+        self.textLabel?.font = licenceCellFont
+        self.textLabel?.textColor = licenceCellFontColor
+        self.licenceCellFontColor = licenceCellFontColor
+        self.licenceCellFontHighlightColor = licenceCellFontHighlightColor
+
+        applyBackground(color: self.customBackgroundColor)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        self.parallaxMotionEffect = TVOSAcknowledgementCell.createParallaxMotionEffects()
+        super.init(coder: aDecoder)
+    }
+
+    @available(iOS 9.0, *)
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocus(in: context, with: coordinator)
+
+        if context.nextFocusedView === self {
+
+            coordinator.addCoordinatedAnimations({
+                guard let selectedColor = self.customHighlightColor else {
+                    return
+                }
+
+                self.transform = CGAffineTransform(scaleX: 1.02, y: 1.02)
+                self.addMotionEffect(self.parallaxMotionEffect)
+                self.applyBackground(color: selectedColor)
+                self.textLabel?.textColor = self.licenceCellFontHighlightColor
+
+            }, completion: nil)
+        }
+        else {
+            guard let notSelectedColor = self.customBackgroundColor else {
+                return
+            }
+            self.applyBackground(color: notSelectedColor)
+            self.transform = .identity
+            self.removeMotionEffect(parallaxMotionEffect)
+            self.textLabel?.textColor = licenceCellFontColor
+        }
+    }
+
+    fileprivate func applyBackground(color: UIColor?) {
+        if let backgroundColor = color {
+            self.backgroundColor = backgroundColor
+            self.contentView.backgroundColor = backgroundColor
+            self.layer.cornerRadius = 8.0
+            self.layer.masksToBounds = true
+        } else {
+            self.accessoryType = .disclosureIndicator
+        }
+    }
+
+    fileprivate class func createParallaxMotionEffects(tiltValue: CGFloat = 0.15, panValue: CGFloat = 10) -> UIMotionEffectGroup {
+        let xTilt = UIInterpolatingMotionEffect(keyPath: "layer.transform.rotation.y", type: .tiltAlongHorizontalAxis)
+        xTilt.minimumRelativeValue = -tiltValue
+        xTilt.maximumRelativeValue = tiltValue
+
+        let yTilt = UIInterpolatingMotionEffect(keyPath: "layer.transform.rotation.x", type: .tiltAlongVerticalAxis)
+        yTilt.minimumRelativeValue = -tiltValue
+        yTilt.maximumRelativeValue = tiltValue
+
+        let xPan = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        xPan.minimumRelativeValue = -panValue
+        xPan.maximumRelativeValue = panValue
+
+        let yPan = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        yPan.minimumRelativeValue = -panValue
+        yPan.maximumRelativeValue = panValue
+
+        let motionGroup = UIMotionEffectGroup()
+        motionGroup.motionEffects = [xTilt, yTilt, xPan, yPan]
+
+        return motionGroup
+    }
+}
+
+// MARK: IOSAcknowledgementCell
+
+fileprivate class IOSAcknowledgementCell: UITableViewCell {
+
+    init(style: UITableViewCell.CellStyle, reuseIdentifier: String?, backgroundColor: UIColor?, highlightColor: UIColor?, licenceCellFont:UIFont?, licenceCellFontColor: UIColor?, licenceCellFontHighlightColor: UIColor?) {
+
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.textLabel?.font = licenceCellFont
+        self.textLabel?.textColor = licenceCellFontColor
+
+        self.backgroundColor = backgroundColor
+        self.contentView.backgroundColor = backgroundColor
+        self.accessoryType = .disclosureIndicator
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+

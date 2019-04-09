@@ -1,7 +1,7 @@
 //
 // AcknowViewController.swift
 //
-// Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,36 @@ import UIKit
 open class AcknowViewController: UIViewController {
 
     /// The main text view.
-    open var textView: UITextView?
+    open var textView: UITextView? {
+        didSet {
+            textView?.isScrollEnabled = true
+            textView?.isUserInteractionEnabled = true
+            textView?.showsVerticalScrollIndicator = true
+            
+            #if os(tvOS)
+            textView?.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
+            #endif
+
+            if let font = self.font {
+                textView?.font = font
+            } else {
+                textView?.font = UIFont.preferredFont(forTextStyle: .body)
+            }
+
+            if let fontColor = self.fontColor {
+                textView!.textColor = fontColor
+            }
+        }
+    }
+
+    /// The views background color.
+    open var backgroundColor: UIColor?
+
+    /// The views font.
+    open var font: UIFont?
+
+    /// The views font color.
+    open var fontColor: UIColor?
 
     /// The represented acknowledgement.
     var acknowledgement: Acknow?
@@ -69,7 +98,7 @@ open class AcknowViewController: UIViewController {
 
         let textView = UITextView(frame: view.bounds)
         textView.alwaysBounceVertical = true
-        textView.font = UIFont.preferredFont(forTextStyle: .body)
+
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         #if os(iOS)
             textView.isEditable = false
@@ -77,6 +106,11 @@ open class AcknowViewController: UIViewController {
             
             view.backgroundColor = UIColor.white
         #endif
+
+        if let customBackgroundColor = backgroundColor {
+           self.view.backgroundColor = customBackgroundColor
+        }
+
         textView.textContainerInset = UIEdgeInsets.init(top: TopBottomDefaultMargin, left: LeftRightDefaultMargin, bottom: TopBottomDefaultMargin, right: LeftRightDefaultMargin)
         view.addSubview(textView)
 
