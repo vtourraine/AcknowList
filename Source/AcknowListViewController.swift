@@ -250,19 +250,6 @@ open class AcknowListViewController: UITableViewController {
     }
 
     /**
-     Notifies the view controller that its view is about to be added to a view hierarchy.
-
-     - parameter animated: If `YES`, the view is being added to the window using an animation.
-     */
-    open override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if let indexPath = self.tableView.indexPathForSelectedRow {
-            self.tableView.deselectRow(at: indexPath, animated: animated)
-        }
-    }
-
-    /**
      Notifies the view controller that its view was added to a view hierarchy.
 
      - parameter animated: If `YES`, the view is being added to the window using an animation.
@@ -455,6 +442,7 @@ open class AcknowListViewController: UITableViewController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
                 navigationController.pushViewController(viewController, animated: true)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     /**
