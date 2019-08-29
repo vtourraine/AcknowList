@@ -232,7 +232,11 @@ open class AcknowListViewController: UITableViewController {
     /// Called after the controller's view is loaded into memory.
     open override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Register the cell before use it
+        let identifier = String(describing: UITableViewCell.self)
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
+        
         self.configureHeaderView()
         self.configureFooterView()
 
@@ -423,16 +427,9 @@ open class AcknowListViewController: UITableViewController {
      - returns: An object inheriting from `UITableViewCell` that the table view can use for the specified row. An assertion is raised if you return `nil`.
      */
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let CellIdentifier = "Cell"
-        let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
-        let cell: UITableViewCell
-        if let dequeuedCell = dequeuedCell {
-            cell = dequeuedCell
-        }
-        else {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier)
-        }
-
+        let identifier = String(describing: UITableViewCell.self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        
         if let acknowledgements = self.acknowledgements,
             let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
             let textLabel = cell.textLabel as UILabel? {
