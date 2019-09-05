@@ -179,15 +179,17 @@ open class AcknowListViewController: UITableViewController {
     }
     
     class func bundleName() -> String? {
-        var name: String?
-        
-        if let cfbundleName = Bundle.main.infoDictionary?["CFBundleName"] as? String {
-            name = cfbundleName
-        } else if let cfbundleExecutable = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String {
-            name = cfbundleExecutable
+        let infoDictionary = Bundle.main.infoDictionary
+
+        if let cfBundleName = infoDictionary?["CFBundleName"] as? String {
+            return cfBundleName
         }
-        
-        return name
+        else if let cfBundleExecutable = infoDictionary?["CFBundleExecutable"] as? String {
+            return cfBundleExecutable
+        }
+        else {
+            return nil
+        }
     }
 
     class func defaultAcknowledgementsPlistPath() -> String? {
