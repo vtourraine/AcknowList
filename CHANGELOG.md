@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.1 (work in progress)
+
+- Improve automatic acknowledgements detection, by Francisco Javier Trujillo Mata (@fjtrujy)
+
+
 ## 1.9 (3 April 2019)
 
 - Update to Swift 5, by Oscar Gorog (@OkiRules)
