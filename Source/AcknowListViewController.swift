@@ -177,9 +177,23 @@ open class AcknowListViewController: UITableViewController {
     class func acknowledgementsPlistPath(name:String) -> String? {
         return Bundle.main.path(forResource: name, ofType: "plist")
     }
+    
+    class func bundleName() -> String? {
+        let infoDictionary = Bundle.main.infoDictionary
+
+        if let cfBundleName = infoDictionary?["CFBundleName"] as? String {
+            return cfBundleName
+        }
+        else if let cfBundleExecutable = infoDictionary?["CFBundleExecutable"] as? String {
+            return cfBundleExecutable
+        }
+        else {
+            return nil
+        }
+    }
 
     class func defaultAcknowledgementsPlistPath() -> String? {
-        guard let bundleName = Bundle.main.infoDictionary?["CFBundleName"] as? String else {
+        guard let bundleName = bundleName() else {
             return nil
         }
 
