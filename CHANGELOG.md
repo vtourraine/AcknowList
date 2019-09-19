@@ -3,6 +3,7 @@
 ## 1.9.1 (work in progress)
 
 - Improve automatic acknowledgements detection, by Francisco Javier Trujillo Mata (@fjtrujy)
+- Improve cell initialization, by Francisco Javier Trujillo Mata (@fjtrujy)
 
 
 ## 1.9 (3 April 2019)
