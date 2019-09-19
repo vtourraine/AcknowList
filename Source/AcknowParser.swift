@@ -73,7 +73,7 @@ open class AcknowParser {
      - return: an array of `Acknow` instances.
      */
     open func parseAcknowledgements() -> [Acknow] {
-        let preferenceSpecifiers: AnyObject? = self.rootDictionary["PreferenceSpecifiers"]
+        let preferenceSpecifiers: AnyObject? = rootDictionary["PreferenceSpecifiers"]
 
         if let preferenceSpecifiers = preferenceSpecifiers, preferenceSpecifiers is [AnyObject] {
             let preferenceSpecifiersArray = preferenceSpecifiers as! [AnyObject]

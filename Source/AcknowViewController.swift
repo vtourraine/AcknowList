@@ -106,6 +106,6 @@ open class AcknowViewController: UIViewController {
     }
 
     func updateTextViewInsets(_ textView: UITextView) {
-        textView.textContainerInset = UIEdgeInsets.init(top: TopBottomDefaultMargin, left: self.view.layoutMargins.left, bottom: TopBottomDefaultMargin, right: self.view.layoutMargins.right);
+        textView.textContainerInset = UIEdgeInsets.init(top: TopBottomDefaultMargin, left: view.layoutMargins.left, bottom: TopBottomDefaultMargin, right: view.layoutMargins.right);
     }
 }
