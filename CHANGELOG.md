@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.9.1 (work in progress)
+## 1.9.1 (24 September 2019)
 
 - Improve automatic acknowledgements detection, by Francisco Javier Trujillo Mata (@fjtrujy)
 - Improve cell initialization, by Francisco Javier Trujillo Mata (@fjtrujy)
