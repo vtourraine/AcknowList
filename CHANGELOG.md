@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0 (work in progress)
+## 1.9.2 (7 October 2019)
 
 - Add Swift Package Manager support, by Curato (@curato-research), Zhu Zhiyu (@ApolloZhu)
 
