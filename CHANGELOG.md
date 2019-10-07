@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0 (work in progress)
+
+- Add Swift Package Manager support, by Curato (@curato-research), Zhu Zhiyu (@ApolloZhu)
+
+
 ## 1.9.1 (24 September 2019)
 
 - Improve automatic acknowledgements detection, by Francisco Javier Trujillo Mata (@fjtrujy)
