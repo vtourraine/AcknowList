@@ -7,6 +7,7 @@ _Written in Swift 5 (for Objective-C, you can use [VTAcknowledgementsViewControl
 ![Platform iOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
 ![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
 [![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
+![Swift Package Manager](https://img.shields.io/badge/support-Swift_Package_Manager-orange.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
 
