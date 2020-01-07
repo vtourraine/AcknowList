@@ -76,6 +76,9 @@ open class AcknowViewController: UIViewController {
             textView.dataDetectorTypes = .link
             
             view.backgroundColor = UIColor.white
+        #elseif os(tvOS)
+            textView.isUserInteractionEnabled = true
+            textView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
         #endif
         textView.textContainerInset = UIEdgeInsets.init(top: TopBottomDefaultMargin, left: LeftRightDefaultMargin, bottom: TopBottomDefaultMargin, right: LeftRightDefaultMargin)
         view.addSubview(textView)
