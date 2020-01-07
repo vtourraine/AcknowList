@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.3 (work in progress)
+
+- Fix scrollable acknowledgement details on tvOS, by Jochen Holzer (@Wooder)
+
+
 ## 1.9.2 (7 October 2019)
 
 - Add Swift Package Manager support, by Curato (@curato-research), Zhu Zhiyu (@ApolloZhu)
