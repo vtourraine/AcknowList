@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.9.3 (work in progress)
+## 1.9.3 (9 January 2020)
 
 - Fix scrollable acknowledgement details on tvOS, by Jochen Holzer (@Wooder)
 
