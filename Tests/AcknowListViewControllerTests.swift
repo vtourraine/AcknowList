@@ -3,7 +3,7 @@
 //  AcknowExample
 //
 //  Created by Vincent Tourraine on 22/08/15.
-//  Copyright © 2015-2019 Vincent Tourraine. All rights reserved.
+//  Copyright © 2015-2020 Vincent Tourraine. All rights reserved.
 //
 
 import UIKit
