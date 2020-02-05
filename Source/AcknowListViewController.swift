@@ -278,6 +278,13 @@ open class AcknowListViewController: UITableViewController {
         }
     }
 
+    open override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        layoutTableView(\UITableView.tableHeaderView)
+        layoutTableView(\UITableView.tableFooterView)
+    }
+
     // MARK: - Actions
 
     /**
@@ -307,59 +314,45 @@ open class AcknowListViewController: UITableViewController {
 
     // MARK: - Configuration
 
-    class func LabelMargin () -> CGFloat {
+    class func HorizontalLabelMargin() -> CGFloat {
         return 20
     }
 
-    class func FooterBottomMargin() -> CGFloat {
-        return 20
+    class func VerticalLabelMargin() -> CGFloat {
+        return 10
     }
 
     func configureHeaderView() {
-        let font = UIFont.preferredFont(forTextStyle: .footnote)
-        let labelWidth = view.frame.width - 2 * AcknowListViewController.LabelMargin()
-
         if let headerText = self.headerText {
-            let labelHeight = heightForLabel(text: headerText as NSString, width: labelWidth)
-            let labelFrame = CGRect(
-                x: AcknowListViewController.LabelMargin(),
-                y: AcknowListViewController.LabelMargin(),
-                width: labelWidth,
-                height: labelHeight)
-
-            let label = UILabel(frame: labelFrame)
+            let label = UILabel()
             label.text = headerText
-            label.font = font
+            label.font = UIFont.preferredFont(forTextStyle: .footnote)
             label.textColor = UIColor.gray
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 0
             label.textAlignment = .center
-            label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
             if #available(iOS 10.0, tvOS 10.0, *) {
                 label.adjustsFontForContentSizeCategory = true
             }
 
-            let headerFrame = CGRect(
-                x: 0, y: 0,
-                width: view.frame.width,
-                height: label.frame.height + 2 * AcknowListViewController.LabelMargin())
-            let headerView = UIView(frame: headerFrame)
-            headerView.addSubview(label)
-            tableView.tableHeaderView = headerView
+            let container = UIView()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            container.addSubview(label)
+            NSLayoutConstraint.activate([
+                NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: AcknowListViewController.HorizontalLabelMargin()),
+                NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: -AcknowListViewController.HorizontalLabelMargin()),
+                NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: container, attribute: .topMargin, multiplier: 1.0, constant: AcknowListViewController.VerticalLabelMargin()),
+                NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottomMargin, multiplier: 1.0, constant: -AcknowListViewController.VerticalLabelMargin())
+            ])
+            tableView.tableHeaderView = container
         }
     }
 
     func configureFooterView() {
-        let font = UIFont.preferredFont(forTextStyle: .footnote)
-        let labelWidth = view.frame.width - 2 * AcknowListViewController.LabelMargin()
-
         if let footerText = self.footerText {
-            let labelHeight = heightForLabel(text: footerText as NSString, width: labelWidth)
-            let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
-
-            let label = UILabel(frame: labelFrame)
+            let label = UILabel()
             label.text = footerText
-            label.font = font
+            label.font = UIFont.preferredFont(forTextStyle: .footnote)
             label.textColor = UIColor.gray
             label.backgroundColor = UIColor.clear
             label.numberOfLines = 0
@@ -379,26 +372,30 @@ open class AcknowListViewController: UITableViewController {
                     }
             }
 
-            let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + AcknowListViewController.FooterBottomMargin())
-            let footerView = UIView(frame: footerFrame)
-            footerView.isUserInteractionEnabled = true
-            footerView.addSubview(label)
-            label.frame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height);
-
-            tableView.tableFooterView = footerView
+            let container = UIView()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            container.addSubview(label)
+            NSLayoutConstraint.activate([
+                NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: AcknowListViewController.HorizontalLabelMargin()),
+                NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: -AcknowListViewController.HorizontalLabelMargin()),
+                NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: AcknowListViewController.VerticalLabelMargin()),
+                NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottomMargin, multiplier: 1.0, constant: -AcknowListViewController.VerticalLabelMargin())
+            ])
+            tableView.tableFooterView = container
         }
     }
 
-    func heightForLabel(text labelText: NSString, width labelWidth: CGFloat) -> CGFloat {
-        let font = UIFont.preferredFont(forTextStyle: .footnote)
-        let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
-        // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedString.Key.font: font], context: nil)
-        let labelHeight = labelBounds.height
+    func layoutTableView(_ keyPath: ReferenceWritableKeyPath<UITableView, UIView?>) {
+        guard let subview = tableView?[keyPath: keyPath] else { return }
 
-        return CGFloat(ceilf(Float(labelHeight)))
+        let targetSize = CGSize(width: view.bounds.width - 2 * AcknowListViewController.HorizontalLabelMargin(), height: UIView.layoutFittingCompressedSize.height)
+        let fittingSize = subview.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .defaultLow)
+        subview.frame.size.height = fittingSize.height
+        DispatchQueue.main.async {
+            // UITableView internally caches header/footer sizes, setting it again invalidates this cache.
+            self.tableView?[keyPath: keyPath]? = subview
+        }
     }
-
 
     // MARK: - Table view data source
 
