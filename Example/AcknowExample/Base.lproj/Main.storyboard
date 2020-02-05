@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nk8-2d-AXR">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nk8-2d-AXR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--AcknowList Example-->
@@ -14,29 +16,38 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-DU-ync">
-                                <rect key="frame" x="197" y="285" width="207" height="30"/>
+                                <rect key="frame" x="103" y="433" width="208" height="30"/>
                                 <state key="normal" title="Push AcknowList (Storyboard)"/>
                                 <connections>
                                     <segue destination="BsL-wc-ue5" kind="show" id="BEy-rK-1Bu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-HF-drT">
-                                <rect key="frame" x="217" y="323" width="167" height="30"/>
+                                <rect key="frame" x="123" y="471" width="168" height="30"/>
                                 <state key="normal" title="Push AcknowList (Code)"/>
                                 <connections>
                                     <action selector="pushAcknowList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sti-FP-FSd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbQ-IG-9j1">
+                                <rect key="frame" x="44" y="509" width="326" height="30"/>
+                                <state key="normal" title="Present AcknowList as .formSheet (Storyboard)"/>
+                                <connections>
+                                    <action selector="presentFormSheetAcknowList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="or6-VJ-qev"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MyE-DU-ync" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OZ4-Xg-jHw"/>
                             <constraint firstItem="Iqq-HF-drT" firstAttribute="top" secondItem="MyE-DU-ync" secondAttribute="bottom" constant="8" id="OuL-Zn-7Hh"/>
                             <constraint firstItem="Iqq-HF-drT" firstAttribute="centerX" secondItem="MyE-DU-ync" secondAttribute="centerX" id="hcb-ZH-iEe"/>
+                            <constraint firstItem="hbQ-IG-9j1" firstAttribute="top" secondItem="Iqq-HF-drT" secondAttribute="bottom" constant="8" id="jH9-8O-iCl"/>
+                            <constraint firstItem="hbQ-IG-9j1" firstAttribute="centerX" secondItem="Iqq-HF-drT" secondAttribute="centerX" id="jkn-Nb-jIN"/>
                             <constraint firstItem="MyE-DU-ync" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q5f-IP-jBy"/>
                         </constraints>
                     </view>
@@ -55,17 +66,24 @@
                         <viewControllerLayoutGuide type="bottom" id="3ZD-2v-pKl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="msB-b3-294">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MDb-hU-Erv"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-AcknowExample-acknowledgements"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="headerText">
+                            <string key="value">Header: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. The End.</string>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="footerText">
+                            <string key="value">Footer: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. The End.</string>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqt-9v-5LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="776"/>
+            <point key="canvasLocation" x="2406" y="1103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oj1-63-94z">
@@ -73,7 +91,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nk8-2d-AXR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KgB-Of-Qia">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

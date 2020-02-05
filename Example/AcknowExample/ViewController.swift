@@ -27,8 +27,24 @@ import AcknowList
 
 class ViewController: UIViewController {
 
+    let longText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    lazy var headerText = "Header: \(longText) The End."
+    lazy var footerText = "Footer: \(longText) The End."
+
     @IBAction func pushAcknowList(_ sender: AnyObject) {
         let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+        viewController.headerText = headerText
+        viewController.footerText = footerText
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    @IBAction func presentFormSheetAcknowList(_ sender: Any) {
+        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+        viewController.headerText = headerText
+        viewController.footerText = footerText
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = .formSheet
+        present(navigationController, animated: true, completion: nil)
+    }
+
 }
