@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.4 (work in progress)
+
+- Fix `AcknowListViewController` initializers access level, by Kevin Mitchell Jr (@klmitchell2)
+
+
 ## 1.9.3 (9 January 2020)
 
 - Fix scrollable acknowledgement details on tvOS, by Jochen Holzer (@Wooder)
