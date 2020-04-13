@@ -74,8 +74,6 @@ open class AcknowViewController: UIViewController {
         #if os(iOS)
             textView.isEditable = false
             textView.dataDetectorTypes = .link
-            
-            view.backgroundColor = UIColor.white
         #elseif os(tvOS)
             textView.isUserInteractionEnabled = true
             textView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
