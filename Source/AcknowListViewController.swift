@@ -48,6 +48,9 @@ open class AcknowListViewController: UITableViewController {
      It expects to get set by "User Defined Runtime Attributes" in Interface Builder.
      */
     @IBInspectable var acknowledgementsPlistName: String?
+    
+    /// Closure that can open URLs, so that this doesn't have to use UIApplication
+    public var urlOpener: ((URL) -> Void)?
 
 
     // MARK: - Initialization
@@ -282,13 +285,8 @@ open class AcknowListViewController: UITableViewController {
      - parameter sender: The event sender.
      */
     @IBAction open func openCocoaPodsWebsite(_ sender: AnyObject) {
-        let url = URL(string: AcknowLocalization.CocoaPodsURLString())
-        if let url = url {
-            if #available(iOS 10.0, tvOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
+        if let url = URL(string: AcknowLocalization.CocoaPodsURLString()) {
+            urlOpener?(url)
         }
     }
 
