@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.9.4 (work in progress)
+## 1.9.4 (15 April 2020)
 
 - Fix `AcknowListViewController` initializers access level, by Kevin Mitchell Jr (@klmitchell2)
 - Improve Dark Mode support
