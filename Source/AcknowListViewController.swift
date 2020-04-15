@@ -315,7 +315,7 @@ open class AcknowListViewController: UITableViewController {
         let label = UILabel(frame: frame)
         label.text = text
         label.font = font
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, tvOS 13.0, *) {
             label.textColor = .secondaryLabel
         }
         else {
