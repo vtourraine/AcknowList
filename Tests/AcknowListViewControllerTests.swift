@@ -54,4 +54,38 @@ class AcknowListViewControllerTests: XCTestCase {
             XCTFail()
         }
     }
+
+    func testConfigureTableHeader() throws {
+        let viewController = AcknowListViewController()
+        viewController.headerText = "Test"
+
+        viewController.viewDidLoad()
+
+        let headerView = try XCTUnwrap(viewController.tableView.tableHeaderView)
+        XCTAssertFalse(headerView.isUserInteractionEnabled)
+        XCTAssertEqual(headerView.subviews.count, 1)
+
+        let label = try XCTUnwrap(headerView.subviews.first as? UILabel)
+        XCTAssertEqual(label.text, "Test")
+        XCTAssertFalse(label.isUserInteractionEnabled)
+        XCTAssertNil(label.gestureRecognizers)
+    }
+
+    func testConfigureTableHeaderWithLink() throws {
+        let viewController = AcknowListViewController()
+        viewController.headerText = "Test https://developer.apple.com"
+
+        viewController.viewDidLoad()
+
+        let headerView = try XCTUnwrap(viewController.tableView.tableHeaderView)
+        XCTAssertTrue(headerView.isUserInteractionEnabled)
+        XCTAssertEqual(headerView.subviews.count, 1)
+
+        let label = try XCTUnwrap(headerView.subviews.first as? UILabel)
+        XCTAssertEqual(label.text, "Test https://developer.apple.com")
+        XCTAssertTrue(label.isUserInteractionEnabled)
+
+        let gestureRecognizers = try XCTUnwrap(label.gestureRecognizers)
+        XCTAssertEqual(gestureRecognizers.count, 1)
+    }
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0 (work in progress)
+
+- Open any URL in `AcknowListViewController` header and footer
+
+
 ## 1.9.4 (15 April 2020)
 
 - Fix `AcknowListViewController` initializers access level, by Kevin Mitchell Jr (@klmitchell2)

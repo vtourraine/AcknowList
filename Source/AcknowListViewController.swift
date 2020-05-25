@@ -277,18 +277,21 @@ open class AcknowListViewController: UITableViewController {
     // MARK: - Actions
 
     /**
-     Opens the CocoaPods website with Safari.
+     Opens a link with Safari.
 
-     - parameter sender: The event sender.
+     - parameter sender: The event sender, a gesture recognizer attached to the label containing the link URL.
      */
-    @IBAction open func openCocoaPodsWebsite(_ sender: AnyObject) {
-        let url = URL(string: AcknowLocalization.CocoaPodsURLString())
-        if let url = url {
-            if #available(iOS 10.0, tvOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
+    @IBAction open func openLink(_ sender: UIGestureRecognizer) {
+        guard let label = sender.view as? UILabel,
+            let text = label.text,
+            let url = firstLink(with: text) else {
+            return
+        }
+
+        if #available(iOS 10.0, tvOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
         }
     }
 
@@ -329,6 +332,12 @@ open class AcknowListViewController: UITableViewController {
             label.adjustsFontForContentSizeCategory = true
         }
 
+        if let text = text, firstLink(with: text) != nil {
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openLink(_:)))
+            label.addGestureRecognizer(tapGestureRecognizer)
+            label.isUserInteractionEnabled = true
+        }
+
         return label
     }
 
@@ -342,7 +351,9 @@ open class AcknowListViewController: UITableViewController {
             let label = headerFooterLabel(frame: labelFrame, font: font, text: headerText)
             let headerFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: label.frame.height + 2 * AcknowListViewController.LabelMargin())
             let headerView = UIView(frame: headerFrame)
+            headerView.isUserInteractionEnabled = label.isUserInteractionEnabled
             headerView.addSubview(label)
+
             tableView.tableHeaderView = headerView
         }
     }
@@ -356,19 +367,9 @@ open class AcknowListViewController: UITableViewController {
             let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
             let label = headerFooterLabel(frame: labelFrame, font: font, text: footerText)
 
-            let CocoaPodsURL = URL(string: AcknowLocalization.CocoaPodsURLString())
-            if let CocoaPodsURL = CocoaPodsURL,
-                let CocoaPodsURLHost = CocoaPodsURL.host {
-                    if footerText.range(of: CocoaPodsURLHost) != nil {
-                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
-                        label.addGestureRecognizer(tapGestureRecognizer)
-                        label.isUserInteractionEnabled = true
-                    }
-            }
-
             let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + AcknowListViewController.FooterBottomMargin())
             let footerView = UIView(frame: footerFrame)
-            footerView.isUserInteractionEnabled = true
+            footerView.isUserInteractionEnabled = label.isUserInteractionEnabled
             footerView.addSubview(label)
             label.frame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height);
 
@@ -384,6 +385,16 @@ open class AcknowListViewController: UITableViewController {
         let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))
+    }
+
+    func firstLink(with text: String) -> URL? {
+        let types: NSTextCheckingResult.CheckingType = [.link]
+        guard let linkDetector = try? NSDataDetector(types: types.rawValue),
+            let firstLink = linkDetector.firstMatch(in: text, options: [], range: NSMakeRange(0, text.count)) else {
+                return nil
+        }
+
+        return firstLink.url
     }
 
 

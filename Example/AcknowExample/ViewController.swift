@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
     @IBAction func pushAcknowList(_ sender: AnyObject) {
         let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+        viewController.headerText = "Visit: https://developer.apple.com"
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
