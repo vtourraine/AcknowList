@@ -3,6 +3,7 @@
 ## 2.0 (work in progress)
 
 - Open any URL in `AcknowListViewController` header and footer
+- TO DO: Support SPM localized resources
 
 
 ## 1.9.4 (15 April 2020)
