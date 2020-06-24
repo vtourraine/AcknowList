@@ -1,8 +1,6 @@
 # AcknowList
 
-_Ready to use “Acknowledgements”/“Licenses”/“Credits” view controller for [CocoaPods](http://cocoapods.org/)._
-
-_Written in Swift 5 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
+Acknowledgements screen displaying a list of licences, for example from [CocoaPods](https://cocoapods.org) dependencies.
 
 ![Platform iOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
 ![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
@@ -10,6 +8,8 @@ _Written in Swift 5 (for Objective-C, you can use [VTAcknowledgementsViewControl
 ![Swift Package Manager](https://img.shields.io/badge/support-Swift_Package_Manager-orange.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
+
+_Also available in Objective-C with [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController)._
 
 <img alt="iPhone screenshot 1" src="https://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-X-01.png" width="300px"> <img alt="iPhone screenshot 2" src="https://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-X-02.png" width="300px">
 
