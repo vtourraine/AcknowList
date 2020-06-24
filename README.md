@@ -42,7 +42,7 @@ let viewController = AcknowListViewController()
 navigationController.pushViewController(viewController, animated: true)
 ```
 
-By default, the controller will try to guess the name of your `.plist` file, based on the bundle name (`Pods-#bundle-name#-acknowledgements.plist`. If that doesn’t match the file you’re looking for, you can initialize the view controller with a custom file name or path.
+By default, the controller will try to guess the name of your `.plist` file, based on the bundle name (`Pods-#bundle-name#-acknowledgements.plist`). If that doesn’t match the file you’re looking for, you can initialize the view controller with a custom file name or path.
 
 ``` swift
 let viewController = AcknowListViewController(fileNamed: "Pods-AcknowExample-acknowledgements")
