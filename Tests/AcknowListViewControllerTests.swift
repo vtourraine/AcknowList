@@ -60,6 +60,7 @@ class AcknowListViewControllerTests: XCTestCase {
         viewController.headerText = "Test"
 
         viewController.viewDidLoad()
+        viewController.viewWillAppear(true)
 
         let headerView = try XCTUnwrap(viewController.tableView.tableHeaderView)
         XCTAssertFalse(headerView.isUserInteractionEnabled)
@@ -76,6 +77,7 @@ class AcknowListViewControllerTests: XCTestCase {
         viewController.headerText = "Test https://developer.apple.com"
 
         viewController.viewDidLoad()
+        viewController.viewWillAppear(true)
 
         let headerView = try XCTUnwrap(viewController.tableView.tableHeaderView)
         XCTAssertTrue(headerView.isUserInteractionEnabled)
