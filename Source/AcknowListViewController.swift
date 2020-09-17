@@ -233,9 +233,6 @@ open class AcknowListViewController: UITableViewController {
         let identifier = String(describing: UITableViewCell.self)
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
 
-        configureHeaderView()
-        configureFooterView()
-
         if let navigationController = self.navigationController {
             if presentingViewController != nil && navigationController.viewControllers.first == self {
                 let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
@@ -251,6 +248,9 @@ open class AcknowListViewController: UITableViewController {
      */
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        configureHeaderView()
+        configureFooterView()
 
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPath, animated: animated)

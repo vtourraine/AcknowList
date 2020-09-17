@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.5 (17 September 2020)
+
+- Fix header/footer layout when building with iOS 14 SDK
+
+
 ## 1.9.4 (15 April 2020)
 
 - Fix `AcknowListViewController` initializers access level, by Kevin Mitchell Jr (@klmitchell2)
