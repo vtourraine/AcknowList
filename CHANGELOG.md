@@ -3,8 +3,12 @@
 ## 2.0 (work in progress)
 
 - Open any URL in `AcknowListViewController` header and footer
-- Fix header/footer layout when building with iOS 14 SDK
 - TO DO: Support SPM localized resources
+
+
+## 1.9.5 (17 September 2020)
+
+- Fix header/footer layout when building with iOS 14 SDK
 
 
 ## 1.9.4 (15 April 2020)
