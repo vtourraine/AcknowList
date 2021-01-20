@@ -57,9 +57,9 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init() {
+    public convenience init(style: UITableView.Style = .grouped, customTitle: String? = nil) {
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        self.init(acknowledgementsPlistPath: path)
+        self.init(acknowledgementsPlistPath: path, style: style, customTitle: customTitle)
     }
 
     /**
@@ -67,9 +67,9 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(fileNamed fileName: String) {
+    public convenience init(fileNamed fileName: String, style: UITableView.Style = .grouped, customTitle: String? = nil) {
         let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName)
-        self.init(acknowledgementsPlistPath: path)
+        self.init(acknowledgementsPlistPath: path, style: style, customTitle: customTitle)
     }
 
     /**
@@ -79,14 +79,14 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPath: String?) {
-        super.init(style: .grouped)
+    public init(acknowledgementsPlistPath: String?, style: UITableView.Style = .grouped, customTitle: String? = nil) {
+        super.init(style: style)
 
         if let acknowledgementsPlistPath = acknowledgementsPlistPath {
-            commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath])
+            commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath], customTitle: customTitle)
         }
         else {
-            commonInit(acknowledgementsPlistPaths: [])
+            commonInit(acknowledgementsPlistPaths: [], customTitle: customTitle)
         }
     }
 
@@ -99,9 +99,9 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPaths: [String]) {
-        super.init(style: .grouped)
-        commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths)
+    public init(acknowledgementsPlistPaths: [String], style: UITableView.Style = .grouped, customTitle: String? = nil) {
+        super.init(style: style)
+        commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths, customTitle: customTitle)
     }
 
     /**
@@ -122,8 +122,8 @@ open class AcknowListViewController: UITableViewController {
         }
     }
 
-    func commonInit(acknowledgementsPlistPaths: [String]) {
-        title = AcknowLocalization.localizedTitle()
+    func commonInit(acknowledgementsPlistPaths: [String], customTitle: String? = nil) {
+        title = customTitle ?? AcknowLocalization.localizedTitle()
 
         guard !acknowledgementsPlistPaths.isEmpty else { return }
 
