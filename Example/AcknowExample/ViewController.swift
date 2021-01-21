@@ -32,4 +32,22 @@ class ViewController: UIViewController {
         viewController.headerText = "Visit: https://developer.apple.com"
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    @IBAction func pushAcknowListWithGroupedInsetStyle(_ sender: AnyObject) {
+        if #available(iOS 13.0, *) {
+            let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: .insetGrouped)
+            viewController.headerText = "Visit: https://developer.apple.com"
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        return
+    }
+
+    @IBAction func pushAcknowListWithCustomTitle(_ sender: AnyObject) {
+        if #available(iOS 13.0, *) {
+            let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", customTitle: "Custom Title")
+            viewController.headerText = "Visit: https://developer.apple.com"
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        return
+    }
 }
