@@ -26,10 +26,21 @@ import UIKit
 import AcknowList
 
 class ViewController: UIViewController {
-
+    
+    let style: UITableView.Style = .grouped
+    //let headerText: String? = nil
+    let headerText: String = "Visit: https://developer.apple.com"
+    
     @IBAction func pushAcknowList(_ sender: AnyObject) {
-        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
-        viewController.headerText = "Visit: https://developer.apple.com"
+        var viewController: AcknowListViewController
+        if style == .grouped {
+            viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+        }
+        else {
+            viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: .plain)
+            viewController.tableView.backgroundColor = .groupTableViewBackground
+        }
+        viewController.headerText = headerText
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
