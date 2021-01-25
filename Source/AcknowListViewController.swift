@@ -67,9 +67,9 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(fileNamed fileName: String) {
+    public convenience init(fileNamed fileName: String, style: UITableView.Style = .grouped) {
         let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName)
-        self.init(acknowledgementsPlistPath: path)
+        self.init(acknowledgementsPlistPath: path, style: style)
     }
 
     /**
@@ -79,8 +79,8 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPath: String?) {
-        super.init(style: .grouped)
+    public init(acknowledgementsPlistPath: String?, style: UITableView.Style = .grouped) {
+        super.init(style: style)
 
         if let acknowledgementsPlistPath = acknowledgementsPlistPath {
             commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath])
@@ -99,8 +99,8 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPaths: [String]) {
-        super.init(style: .grouped)
+    public init(acknowledgementsPlistPaths: [String], style: UITableView.Style = .grouped) {
+        super.init(style: style)
         commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths)
     }
 
@@ -112,7 +112,8 @@ open class AcknowListViewController: UITableViewController {
      - returns: The new `AcknowListViewController` instance.
      */
     public required init(coder aDecoder: NSCoder) {
-        super.init(style: .grouped)
+        //super.init(style: .grouped)
+        super.init(nibName: nil, bundle: nil)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
         if let path = path {
             commonInit(acknowledgementsPlistPaths: [path])
@@ -364,14 +365,13 @@ open class AcknowListViewController: UITableViewController {
 
         if let footerText = self.footerText {
             let labelHeight = heightForLabel(text: footerText as NSString, width: labelWidth)
-            let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
+            let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: tableView.style == .plain ? AcknowListViewController.LabelMargin() : 0, width: labelWidth, height: labelHeight)
             let label = headerFooterLabel(frame: labelFrame, font: font, text: footerText)
 
-            let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + AcknowListViewController.FooterBottomMargin())
+            let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + 2 * AcknowListViewController.FooterBottomMargin())
             let footerView = UIView(frame: footerFrame)
             footerView.isUserInteractionEnabled = label.isUserInteractionEnabled
             footerView.addSubview(label)
-            label.frame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height);
 
             tableView.tableFooterView = footerView
         }
