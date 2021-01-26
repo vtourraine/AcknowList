@@ -26,25 +26,31 @@ import UIKit
 import AcknowList
 
 class ViewController: UIViewController {
-
+    
     @IBAction func pushAcknowList(_ sender: AnyObject) {
         let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
         viewController.headerText = "Visit: https://developer.apple.com"
         navigationController?.pushViewController(viewController, animated: true)
     }
-
-    @IBAction func pushAcknowListWithGroupedInsetStyle(_ sender: AnyObject) {
+    
+    @IBAction func pushAcknowListWithCustomTitleDefaultStyle(_ sender: AnyObject) {
+        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
+        viewController.title = "Default Style"
+        viewController.headerText = "Visit: https://developer.apple.com"
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func pushAcknowListWithCustomTitlePlainStyle(_ sender: AnyObject) {
+        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: .plain)
+        viewController.title = "Plain Style"
+        viewController.headerText = "Visit: https://developer.apple.com"
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func pushAcknowListWithCustomTitleInsetGroupedStyle(_ sender: AnyObject) {
         if #available(iOS 13.0, *) {
             let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: .insetGrouped)
-            viewController.headerText = "Visit: https://developer.apple.com"
-            navigationController?.pushViewController(viewController, animated: true)
-        }
-        return
-    }
-
-    @IBAction func pushAcknowListWithCustomTitle(_ sender: AnyObject) {
-        if #available(iOS 13.0, *) {
-            let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", customTitle: "Custom Title")
+            viewController.title = "Grouped Inset Style"
             viewController.headerText = "Visit: https://developer.apple.com"
             navigationController?.pushViewController(viewController, animated: true)
         }

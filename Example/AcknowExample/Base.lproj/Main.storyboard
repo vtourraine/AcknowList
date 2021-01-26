@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nk8-2d-AXR">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,38 +17,38 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgi-Ed-Vrq">
-                                <rect key="frame" x="20" y="376" width="374" height="144"/>
+                                <rect key="frame" x="16" y="168" width="288" height="144"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-DU-ync">
-                                        <rect key="frame" x="83" y="0.0" width="208" height="30"/>
+                                        <rect key="frame" x="40" y="0.0" width="208" height="30"/>
                                         <state key="normal" title="Push AcknowList (Storyboard)"/>
                                         <connections>
                                             <segue destination="BsL-wc-ue5" kind="show" id="BEy-rK-1Bu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-HF-drT">
-                                        <rect key="frame" x="74" y="38" width="226" height="30"/>
-                                        <state key="normal" title="Push AcknowList (Code, Default)"/>
+                                        <rect key="frame" x="12" y="38" width="264" height="30"/>
+                                        <state key="normal" title="Push AcknowList (Code, Default Style)"/>
                                         <connections>
-                                            <action selector="pushAcknowList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sti-FP-FSd"/>
+                                            <action selector="pushAcknowListWithCustomTitleDefaultStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqg-nD-Yg9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-ou-G13">
-                                        <rect key="frame" x="53" y="76" width="268" height="30"/>
-                                        <state key="normal" title="Push AcknowList (Code, Custom Style)"/>
+                                        <rect key="frame" x="20" y="76" width="248" height="30"/>
+                                        <state key="normal" title="Push AcknowList (Code, Plain Style)"/>
                                         <connections>
-                                            <action selector="pushAcknowListWithGroupedInsetStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vsV-0B-Sjl"/>
+                                            <action selector="pushAcknowListWithCustomTitlePlainStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Lu-jt-8bG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnQ-ut-L6B">
-                                        <rect key="frame" x="55.5" y="114" width="263" height="30"/>
-                                        <state key="normal" title="Push AcknowList (Code, Custom Title)"/>
+                                        <rect key="frame" x="-12" y="114" width="312" height="30"/>
+                                        <state key="normal" title="Push AcknowList (Code, Inset Grouped Style)"/>
                                         <connections>
-                                            <action selector="pushAcknowListWithCustomTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8y-JO-DMk"/>
+                                            <action selector="pushAcknowListWithCustomTitleInsetGroupedStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Lt-Uj-eaq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,7 +88,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3ZD-2v-pKl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="msB-b3-294">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -107,7 +107,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nk8-2d-AXR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KgB-Of-Qia">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
