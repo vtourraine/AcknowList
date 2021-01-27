@@ -27,20 +27,77 @@ import AcknowList
 
 class ViewController: UIViewController {
     
-    let style: UITableView.Style = .grouped
-    //let headerText: String? = nil
-    let headerText: String = "Visit: https://developer.apple.com"
+    var style: UITableView.Style = .grouped
+    var headerTextShouldAppear: Bool = true
+    var footerTextShouldAppear: Bool = true
+    var headerText: String = "Visit: https://developer.apple.com"
     
+
     @IBAction func pushAcknowList(_ sender: AnyObject) {
         var viewController: AcknowListViewController
         if style == .grouped {
             viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
         }
         else {
-            viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: .plain)
+            viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: style)
+            if style == .plain {
+                viewController.tableView.backgroundColor = .groupTableViewBackground
+            }
+        }
+        viewController.tableView.tableFooterView = UIView(frame: .zero)
+        
+        viewController.headerText = headerTextShouldAppear ? headerText : nil
+        if footerTextShouldAppear == false {
+            viewController.footerText = nil
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @IBAction func presentAcknowList(_ sender: AnyObject) {
+        let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements", style: style)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        let item = UIBarButtonItem(barButtonSystemItem: .done, target: viewController, action: #selector(AcknowListViewController.dismissViewController(_:)))
+        viewController.navigationItem.leftBarButtonItem = item
+        
+        if style == .plain {
             viewController.tableView.backgroundColor = .groupTableViewBackground
         }
-        viewController.headerText = headerText
-        navigationController?.pushViewController(viewController, animated: true)
+        viewController.tableView.tableFooterView = UIView(frame: .zero)
+
+        viewController.headerText = headerTextShouldAppear ? headerText : nil
+        if footerTextShouldAppear == false {
+            viewController.footerText = nil
+        }
+        
+        present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func styleValueChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            style = .grouped
+            
+        case 1:
+            style = .plain
+            
+        case 2:
+            if #available(iOS 13.0, *) {
+                style = .insetGrouped
+            } else {
+                style = .grouped
+            }
+            
+        default:
+            break
+        }
+    }
+    
+    @IBAction func headerTextSwitchValueChanged(_ sender: UISwitch) {
+        headerTextShouldAppear = sender.isOn
+    }
+    
+    @IBAction func footerTextSwitchValueChanged(_ sender: UISwitch) {
+        footerTextShouldAppear = sender.isOn
     }
 }

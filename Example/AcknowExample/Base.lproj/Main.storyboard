@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nk8-2d-AXR">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nk8-2d-AXR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--AcknowList Example-->
@@ -10,62 +13,130 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AcknowExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="a0R-Dk-ocU"/>
+                        <viewControllerLayoutGuide type="bottom" id="lsB-7Q-L7m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-DU-ync">
-                                <rect key="frame" x="197" y="285" width="207" height="30"/>
-                                <state key="normal" title="Push AcknowList (Storyboard)"/>
-                                <connections>
-                                    <segue destination="BsL-wc-ue5" kind="show" id="BEy-rK-1Bu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-HF-drT">
-                                <rect key="frame" x="217" y="323" width="167" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-HF-drT">
+                                <rect key="frame" x="123" y="380" width="168" height="30"/>
                                 <state key="normal" title="Push AcknowList (Code)"/>
                                 <connections>
                                     <action selector="pushAcknowList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sti-FP-FSd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDg-Vg-Fgj">
+                                <rect key="frame" x="113.5" y="430" width="187" height="30"/>
+                                <state key="normal" title="Present AcknowList (Code)"/>
+                                <connections>
+                                    <action selector="presentAcknowList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TwH-we-kZb"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QtG-2w-6HO">
+                                <rect key="frame" x="8" y="198" width="398" height="32"/>
+                                <segments>
+                                    <segment title="Grouped (Default)"/>
+                                    <segment title="Plain"/>
+                                    <segment title="InsetGrouped"/>
+                                </segments>
+                                <connections>
+                                    <action selector="styleValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="y62-nE-g6i"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkf-yB-TtT">
+                                <rect key="frame" x="40" y="259" width="297" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-ij-1ja">
+                                <rect key="frame" x="345" y="254" width="51" height="31"/>
+                                <connections>
+                                    <action selector="headerTextSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="p0H-aC-505"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Footer Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG9-kY-dgt">
+                                <rect key="frame" x="40" y="309.5" width="297" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4a-9h-eoh">
+                                <rect key="frame" x="345" y="304.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="footerTextSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vhh-eZ-Qvv"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-DU-ync">
+                                <rect key="frame" x="103" y="138" width="208" height="30"/>
+                                <state key="normal" title="Push AcknowList (Storyboard)"/>
+                                <connections>
+                                    <segue destination="Off-8h-iQD" kind="show" id="229-Uu-M5k"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MyE-DU-ync" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OZ4-Xg-jHw"/>
-                            <constraint firstItem="Iqq-HF-drT" firstAttribute="top" secondItem="MyE-DU-ync" secondAttribute="bottom" constant="8" id="OuL-Zn-7Hh"/>
-                            <constraint firstItem="Iqq-HF-drT" firstAttribute="centerX" secondItem="MyE-DU-ync" secondAttribute="centerX" id="hcb-ZH-iEe"/>
-                            <constraint firstItem="MyE-DU-ync" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q5f-IP-jBy"/>
+                            <constraint firstItem="pDg-Vg-Fgj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2f4-3w-CGf"/>
+                            <constraint firstItem="hkf-yB-TtT" firstAttribute="top" secondItem="QtG-2w-6HO" secondAttribute="bottom" constant="30" id="5Jg-hG-kiN"/>
+                            <constraint firstItem="hkf-yB-TtT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="CuO-yd-YeC"/>
+                            <constraint firstAttribute="trailing" secondItem="QtG-2w-6HO" secondAttribute="trailing" constant="8" id="FC2-Gv-mRN"/>
+                            <constraint firstItem="Iqq-HF-drT" firstAttribute="top" secondItem="AG9-kY-dgt" secondAttribute="bottom" constant="50" id="IAY-iF-6aa"/>
+                            <constraint firstItem="QtG-2w-6HO" firstAttribute="top" secondItem="MyE-DU-ync" secondAttribute="bottom" constant="30" id="JjP-6U-bPW"/>
+                            <constraint firstItem="G4a-9h-eoh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N1n-PK-6Qj"/>
+                            <constraint firstItem="G4a-9h-eoh" firstAttribute="centerY" secondItem="AG9-kY-dgt" secondAttribute="centerY" id="Qhw-Ns-0FY"/>
+                            <constraint firstItem="MyE-DU-ync" firstAttribute="top" secondItem="a0R-Dk-ocU" secondAttribute="bottom" constant="50" id="Rdd-Gd-DMY"/>
+                            <constraint firstItem="pDg-Vg-Fgj" firstAttribute="top" secondItem="Iqq-HF-drT" secondAttribute="bottom" constant="20" id="X8l-Xo-Hu9"/>
+                            <constraint firstItem="Iqq-HF-drT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIN-w8-neg"/>
+                            <constraint firstItem="G4a-9h-eoh" firstAttribute="leading" secondItem="AG9-kY-dgt" secondAttribute="trailing" constant="8" id="cRl-Hj-hi8"/>
+                            <constraint firstItem="w9o-ij-1ja" firstAttribute="leading" secondItem="hkf-yB-TtT" secondAttribute="trailing" constant="8" id="dYc-8d-G9g"/>
+                            <constraint firstItem="AG9-kY-dgt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hI0-n8-7r5"/>
+                            <constraint firstItem="w9o-ij-1ja" firstAttribute="centerY" secondItem="hkf-yB-TtT" secondAttribute="centerY" id="oj0-de-t2E"/>
+                            <constraint firstItem="AG9-kY-dgt" firstAttribute="top" secondItem="hkf-yB-TtT" secondAttribute="bottom" constant="30" id="om4-op-Np8"/>
+                            <constraint firstItem="QtG-2w-6HO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="vHh-Np-ajf"/>
+                            <constraint firstItem="MyE-DU-ync" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wWC-0e-rfF"/>
+                            <constraint firstItem="w9o-ij-1ja" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wkN-jD-Hca"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AcknowList Example" id="xIb-0L-dfj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="1046"/>
+            <point key="canvasLocation" x="846" y="1010"/>
         </scene>
         <!--Acknow List View Controller-->
-        <scene sceneID="5j9-Xd-FVm">
+        <scene sceneID="YAb-53-Css">
             <objects>
-                <viewController id="BsL-wc-ue5" customClass="AcknowListViewController" customModule="AcknowList" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X0G-eq-cNb"/>
-                        <viewControllerLayoutGuide type="bottom" id="3ZD-2v-pKl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="msB-b3-294">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="Off-8h-iQD" customClass="AcknowListViewController" customModule="AcknowList" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="snL-ZT-rI3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="q9T-n1-1D9">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q9T-n1-1D9" id="938-E5-W3U">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Off-8h-iQD" id="UAa-Ss-qnO"/>
+                            <outlet property="delegate" destination="Off-8h-iQD" id="bNx-ic-Pu2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hQd-j7-XRP"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-AcknowExample-acknowledgements"/>
                     </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqt-9v-5LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F8a-sO-XLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="776"/>
+            <point key="canvasLocation" x="1704" y="1010"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oj1-63-94z">
@@ -73,7 +144,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nk8-2d-AXR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KgB-Of-Qia">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -86,4 +157,9 @@
             <point key="canvasLocation" x="58" y="1010"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
