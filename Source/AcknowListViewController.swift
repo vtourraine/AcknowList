@@ -111,9 +111,8 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public required init(coder aDecoder: NSCoder) {
-        //super.init(style: .grouped)
-        super.init(nibName: nil, bundle: nil)
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
         if let path = path {
             commonInit(acknowledgementsPlistPaths: [path])
