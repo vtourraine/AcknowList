@@ -63,11 +63,23 @@ open class AcknowListViewController: UITableViewController {
     }
 
     /**
+     Initializes the `AcknowListViewController` instance based on default configuration with style.
+
+     - parameter style: The style to apply to the table view. Default is `.grouped`.
+     
+     - returns: The new `AcknowListViewController` instance.
+     */
+    public convenience override init(style: UITableView.Style = .grouped) {
+        let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
+        self.init(acknowledgementsPlistPath: path, style: style)
+    }
+
+    /**
      Initializes the `AcknowListViewController` instance for the plist file based on its name.
 
      - parameter :
      - fileName: The name of the acknowledgements plist file.
-     - style: The style to apply to the table view. Default is `.grouped`
+     - style: The style to apply to the table view. Default is `.grouped`.
 
      - returns: The new `AcknowListViewController` instance.
      */
@@ -81,7 +93,7 @@ open class AcknowListViewController: UITableViewController {
 
      - parameter :
      - acknowledgementsPlistPath: The path to the acknowledgements plist file.
-     - style: The style to apply to the table view. Default is `.grouped`
+     - style: The style to apply to the table view. Default is `.grouped`.
 
      - returns: The new `AcknowListViewController` instance.
      */
@@ -103,7 +115,7 @@ open class AcknowListViewController: UITableViewController {
 
      - parameter :
      - acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
-     - style: The style to apply to the table view. Default is `.grouped`
+     - style: The style to apply to the table view. Default is `.grouped`.
 
      - returns: The new `AcknowListViewController` instance.
      */
