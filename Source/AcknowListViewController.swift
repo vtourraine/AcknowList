@@ -65,6 +65,10 @@ open class AcknowListViewController: UITableViewController {
     /**
      Initializes the `AcknowListViewController` instance for the plist file based on its name.
 
+     - parameter :
+     - fileName: The name of the acknowledgements plist file.
+     - style: The style to apply to the table view. Default is `.grouped`
+
      - returns: The new `AcknowListViewController` instance.
      */
     public convenience init(fileNamed fileName: String, style: UITableView.Style = .grouped) {
@@ -75,7 +79,9 @@ open class AcknowListViewController: UITableViewController {
     /**
      Initializes the `AcknowListViewController` instance for a plist file path.
 
-     - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
+     - parameter :
+     - acknowledgementsPlistPath: The path to the acknowledgements plist file.
+     - style: The style to apply to the table view. Default is `.grouped`
 
      - returns: The new `AcknowListViewController` instance.
      */
@@ -95,7 +101,9 @@ open class AcknowListViewController: UITableViewController {
 
      The first path is the "main" one which will be used for any custom header/footer.
 
-     - parameter acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
+     - parameter :
+     - acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
+     - style: The style to apply to the table view. Default is `.grouped`
 
      - returns: The new `AcknowListViewController` instance.
      */
