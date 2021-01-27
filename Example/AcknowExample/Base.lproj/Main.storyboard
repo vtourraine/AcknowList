@@ -140,7 +140,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="hQd-j7-XRP"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-AcknowExample-acknowledgements"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-acknowledgements"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="headerText" value="Visit: https://developer.apple.com"/>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>

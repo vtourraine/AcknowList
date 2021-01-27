@@ -113,13 +113,6 @@ open class AcknowListViewController: UITableViewController {
      */
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        if let path = path {
-            commonInit(acknowledgementsPlistPaths: [path])
-        }
-        else {
-            commonInit(acknowledgementsPlistPaths: [])
-        }
     }
 
     func commonInit(acknowledgementsPlistPaths: [String]) {
@@ -212,7 +205,7 @@ open class AcknowListViewController: UITableViewController {
     override open func awakeFromNib() {
         super.awakeFromNib()
 
-        let path: String?
+        var path: String?
         if let acknowledgementsPlistName = self.acknowledgementsPlistName {
             path = AcknowListViewController.acknowledgementsPlistPath(name: acknowledgementsPlistName)
         }
@@ -220,6 +213,10 @@ open class AcknowListViewController: UITableViewController {
             path = AcknowListViewController.defaultAcknowledgementsPlistPath()
         }
 
+        if path == nil {
+            path = AcknowListViewController.defaultAcknowledgementsPlistPath()
+        }
+        
         if let path = path {
             commonInit(acknowledgementsPlistPaths: [path])
         }
