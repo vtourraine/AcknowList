@@ -49,20 +49,16 @@ open class AcknowListViewController: UITableViewController {
      */
     @IBInspectable var acknowledgementsPlistName: String?
 
-
     // MARK: - Initialization
 
     /**
      Initializes the `AcknowListViewController` instance based on default configuration.
 
-     - Parameters:
-        - style: UITableView.Style to apply to the table view. **Default:** `.grouped`
-
      - returns: The new `AcknowListViewController` instance.
      */
-    public override convenience init(style: UITableView.Style = .grouped) {
+    public convenience init() {
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        self.init(acknowledgementsPlistPath: path, style: style)
+        self.init(acknowledgementsPlistPath: path)
     }
 
     /**
@@ -70,13 +66,12 @@ open class AcknowListViewController: UITableViewController {
 
      - Parameters:
        - fileNamed: Name of the acknowledgements plist file
-       - style: `UITableView.Style` to apply to the table view. **Default:** `.grouped`
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(fileNamed fileName: String, style: UITableView.Style = .grouped) {
+    public convenience init(fileNamed fileName: String) {
         let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName)
-        self.init(acknowledgementsPlistPath: path, style: style)
+        self.init(acknowledgementsPlistPath: path)
     }
 
     /**
