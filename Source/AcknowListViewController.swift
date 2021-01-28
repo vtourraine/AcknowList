@@ -49,6 +49,7 @@ open class AcknowListViewController: UITableViewController {
      */
     @IBInspectable var acknowledgementsPlistName: String?
 
+
     // MARK: - Initialization
 
     /**
