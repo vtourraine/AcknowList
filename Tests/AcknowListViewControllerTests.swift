@@ -32,13 +32,7 @@ class AcknowListViewControllerTests: XCTestCase {
         let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath, style: .insetGrouped)
-
-        XCTAssertEqual(viewController.numberOfSections(in: viewController.tableView), 1)
-        XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 1)
         XCTAssertEqual(viewController.tableView.style, .insetGrouped)
-
-        let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        XCTAssertEqual(cell.textLabel?.text, "AcknowList")
     }
 
     func testSortsAcknowledgementsByTitle() {
