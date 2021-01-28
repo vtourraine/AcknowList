@@ -19,6 +19,8 @@ class AcknowListViewControllerTests: XCTestCase {
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
 
+        XCTAssertEqual(viewController.tableView.style, .grouped, "should use `.grouped` as the default table view style")
+
         XCTAssertEqual(viewController.numberOfSections(in: viewController.tableView), 1)
         XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 1)
 
