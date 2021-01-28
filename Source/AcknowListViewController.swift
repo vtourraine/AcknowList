@@ -134,6 +134,8 @@ open class AcknowListViewController: UITableViewController {
     }
 
     func commonInit(acknowledgementsPlistPaths: [String]) {
+        title = AcknowLocalization.localizedTitle()
+
         guard !acknowledgementsPlistPaths.isEmpty else { return }
 
         if let mainPlistPath = acknowledgementsPlistPaths.first {
