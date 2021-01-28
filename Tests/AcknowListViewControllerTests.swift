@@ -26,20 +26,6 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(cell.textLabel?.text, "AcknowList")
     }
 
-    func testConfigureTableViewWithCustomTitle() {
-        let bundle = Bundle(for: AcknowListViewControllerTests.self)
-        let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
-
-        let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath, customTitle: "Custom Title")
-
-        XCTAssertEqual(viewController.numberOfSections(in: viewController.tableView), 1)
-        XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 1)
-        XCTAssertEqual(viewController.title, "Custom Title")
-
-        let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        XCTAssertEqual(cell.textLabel?.text, "AcknowList")
-    }
-
     @available (iOS 13.0, *)
     func testConfigureTableViewWithCustomStyle() {
         let bundle = Bundle(for: AcknowListViewControllerTests.self)
