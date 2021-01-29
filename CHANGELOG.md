@@ -3,6 +3,7 @@
 ## 2.0 (work in progress)
 
 - Open any URL in `AcknowListViewController` header and footer
+- Update `AcknowListViewController` initializers with optional table view style parameter, by Matt Croxson (@Lumus)
 - TO DO: Support SPM localized resources
 
 
