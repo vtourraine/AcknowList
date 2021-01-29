@@ -3,7 +3,7 @@
 //  AcknowExampleTests
 //
 //  Created by Vincent Tourraine on 15/08/15.
-//  Copyright © 2015-2020 Vincent Tourraine. All rights reserved.
+//  Copyright © 2015-2021 Vincent Tourraine. All rights reserved.
 //
 
 import UIKit
