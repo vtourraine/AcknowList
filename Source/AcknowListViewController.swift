@@ -65,6 +65,9 @@ open class AcknowListViewController: UITableViewController {
     /**
      Initializes the `AcknowListViewController` instance for the plist file based on its name.
 
+     - Parameters:
+       - fileNamed: Name of the acknowledgements plist file
+
      - returns: The new `AcknowListViewController` instance.
      */
     public convenience init(fileNamed fileName: String) {
@@ -75,12 +78,14 @@ open class AcknowListViewController: UITableViewController {
     /**
      Initializes the `AcknowListViewController` instance for a plist file path.
 
-     - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
+     - Parameters:
+        - acknowledgementsPlistPath: The path to the acknowledgements plist file.
+        - style: `UITableView.Style` to apply to the table view. **Default:** `.grouped`
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPath: String?) {
-        super.init(style: .grouped)
+    public init(acknowledgementsPlistPath: String?, style: UITableView.Style = .grouped) {
+        super.init(style: style)
 
         if let acknowledgementsPlistPath = acknowledgementsPlistPath {
             commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath])
@@ -95,12 +100,14 @@ open class AcknowListViewController: UITableViewController {
 
      The first path is the "main" one which will be used for any custom header/footer.
 
-     - parameter acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
+     - Parameters:
+        - acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
+        - style: `UITableView.Style` to apply to the table view. **Default:** `.grouped`
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public init(acknowledgementsPlistPaths: [String]) {
-        super.init(style: .grouped)
+    public init(acknowledgementsPlistPaths: [String], style: UITableView.Style = .grouped) {
+        super.init(style: style)
         commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths)
     }
 

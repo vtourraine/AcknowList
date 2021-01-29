@@ -19,11 +19,22 @@ class AcknowListViewControllerTests: XCTestCase {
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
 
+        XCTAssertEqual(viewController.tableView.style, .grouped, "should use `.grouped` as the default table view style")
+
         XCTAssertEqual(viewController.numberOfSections(in: viewController.tableView), 1)
         XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 1)
 
         let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertEqual(cell.textLabel?.text, "AcknowList")
+    }
+
+    @available (iOS 13.0, *)
+    func testConfigureTableViewWithCustomStyle() {
+        let bundle = Bundle(for: AcknowListViewControllerTests.self)
+        let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
+
+        let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath, style: .insetGrouped)
+        XCTAssertEqual(viewController.tableView.style, .insetGrouped)
     }
 
     func testSortsAcknowledgementsByTitle() {
