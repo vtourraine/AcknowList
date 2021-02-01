@@ -34,7 +34,7 @@
                                         <rect key="frame" x="12" y="38" width="264" height="30"/>
                                         <state key="normal" title="Push AcknowList (Code, Default Style)"/>
                                         <connections>
-                                            <action selector="pushAcknowListWithCustomTitleDefaultStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqg-nD-Yg9"/>
+                                            <action selector="pushAcknowListWithDefaultStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X9P-P2-lFb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-ou-G13">

@@ -15,10 +15,10 @@
     "git": "https://github.com/vtourraine/AcknowList.git",
     "tag": "1.9.5"
   },
-  "source_files": "Source/*.swift",
-  "resources": "Resources/AcknowList.bundle",
+  "source_files": "Sources/*.swift",
+  "resources": "Sources/Resources/AcknowList.bundle",
   "platforms": {
-    "ios": "8.0",
+    "ios": "9.0",
     "tvos": "9.0"
   },
   "frameworks": "UIKit",

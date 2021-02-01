@@ -13,15 +13,13 @@
 		1F6C52B21B7F495700B9A7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B01B7F495700B9A7CC /* Main.storyboard */; };
 		1F6C52B41B7F495700B9A7CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B31B7F495700B9A7CC /* Images.xcassets */; };
 		1F6C52B71B7F495700B9A7CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C52B51B7F495700B9A7CC /* LaunchScreen.xib */; };
+		32A5DE6425C7E68F00ED11BB /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A5DE6325C7E68F00ED11BB /* AcknowList.framework */; };
+		32A5DE6525C7E68F00ED11BB /* AcknowList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32A5DE6325C7E68F00ED11BB /* AcknowList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A999442058275600A3F668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A999432058275600A3F668 /* AppDelegate.swift */; };
 		D7A999462058275600A3F668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A999452058275600A3F668 /* ViewController.swift */; };
 		D7A999492058275600A3F668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A999472058275600A3F668 /* Main.storyboard */; };
 		D7A9994B2058275600A3F668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A9994A2058275600A3F668 /* Assets.xcassets */; };
 		D7A999502058277C00A3F668 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */; };
-		D7A99951205827D600A3F668 /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; };
-		D7A99952205827D600A3F668 /* AcknowList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D7F4DAA91E8579FF003F0540 /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; };
-		D7F4DAAA1E8579FF003F0540 /* AcknowList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4DAA81E8579FF003F0540 /* AcknowList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,7 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D7A99952205827D600A3F668 /* AcknowList.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D7F4DAAA1E8579FF003F0540 /* AcknowList.framework in Embed Frameworks */,
+				32A5DE6525C7E68F00ED11BB /* AcknowList.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,13 +56,13 @@
 		1F6C52B11B7F495700B9A7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F6C52B31B7F495700B9A7CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F6C52B61B7F495700B9A7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		32A5DE6325C7E68F00ED11BB /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A999412058275600A3F668 /* AcknowExampleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcknowExampleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A999432058275600A3F668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A999452058275600A3F668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7A999482058275600A3F668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A9994A2058275600A3F668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A9994C2058275600A3F668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7F4DAA81E8579FF003F0540 /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F4DAA91E8579FF003F0540 /* AcknowList.framework in Frameworks */,
+				32A5DE6425C7E68F00ED11BB /* AcknowList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A99951205827D600A3F668 /* AcknowList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +87,6 @@
 		1F6C529E1B7F495700B9A7CC = {
 			isa = PBXGroup;
 			children = (
-				D7F4DAA81E8579FF003F0540 /* AcknowList.framework */,
 				1F6C52A91B7F495700B9A7CC /* AcknowExample */,
 				D7A999422058275600A3F668 /* AcknowExampleTV */,
 				1F6C52A81B7F495700B9A7CC /* Products */,
@@ -133,6 +128,7 @@
 		D473FA81574D35010E2892B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32A5DE6325C7E68F00ED11BB /* AcknowList.framework */,
 				1AD73BAB1CAC45BD0084F8CA /* AcknowList.framework */,
 			);
 			name = Frameworks;
@@ -350,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -419,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AcknowExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.vtourraine.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AcknowExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.vtourraine.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

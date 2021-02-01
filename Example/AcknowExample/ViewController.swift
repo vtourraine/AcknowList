@@ -27,9 +27,9 @@ import AcknowList
 
 class ViewController: UIViewController {
 
-    @IBAction func pushAcknowListWithCustomTitleDefaultStyle(_ sender: AnyObject) {
+    @IBAction func pushAcknowListWithDefaultStyle(_ sender: AnyObject) {
         let viewController = AcknowListViewController(fileNamed: "Pods-acknowledgements")
-        viewController.title = "Default Style"
+        //viewController.title = "Default Style"
         viewController.headerText = "Visit: https://developer.apple.com"
         navigationController?.pushViewController(viewController, animated: true)
     }
