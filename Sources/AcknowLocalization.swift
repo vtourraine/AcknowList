@@ -56,7 +56,7 @@ open class AcknowLocalization {
             return Bundle(path: bundlePath)
         }
         #else
-        if let bundlePath = Bundle(for: self).path(forResource: "AcknowList", ofType: "bundle") {
+        if let bundlePath = Bundle(for: AcknowLocalization.self).path(forResource: "AcknowList", ofType: "bundle") {
             return Bundle(path: bundlePath)
         }
         #endif
