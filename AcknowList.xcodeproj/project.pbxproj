@@ -107,7 +107,7 @@
 				1AD73B941CAC3CE60084F8CA /* Supporting Files */,
 			);
 			name = AcknowList;
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		1AA3C3821CAC35190071A7FD /* AcknowListTests */ = {
