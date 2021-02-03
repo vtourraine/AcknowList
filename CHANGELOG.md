@@ -4,8 +4,8 @@
 
 - Open any URL in `AcknowListViewController` header and footer
 - Update `AcknowListViewController` initializers with optional table view style parameter, by Matt Croxson (@Lumus)
+- Update Swift Package Manager implementation to support localized resources, by Patrick (@iDevelopper)
 - Update supported platforms to iOS 9
-- WIP: Support SPM localized resources
 
 
 ## 1.9.5 (17 September 2020)

@@ -52,15 +52,19 @@ open class AcknowLocalization {
      */
     class func resourcesBundle() -> Bundle? {
         #if SWIFT_PACKAGE
-        if let bundlePath = Bundle.module.path(forResource: "AcknowList", ofType: "bundle") {
-            return Bundle(path: bundlePath)
-        }
+        // Preprocessor definition documented here:
+        // https://github.com/apple/swift-package-manager/blob/main/Documentation/Usage.md#packaging-legacy-code
+        let rootBundle = Bundle.module
         #else
-        if let bundlePath = Bundle(for: AcknowLocalization.self).path(forResource: "AcknowList", ofType: "bundle") {
+        let rootBundle = Bundle(for: AcknowLocalization.self)
+        #endif
+
+        if let bundlePath = rootBundle.path(forResource: "AcknowList", ofType: "bundle") {
             return Bundle(path: bundlePath)
         }
-        #endif
-        return nil
+        else {
+            return nil
+        }
     }
 
     /**
@@ -73,12 +77,14 @@ open class AcknowLocalization {
      */
     class func localizedString(forKey key: String, defaultString: String) -> String {
         let defaultLanguage = "en"
+
         if var language = preferredLanguageCode() {
             if let bundle = resourcesBundle() {
                 let localizations = bundle.localizations
                 if localizations.contains(language) == false {
                     language = language.components(separatedBy: "-").first!
                 }
+
                 if let bundlePath = bundle.path(forResource: language, ofType: "lproj") {
                     if let bundle = Bundle(path: bundlePath) {
                         return bundle.localizedString(forKey: key, value: defaultString, table: nil)
@@ -93,6 +99,7 @@ open class AcknowLocalization {
                 }
             }
         }
+
         return Bundle.main.localizedString(forKey: key, value:defaultString, table:nil)
     }
 
