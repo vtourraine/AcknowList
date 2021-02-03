@@ -1,0 +1,6 @@
+module Pods_AcknowExampleCocoaPods {
+  umbrella header "Pods-AcknowExampleCocoaPods-umbrella.h"
+
+  export *
+  module * { export * }
+}

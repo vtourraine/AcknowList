@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Push AcknowList (Code, Plain Style)"; ObjectID = "EkS-ou-G13"; */
+"EkS-ou-G13.normalTitle" = "Push AcknowList (Code, Plain Style)";
+
+/* Class = "UIButton"; normalTitle = "Push AcknowList (Code, Default Style)"; ObjectID = "Iqq-HF-drT"; */
+"Iqq-HF-drT.normalTitle" = "Push AcknowList (Code, Default Style)";
+
+/* Class = "UIButton"; normalTitle = "Push AcknowList (Storyboard)"; ObjectID = "MyE-DU-ync"; */
+"MyE-DU-ync.normalTitle" = "Push AcknowList (Storyboard)";
+
+/* Class = "UIButton"; normalTitle = "Push AcknowList (Code, Inset Grouped Style)"; ObjectID = "qnQ-ut-L6B"; */
+"qnQ-ut-L6B.normalTitle" = "Push AcknowList (Code, Inset Grouped Style)";
+
+/* Class = "UINavigationItem"; title = "AcknowList Example"; ObjectID = "xIb-0L-dfj"; */
+"xIb-0L-dfj.title" = "AcknowList Example";

@@ -13,7 +13,6 @@
 		1A7421771CAC3685007E44FD /* AcknowViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */; };
 		1AA3C37F1CAC35190071A7FD /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA3C3741CAC35190071A7FD /* AcknowList.framework */; };
 		1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */; };
-		32A5DE4225C7DD3D00ED11BB /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32A5DE3B25C7DD3D00ED11BB /* AcknowList.bundle */; };
 		32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */; };
 		32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */; };
 		32A5DE4525C7DD3D00ED11BB /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */; };
@@ -25,6 +24,7 @@
 		D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */; };
 		D70B4283212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */; };
 		D70B4285212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */; };
+		D7527EE425CAFDB000378FB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7527EE225CAFDB000378FB8 /* Localizable.strings */; };
 		D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */; };
 /* End PBXBuildFile section */
 
@@ -47,19 +47,32 @@
 		1AA3C37E1CAC35190071A7FD /* AcknowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcknowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3C3851CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Tests/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
-		32A5DE3B25C7DD3D00ED11BB /* AcknowList.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcknowList.bundle; sourceTree = "<group>"; };
 		32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParser.swift; sourceTree = "<group>"; };
 		32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acknow.swift; sourceTree = "<group>"; };
 		32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowViewController.swift; sourceTree = "<group>"; };
 		32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListViewController.swift; sourceTree = "<group>"; };
 		32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
-		32A5DE5225C7E2FB00ED11BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		32A5DE5225C7E2FB00ED11BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
 		D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Alamofire.txt"; sourceTree = "<group>"; };
 		D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Charts.txt"; sourceTree = "<group>"; };
 		D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"; sourceTree = "<group>"; };
 		D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TYPFontAwesome.txt"; sourceTree = "<group>"; };
 		D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-pop.txt"; sourceTree = "<group>"; };
+		D7527EE325CAFDB000378FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EE725CAFDBA00378FB8 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EE825CAFDC600378FB8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EE925CAFDCC00378FB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEA25CAFDD300378FB8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEB25CAFDD800378FB8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEC25CAFDDE00378FB8 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EED25CAFDE300378FB8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEE25CAFDE900378FB8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEF25CAFDEE00378FB8 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7527EF025CAFDF400378FB8 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7527EF125CAFDFA00378FB8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EF225CAFE0000378FB8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7527EF325CAFE0700378FB8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-multi.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +169,7 @@
 		32A5DE3A25C7DD3D00ED11BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32A5DE3B25C7DD3D00ED11BB /* AcknowList.bundle */,
+				D7527EE225CAFDB000378FB8 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -232,7 +245,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = VTourraine;
 				TargetAttributes = {
 					1AA3C3731CAC35190071A7FD = {
@@ -252,6 +265,18 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				"pt-PT",
+				da,
+				nl,
+				"zh-Hans",
+				ja,
+				it,
+				de,
+				es,
+				fr,
+				sv,
+				"pt-BR",
 			);
 			mainGroup = 1AA3C36A1CAC35190071A7FD;
 			productRefGroup = 1AA3C3751CAC35190071A7FD /* Products */;
@@ -269,7 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32A5DE4225C7DD3D00ED11BB /* AcknowList.bundle in Resources */,
+				D7527EE425CAFDB000378FB8 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +349,30 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D7527EE225CAFDB000378FB8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7527EE325CAFDB000378FB8 /* Base */,
+				D7527EE725CAFDBA00378FB8 /* da */,
+				D7527EE825CAFDC600378FB8 /* de */,
+				D7527EE925CAFDCC00378FB8 /* en */,
+				D7527EEA25CAFDD300378FB8 /* es */,
+				D7527EEB25CAFDD800378FB8 /* fr */,
+				D7527EEC25CAFDDE00378FB8 /* it */,
+				D7527EED25CAFDE300378FB8 /* ja */,
+				D7527EEE25CAFDE900378FB8 /* nl */,
+				D7527EEF25CAFDEE00378FB8 /* pt-BR */,
+				D7527EF025CAFDF400378FB8 /* pt-PT */,
+				D7527EF125CAFDFA00378FB8 /* sv */,
+				D7527EF225CAFE0000378FB8 /* zh-Hans */,
+				D7527EF325CAFE0700378FB8 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		1AA3C3861CAC35190071A7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -349,6 +398,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -412,6 +462,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -453,7 +504,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vtourraine.AcknowList;
@@ -473,7 +524,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vtourraine.AcknowList;

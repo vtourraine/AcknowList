@@ -37,15 +37,6 @@ open class AcknowLocalization {
     }
 
     /**
-     Returns the user’s preferred language.
-
-     - returns: The preferred language ID.
-     */
-    class func preferredLanguageCode() -> String? {
-        return Locale.preferredLanguages.first
-    }
-
-    /**
      Returns the resources bundle (for localizations).
 
      - returns: The resources bundle.
@@ -54,17 +45,18 @@ open class AcknowLocalization {
         #if SWIFT_PACKAGE
         // Preprocessor definition documented here:
         // https://github.com/apple/swift-package-manager/blob/main/Documentation/Usage.md#packaging-legacy-code
-        let rootBundle = Bundle.module
+        return Bundle.module
         #else
         let rootBundle = Bundle(for: AcknowLocalization.self)
-        #endif
 
-        if let bundlePath = rootBundle.path(forResource: "AcknowList", ofType: "bundle") {
+        let CocoaPodsBundleName = "AcknowListBundle"
+        if let bundlePath = rootBundle.path(forResource: CocoaPodsBundleName, ofType: "bundle") {
             return Bundle(path: bundlePath)
         }
         else {
-            return nil
+            return rootBundle
         }
+        #endif
     }
 
     /**
@@ -76,31 +68,12 @@ open class AcknowLocalization {
      - returns: The localized string.
      */
     class func localizedString(forKey key: String, defaultString: String) -> String {
-        let defaultLanguage = "en"
-
-        if var language = preferredLanguageCode() {
-            if let bundle = resourcesBundle() {
-                let localizations = bundle.localizations
-                if localizations.contains(language) == false {
-                    language = language.components(separatedBy: "-").first!
-                }
-
-                if let bundlePath = bundle.path(forResource: language, ofType: "lproj") {
-                    if let bundle = Bundle(path: bundlePath) {
-                        return bundle.localizedString(forKey: key, value: defaultString, table: nil)
-                    }
-                }
-                else {
-                    if let bundlePath = bundle.path(forResource: defaultLanguage, ofType: "lproj") {
-                        if let bundle = Bundle(path: bundlePath) {
-                            return bundle.localizedString(forKey: key, value: defaultString, table: nil)
-                        }
-                    }
-                }
-            }
+        if let bundle = resourcesBundle() {
+            return bundle.localizedString(forKey: key, value: defaultString, table: nil)
         }
-
-        return Bundle.main.localizedString(forKey: key, value:defaultString, table:nil)
+        else {
+            return defaultString
+        }
     }
 
     /**

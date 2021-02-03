@@ -1,0 +1,16 @@
+PODS:
+  - AcknowList (1.9.5)
+
+DEPENDENCIES:
+  - AcknowList (from `../../`)
+
+EXTERNAL SOURCES:
+  AcknowList:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  AcknowList: 4e92d3c8fba2f256270c6dfa5d11e8dc30105081
+
+PODFILE CHECKSUM: 46635e41a4f934ddec0a6f178b469fb26fcdbd3e
+
+COCOAPODS: 1.10.0

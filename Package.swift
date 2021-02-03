@@ -15,7 +15,6 @@ let package = Package(
         .target(
             name: "AcknowList",
             path: "Sources",
-            exclude: ["Info.plist"],
             resources: [.process("Resources")]
         )
     ],
