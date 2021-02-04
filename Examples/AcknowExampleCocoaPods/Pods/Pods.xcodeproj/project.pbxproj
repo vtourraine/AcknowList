@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		067C6C55161225EB57287A9C1755BEDE /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC81D020EF5EB9DE99ECB374FD8BD43 /* Acknow.swift */; };
-		099704838DC20CA559F95F1495A7AC84 /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A8A6748C1A96DD4263204F3B0F9F7C /* AcknowList-dummy.m */; };
-		0F699A466DE30174295F7709F5D1E1B0 /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D66DE6BA8E4609E51583EF861B75A230 /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1E4B722743634DAEF0A8BF89728039C9 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FB0D8F6EC4F2EEA40FD1B50C8A0CAFDE /* fr.lproj */; };
-		2713E728D686704BC34C72BAC61B372E /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D49906B71DCA13AB84C2EF70D77A0 /* AcknowLocalization.swift */; };
-		2F45C20078636612CF0729F10144F41E /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 622D077EBBB77186DA8135E9D32FCA14 /* Base.lproj */; };
-		366D1B4B6112945C1F51C29FC29776B4 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 45F225BA04489207C64AE9F681F0728B /* es.lproj */; };
+		04AC630F026C7F3AC1EE5CAB0253F8BA /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 103BCD14B69E326D4286167CF04280D1 /* sv.lproj */; };
+		099704838DC20CA559F95F1495A7AC84 /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C6CEF534B9322CF35B90A86747D919 /* AcknowList-dummy.m */; };
+		0F699A466DE30174295F7709F5D1E1B0 /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 122B759150C83AA63328924C1115304E /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		17269042B7AB303AE24DDAB3EBB2C5F3 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3C6CB6FFAAE9B830049F07279361F5E3 /* es.lproj */; };
+		3796F884A907654863472523696FB20B /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B598B568253CEA3635853CA248C5A68 /* AcknowListViewController.swift */; };
+		380F7827670210F687430A1F78FBED9C /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 36873B7EAB5162F3D34F80F8E38D28AF /* pt-PT.lproj */; };
 		3DF9C37E32D60B7A7021F4607F3FAC36 /* Pods-AcknowExampleCocoaPods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 080CE83B1F7BD6BA45FCA7723B8A04E6 /* Pods-AcknowExampleCocoaPods-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4384BD3D8DC52C5A6BBC33192C73DEB3 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C67EC60E5B98571929A476D5293DEE21 /* da.lproj */; };
-		43AE73F5043D93C9AA01B183C41C2750 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 32001C9B8FAAF41515510DB8CA3DF01E /* nl.lproj */; };
-		4E5FE56F77E0593C630B58AB03227FA4 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E726EDD241F4C788B8B947995038A915 /* ja.lproj */; };
-		4F962C4D9FBAE2DB4FDA1BD2D572F1DF /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2D9296CB0AFF6637C2301C8D07FF80E5 /* it.lproj */; };
-		70AB8A4613D7C406A09A05CD76984932 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5A19B225BD392DBCDD32ECB08AABF566 /* pt-PT.lproj */; };
-		7D0430D5A99BAB653BD6E7E76FDEB573 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8B5F4AF4469CA8993D8AA3F221147F27 /* zh-Hans.lproj */; };
-		85D3ACBCBE6F1E168F75EFB563655A96 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B3378BD99F8DDECF4ADF720BD0A2DF9F /* sv.lproj */; };
-		87DDA2D228EE70BB11BC20E20780ABA6 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 386A3AB779831C0AC95C9DDFCDBB846A /* en.lproj */; };
+		4BA55F9B3AF0A4DF986B807DAA1A3140 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 71D865A2F83B4DC5810DE504D69AB015 /* zh-Hant.lproj */; };
+		5C79E70FF9EC23334A201DD6BA86C00C /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 32EB31A61D9D0D512BCCD48A32A1E9A2 /* de.lproj */; };
+		5D8F99E0DF0FB9E4013E9C7E0E3DBFB9 /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25F14976DE0D10A555B2935C10FB2DE /* AcknowParser.swift */; };
+		64BB4BC4B0A1B98EE4ED9C264B189489 /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C250AC9122482997C501377B790E64 /* AcknowLocalization.swift */; };
+		6B476FFDC7C9BBD37E9F026EDD67F9DA /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 375390899B977811C1D1558516651CDE /* fr.lproj */; };
+		6F8E36B65892D3EE519367E4CFBD5847 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F868E09EC2A60F448CD810E7443BCCD1 /* nl.lproj */; };
+		71E7A557C7BE53E505EE062114CB84D8 /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00836DED37DBD8993F46FA23AA697 /* Acknow.swift */; };
+		723DC1026EBC94DCB8413BBACFF873E5 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9E3F0CA88847467563BD4B7B3F668AAA /* en.lproj */; };
 		8A57CDB269BFAF204F7ACAC12A4FFCEC /* Pods-AcknowExampleCocoaPods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C889BF4A098FD946F9AD0EE895FEF8D5 /* Pods-AcknowExampleCocoaPods-dummy.m */; };
-		A13A1F0BB2EF0D1E0546C59853B6DE39 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0021942E1EFFCCCD0B802B5EB0B77832 /* zh-Hant.lproj */; };
-		A3382A32E85FE71444FA5899964A4F75 /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C70E185B0009FEC7E85061F8D302207 /* AcknowListViewController.swift */; };
-		AE8D9C8F65ADB7B41A3865BA1FB61906 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 94596818E8140BAE0F7A1716D6A6D3E2 /* pt-BR.lproj */; };
-		DE0A3B0C086E9303B88C1C74BD9BF84F /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4A7F95A8A443FCD9CEF65E52171857 /* AcknowParser.swift */; };
-		E5C826B6719F1089350C22BA4A4FE402 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D4E0F52D50A9CC6C6FA80EC27970BB2A /* de.lproj */; };
-		F025E870BDDC88248BC225078B9614BB /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A13CAF97F7CBDA4FD61BBF98F0E063D /* AcknowViewController.swift */; };
+		A0F51A424C42A65D92572F66C1EFF260 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 108B1DE3187CD2803C52BFC2EE8A6A9C /* da.lproj */; };
+		B3DD550F787820C9C1B410090E8A887B /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 26E5361AC464B465D88383A917BF246F /* Base.lproj */; };
+		C98CC3879B75A60EEFC22FF908E07467 /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC535F9C8D7CBC4AD64C5FD8138FD1E /* AcknowViewController.swift */; };
+		D1FFA065BD09C5C31BDB69A30E544F26 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 341300FC1F1292EC8599CE25450E3D0E /* pt-BR.lproj */; };
+		E31539A35231F8AEC0DA2DC8326D6769 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F64B8B963E672EB0634FE00867591 /* zh-Hans.lproj */; };
+		E88C80965D57D7F20C3B710BDDD1DC2D /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DF0EA6F58ECCD5196F8850143EB487E8 /* it.lproj */; };
+		FE68CC47E8F8720D00F34615D8A0EB62 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 89FFA7B054A9FA824AEEA750FA61BB69 /* ja.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,47 +50,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0021942E1EFFCCCD0B802B5EB0B77832 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Sources/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
 		080CE83B1F7BD6BA45FCA7723B8A04E6 /* Pods-AcknowExampleCocoaPods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AcknowExampleCocoaPods-umbrella.h"; sourceTree = "<group>"; };
-		1A13CAF97F7CBDA4FD61BBF98F0E063D /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Sources/AcknowViewController.swift; sourceTree = "<group>"; };
-		1A866986EE4B0CA4BE89D75D71CB05B6 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
+		0B2F64B8B963E672EB0634FE00867591 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Sources/AcknowList/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		103BCD14B69E326D4286167CF04280D1 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Sources/AcknowList/Resources/sv.lproj; sourceTree = "<group>"; };
+		108B1DE3187CD2803C52BFC2EE8A6A9C /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Sources/AcknowList/Resources/da.lproj; sourceTree = "<group>"; };
+		122B759150C83AA63328924C1115304E /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
+		192173CB3AF37F473EBB1CC909BE18EB /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
 		1AB292DEC0B08C071C47375988B3366E /* libAcknowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAcknowList.a; path = libAcknowList.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2395CAA720B6608B70D2C670D1549B09 /* AcknowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.debug.xcconfig; sourceTree = "<group>"; };
-		2D9296CB0AFF6637C2301C8D07FF80E5 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Sources/Resources/it.lproj; sourceTree = "<group>"; };
-		32001C9B8FAAF41515510DB8CA3DF01E /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Sources/Resources/nl.lproj; sourceTree = "<group>"; };
-		386A3AB779831C0AC95C9DDFCDBB846A /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/Resources/en.lproj; sourceTree = "<group>"; };
+		1B598B568253CEA3635853CA248C5A68 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Sources/AcknowList/AcknowListViewController.swift; sourceTree = "<group>"; };
+		26E5361AC464B465D88383A917BF246F /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Sources/AcknowList/Resources/Base.lproj; sourceTree = "<group>"; };
+		2E2411A66D2985D05088EEA0D19E57B3 /* AcknowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.debug.xcconfig; sourceTree = "<group>"; };
+		32EB31A61D9D0D512BCCD48A32A1E9A2 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Sources/AcknowList/Resources/de.lproj; sourceTree = "<group>"; };
+		341300FC1F1292EC8599CE25450E3D0E /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Sources/AcknowList/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		36873B7EAB5162F3D34F80F8E38D28AF /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Sources/AcknowList/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		375390899B977811C1D1558516651CDE /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Sources/AcknowList/Resources/fr.lproj; sourceTree = "<group>"; };
+		3C6CB6FFAAE9B830049F07279361F5E3 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Sources/AcknowList/Resources/es.lproj; sourceTree = "<group>"; };
+		431167B4A9DD9ABA7D7B6E5EBA530BAC /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AcknowListBundle-AcknowList-Info.plist"; sourceTree = "<group>"; };
 		441E3FC6CC751557B8E19986B323A91D /* Pods-AcknowExampleCocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AcknowExampleCocoaPods.release.xcconfig"; sourceTree = "<group>"; };
-		45F225BA04489207C64AE9F681F0728B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Sources/Resources/es.lproj; sourceTree = "<group>"; };
 		48E4A9CA91C4803509BC7DA270768A6E /* Pods-AcknowExampleCocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AcknowExampleCocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
-		4BC81D020EF5EB9DE99ECB374FD8BD43 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Sources/Acknow.swift; sourceTree = "<group>"; };
 		4CF6147E87DCC980E822638152021990 /* Pods-AcknowExampleCocoaPods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AcknowExampleCocoaPods.modulemap"; sourceTree = "<group>"; };
 		52D10AC1C8FE5D394605C6DEA6AF6523 /* Pods-AcknowExampleCocoaPods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AcknowExampleCocoaPods-resources.sh"; sourceTree = "<group>"; };
-		5A19B225BD392DBCDD32ECB08AABF566 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Sources/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
-		5B4A7F95A8A443FCD9CEF65E52171857 /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Sources/AcknowParser.swift; sourceTree = "<group>"; };
-		5C70E185B0009FEC7E85061F8D302207 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Sources/AcknowListViewController.swift; sourceTree = "<group>"; };
-		622D077EBBB77186DA8135E9D32FCA14 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Sources/Resources/Base.lproj; sourceTree = "<group>"; };
 		647BF7F14986EE0FB8498F91FDAFA222 /* Pods-AcknowExampleCocoaPods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AcknowExampleCocoaPods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		71D865A2F83B4DC5810DE504D69AB015 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Sources/AcknowList/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
 		75F3BB162DB2498A25F00ACD64A58C69 /* AcknowListBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AcknowListBundle.bundle; path = "AcknowList-AcknowListBundle.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78A8A6748C1A96DD4263204F3B0F9F7C /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
-		8B5F4AF4469CA8993D8AA3F221147F27 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Sources/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
-		94596818E8140BAE0F7A1716D6A6D3E2 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Sources/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		7DC535F9C8D7CBC4AD64C5FD8138FD1E /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Sources/AcknowList/AcknowViewController.swift; sourceTree = "<group>"; };
+		89FFA7B054A9FA824AEEA750FA61BB69 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Sources/AcknowList/Resources/ja.lproj; sourceTree = "<group>"; };
+		9C26E33C35A1451293982C5FDF61F586 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A12F5C884B872FAF80E16B894B861CDA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
-		A4BF9E641459AB42F25052BBEEBD2CDD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9E3F0CA88847467563BD4B7B3F668AAA /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/AcknowList/Resources/en.lproj; sourceTree = "<group>"; };
+		A6A00836DED37DBD8993F46FA23AA697 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Sources/AcknowList/Acknow.swift; sourceTree = "<group>"; };
 		A92B29D5A4EF27490AA146C192865E8D /* libPods-AcknowExampleCocoaPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AcknowExampleCocoaPods.a"; path = "libPods-AcknowExampleCocoaPods.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AACFB524A7ACFF732563193840472D8B /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
-		B1C603CF4F39518BC7DEF0A57ACE6D37 /* AcknowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.release.xcconfig; sourceTree = "<group>"; };
-		B21042D5907CD1D0638396C5F578832B /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AcknowListBundle-AcknowList-Info.plist"; sourceTree = "<group>"; };
-		B3378BD99F8DDECF4ADF720BD0A2DF9F /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Sources/Resources/sv.lproj; sourceTree = "<group>"; };
-		C028E8B0F93673520F9EE0620B4A1A70 /* AcknowList.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.podspec.json; sourceTree = "<group>"; };
-		C67EC60E5B98571929A476D5293DEE21 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Sources/Resources/da.lproj; sourceTree = "<group>"; };
+		A9C6CEF534B9322CF35B90A86747D919 /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
+		B12415AB58E8540490300CB53A836C73 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B25F14976DE0D10A555B2935C10FB2DE /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Sources/AcknowList/AcknowParser.swift; sourceTree = "<group>"; };
 		C889BF4A098FD946F9AD0EE895FEF8D5 /* Pods-AcknowExampleCocoaPods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AcknowExampleCocoaPods-dummy.m"; sourceTree = "<group>"; };
-		D4E0F52D50A9CC6C6FA80EC27970BB2A /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Sources/Resources/de.lproj; sourceTree = "<group>"; };
-		D66DE6BA8E4609E51583EF861B75A230 /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
-		E726EDD241F4C788B8B947995038A915 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Sources/Resources/ja.lproj; sourceTree = "<group>"; };
+		CBCE92FA2B3CF9FB26D3855172D7DE8E /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		D7B96F1FE1CF5E200F3F35F0B4B831FF /* AcknowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.release.xcconfig; sourceTree = "<group>"; };
+		DF0EA6F58ECCD5196F8850143EB487E8 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Sources/AcknowList/Resources/it.lproj; sourceTree = "<group>"; };
+		E3C250AC9122482997C501377B790E64 /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Sources/AcknowList/AcknowLocalization.swift; sourceTree = "<group>"; };
+		E74CF368E31E774139DE6E25255AD492 /* AcknowList.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.podspec.json; sourceTree = "<group>"; };
 		E90C49C8F1F34C88C963AE3E103825CC /* Pods-AcknowExampleCocoaPods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AcknowExampleCocoaPods-acknowledgements.plist"; sourceTree = "<group>"; };
-		FB0D8F6EC4F2EEA40FD1B50C8A0CAFDE /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Sources/Resources/fr.lproj; sourceTree = "<group>"; };
-		FC4D49906B71DCA13AB84C2EF70D77A0 /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Sources/AcknowLocalization.swift; sourceTree = "<group>"; };
+		F868E09EC2A60F448CD810E7443BCCD1 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Sources/AcknowList/Resources/nl.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B15E27CB283E6C742808A64BEBB143 /* AcknowList */ = {
+			isa = PBXGroup;
+			children = (
+				A6A00836DED37DBD8993F46FA23AA697 /* Acknow.swift */,
+				1B598B568253CEA3635853CA248C5A68 /* AcknowListViewController.swift */,
+				E3C250AC9122482997C501377B790E64 /* AcknowLocalization.swift */,
+				B25F14976DE0D10A555B2935C10FB2DE /* AcknowParser.swift */,
+				7DC535F9C8D7CBC4AD64C5FD8138FD1E /* AcknowViewController.swift */,
+				26E5361AC464B465D88383A917BF246F /* Base.lproj */,
+				108B1DE3187CD2803C52BFC2EE8A6A9C /* da.lproj */,
+				32EB31A61D9D0D512BCCD48A32A1E9A2 /* de.lproj */,
+				9E3F0CA88847467563BD4B7B3F668AAA /* en.lproj */,
+				3C6CB6FFAAE9B830049F07279361F5E3 /* es.lproj */,
+				375390899B977811C1D1558516651CDE /* fr.lproj */,
+				DF0EA6F58ECCD5196F8850143EB487E8 /* it.lproj */,
+				89FFA7B054A9FA824AEEA750FA61BB69 /* ja.lproj */,
+				F868E09EC2A60F448CD810E7443BCCD1 /* nl.lproj */,
+				341300FC1F1292EC8599CE25450E3D0E /* pt-BR.lproj */,
+				36873B7EAB5162F3D34F80F8E38D28AF /* pt-PT.lproj */,
+				103BCD14B69E326D4286167CF04280D1 /* sv.lproj */,
+				0B2F64B8B963E672EB0634FE00867591 /* zh-Hans.lproj */,
+				71D865A2F83B4DC5810DE504D69AB015 /* zh-Hant.lproj */,
+				FFFD2B06D65548AD7C2AE71A907CE3E8 /* Pod */,
+				B4A2BA085D000EC6D15A5D0A5F27DF50 /* Support Files */,
+			);
+			name = AcknowList;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
 		15A337CBAB8C34F927C38CC7C1D03666 /* Pods-AcknowExampleCocoaPods */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,35 +163,6 @@
 			path = "Target Support Files/Pods-AcknowExampleCocoaPods";
 			sourceTree = "<group>";
 		};
-		184A73056219CE29AAB0773268999090 /* AcknowList */ = {
-			isa = PBXGroup;
-			children = (
-				4BC81D020EF5EB9DE99ECB374FD8BD43 /* Acknow.swift */,
-				5C70E185B0009FEC7E85061F8D302207 /* AcknowListViewController.swift */,
-				FC4D49906B71DCA13AB84C2EF70D77A0 /* AcknowLocalization.swift */,
-				5B4A7F95A8A443FCD9CEF65E52171857 /* AcknowParser.swift */,
-				1A13CAF97F7CBDA4FD61BBF98F0E063D /* AcknowViewController.swift */,
-				622D077EBBB77186DA8135E9D32FCA14 /* Base.lproj */,
-				C67EC60E5B98571929A476D5293DEE21 /* da.lproj */,
-				D4E0F52D50A9CC6C6FA80EC27970BB2A /* de.lproj */,
-				386A3AB779831C0AC95C9DDFCDBB846A /* en.lproj */,
-				45F225BA04489207C64AE9F681F0728B /* es.lproj */,
-				FB0D8F6EC4F2EEA40FD1B50C8A0CAFDE /* fr.lproj */,
-				2D9296CB0AFF6637C2301C8D07FF80E5 /* it.lproj */,
-				E726EDD241F4C788B8B947995038A915 /* ja.lproj */,
-				32001C9B8FAAF41515510DB8CA3DF01E /* nl.lproj */,
-				94596818E8140BAE0F7A1716D6A6D3E2 /* pt-BR.lproj */,
-				5A19B225BD392DBCDD32ECB08AABF566 /* pt-PT.lproj */,
-				B3378BD99F8DDECF4ADF720BD0A2DF9F /* sv.lproj */,
-				8B5F4AF4469CA8993D8AA3F221147F27 /* zh-Hans.lproj */,
-				0021942E1EFFCCCD0B802B5EB0B77832 /* zh-Hant.lproj */,
-				E3BAACC1E60EA62057498D5D783D077C /* Pod */,
-				6DC5EAC74561254E62C7B26D14A7B132 /* Support Files */,
-			);
-			name = AcknowList;
-			path = ../../..;
-			sourceTree = "<group>";
-		};
 		5B6BF047CF7B9F10EFBAB73C6B243FC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,21 +173,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DC5EAC74561254E62C7B26D14A7B132 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A866986EE4B0CA4BE89D75D71CB05B6 /* AcknowList.modulemap */,
-				78A8A6748C1A96DD4263204F3B0F9F7C /* AcknowList-dummy.m */,
-				AACFB524A7ACFF732563193840472D8B /* AcknowList-prefix.pch */,
-				D66DE6BA8E4609E51583EF861B75A230 /* AcknowList-umbrella.h */,
-				2395CAA720B6608B70D2C670D1549B09 /* AcknowList.debug.xcconfig */,
-				B1C603CF4F39518BC7DEF0A57ACE6D37 /* AcknowList.release.xcconfig */,
-				B21042D5907CD1D0638396C5F578832B /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Examples/AcknowExampleCocoaPods/Pods/Target Support Files/AcknowList";
-			sourceTree = "<group>";
-		};
 		939249473D1FEFA5C5FE29F8651A2AED /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,10 +181,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B4A2BA085D000EC6D15A5D0A5F27DF50 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C26E33C35A1451293982C5FDF61F586 /* AcknowList.modulemap */,
+				A9C6CEF534B9322CF35B90A86747D919 /* AcknowList-dummy.m */,
+				192173CB3AF37F473EBB1CC909BE18EB /* AcknowList-prefix.pch */,
+				122B759150C83AA63328924C1115304E /* AcknowList-umbrella.h */,
+				2E2411A66D2985D05088EEA0D19E57B3 /* AcknowList.debug.xcconfig */,
+				D7B96F1FE1CF5E200F3F35F0B4B831FF /* AcknowList.release.xcconfig */,
+				431167B4A9DD9ABA7D7B6E5EBA530BAC /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Examples/AcknowExampleCocoaPods/Pods/Target Support Files/AcknowList";
+			sourceTree = "<group>";
+		};
 		C073B8DFA864CF81842063F0E763F67B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				184A73056219CE29AAB0773268999090 /* AcknowList */,
+				06B15E27CB283E6C742808A64BEBB143 /* AcknowList */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -222,12 +222,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E3BAACC1E60EA62057498D5D783D077C /* Pod */ = {
+		FFFD2B06D65548AD7C2AE71A907CE3E8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C028E8B0F93673520F9EE0620B4A1A70 /* AcknowList.podspec.json */,
-				A12F5C884B872FAF80E16B894B861CDA /* LICENSE.txt */,
-				A4BF9E641459AB42F25052BBEEBD2CDD /* README.md */,
+				E74CF368E31E774139DE6E25255AD492 /* AcknowList.podspec.json */,
+				CBCE92FA2B3CF9FB26D3855172D7DE8E /* LICENSE.txt */,
+				B12415AB58E8540490300CB53A836C73 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -342,20 +342,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F45C20078636612CF0729F10144F41E /* Base.lproj in Resources */,
-				4384BD3D8DC52C5A6BBC33192C73DEB3 /* da.lproj in Resources */,
-				E5C826B6719F1089350C22BA4A4FE402 /* de.lproj in Resources */,
-				87DDA2D228EE70BB11BC20E20780ABA6 /* en.lproj in Resources */,
-				366D1B4B6112945C1F51C29FC29776B4 /* es.lproj in Resources */,
-				1E4B722743634DAEF0A8BF89728039C9 /* fr.lproj in Resources */,
-				4F962C4D9FBAE2DB4FDA1BD2D572F1DF /* it.lproj in Resources */,
-				4E5FE56F77E0593C630B58AB03227FA4 /* ja.lproj in Resources */,
-				43AE73F5043D93C9AA01B183C41C2750 /* nl.lproj in Resources */,
-				AE8D9C8F65ADB7B41A3865BA1FB61906 /* pt-BR.lproj in Resources */,
-				70AB8A4613D7C406A09A05CD76984932 /* pt-PT.lproj in Resources */,
-				85D3ACBCBE6F1E168F75EFB563655A96 /* sv.lproj in Resources */,
-				7D0430D5A99BAB653BD6E7E76FDEB573 /* zh-Hans.lproj in Resources */,
-				A13A1F0BB2EF0D1E0546C59853B6DE39 /* zh-Hant.lproj in Resources */,
+				B3DD550F787820C9C1B410090E8A887B /* Base.lproj in Resources */,
+				A0F51A424C42A65D92572F66C1EFF260 /* da.lproj in Resources */,
+				5C79E70FF9EC23334A201DD6BA86C00C /* de.lproj in Resources */,
+				723DC1026EBC94DCB8413BBACFF873E5 /* en.lproj in Resources */,
+				17269042B7AB303AE24DDAB3EBB2C5F3 /* es.lproj in Resources */,
+				6B476FFDC7C9BBD37E9F026EDD67F9DA /* fr.lproj in Resources */,
+				E88C80965D57D7F20C3B710BDDD1DC2D /* it.lproj in Resources */,
+				FE68CC47E8F8720D00F34615D8A0EB62 /* ja.lproj in Resources */,
+				6F8E36B65892D3EE519367E4CFBD5847 /* nl.lproj in Resources */,
+				D1FFA065BD09C5C31BDB69A30E544F26 /* pt-BR.lproj in Resources */,
+				380F7827670210F687430A1F78FBED9C /* pt-PT.lproj in Resources */,
+				04AC630F026C7F3AC1EE5CAB0253F8BA /* sv.lproj in Resources */,
+				E31539A35231F8AEC0DA2DC8326D6769 /* zh-Hans.lproj in Resources */,
+				4BA55F9B3AF0A4DF986B807DAA1A3140 /* zh-Hant.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,12 +400,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				067C6C55161225EB57287A9C1755BEDE /* Acknow.swift in Sources */,
+				71E7A557C7BE53E505EE062114CB84D8 /* Acknow.swift in Sources */,
 				099704838DC20CA559F95F1495A7AC84 /* AcknowList-dummy.m in Sources */,
-				A3382A32E85FE71444FA5899964A4F75 /* AcknowListViewController.swift in Sources */,
-				2713E728D686704BC34C72BAC61B372E /* AcknowLocalization.swift in Sources */,
-				DE0A3B0C086E9303B88C1C74BD9BF84F /* AcknowParser.swift in Sources */,
-				F025E870BDDC88248BC225078B9614BB /* AcknowViewController.swift in Sources */,
+				3796F884A907654863472523696FB20B /* AcknowListViewController.swift in Sources */,
+				64BB4BC4B0A1B98EE4ED9C264B189489 /* AcknowLocalization.swift in Sources */,
+				5D8F99E0DF0FB9E4013E9C7E0E3DBFB9 /* AcknowParser.swift in Sources */,
+				C98CC3879B75A60EEFC22FF908E07467 /* AcknowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +437,7 @@
 /* Begin XCBuildConfiguration section */
 		2151539B26BED2A019EBD2655015CA30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C603CF4F39518BC7DEF0A57ACE6D37 /* AcknowList.release.xcconfig */;
+			baseConfigurationReference = D7B96F1FE1CF5E200F3F35F0B4B831FF /* AcknowList.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -549,7 +549,7 @@
 		};
 		C54A96FD84FDD19983D4DA3B1C904D31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C603CF4F39518BC7DEF0A57ACE6D37 /* AcknowList.release.xcconfig */;
+			baseConfigurationReference = D7B96F1FE1CF5E200F3F35F0B4B831FF /* AcknowList.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AcknowList";
 				IBSC_MODULE = AcknowList;
@@ -649,7 +649,7 @@
 		};
 		E235192F484C83FD18371B1BC66B773E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2395CAA720B6608B70D2C670D1549B09 /* AcknowList.debug.xcconfig */;
+			baseConfigurationReference = 2E2411A66D2985D05088EEA0D19E57B3 /* AcknowList.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AcknowList";
 				IBSC_MODULE = AcknowList;
@@ -665,7 +665,7 @@
 		};
 		E5C1CFB70A8066F62C15A262DD492CE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2395CAA720B6608B70D2C670D1549B09 /* AcknowList.debug.xcconfig */;
+			baseConfigurationReference = 2E2411A66D2985D05088EEA0D19E57B3 /* AcknowList.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

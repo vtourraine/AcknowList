@@ -166,7 +166,8 @@
 				32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */,
 				32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */,
 			);
-			path = Sources;
+			name = Sources;
+			path = Sources/AcknowList;
 			sourceTree = SOURCE_ROOT;
 		};
 		32A5DE3A25C7DD3D00ED11BB /* Resources */ = {

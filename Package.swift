@@ -14,7 +14,6 @@ let package = Package(
     targets: [
         .target(
             name: "AcknowList",
-            path: "Sources",
             resources: [.process("Resources")]
         ),
         .testTarget(
