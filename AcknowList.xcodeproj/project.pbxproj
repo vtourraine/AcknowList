@@ -12,13 +12,14 @@
 		1A7421761CAC3685007E44FD /* AcknowParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7421731CAC3685007E44FD /* AcknowParserTests.swift */; };
 		1A7421771CAC3685007E44FD /* AcknowViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */; };
 		1AA3C37F1CAC35190071A7FD /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA3C3741CAC35190071A7FD /* AcknowList.framework */; };
-		1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */; };
 		32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */; };
 		32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */; };
 		32A5DE4525C7DD3D00ED11BB /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */; };
 		32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */; };
 		32A5DE4825C7DD3D00ED11BB /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */; };
 		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
+		D70473D225CC4DB0004F2BEC /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */; };
+		D70473E525CC530E004F2BEC /* AcknowListTestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */; };
 		D70B427D212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */; };
 		D70B427F212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */; };
 		D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */; };
@@ -46,7 +47,6 @@
 		1AA3C3741CAC35190071A7FD /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3C37E1CAC35190071A7FD /* AcknowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcknowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3C3851CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Tests/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParser.swift; sourceTree = "<group>"; };
 		32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acknow.swift; sourceTree = "<group>"; };
 		32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +54,8 @@
 		32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
 		32A5DE5225C7E2FB00ED11BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
+		D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListTestsHelpers.swift; sourceTree = "<group>"; };
 		D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Alamofire.txt"; sourceTree = "<group>"; };
 		D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Charts.txt"; sourceTree = "<group>"; };
 		D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		1AA3C3821CAC35190071A7FD /* AcknowListTests */ = {
 			isa = PBXGroup;
 			children = (
+				D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */,
 				1A7421721CAC3685007E44FD /* AcknowListViewControllerTests.swift */,
 				1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */,
 				1A7421731CAC3685007E44FD /* AcknowParserTests.swift */,
@@ -134,7 +137,7 @@
 				1AD73B8F1CAC3AEB0084F8CA /* Supporting Files */,
 			);
 			name = AcknowListTests;
-			path = Tests;
+			path = Tests/AcknowListTests;
 			sourceTree = "<group>";
 		};
 		1AD73B8F1CAC3AEB0084F8CA /* Supporting Files */ = {
@@ -177,7 +180,7 @@
 		D70B4286212B2EFF007B6A81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */,
+				D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */,
 				D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */,
 				503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */,
 				D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */,
@@ -186,7 +189,7 @@
 				D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */,
 				D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,7 +308,7 @@
 				D70B427D212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt in Resources */,
 				503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */,
 				D70B427F212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt in Resources */,
-				1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */,
+				D70473D225CC4DB0004F2BEC /* Pods-acknowledgements.plist in Resources */,
 				D70B4283212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt in Resources */,
 				D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */,
 				D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */,
@@ -334,6 +337,7 @@
 			files = (
 				1A7421771CAC3685007E44FD /* AcknowViewControllerTests.swift in Sources */,
 				1A7421751CAC3685007E44FD /* AcknowListViewControllerTests.swift in Sources */,
+				D70473E525CC530E004F2BEC /* AcknowListTestsHelpers.swift in Sources */,
 				1A7421761CAC3685007E44FD /* AcknowParserTests.swift in Sources */,
 				1420A2E41CAEC92200D98F9C /* AcknowLocalizationTests.swift in Sources */,
 			);
@@ -540,7 +544,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vtourraine.AcknowListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,7 +557,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vtourraine.AcknowListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

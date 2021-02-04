@@ -14,7 +14,7 @@ import XCTest
 class AcknowListViewControllerTests: XCTestCase {
 
     func testConfigureTableView() {
-        let bundle = Bundle(for: AcknowListViewControllerTests.self)
+        let bundle = resourcesBundle()
         let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
@@ -38,7 +38,7 @@ class AcknowListViewControllerTests: XCTestCase {
     }
 
     func testSortsAcknowledgementsByTitle() {
-        let bundle = Bundle(for: AcknowListViewControllerTests.self)
+        let bundle = resourcesBundle()
         let plistPath = bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist")
 
         let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
@@ -49,7 +49,7 @@ class AcknowListViewControllerTests: XCTestCase {
     }
 
     func testLoadFromMultiplePlist() {
-        let bundle = Bundle(for: AcknowListViewControllerTests.self)
+        let bundle = resourcesBundle()
         let plistPath1 = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
         let plistPath2 = bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist")
 
