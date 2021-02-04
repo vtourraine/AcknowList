@@ -9,6 +9,7 @@
 - Update supported platforms to iOS 9
 - Add CocoaPods example project
 - Add Swift Package Manager example project
+- Add Swift Package Manager test target support
 
 
 ## 1.9.5 (17 September 2020)
