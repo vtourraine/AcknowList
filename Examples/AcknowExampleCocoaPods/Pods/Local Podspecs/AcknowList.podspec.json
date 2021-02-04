@@ -15,10 +15,10 @@
     "git": "https://github.com/vtourraine/AcknowList.git",
     "tag": "1.9.5"
   },
-  "source_files": "Sources/*.swift",
+  "source_files": "Sources/AcknowList/*.swift",
   "resource_bundles": {
     "AcknowListBundle": [
-      "Sources/Resources/**/*.lproj"
+      "Sources/AcknowList/Resources/**/*.lproj"
     ]
   },
   "platforms": {
