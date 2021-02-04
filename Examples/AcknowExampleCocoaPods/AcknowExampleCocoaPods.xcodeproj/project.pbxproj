@@ -14,6 +14,7 @@
 		D7527E5225CAE11000378FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7527E5025CAE11000378FB8 /* Main.storyboard */; };
 		D7527E5425CAE11200378FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7527E5325CAE11200378FB8 /* Assets.xcassets */; };
 		D7527E5725CAE11200378FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7527E5525CAE11200378FB8 /* LaunchScreen.storyboard */; };
+		D7527F2525CBE82200378FB8 /* Pods-AcknowExampleCocoaPods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7527F2425CBE82200378FB8 /* Pods-AcknowExampleCocoaPods-acknowledgements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D7527E5825CAE11200378FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7527E7325CAE3CC00378FB8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		D7527E7425CAE3CC00378FB8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D7527F2425CBE82200378FB8 /* Pods-AcknowExampleCocoaPods-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Pods-AcknowExampleCocoaPods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-AcknowExampleCocoaPods/Pods-AcknowExampleCocoaPods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				D7527E4A25CAE10F00378FB8 /* AppDelegate.swift */,
 				D7527E4C25CAE11000378FB8 /* SceneDelegate.swift */,
 				D7527E4E25CAE11000378FB8 /* ViewController.swift */,
+				D7527F2425CBE82200378FB8 /* Pods-AcknowExampleCocoaPods-acknowledgements.plist */,
 				D7527E5025CAE11000378FB8 /* Main.storyboard */,
 				D7527E5325CAE11200378FB8 /* Assets.xcassets */,
 				D7527E5525CAE11200378FB8 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7527E5725CAE11200378FB8 /* LaunchScreen.storyboard in Resources */,
+				D7527F2525CBE82200378FB8 /* Pods-AcknowExampleCocoaPods-acknowledgements.plist in Resources */,
 				D7527E5425CAE11200378FB8 /* Assets.xcassets in Resources */,
 				D7527E5225CAE11000378FB8 /* Main.storyboard in Resources */,
 			);
