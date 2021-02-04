@@ -50,46 +50,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0021942E1EFFCCCD0B802B5EB0B77832 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "Sources/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		0021942E1EFFCCCD0B802B5EB0B77832 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Sources/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
 		080CE83B1F7BD6BA45FCA7723B8A04E6 /* Pods-AcknowExampleCocoaPods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AcknowExampleCocoaPods-umbrella.h"; sourceTree = "<group>"; };
 		1A13CAF97F7CBDA4FD61BBF98F0E063D /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Sources/AcknowViewController.swift; sourceTree = "<group>"; };
 		1A866986EE4B0CA4BE89D75D71CB05B6 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
-		1AB292DEC0B08C071C47375988B3366E /* libAcknowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAcknowList.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB292DEC0B08C071C47375988B3366E /* libAcknowList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAcknowList.a; path = libAcknowList.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2395CAA720B6608B70D2C670D1549B09 /* AcknowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.debug.xcconfig; sourceTree = "<group>"; };
-		2D9296CB0AFF6637C2301C8D07FF80E5 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = Sources/Resources/it.lproj; sourceTree = "<group>"; };
-		32001C9B8FAAF41515510DB8CA3DF01E /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = Sources/Resources/nl.lproj; sourceTree = "<group>"; };
-		386A3AB779831C0AC95C9DDFCDBB846A /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Sources/Resources/en.lproj; sourceTree = "<group>"; };
+		2D9296CB0AFF6637C2301C8D07FF80E5 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Sources/Resources/it.lproj; sourceTree = "<group>"; };
+		32001C9B8FAAF41515510DB8CA3DF01E /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Sources/Resources/nl.lproj; sourceTree = "<group>"; };
+		386A3AB779831C0AC95C9DDFCDBB846A /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/Resources/en.lproj; sourceTree = "<group>"; };
 		441E3FC6CC751557B8E19986B323A91D /* Pods-AcknowExampleCocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AcknowExampleCocoaPods.release.xcconfig"; sourceTree = "<group>"; };
-		45F225BA04489207C64AE9F681F0728B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = Sources/Resources/es.lproj; sourceTree = "<group>"; };
+		45F225BA04489207C64AE9F681F0728B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Sources/Resources/es.lproj; sourceTree = "<group>"; };
 		48E4A9CA91C4803509BC7DA270768A6E /* Pods-AcknowExampleCocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AcknowExampleCocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC81D020EF5EB9DE99ECB374FD8BD43 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Sources/Acknow.swift; sourceTree = "<group>"; };
 		4CF6147E87DCC980E822638152021990 /* Pods-AcknowExampleCocoaPods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AcknowExampleCocoaPods.modulemap"; sourceTree = "<group>"; };
 		52D10AC1C8FE5D394605C6DEA6AF6523 /* Pods-AcknowExampleCocoaPods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AcknowExampleCocoaPods-resources.sh"; sourceTree = "<group>"; };
-		5A19B225BD392DBCDD32ECB08AABF566 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-PT.lproj"; path = "Sources/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		5A19B225BD392DBCDD32ECB08AABF566 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Sources/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
 		5B4A7F95A8A443FCD9CEF65E52171857 /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Sources/AcknowParser.swift; sourceTree = "<group>"; };
 		5C70E185B0009FEC7E85061F8D302207 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Sources/AcknowListViewController.swift; sourceTree = "<group>"; };
-		622D077EBBB77186DA8135E9D32FCA14 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Base.lproj; path = Sources/Resources/Base.lproj; sourceTree = "<group>"; };
+		622D077EBBB77186DA8135E9D32FCA14 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Sources/Resources/Base.lproj; sourceTree = "<group>"; };
 		647BF7F14986EE0FB8498F91FDAFA222 /* Pods-AcknowExampleCocoaPods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AcknowExampleCocoaPods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		75F3BB162DB2498A25F00ACD64A58C69 /* AcknowListBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcknowListBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F3BB162DB2498A25F00ACD64A58C69 /* AcknowListBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AcknowListBundle.bundle; path = "AcknowList-AcknowListBundle.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A8A6748C1A96DD4263204F3B0F9F7C /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
-		8B5F4AF4469CA8993D8AA3F221147F27 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "Sources/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
-		94596818E8140BAE0F7A1716D6A6D3E2 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-BR.lproj"; path = "Sources/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A12F5C884B872FAF80E16B894B861CDA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		A4BF9E641459AB42F25052BBEEBD2CDD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A92B29D5A4EF27490AA146C192865E8D /* libPods-AcknowExampleCocoaPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcknowExampleCocoaPods.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5F4AF4469CA8993D8AA3F221147F27 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Sources/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		94596818E8140BAE0F7A1716D6A6D3E2 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Sources/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A12F5C884B872FAF80E16B894B861CDA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		A4BF9E641459AB42F25052BBEEBD2CDD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A92B29D5A4EF27490AA146C192865E8D /* libPods-AcknowExampleCocoaPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AcknowExampleCocoaPods.a"; path = "libPods-AcknowExampleCocoaPods.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACFB524A7ACFF732563193840472D8B /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
 		B1C603CF4F39518BC7DEF0A57ACE6D37 /* AcknowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.release.xcconfig; sourceTree = "<group>"; };
 		B21042D5907CD1D0638396C5F578832B /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AcknowListBundle-AcknowList-Info.plist"; sourceTree = "<group>"; };
-		B3378BD99F8DDECF4ADF720BD0A2DF9F /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = Sources/Resources/sv.lproj; sourceTree = "<group>"; };
-		C028E8B0F93673520F9EE0620B4A1A70 /* AcknowList.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = AcknowList.podspec.json; sourceTree = "<group>"; };
-		C67EC60E5B98571929A476D5293DEE21 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = Sources/Resources/da.lproj; sourceTree = "<group>"; };
+		B3378BD99F8DDECF4ADF720BD0A2DF9F /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Sources/Resources/sv.lproj; sourceTree = "<group>"; };
+		C028E8B0F93673520F9EE0620B4A1A70 /* AcknowList.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.podspec.json; sourceTree = "<group>"; };
+		C67EC60E5B98571929A476D5293DEE21 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Sources/Resources/da.lproj; sourceTree = "<group>"; };
 		C889BF4A098FD946F9AD0EE895FEF8D5 /* Pods-AcknowExampleCocoaPods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AcknowExampleCocoaPods-dummy.m"; sourceTree = "<group>"; };
-		D4E0F52D50A9CC6C6FA80EC27970BB2A /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = Sources/Resources/de.lproj; sourceTree = "<group>"; };
+		D4E0F52D50A9CC6C6FA80EC27970BB2A /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Sources/Resources/de.lproj; sourceTree = "<group>"; };
 		D66DE6BA8E4609E51583EF861B75A230 /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
-		E726EDD241F4C788B8B947995038A915 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = Sources/Resources/ja.lproj; sourceTree = "<group>"; };
+		E726EDD241F4C788B8B947995038A915 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Sources/Resources/ja.lproj; sourceTree = "<group>"; };
 		E90C49C8F1F34C88C963AE3E103825CC /* Pods-AcknowExampleCocoaPods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AcknowExampleCocoaPods-acknowledgements.plist"; sourceTree = "<group>"; };
-		FB0D8F6EC4F2EEA40FD1B50C8A0CAFDE /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = Sources/Resources/fr.lproj; sourceTree = "<group>"; };
+		FB0D8F6EC4F2EEA40FD1B50C8A0CAFDE /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Sources/Resources/fr.lproj; sourceTree = "<group>"; };
 		FC4D49906B71DCA13AB84C2EF70D77A0 /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Sources/AcknowLocalization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,7 +315,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";

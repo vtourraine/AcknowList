@@ -67,7 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../../Tests/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../../Tests/AcknowListTests/Resources/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		1AD73BAB1CAC45BD0084F8CA /* AcknowList.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AcknowList.framework; path = "../../../../Library/Developer/Xcode/DerivedData/AcknowList-hcxjausribyixhgxamdenioijlba/Build/Products/Debug-iphonesimulator/AcknowList.framework"; sourceTree = "<group>"; };
 		1F6C52A71B7F495700B9A7CC /* AcknowExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcknowExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C52AB1B7F495700B9A7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
