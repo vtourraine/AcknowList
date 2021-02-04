@@ -17,7 +17,9 @@
   },
   "source_files": "Sources/*.swift",
   "resource_bundles": {
-    "AcknowListBundle": ["Sources/Resources/**/*.lproj"]
+    "AcknowListBundle": [
+      "Sources/Resources/**/*.lproj"
+    ]
   },
   "platforms": {
     "ios": "9.0",

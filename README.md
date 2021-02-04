@@ -27,7 +27,15 @@ _Also available in Objective-C with [VTAcknowledgementsViewController](https://g
 
 ## How to Install
 
-CocoaPods is the most common solution to install this library.
+### Swift Package Manager
+
+AcknowList can be installed with the [Swift Package Manager](https://swift.org/package-manager/) (requires Xcode 12 for localized resources).
+
+1. Click on `File` → `Swift Packages` → `Add Package Dependency…`.
+2. Enter `https://github.com/vtourraine/AcknowList`.
+3. Select the version you’d like to use.
+
+### CocoaPods
 
 1. Add `pod 'AcknowList'` to your `Podfile`.
 2. Run `pod install`.
@@ -85,7 +93,7 @@ AcknowList is also compatible with tvOS for Apple TV apps.
 
 ## Requirements
 
-AcknowList is written in Swift 5, requires iOS 8.0 or tvOS 9.0 and above, Xcode 11 and above.
+AcknowList is written in Swift 5, requires iOS 9.0 or tvOS 9.0 and above, Xcode 11 and above.
 
 ## Credits
 

@@ -1,10 +1,12 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
+
 import PackageDescription
 
 let package = Package(
     name: "AcknowList",
+    defaultLocalization: "en",
     platforms: [
-        .iOS(.v8), .tvOS(.v9)
+        .iOS(.v9), .tvOS(.v9)
     ],
     products: [
         .library(name: "AcknowList", targets: ["AcknowList"])
@@ -12,7 +14,8 @@ let package = Package(
     targets: [
         .target(
             name: "AcknowList",
-            path: "Source"
+            path: "Sources",
+            resources: [.process("Resources")]
         )
     ],
     swiftLanguageVersions: [.v5]

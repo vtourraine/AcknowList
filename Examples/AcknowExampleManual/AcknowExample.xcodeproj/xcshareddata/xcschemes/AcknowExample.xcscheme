@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1230"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,21 @@
                BlueprintIdentifier = "1AA3C3731CAC35190071A7FD"
                BuildableName = "AcknowList.framework"
                BlueprintName = "AcknowList"
-               ReferencedContainer = "container:AcknowList.xcodeproj">
+               ReferencedContainer = "container:../AcknowList.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
+               BuildableName = "AcknowExample.app"
+               BlueprintName = "AcknowExample"
+               ReferencedContainer = "container:AcknowExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AA3C3731CAC35190071A7FD"
-            BuildableName = "AcknowList.framework"
-            BlueprintName = "AcknowList"
-            ReferencedContainer = "container:AcknowList.xcodeproj">
+            BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
+            BuildableName = "AcknowExample.app"
+            BlueprintName = "AcknowExample"
+            ReferencedContainer = "container:AcknowExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -45,7 +59,7 @@
                BlueprintIdentifier = "1AA3C37D1CAC35190071A7FD"
                BuildableName = "AcknowListTests.xctest"
                BlueprintName = "AcknowListTests"
-               ReferencedContainer = "container:AcknowList.xcodeproj">
+               ReferencedContainer = "container:../../AcknowList.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -60,15 +74,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AA3C3731CAC35190071A7FD"
-            BuildableName = "AcknowList.framework"
-            BlueprintName = "AcknowList"
-            ReferencedContainer = "container:AcknowList.xcodeproj">
+            BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
+            BuildableName = "AcknowExample.app"
+            BlueprintName = "AcknowExample"
+            ReferencedContainer = "container:AcknowExample.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -76,15 +91,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AA3C3731CAC35190071A7FD"
-            BuildableName = "AcknowList.framework"
-            BlueprintName = "AcknowList"
-            ReferencedContainer = "container:AcknowList.xcodeproj">
+            BlueprintIdentifier = "1F6C52A61B7F495700B9A7CC"
+            BuildableName = "AcknowExample.app"
+            BlueprintName = "AcknowExample"
+            ReferencedContainer = "container:AcknowExample.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

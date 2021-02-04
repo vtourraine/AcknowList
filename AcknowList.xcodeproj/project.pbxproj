@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1420A2E41CAEC92200D98F9C /* AcknowLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */; };
-		144210351CB657F200E958F1 /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144210341CB657F200E958F1 /* AcknowLocalization.swift */; };
-		1A74216E1CAC3616007E44FD /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216A1CAC3616007E44FD /* Acknow.swift */; };
-		1A74216F1CAC3616007E44FD /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */; };
-		1A7421701CAC3616007E44FD /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216C1CAC3616007E44FD /* AcknowParser.swift */; };
-		1A7421711CAC3616007E44FD /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74216D1CAC3616007E44FD /* AcknowViewController.swift */; };
 		1A7421751CAC3685007E44FD /* AcknowListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7421721CAC3685007E44FD /* AcknowListViewControllerTests.swift */; };
 		1A7421761CAC3685007E44FD /* AcknowParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7421731CAC3685007E44FD /* AcknowParserTests.swift */; };
 		1A7421771CAC3685007E44FD /* AcknowViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */; };
 		1AA3C37F1CAC35190071A7FD /* AcknowList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA3C3741CAC35190071A7FD /* AcknowList.framework */; };
 		1AD73B921CAC3B1C0084F8CA /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */; };
-		1AD73BBE1CAC54C60084F8CA /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */; };
+		32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */; };
+		32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */; };
+		32A5DE4525C7DD3D00ED11BB /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */; };
+		32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */; };
+		32A5DE4825C7DD3D00ED11BB /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */; };
 		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
 		D70B427D212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */; };
 		D70B427F212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */; };
 		D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */; };
 		D70B4283212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */; };
 		D70B4285212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */; };
+		D7527EE425CAFDB000378FB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7527EE225CAFDB000378FB8 /* Localizable.strings */; };
 		D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */; };
 /* End PBXBuildFile section */
 
@@ -40,26 +40,39 @@
 
 /* Begin PBXFileReference section */
 		1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalizationTests.swift; sourceTree = "<group>"; };
-		144210341CB657F200E958F1 /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
-		1A74216A1CAC3616007E44FD /* Acknow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acknow.swift; sourceTree = "<group>"; };
-		1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListViewController.swift; sourceTree = "<group>"; };
-		1A74216C1CAC3616007E44FD /* AcknowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParser.swift; sourceTree = "<group>"; };
-		1A74216D1CAC3616007E44FD /* AcknowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowViewController.swift; sourceTree = "<group>"; };
 		1A7421721CAC3685007E44FD /* AcknowListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListViewControllerTests.swift; sourceTree = "<group>"; };
 		1A7421731CAC3685007E44FD /* AcknowParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParserTests.swift; sourceTree = "<group>"; };
 		1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowViewControllerTests.swift; sourceTree = "<group>"; };
 		1AA3C3741CAC35190071A7FD /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AA3C3791CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA3C37E1CAC35190071A7FD /* AcknowListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcknowListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3C3851CAC35190071A7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD73B901CAC3B140084F8CA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Tests/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
-		1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = SOURCE_ROOT; };
+		32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowParser.swift; sourceTree = "<group>"; };
+		32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acknow.swift; sourceTree = "<group>"; };
+		32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowViewController.swift; sourceTree = "<group>"; };
+		32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListViewController.swift; sourceTree = "<group>"; };
+		32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
+		32A5DE5225C7E2FB00ED11BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
 		D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Alamofire.txt"; sourceTree = "<group>"; };
 		D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Charts.txt"; sourceTree = "<group>"; };
 		D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"; sourceTree = "<group>"; };
 		D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TYPFontAwesome.txt"; sourceTree = "<group>"; };
 		D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-pop.txt"; sourceTree = "<group>"; };
+		D7527EE325CAFDB000378FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EE725CAFDBA00378FB8 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EE825CAFDC600378FB8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EE925CAFDCC00378FB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEA25CAFDD300378FB8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEB25CAFDD800378FB8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEC25CAFDDE00378FB8 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EED25CAFDE300378FB8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEE25CAFDE900378FB8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EEF25CAFDEE00378FB8 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7527EF025CAFDF400378FB8 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7527EF125CAFDFA00378FB8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7527EF225CAFE0000378FB8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D7527EF325CAFE0700378FB8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-multi.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,16 +116,11 @@
 		1AA3C3761CAC35190071A7FD /* AcknowList */ = {
 			isa = PBXGroup;
 			children = (
-				1A74216A1CAC3616007E44FD /* Acknow.swift */,
-				1A74216B1CAC3616007E44FD /* AcknowListViewController.swift */,
-				144210341CB657F200E958F1 /* AcknowLocalization.swift */,
-				1A74216C1CAC3616007E44FD /* AcknowParser.swift */,
-				1A74216D1CAC3616007E44FD /* AcknowViewController.swift */,
-				1AD73BBC1CAC53BD0084F8CA /* Resources */,
+				32A5DE3925C7DD3D00ED11BB /* Sources */,
 				1AD73B941CAC3CE60084F8CA /* Supporting Files */,
 			);
 			name = AcknowList;
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		1AA3C3821CAC35190071A7FD /* AcknowListTests */ = {
@@ -140,17 +148,30 @@
 		1AD73B941CAC3CE60084F8CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1AA3C3791CAC35190071A7FD /* Info.plist */,
+				32A5DE5225C7E2FB00ED11BB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AD73BBC1CAC53BD0084F8CA /* Resources */ = {
+		32A5DE3925C7DD3D00ED11BB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1AD73BBD1CAC54C60084F8CA /* AcknowList.bundle */,
+				32A5DE3A25C7DD3D00ED11BB /* Resources */,
+				32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */,
+				32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */,
+				32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */,
+				32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */,
+				32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */,
 			);
-			name = Resources;
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		32A5DE3A25C7DD3D00ED11BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7527EE225CAFDB000378FB8 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D70B4286212B2EFF007B6A81 /* Resources */ = {
@@ -224,7 +245,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = VTourraine;
 				TargetAttributes = {
 					1AA3C3731CAC35190071A7FD = {
@@ -244,6 +265,18 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				"pt-PT",
+				da,
+				nl,
+				"zh-Hans",
+				ja,
+				it,
+				de,
+				es,
+				fr,
+				sv,
+				"pt-BR",
 			);
 			mainGroup = 1AA3C36A1CAC35190071A7FD;
 			productRefGroup = 1AA3C3751CAC35190071A7FD /* Products */;
@@ -261,7 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD73BBE1CAC54C60084F8CA /* AcknowList.bundle in Resources */,
+				D7527EE425CAFDB000378FB8 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A74216E1CAC3616007E44FD /* Acknow.swift in Sources */,
-				144210351CB657F200E958F1 /* AcknowLocalization.swift in Sources */,
-				1A74216F1CAC3616007E44FD /* AcknowListViewController.swift in Sources */,
-				1A7421701CAC3616007E44FD /* AcknowParser.swift in Sources */,
-				1A7421711CAC3616007E44FD /* AcknowViewController.swift in Sources */,
+				32A5DE4525C7DD3D00ED11BB /* AcknowViewController.swift in Sources */,
+				32A5DE4825C7DD3D00ED11BB /* AcknowLocalization.swift in Sources */,
+				32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */,
+				32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */,
+				32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +348,30 @@
 			targetProxy = 1AA3C3801CAC35190071A7FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7527EE225CAFDB000378FB8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7527EE325CAFDB000378FB8 /* Base */,
+				D7527EE725CAFDBA00378FB8 /* da */,
+				D7527EE825CAFDC600378FB8 /* de */,
+				D7527EE925CAFDCC00378FB8 /* en */,
+				D7527EEA25CAFDD300378FB8 /* es */,
+				D7527EEB25CAFDD800378FB8 /* fr */,
+				D7527EEC25CAFDDE00378FB8 /* it */,
+				D7527EED25CAFDE300378FB8 /* ja */,
+				D7527EEE25CAFDE900378FB8 /* nl */,
+				D7527EEF25CAFDEE00378FB8 /* pt-BR */,
+				D7527EF025CAFDF400378FB8 /* pt-PT */,
+				D7527EF125CAFDFA00378FB8 /* sv */,
+				D7527EF225CAFE0000378FB8 /* zh-Hans */,
+				D7527EF325CAFE0700378FB8 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1AA3C3861CAC35190071A7FD /* Debug */ = {
@@ -341,6 +398,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -366,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,6 +462,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -423,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
@@ -445,7 +504,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vtourraine.AcknowList;
@@ -465,7 +524,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vtourraine.AcknowList;
@@ -479,6 +538,7 @@
 		1AA3C38C1CAC35190071A7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -491,6 +551,7 @@
 		1AA3C38D1CAC35190071A7FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
