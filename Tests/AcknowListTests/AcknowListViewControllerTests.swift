@@ -13,11 +13,10 @@ import XCTest
 
 class AcknowListViewControllerTests: XCTestCase {
 
-    func testConfigureTableView() {
+    func testConfigureTableView() throws {
         let bundle = resourcesBundle()
-        let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
-
-        let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
+        let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
+        let viewController = AcknowListViewController(plistPath: plistPath)
 
         XCTAssertEqual(viewController.tableView.style, .grouped, "should use `.grouped` as the default table view style")
 
@@ -29,41 +28,23 @@ class AcknowListViewControllerTests: XCTestCase {
     }
 
     @available (iOS 13.0, *)
-    func testConfigureTableViewWithCustomStyle() {
-        let bundle = Bundle(for: AcknowListViewControllerTests.self)
-        let plistPath = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
+    func testConfigureTableViewWithCustomStyle() throws {
+        let bundle = resourcesBundle()
+        let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
+        let viewController = AcknowListViewController(plistPath: plistPath, style: .insetGrouped)
 
-        let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath, style: .insetGrouped)
         XCTAssertEqual(viewController.tableView.style, .insetGrouped)
     }
 
-    func testSortsAcknowledgementsByTitle() {
+    func testSortsAcknowledgementsByTitle() throws {
         let bundle = resourcesBundle()
-        let plistPath = bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist")
+        let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist"))
+        let viewController = AcknowListViewController(plistPath: plistPath)
 
-        let viewController = AcknowListViewController(acknowledgementsPlistPath: plistPath)
-        XCTAssertEqual(viewController.acknowledgements?.count, 3)
-        XCTAssertEqual(viewController.acknowledgements?[0].title, "A title")
-        XCTAssertEqual(viewController.acknowledgements?[1].title, "B title")
-        XCTAssertEqual(viewController.acknowledgements?[2].title, "C title")
-    }
-
-    func testLoadFromMultiplePlist() {
-        let bundle = resourcesBundle()
-        let plistPath1 = bundle.path(forResource: "Pods-acknowledgements", ofType: "plist")
-        let plistPath2 = bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist")
-
-        if let plistPath1 = plistPath1, let plistPath2 = plistPath2 {
-            let viewController = AcknowListViewController(acknowledgementsPlistPaths: [plistPath1, plistPath2])
-            XCTAssertEqual(viewController.acknowledgements?.count, 4)
-            XCTAssertEqual(viewController.acknowledgements?[0].title, "A title")
-            XCTAssertEqual(viewController.acknowledgements?[1].title, "AcknowList")
-            XCTAssertEqual(viewController.acknowledgements?[2].title, "B title")
-            XCTAssertEqual(viewController.acknowledgements?[3].title, "C title")
-        }
-        else {
-            XCTFail()
-        }
+        XCTAssertEqual(viewController.acknowledgements.count, 3)
+        XCTAssertEqual(viewController.acknowledgements[0].title, "A title")
+        XCTAssertEqual(viewController.acknowledgements[1].title, "B title")
+        XCTAssertEqual(viewController.acknowledgements[2].title, "C title")
     }
 
     func testConfigureTableHeader() throws {
