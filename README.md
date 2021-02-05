@@ -85,7 +85,7 @@ button.setTitle(AcknowLocalization.localizedTitle(), for: .normal)
 By default, `AcknowListViewController` uses the “grouped” table view style. You can choose a different style:
 
 ``` swift
-let viewController = AcknowListViewController(plistPath: path, style = .plain)
+let viewController = AcknowListViewController(plistPath: path, style: .plain)
 ```
 
 If you need to further customize the appearance or behavior of this pod, feel free to subclass its classes.
