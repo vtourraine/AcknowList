@@ -11,6 +11,7 @@
 - Add CocoaPods example project
 - Add Swift Package Manager example project
 - Add Swift Package Manager test target support
+- Update `acknowledgements` property on `AcknowListViewController` to non-optional
 - Update Swift Package Manager implementation to support localized resources, by Patrick (@iDevelopper)
 - Update supported platforms to iOS 9
 - Move sources, tests, and resources to follow Swift Package Manager guidelines
