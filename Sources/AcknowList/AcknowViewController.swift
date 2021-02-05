@@ -59,12 +59,8 @@ open class AcknowViewController: UIViewController {
 
     // MARK: - View lifecycle
 
-    struct K {
-        struct DefaultMargin {
-            static let topBottom: CGFloat = 20
-            static let leftRight: CGFloat = 10
-        }
-    }
+    let DefaultMarginTopBottom: CGFloat = 20
+    let DefaultMarginLeftRight: CGFloat = 10
 
     /// Called after the controller's view is loaded into memory.
     open override func viewDidLoad() {
@@ -81,7 +77,7 @@ open class AcknowViewController: UIViewController {
             textView.isUserInteractionEnabled = true
             textView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
         #endif
-        textView.textContainerInset = UIEdgeInsets(top: K.DefaultMargin.topBottom, left: K.DefaultMargin.leftRight, bottom: K.DefaultMargin.topBottom, right: K.DefaultMargin.leftRight)
+        textView.textContainerInset = UIEdgeInsets(top: DefaultMarginTopBottom, left: DefaultMarginLeftRight, bottom: DefaultMarginTopBottom, right: DefaultMarginLeftRight)
         view.addSubview(textView)
 
         self.textView = textView
@@ -110,6 +106,6 @@ open class AcknowViewController: UIViewController {
     }
 
     func updateTextViewInsets(_ textView: UITextView) {
-        textView.textContainerInset = UIEdgeInsets(top: K.DefaultMargin.topBottom, left: view.layoutMargins.left, bottom: K.DefaultMargin.topBottom, right: view.layoutMargins.right);
+        textView.textContainerInset = UIEdgeInsets(top: DefaultMarginTopBottom, left: view.layoutMargins.left, bottom: DefaultMarginTopBottom, right: view.layoutMargins.right)
     }
 }
