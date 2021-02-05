@@ -57,17 +57,17 @@ let viewController = AcknowListViewController(fileNamed: "Pods-AcknowExample-ack
 
 ``` swift
 let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", ofType: "plist")
-let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
+let viewController = AcknowListViewController(plistPath: path)
+```
+
+If you want to include licenses that are not part of a `.plist` file, you can create new `Acknow` instances, and use them for the acknowledgements array of the controller.
+
+``` swift
+let acknow = Acknow(title: "...", text: "...")
+let viewController = AcknowListViewController(acknowledgements: [acknow])
 ```
 
 ## Customization
-
-If you need to include licenses that are not part of the generated `plist` file, or if you don’t want to use the generated `plist` at all, you can easily create new `Acknow` instances, and set them as the acknowledgements array of the controller.
-
-``` swift
-let customLicense = Acknow(title: "...", text: "...")
-viewController.acknowledgements = [customLicense]
-```
 
 The controller can also display a header and a footer. By default, they are loaded from the generated `plist` file, but you can also directly change the properties values.
 
@@ -80,6 +80,12 @@ The controller title is a localized value for “acknowledgements”. You might 
 
 ``` swift
 button.setTitle(AcknowLocalization.localizedTitle(), for: .normal)
+```
+
+By default, `AcknowListViewController` uses the “grouped” table view style. You can choose a different style:
+
+``` swift
+let viewController = AcknowListViewController(plistPath: path, style = .plain)
 ```
 
 If you need to further customize the appearance or behavior of this pod, feel free to subclass its classes.
