@@ -291,7 +291,7 @@ open class AcknowListViewController: UITableViewController {
     @IBAction open func openLink(_ sender: UIGestureRecognizer) {
         guard let label = sender.view as? UILabel,
             let text = label.text,
-            let url = firstLink(with: text) else {
+            let url = AcknowParser.firstLink(in: text) else {
             return
         }
 
@@ -339,7 +339,7 @@ open class AcknowListViewController: UITableViewController {
             label.adjustsFontForContentSizeCategory = true
         }
 
-        if let text = text, firstLink(with: text) != nil {
+        if let text = text, AcknowParser.firstLink(in: text) != nil {
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openLink(_:)))
             label.addGestureRecognizer(tapGestureRecognizer)
             label.isUserInteractionEnabled = true
@@ -393,17 +393,6 @@ open class AcknowListViewController: UITableViewController {
 
         return CGFloat(ceilf(Float(labelHeight)))
     }
-
-    func firstLink(with text: String) -> URL? {
-        let types: NSTextCheckingResult.CheckingType = [.link]
-        guard let linkDetector = try? NSDataDetector(types: types.rawValue),
-            let firstLink = linkDetector.firstMatch(in: text, options: [], range: NSMakeRange(0, text.count)) else {
-                return nil
-        }
-
-        return firstLink.url
-    }
-
 
     // MARK: - Table view data source
 

@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-import AcknowList
+@testable import AcknowList
 
 class AcknowParserTests: XCTestCase {
 
@@ -103,5 +103,15 @@ class AcknowParserTests: XCTestCase {
         XCTAssertNil(parser.parseHeaderAndFooter().header)
         XCTAssertNil(parser.parseHeaderAndFooter().footer)
         XCTAssertTrue(parser.parseAcknowledgements().isEmpty)
+    }
+
+    func testFindLink() throws {
+        let url = try XCTUnwrap(AcknowParser.firstLink(in: "test cocoapods.org"))
+        XCTAssertEqual(url, URL(string: "http://cocoapods.org"))
+    }
+
+    func testFindNoLink() {
+        let url = AcknowParser.firstLink(in: "test")
+        XCTAssertNil(url)
     }
 }
