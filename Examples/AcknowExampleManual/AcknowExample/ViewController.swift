@@ -34,8 +34,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pushAcknowListWithCustomTitlePlainStyle(_ sender: AnyObject) {
-        let path = Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist")
-        let viewController = AcknowListViewController(acknowledgementsPlistPath: path, style: .plain)
+        guard let path = Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist") else {
+            return
+        }
+
+        let viewController = AcknowListViewController(plistPath: path, style: .plain)
         viewController.title = "Plain Style"
         viewController.headerText = "Visit: https://developer.apple.com"
         navigationController?.pushViewController(viewController, animated: true)
@@ -43,12 +46,14 @@ class ViewController: UIViewController {
     
     @IBAction func pushAcknowListWithCustomTitleInsetGroupedStyle(_ sender: AnyObject) {
         if #available(iOS 13.0, *) {
-            let path = Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist")
-            let viewController = AcknowListViewController(acknowledgementsPlistPath: path, style: .insetGrouped)
+            guard let path = Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist") else {
+                return
+            }
+
+            let viewController = AcknowListViewController(plistPath: path, style: .insetGrouped)
             viewController.title = "Grouped Inset Style"
             viewController.headerText = "Visit: https://developer.apple.com"
             navigationController?.pushViewController(viewController, animated: true)
         }
-        return
     }
 }

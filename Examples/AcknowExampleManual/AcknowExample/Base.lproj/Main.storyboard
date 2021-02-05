@@ -94,7 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BP3-Ce-X6N"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-AcknowExample-acknowledgements"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-acknowledgements"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqt-9v-5LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -107,7 +107,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nk8-2d-AXR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KgB-Of-Qia">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
