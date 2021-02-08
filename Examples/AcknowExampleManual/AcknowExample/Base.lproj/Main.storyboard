@@ -27,7 +27,7 @@
                                         <rect key="frame" x="40" y="0.0" width="208" height="30"/>
                                         <state key="normal" title="Push AcknowList (Storyboard)"/>
                                         <connections>
-                                            <segue destination="BsL-wc-ue5" kind="show" id="BEy-rK-1Bu"/>
+                                            <segue destination="HUP-ER-yyy" kind="show" id="ToE-1A-RUo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-HF-drT">
@@ -80,26 +80,26 @@
             <point key="canvasLocation" x="893" y="1046"/>
         </scene>
         <!--Acknow List View Controller-->
-        <scene sceneID="5j9-Xd-FVm">
+        <scene sceneID="LzN-nx-gHd">
             <objects>
-                <viewController id="BsL-wc-ue5" customClass="AcknowListViewController" customModule="AcknowList" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X0G-eq-cNb"/>
-                        <viewControllerLayoutGuide type="bottom" id="3ZD-2v-pKl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="msB-b3-294">
+                <tableViewController id="HUP-ER-yyy" customClass="AcknowListViewController" customModule="AcknowList" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="FCp-9G-ab3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BP3-Ce-X6N"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="HUP-ER-yyy" id="SiD-3Z-UpG"/>
+                            <outlet property="delegate" destination="HUP-ER-yyy" id="8aB-sV-Xk8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="LBA-W1-mXq"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="acknowledgementsPlistName" value="Pods-acknowledgements"/>
                     </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqt-9v-5LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3z-SY-lTx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632" y="776"/>
+            <point key="canvasLocation" x="1789" y="719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oj1-63-94z">

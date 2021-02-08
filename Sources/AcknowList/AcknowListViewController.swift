@@ -131,7 +131,7 @@ open class AcknowListViewController: UITableViewController {
     public required init?(coder: NSCoder) {
         self.acknowledgements = []
 
-        super.init(style: .grouped)
+        super.init(coder: coder)
 
         self.title = AcknowLocalization.localizedTitle()
     }
