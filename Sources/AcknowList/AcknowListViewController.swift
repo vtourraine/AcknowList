@@ -336,36 +336,52 @@ open class AcknowListViewController: UITableViewController {
         let font = UIFont.preferredFont(forTextStyle: .footnote)
         let labelWidth = view.frame.width - 2 * LabelMargin
 
-        if let headerText = self.headerText {
-            let labelHeight = heightForLabel(text: headerText as NSString, width: labelWidth)
-            let labelFrame = CGRect(x: LabelMargin, y: LabelMargin, width: labelWidth, height: labelHeight)
-            let label = headerFooterLabel(frame: labelFrame, font: font, text: headerText)
-            let headerFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: label.frame.height + 2 * LabelMargin)
-            let headerView = UIView(frame: headerFrame)
-            headerView.isUserInteractionEnabled = label.isUserInteractionEnabled
-            headerView.addSubview(label)
-
-            tableView.tableHeaderView = headerView
+        guard let text = self.headerText else {
+            return
         }
+
+        let labelHeight = heightForLabel(text: text as NSString, width: labelWidth)
+        let labelFrame = CGRect(x: LabelMargin, y: LabelMargin, width: labelWidth, height: labelHeight)
+        let label = headerFooterLabel(frame: labelFrame, font: font, text: text)
+        let headerFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: label.frame.height + 2 * LabelMargin)
+        let headerView = UIView(frame: headerFrame)
+        headerView.isUserInteractionEnabled = label.isUserInteractionEnabled
+        headerView.addSubview(label)
+
+        tableView.tableHeaderView = headerView
     }
 
     func configureFooterView() {
         let font = UIFont.preferredFont(forTextStyle: .footnote)
         let labelWidth = view.frame.width - 2 * LabelMargin
 
-        if let footerText = self.footerText {
-            let labelHeight = heightForLabel(text: footerText as NSString, width: labelWidth)
-            let labelFrame = CGRect(x: LabelMargin, y: 0, width: labelWidth, height: labelHeight);
-            let label = headerFooterLabel(frame: labelFrame, font: font, text: footerText)
-
-            let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + FooterBottomMargin)
-            let footerView = UIView(frame: footerFrame)
-            footerView.isUserInteractionEnabled = label.isUserInteractionEnabled
-            footerView.addSubview(label)
-            label.frame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height);
-
-            tableView.tableFooterView = footerView
+        guard let text = self.footerText else {
+            return
         }
+
+        let labelHeight = heightForLabel(text: text as NSString, width: labelWidth)
+        let labelFrame = CGRect(x: LabelMargin, y: 0, width: labelWidth, height: labelHeight);
+        let label = headerFooterLabel(frame: labelFrame, font: font, text: text)
+
+        let footerHeight: CGFloat
+        let labelOriginY: CGFloat
+        if tableView.style == .plain {
+            // “Plain” table views need additional margin between the bottom of the last row and the top of the footer label.
+            labelOriginY = FooterBottomMargin
+            footerHeight = label.frame.height + FooterBottomMargin * 2
+        }
+        else {
+            labelOriginY = 0
+            footerHeight = label.frame.height + FooterBottomMargin
+        }
+
+        let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: footerHeight)
+        let footerView = UIView(frame: footerFrame)
+        footerView.isUserInteractionEnabled = label.isUserInteractionEnabled
+        footerView.addSubview(label)
+        label.frame = CGRect(x: 0, y: labelOriginY, width: label.frame.width, height: label.frame.height);
+
+        tableView.tableFooterView = footerView
     }
 
     func heightForLabel(text labelText: NSString, width labelWidth: CGFloat) -> CGFloat {
