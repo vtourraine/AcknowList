@@ -37,7 +37,7 @@ class AcknowParserTests: XCTestCase {
         XCTAssertNotNil(parser)
 
         let acknowledgements = parser.parseAcknowledgements()
-        XCTAssertEqual(acknowledgements.count, 1)
+        XCTAssertEqual(acknowledgements.count, 3)
 
         let acknow = acknowledgements.first
         if let acknow = acknow {
