@@ -2,19 +2,20 @@
 
 ## 2.0 (work in progress)
 
-- Open any URL in `AcknowListViewController` header and footer
+- Update `AcknowListViewController` to detect URLs in header and footer
+- Update `AcknowListViewController` to make `acknowledgements` property non-optional
 - Update `AcknowListViewController` initializers
-    - Add initializer with array of `Acknow`
     - Add optional table view style parameter, by Matt Croxson (@Lumus)
-    - Rename parameter for initializer with plist path
+    - Add initializer with array of `Acknow`
+    - Rename plist path parameter
     - Remove initializer with multiple plist paths
+- Improve Swift Package Manager support
+    - Support SPM localized resources, by Patrick (@iDevelopper)
+    - Add SPM test target
+    - Add SPM example project
+    - Move sources, tests, and resources to follow SPM guidelines
 - Add CocoaPods example project
-- Add Swift Package Manager example project
-- Add Swift Package Manager test target support
-- Update `acknowledgements` property on `AcknowListViewController` to non-optional
-- Update Swift Package Manager implementation to support localized resources, by Patrick (@iDevelopper)
-- Update supported platforms to iOS 9
-- Move sources, tests, and resources to follow Swift Package Manager guidelines
+- Update supported platforms to iOS 9 and more recent
 
 
 ## 1.9.5 (17 September 2020)
