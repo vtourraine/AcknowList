@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0 (work in progress)
+## 2.0.0 (15 March 2021)
 
 - Update `AcknowListViewController` to detect URLs in header and footer
 - Update `AcknowListViewController` to make `acknowledgements` property non-optional
