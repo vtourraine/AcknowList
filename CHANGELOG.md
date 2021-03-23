@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1 (work in progress)
+
+- Update `AcknowListViewController` to make initializers available with Objective-C
+
+
 ## 2.0.0 (15 March 2021)
 
 - Update `AcknowListViewController` to detect URLs in header and footer
