@@ -22,6 +22,7 @@
 		D7A999492058275600A3F668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A999472058275600A3F668 /* Main.storyboard */; };
 		D7A9994B2058275600A3F668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A9994A2058275600A3F668 /* Assets.xcassets */; };
 		D7A999502058277C00A3F668 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD73B8D1CAC3A990084F8CA /* Pods-acknowledgements.plist */; };
+		D7FAF74D2609ECD900DC6B7C /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF74C2609ECD900DC6B7C /* ObjCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		D7A999482058275600A3F668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A9994A2058275600A3F668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A9994C2058275600A3F668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7FAF74B2609ECD900DC6B7C /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
+		D7FAF74C2609ECD900DC6B7C /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 				1F6C52B31B7F495700B9A7CC /* Images.xcassets */,
 				1F6C52B51B7F495700B9A7CC /* LaunchScreen.xib */,
 				1F6C52AA1B7F495700B9A7CC /* Supporting Files */,
+				D7FAF7502609ECE800DC6B7C /* Objective-C */,
 			);
 			path = AcknowExample;
 			sourceTree = "<group>";
@@ -179,6 +183,15 @@
 				D7A9994C2058275600A3F668 /* Info.plist */,
 			);
 			path = AcknowExampleTV;
+			sourceTree = "<group>";
+		};
+		D7FAF7502609ECE800DC6B7C /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				D7FAF74B2609ECD900DC6B7C /* ObjCViewController.h */,
+				D7FAF74C2609ECD900DC6B7C /* ObjCViewController.m */,
+			);
+			name = "Objective-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +246,7 @@
 				TargetAttributes = {
 					1F6C52A61B7F495700B9A7CC = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1240;
 					};
 					D7A999402058275600A3F668 = {
 						CreatedOnToolsVersion = 9.2;
@@ -315,6 +328,7 @@
 			files = (
 				1F6C52AF1B7F495700B9A7CC /* ViewController.swift in Sources */,
 				1F6C52AD1B7F495700B9A7CC /* AppDelegate.swift in Sources */,
+				D7FAF74D2609ECD900DC6B7C /* ObjCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +489,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AcknowExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.vtourraine.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -489,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AcknowExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
