@@ -74,7 +74,7 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(fileNamed fileName: String) {
+    @objc public convenience init(fileNamed fileName: String) {
         if let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName) {
             self.init(plistPath: path)
         }
@@ -92,7 +92,7 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(plistPath: String, style: UITableView.Style = .grouped) {
+    @objc public convenience init(plistPath: String, style: UITableView.Style = .grouped) {
         self.init(acknowledgements: [], style: style)
 
         load(from: plistPath)
