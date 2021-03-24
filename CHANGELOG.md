@@ -3,6 +3,7 @@
 ## 2.0.1 (work in progress)
 
 - Update `AcknowListViewController` to make initializers available with Objective-C
+- Fix header/footer layout when resizing `AcknowListViewController`
 
 
 ## 2.0.0 (15 March 2021)
