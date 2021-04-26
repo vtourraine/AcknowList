@@ -21,9 +21,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
 /// Subclass of `UIViewController` that displays a single acknowledgement.
+@available(iOS 9.0.0, tvOS 9.0.0, *)
 open class AcknowViewController: UIViewController {
 
     /// The main text view.
@@ -109,3 +111,5 @@ open class AcknowViewController: UIViewController {
         textView.textContainerInset = UIEdgeInsets(top: DefaultMarginTopBottom, left: view.layoutMargins.left, bottom: DefaultMarginTopBottom, right: view.layoutMargins.right)
     }
 }
+
+#endif

@@ -6,7 +6,7 @@ let package = Package(
     name: "AcknowList",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v9), .tvOS(.v9)
+        .iOS(.v9), .tvOS(.v9), watchOS(.v7), macOS(.v10_15)
     ],
     products: [
         .library(name: "AcknowList", targets: ["AcknowList"])

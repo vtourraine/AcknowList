@@ -25,7 +25,9 @@
 		D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */; };
 		D70B4283212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */; };
 		D70B4285212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */; };
+		D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */; };
 		D7527EE425CAFDB000378FB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7527EE225CAFDB000378FB8 /* Localizable.strings */; };
+		D78335EF2628934800A380A3 /* AcknowSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */; };
 		D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 		D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"; sourceTree = "<group>"; };
 		D70B4282212B2970007B6A81 /* RegexTesting-GroundTruth-TYPFontAwesome.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TYPFontAwesome.txt"; sourceTree = "<group>"; };
 		D70B4284212B2988007B6A81 /* RegexTesting-GroundTruth-pop.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-pop.txt"; sourceTree = "<group>"; };
+		D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowListSwiftUI.swift; sourceTree = "<group>"; };
 		D7527EE325CAFDB000378FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7527EE725CAFDBA00378FB8 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7527EE825CAFDC600378FB8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		D7527EF125CAFDFA00378FB8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7527EF225CAFE0000378FB8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D7527EF325CAFE0700378FB8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowSwiftUI.swift; sourceTree = "<group>"; };
 		D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-multi.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +169,8 @@
 				32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */,
 				32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */,
 				32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */,
+				D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */,
+				D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */,
 			);
 			name = Sources;
 			path = Sources/AcknowList;
@@ -249,7 +255,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = VTourraine;
 				TargetAttributes = {
 					1AA3C3731CAC35190071A7FD = {
@@ -329,6 +335,8 @@
 				32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */,
 				32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */,
 				32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */,
+				D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */,
+				D78335EF2628934800A380A3 /* AcknowSwiftUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,16 +438,17 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchos watchsimulator macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -488,15 +497,16 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchos watchsimulator macosx";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -516,7 +526,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -536,7 +545,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

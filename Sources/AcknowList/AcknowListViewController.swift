@@ -21,9 +21,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
+@available(iOS 9.0.0, tvOS 9.0.0, *)
 open class AcknowListViewController: UITableViewController {
 
     /// The represented array of `Acknow`.
@@ -462,3 +464,5 @@ open class AcknowListViewController: UITableViewController {
         return UITableView.automaticDimension
     }
 }
+
+#endif
