@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import AcknowList
 
 class ViewController: UIViewController {
@@ -14,6 +15,17 @@ class ViewController: UIViewController {
         let vc = AcknowListViewController()
         let navigationController = UINavigationController(rootViewController: vc)
         present(navigationController, animated: true, completion: nil)
+    }
+
+    @IBAction func presentAcknowledgementsSwiftUI(_ sender: UIButton) {
+        if #available(iOS 13.0, *) {
+            guard let path = Bundle.main.path(forResource: "Pods-AcknowExampleCocoaPods-acknowledgements", ofType: "plist") else {
+                return
+            }
+
+            let viewController = UIHostingController(rootView: AcknowNavigationSwiftUIView(plistPath: path))
+            present(viewController, animated: true)
+        }
     }
 }
 

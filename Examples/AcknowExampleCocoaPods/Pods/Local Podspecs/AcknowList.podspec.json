@@ -1,6 +1,6 @@
 {
   "name": "AcknowList",
-  "version": "1.9.5",
+  "version": "2.0.1",
   "summary": "Ready to use “Acknowledgements”/“Licenses” view controller for CocoaPods.",
   "homepage": "https://github.com/vtourraine/AcknowList",
   "license": {
@@ -10,10 +10,9 @@
   "authors": {
     "Vincent Tourraine": "me@vtourraine.net"
   },
-  "social_media_url": "http://twitter.com/vtourraine",
   "source": {
     "git": "https://github.com/vtourraine/AcknowList.git",
-    "tag": "1.9.5"
+    "tag": "2.0.1"
   },
   "source_files": "Sources/AcknowList/*.swift",
   "resource_bundles": {
@@ -23,7 +22,9 @@
   },
   "platforms": {
     "ios": "9.0",
-    "tvos": "9.0"
+    "tvos": "9.0",
+    "watchOS": "7.0",
+    "macOS": "10.15"
   },
   "frameworks": "UIKit",
   "swift_version": "5.0"

@@ -1,5 +1,5 @@
 PODS:
-  - AcknowList (1.9.5)
+  - AcknowList (2.0.1)
 
 DEPENDENCIES:
   - AcknowList (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  AcknowList: b21ec1bdfccd89db607c2ef6db611db7b886aeb4
+  AcknowList: 31c554dd38de97596be2c64a72b44c9eacf87108
 
 PODFILE CHECKSUM: 46635e41a4f934ddec0a6f178b469fb26fcdbd3e
 
