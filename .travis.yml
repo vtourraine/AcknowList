@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode12
 
 script:
- - xcodebuild test -project AcknowList.xcodeproj -scheme AcknowList -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.0' ONLY_ACTIVE_ARCH=NO
+ - xcodebuild test -project AcknowList.xcodeproj -scheme AcknowList -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.0' ONLY_ACTIVE_ARCH=NO
