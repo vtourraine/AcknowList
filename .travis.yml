@@ -2,6 +2,6 @@ language: objective-c
 osx_image: xcode12.2
 
 script:
- - xcodebuild test -project AcknowList.xcodeproj -scheme AcknowList -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.0'
+ - xcodebuild test -project AcknowList.xcodeproj -scheme AcknowList -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.2'
  - xcodebuild test -project AcknowList.xcodeproj -scheme AcknowList -destination 'platform=tvOS Simulator,name=Apple TV'
  - xcodebuild test -project AcknowList.xcodeproj -scheme AcknowList -destination 'platform=macOS'
