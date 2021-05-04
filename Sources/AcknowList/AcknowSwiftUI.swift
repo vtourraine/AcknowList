@@ -33,7 +33,14 @@ public struct AcknowSwiftUIView: View {
 
     public var body: some View {
         #if os(macOS)
-        ScrollView {
+        return macOSBody()
+        #else
+        return iOSBody()
+        #endif
+    }
+
+    func macOSBody() -> some View {
+        return ScrollView {
             Text(acknowledgement.title)
                 .font(.title)
                 .padding()
@@ -41,15 +48,18 @@ public struct AcknowSwiftUIView: View {
                 .font(.body)
                 .padding()
         }
-        #else
-        ScrollView {
+    }
+
+    #if !os(macOS)
+    func iOSBody() -> some View {
+        return ScrollView {
             Text(acknowledgement.text)
                 .font(.body)
                 .padding()
         }
         .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
-        #endif
     }
+    #endif
 }
 
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
