@@ -6,11 +6,11 @@
 //  Copyright © 2015-2021 Vincent Tourraine. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 @testable import AcknowList
 
+#if !os(macOS)
 class AcknowListViewControllerTests: XCTestCase {
 
     func testConfigureTableView() throws {
@@ -85,3 +85,4 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(gestureRecognizers.count, 1)
     }
 }
+#endif

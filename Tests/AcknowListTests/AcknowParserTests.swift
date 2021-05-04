@@ -6,7 +6,6 @@
 //  Copyright © 2015-2021 Vincent Tourraine. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 @testable import AcknowList

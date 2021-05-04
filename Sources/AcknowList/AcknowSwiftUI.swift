@@ -32,11 +32,18 @@ public struct AcknowSwiftUIView: View {
     }
 
     public var body: some View {
+        #if os(macOS)
+        ScrollView {
+            Text(acknowledgement.text)
+                .padding()
+        }
+        #else
         ScrollView {
             Text(acknowledgement.text)
                 .padding()
         }
         .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
+        #endif
     }
 }
 

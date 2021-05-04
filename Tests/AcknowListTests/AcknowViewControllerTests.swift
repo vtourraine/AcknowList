@@ -6,11 +6,11 @@
 //  Copyright © 2015-2021 Vincent Tourraine. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 @testable import AcknowList
 
+#if !os(macOS)
 class AcknowViewControllerTests: XCTestCase {
 
     func testLoadView() {
@@ -23,3 +23,4 @@ class AcknowViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.textView!.text, "Text...")
     }
 }
+#endif

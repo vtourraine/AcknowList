@@ -45,13 +45,21 @@ public struct AcknowListSwiftUIView: View {
     }
 
     public var body: some View {
+        #if os(iOS)
         List(acknowledgements) { acknowledgement in
             NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
                 Text(acknowledgement.title)
             }
         }
-        // .listStyle(GroupedListStyle())
+        .listStyle(GroupedListStyle())
         .navigationBarTitle(Text("Acknowledgements"))
+        #else
+        List(acknowledgements) { acknowledgement in
+            NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
+                Text(acknowledgement.title)
+            }
+        }
+        #endif
     }
 }
 
