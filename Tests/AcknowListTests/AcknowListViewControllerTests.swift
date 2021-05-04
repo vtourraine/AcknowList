@@ -27,6 +27,7 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(cell.textLabel?.text, "AcknowList")
     }
 
+    #if os(iOS)
     @available (iOS 13.0, *)
     func testConfigureTableViewWithCustomStyle() throws {
         let bundle = resourcesBundle()
@@ -35,6 +36,7 @@ class AcknowListViewControllerTests: XCTestCase {
 
         XCTAssertEqual(viewController.tableView.style, .insetGrouped)
     }
+    #endif
 
     func testSortsAcknowledgementsByTitle() throws {
         let bundle = resourcesBundle()
