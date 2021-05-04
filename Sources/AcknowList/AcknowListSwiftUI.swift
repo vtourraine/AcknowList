@@ -33,30 +33,58 @@ extension Acknow: Identifiable {
 
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 public struct AcknowListSwiftUIView: View {
-    public var acknowledgements: [Acknow] = []
 
-    public init(acknowledgements: [Acknow]) {
+    public var acknowledgements: [Acknow] = []
+    public var headerText: String?
+    public var footerText: String?
+
+    public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
         self.acknowledgements = acknowledgements
+        self.headerText = headerText
+        self.footerText = footerText
     }
 
     public init(plistPath: String) {
         let parser = AcknowParser(plistPath: plistPath)
-        self.init(acknowledgements: parser.parseAcknowledgements())
+        let headerFooter = parser.parseHeaderAndFooter()
+
+        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: headerFooter.header, footerText: headerFooter.footer)
+    }
+
+    struct HeaderFooter: View {
+        let text: String?
+
+        var body: some View {
+            if let text = text {
+                Text(text)
+            }
+            else {
+                EmptyView()
+            }
+        }
     }
 
     public var body: some View {
-        #if os(iOS)
-        List(acknowledgements) { acknowledgement in
-            NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
-                Text(acknowledgement.title)
+        #if os(iOS) || os(tvOS)
+        List {
+            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
+                ForEach (acknowledgements) { acknowledgement in
+                    NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
+                        Text(acknowledgement.title)
+                    }
+                }
             }
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(Text("Acknowledgements"))
         #else
-        List(acknowledgements) { acknowledgement in
-            NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
-                Text(acknowledgement.title)
+        List {
+            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
+                ForEach (acknowledgements) { acknowledgement in
+                    NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
+                        Text(acknowledgement.title)
+                    }
+                }
             }
         }
         #endif
@@ -65,20 +93,27 @@ public struct AcknowListSwiftUIView: View {
 
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 public struct AcknowNavigationSwiftUIView: View {
-    public var acknowledgements = [Acknow]()
 
-    public init(acknowledgements: [Acknow]) {
+    public var acknowledgements = [Acknow]()
+    public var headerText: String?
+    public var footerText: String?
+
+    public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
         self.acknowledgements = acknowledgements
+        self.headerText = headerText
+        self.footerText = footerText
     }
 
     public init(plistPath: String) {
         let parser = AcknowParser(plistPath: plistPath)
-        self.init(acknowledgements: parser.parseAcknowledgements())
+        let headerFooter = parser.parseHeaderAndFooter()
+
+        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: headerFooter.header, footerText: headerFooter.footer)
     }
 
     public var body: some View {
         NavigationView {
-            AcknowListSwiftUIView(acknowledgements: acknowledgements)
+            AcknowListSwiftUIView(acknowledgements: acknowledgements, headerText: headerText, footerText: footerText)
         }
     }
 }
@@ -86,25 +121,13 @@ public struct AcknowNavigationSwiftUIView: View {
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 struct AcknowListSwiftUI_Previews: PreviewProvider {
     static let license = """
-    Copyright (c) 2015-2021 Vincent Tourraine (https://www.vtourraine.net)
+        Copyright (c) 2015-2021 Vincent Tourraine (https://www.vtourraine.net)
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     """
     static let acks = [Acknow(title: "Title 1", text: license),
                        Acknow(title: "Title 2", text: license),
@@ -113,14 +136,17 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
         AcknowNavigationSwiftUIView(acknowledgements: acks)
             .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+
+        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
         
-        AcknowNavigationSwiftUIView(acknowledgements: acks)
+        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
             .previewDevice(PreviewDevice(rawValue: "Apple TV 4K"))
 
-        AcknowNavigationSwiftUIView(acknowledgements: acks)
+        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
             .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 6 - 44mm"))
 
-        AcknowNavigationSwiftUIView(acknowledgements: acks)
+        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
             .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
 }
