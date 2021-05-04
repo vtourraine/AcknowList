@@ -112,11 +112,15 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
 
     static var previews: some View {
         AcknowNavigationSwiftUIView(acknowledgements: acks)
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
         
         AcknowNavigationSwiftUIView(acknowledgements: acks)
             .previewDevice(PreviewDevice(rawValue: "Apple TV 4K"))
 
         AcknowNavigationSwiftUIView(acknowledgements: acks)
             .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 6 - 44mm"))
+
+        AcknowNavigationSwiftUIView(acknowledgements: acks)
+            .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
 }
