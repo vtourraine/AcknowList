@@ -93,7 +93,10 @@ If you need to further customize the appearance or behavior of this library, fee
 
 ## SwiftUI
 
-AcknowList now offers a SwiftUI interface, which supports all the major platforms. **SwiftUI support is still in development.**
+AcknowList now offers a SwiftUI interface, which supports all the major platforms.
+
+Instantiate a `AcknowListSwiftUIView` with a path to the `plist` file, or with an array of `Acknow` instances, and present this view from a `NavigationView`.
+
 
 ## Platforms
 
@@ -106,7 +109,7 @@ AcknowList now offers a SwiftUI interface, which supports all the major platform
 
 ## Requirements
 
-AcknowList is written in Swift 5, requires iOS 9.0 or tvOS 9.0 and above, Xcode 11 and above.
+AcknowList is written in Swift 5, and requires Xcode 12 and above.
 
 ## Credits
 

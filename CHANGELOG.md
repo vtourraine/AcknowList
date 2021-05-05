@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0 (work in progress)
+
+- Add SwiftUI interface (supports iOS/tvOS/watchOS/macOS)
+
+
 ## 2.0.1 (26 April 2021)
 
 - Update `AcknowListViewController` to make initializers available with Objective-C
