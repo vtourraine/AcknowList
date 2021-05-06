@@ -92,33 +92,6 @@ public struct AcknowListSwiftUIView: View {
 }
 
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
-public struct AcknowNavigationSwiftUIView: View {
-
-    public var acknowledgements = [Acknow]()
-    public var headerText: String?
-    public var footerText: String?
-
-    public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
-        self.acknowledgements = acknowledgements
-        self.headerText = headerText
-        self.footerText = footerText
-    }
-
-    public init(plistPath: String) {
-        let parser = AcknowParser(plistPath: plistPath)
-        let headerFooter = parser.parseHeaderAndFooter()
-
-        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: headerFooter.header, footerText: headerFooter.footer)
-    }
-
-    public var body: some View {
-        NavigationView {
-            AcknowListSwiftUIView(acknowledgements: acknowledgements, headerText: headerText, footerText: footerText)
-        }
-    }
-}
-
-@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 struct AcknowListSwiftUI_Previews: PreviewProvider {
     static let license = """
         Copyright (c) 2015-2021 Vincent Tourraine (https://www.vtourraine.net)
@@ -134,19 +107,29 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
                        Acknow(title: "Title 3", text: license)]
 
     static var previews: some View {
-        AcknowNavigationSwiftUIView(acknowledgements: acks)
-            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+        NavigationView {
+            AcknowListSwiftUIView(acknowledgements: acks)
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
 
-        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
-            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+        NavigationView {
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
         
-        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
-            .previewDevice(PreviewDevice(rawValue: "Apple TV 4K"))
+        NavigationView {
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+        }
+        .previewDevice(PreviewDevice(rawValue: "Apple TV 4K"))
 
-        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
-            .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 6 - 44mm"))
+        NavigationView {
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+        }
+        .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 6 - 44mm"))
 
-        AcknowNavigationSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
-            .previewDevice(PreviewDevice(rawValue: "Mac"))
+        NavigationView {
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+        }
+        .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
 }
