@@ -47,8 +47,17 @@ public struct AcknowListSwiftUIView: View {
     public init(plistPath: String) {
         let parser = AcknowParser(plistPath: plistPath)
         let headerFooter = parser.parseHeaderAndFooter()
+        let header: String?
+        let footer = headerFooter.footer
 
-        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: headerFooter.header, footerText: headerFooter.footer)
+        if headerFooter.header != AcknowParser.DefaultHeaderText {
+            header = headerFooter.header
+        }
+        else {
+            header = nil
+        }
+
+        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: header, footerText: footer)
     }
 
     struct HeaderFooter: View {
@@ -76,7 +85,7 @@ public struct AcknowListSwiftUIView: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text("Acknowledgements"))
+        .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
         #else
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {

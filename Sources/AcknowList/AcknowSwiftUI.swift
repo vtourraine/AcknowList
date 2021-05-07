@@ -47,7 +47,7 @@ public struct AcknowSwiftUIView: View {
                 .font(.body)
                 .padding()
         }
-        .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
+        .navigationBarTitle(acknowledgement.title)
         #endif
     }
 }

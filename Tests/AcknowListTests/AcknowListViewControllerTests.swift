@@ -24,7 +24,7 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 3)
 
         let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        XCTAssertEqual(cell.textLabel?.text, "AcknowList")
+        XCTAssertEqual(cell.textLabel?.text, "AcknowList (1)")
     }
 
     #if os(iOS)
