@@ -6,7 +6,6 @@
 //  Copyright © 2015-2021 Vincent Tourraine. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 @testable import AcknowList
@@ -41,7 +40,7 @@ class AcknowParserTests: XCTestCase {
 
         let acknow = acknowledgements.first
         if let acknow = acknow {
-            XCTAssertEqual(acknow.title, "AcknowList")
+            XCTAssertEqual(acknow.title, "AcknowList (1)")
             XCTAssertTrue(acknow.text.hasPrefix("Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)"))
         }
         else {

@@ -65,11 +65,22 @@
                                     <constraint firstItem="Iqq-HF-drT" firstAttribute="centerX" secondItem="MyE-DU-ync" secondAttribute="centerX" id="yng-6x-vo9"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNn-Wo-gYQ">
+                                <rect key="frame" x="75" y="320" width="170" height="30"/>
+                                <state key="normal" title="Push SwiftUI AcknowList"/>
+                                <connections>
+                                    <action selector="pushAcknowListSwiftUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljJ-dj-lWI"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oNn-Wo-gYQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gqp-GE-1At"/>
                             <constraint firstItem="Jgi-Ed-Vrq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M1x-nZ-gKC"/>
+                            <constraint firstItem="qnQ-ut-L6B" firstAttribute="centerX" secondItem="EkS-ou-G13" secondAttribute="centerX" id="aQ2-cM-3ii"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jgi-Ed-Vrq" secondAttribute="trailing" id="dMK-Pz-cGj"/>
+                            <constraint firstItem="oNn-Wo-gYQ" firstAttribute="top" secondItem="qnQ-ut-L6B" secondAttribute="bottom" constant="8" id="eHT-XU-06r"/>
+                            <constraint firstItem="qnQ-ut-L6B" firstAttribute="top" secondItem="EkS-ou-G13" secondAttribute="bottom" constant="8" id="okF-UN-wcQ"/>
                             <constraint firstItem="Jgi-Ed-Vrq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y7A-4x-GOB"/>
                         </constraints>
                     </view>

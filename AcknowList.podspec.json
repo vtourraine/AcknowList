@@ -20,7 +20,9 @@
   },
   "platforms": {
     "ios": "9.0",
-    "tvos": "9.0"
+    "tvos": "9.0",
+    "watchOS": "7.0",
+    "macOS": "10.15"
   },
   "frameworks": "UIKit",
   "swift_version": "5.0"

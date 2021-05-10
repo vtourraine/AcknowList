@@ -16,17 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9p-k0-h4u">
-                                <rect key="frame" x="112" y="433" width="191" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9p-k0-h4u">
+                                <rect key="frame" x="112" y="418" width="191" height="30"/>
                                 <state key="normal" title="Present Acknowledgements"/>
                                 <connections>
                                     <action selector="presentAcknowledgements:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xlf-mK-jri"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3w-Ok-7Bb">
+                                <rect key="frame" x="85" y="456" width="244" height="30"/>
+                                <state key="normal" title="Present Acknowledgements SwiftUI"/>
+                                <connections>
+                                    <action selector="presentAcknowledgementsSwiftUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S87-cz-mTX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F9p-k0-h4u" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-20" id="099-MO-8Rw"/>
+                            <constraint firstItem="F9p-k0-h4u" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Nn-XO-kq4"/>
+                            <constraint firstItem="G3w-Ok-7Bb" firstAttribute="top" secondItem="F9p-k0-h4u" secondAttribute="bottom" constant="8" symbolic="YES" id="PcG-aj-Obb"/>
+                            <constraint firstItem="G3w-Ok-7Bb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c7h-vB-m69"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

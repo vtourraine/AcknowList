@@ -23,6 +23,7 @@ _Also available in Objective-C with [VTAcknowledgementsViewController](https://g
 - Dark Mode support
 - Dynamic Type support
 - Localized in 13 languages
+- UIKit and SwiftUI interfaces
 
 ## Installation
 
@@ -90,15 +91,25 @@ let viewController = AcknowListViewController(plistPath: path, style: .plain)
 
 If you need to further customize the appearance or behavior of this library, feel free to subclass its classes.
 
-## Apple TV
+## SwiftUI
 
-AcknowList is also compatible with tvOS for Apple TV apps.
+AcknowList now offers a SwiftUI interface, which supports all the major platforms.
 
-![AcknowList Apple TV screenshots](Images/AcknowList-Apple-TV.png)
+Instantiate a `AcknowListSwiftUIView` with a path to the `plist` file, or with an array of `Acknow` instances, and present this view from a `NavigationView`.
+
+
+## Platforms
+
+| Platform | UIKit | SwiftUI |
+|:--|:--|:--|
+| 📱 | iOS 9.0+ | iOS 13.0+ |
+| 📺 | tvOS 9.0+ | tvOS 13.0+ |
+| ⌚️ | *not supported* | watchOS 7.0+ |
+| 💻 | *not supported* | macOS 10.15+ |
 
 ## Requirements
 
-AcknowList is written in Swift 5, requires iOS 9.0 or tvOS 9.0 and above, Xcode 11 and above.
+AcknowList is written in Swift 5, and requires Xcode 12 and above.
 
 ## Credits
 

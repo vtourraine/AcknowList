@@ -6,11 +6,11 @@
 //  Copyright © 2015-2021 Vincent Tourraine. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 @testable import AcknowList
 
+#if !os(macOS)
 class AcknowListViewControllerTests: XCTestCase {
 
     func testConfigureTableView() throws {
@@ -24,9 +24,10 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 3)
 
         let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
-        XCTAssertEqual(cell.textLabel?.text, "AcknowList")
+        XCTAssertEqual(cell.textLabel?.text, "AcknowList (1)")
     }
 
+    #if os(iOS)
     @available (iOS 13.0, *)
     func testConfigureTableViewWithCustomStyle() throws {
         let bundle = resourcesBundle()
@@ -35,6 +36,7 @@ class AcknowListViewControllerTests: XCTestCase {
 
         XCTAssertEqual(viewController.tableView.style, .insetGrouped)
     }
+    #endif
 
     func testSortsAcknowledgementsByTitle() throws {
         let bundle = resourcesBundle()
@@ -83,3 +85,4 @@ class AcknowListViewControllerTests: XCTestCase {
         XCTAssertEqual(gestureRecognizers.count, 1)
     }
 }
+#endif

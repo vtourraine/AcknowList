@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 import UIKit
+import SwiftUI
 
 import AcknowList
 
@@ -53,6 +54,17 @@ class ViewController: UIViewController {
             let viewController = AcknowListViewController(plistPath: path, style: .insetGrouped)
             viewController.title = "Grouped Inset Style"
             viewController.headerText = "Visit: https://developer.apple.com"
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+
+    @IBAction func pushAcknowListSwiftUI(_ sender: AnyObject) {
+        if #available(iOS 13.0, *) {
+            guard let path = Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist") else {
+                return
+            }
+
+            let viewController = UIHostingController(rootView: AcknowListSwiftUIView(plistPath: path))
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
