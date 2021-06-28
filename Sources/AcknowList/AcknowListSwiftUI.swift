@@ -31,11 +31,17 @@ extension Acknow: Identifiable {
     }
 }
 
+/// View that displays a list of acknowledgements.
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 public struct AcknowListSwiftUIView: View {
 
+    /// The represented array of `Acknow`.
     public var acknowledgements: [Acknow] = []
+
+    /// Header text to be displayed above the list of the acknowledgements.
     public var headerText: String?
+
+    /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
 
     public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
