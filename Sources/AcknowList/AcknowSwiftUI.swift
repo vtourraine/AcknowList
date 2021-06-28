@@ -23,8 +23,11 @@
 
 import SwiftUI
 
+/// View that displays a single acknowledgement.
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 public struct AcknowSwiftUIView: View {
+
+    /// The represented acknowledgement.
     public var acknowledgement: Acknow
 
     public init(acknowledgement: Acknow) {
