@@ -27,8 +27,7 @@ import Foundation
 open class AcknowLocalization {
 
     /**
-     The localized version of “Acknowledgements”.
-     You can use this value for the button presenting the `AcknowListViewController`, for instance.
+     The localized version of “Acknowledgements”. You can use this value for the button presenting the `AcknowListViewController`, for instance.
 
      - returns: The localized title.
      */
@@ -62,8 +61,9 @@ open class AcknowLocalization {
     /**
      Returns a localized string.
 
-     - parameter key: The key for the string to localize.
-     - parameter defaultString: The default non-localized string.
+     - Parameters:
+       - key: The key for the string to localize.
+       - defaultString: The default non-localized string.
 
      - returns: The localized string.
      */
