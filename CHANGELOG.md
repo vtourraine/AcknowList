@@ -3,6 +3,7 @@
 ## 2.1.0 (work in progress)
 
 - Add SwiftUI interface (supports iOS/tvOS/watchOS/macOS)
+- Fix Xcode 13 support, by Thomas Mellenthin (@melle) and Francesc Bruguera (@ifrins)
 
 
 ## 2.0.1 (26 April 2021)
