@@ -74,7 +74,7 @@ public struct AcknowListSwiftUIView: View {
                 Text(text)
             }
             else {
-                EmptyView()
+                Text("")
             }
         }
     }
@@ -82,6 +82,7 @@ public struct AcknowListSwiftUIView: View {
     public var body: some View {
         #if os(iOS) || os(tvOS)
         List {
+
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
                 ForEach (acknowledgements) { acknowledgement in
                     NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {

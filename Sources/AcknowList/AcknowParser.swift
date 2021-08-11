@@ -61,7 +61,7 @@ open class AcknowParser {
             let preferenceSpecifiersArray = preferenceSpecifiers as! [AnyObject]
             if let headerItem = preferenceSpecifiersArray.first,
                 let footerItem = preferenceSpecifiersArray.last,
-                let headerText = headerItem["FooterText"], headerItem is [String: String],
+                let headerText = headerItem["HeaderText"], headerItem is [String: String],
                 let footerText = footerItem["FooterText"], footerItem is [String: String] {
                     return (headerText as! String?, footerText as! String?)
             }
