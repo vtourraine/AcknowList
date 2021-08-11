@@ -79,18 +79,45 @@ public struct AcknowListSwiftUIView: View {
         }
     }
 
+    struct Header: View {
+        let text: String?
+
+        var body: some View {
+            if let text = text {
+                Text(text).font(.subheadline)
+            }
+            else {
+                EmptyView()
+            }
+        }
+    }
+
+    struct Footer: View {
+        let text: String?
+
+        var body: some View {
+            if let text = text {
+                Text(text).font(.footnote).fontWeight(.light)
+            }
+            else {
+                EmptyView()
+            }
+        }
+    }
+
     public var body: some View {
         #if os(iOS) || os(tvOS)
         List {
-            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
+            headerText.map { Header(text: $0) }
+            Section {
                 ForEach (acknowledgements) { acknowledgement in
                     NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
                         Text(acknowledgement.title)
                     }
                 }
             }
+            footerText.map { Footer(text: $0) }
         }
-        .listStyle(GroupedListStyle())
         .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
         #else
         List {
