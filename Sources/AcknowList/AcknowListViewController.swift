@@ -59,7 +59,7 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init() {
+    @objc public convenience init() {
         if let path = AcknowListViewController.defaultAcknowledgementsPlistPath() {
             self.init(plistPath: path)
         }
@@ -114,11 +114,13 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(acknowledgements: [Acknow], style: UITableView.Style = .grouped) {
+    @objc public convenience init(acknowledgements: [AcknowClass], style: UITableView.Style = .grouped) {
         
         self.init(style: style)
-        
-        self.acknowledgements = acknowledgements
+
+        self.acknowledgements = acknowledgements.map { acknow in
+            Acknow(title: acknow.title, text: acknow.text, license: acknow.license)
+        }
 
         self.title = AcknowLocalization.localizedTitle()
     }
