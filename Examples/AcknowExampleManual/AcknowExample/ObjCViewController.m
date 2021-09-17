@@ -28,12 +28,14 @@
 @implementation ObjCViewController
 
 - (void)presentAcknowListViewController {
-    NSString *path = @"";
-    AcknowListViewController *viewController = [[AcknowListViewController alloc] initWithPlistPath:path style:UITableViewStylePlain];
-    viewController.headerText = @"...";
-    viewController.footerText = @"...";
+    // Objective-C compatibility has been disabled, see: https://github.com/vtourraine/AcknowList/issues/89
+    //
+    // NSString *path = @"";
+    // AcknowListViewController *viewController = [[AcknowListViewController alloc] initWithPlistPath:path style:UITableViewStylePlain];
+    // viewController.headerText = @"...";
+    // viewController.footerText = @"...";
 
-    [self presentViewController:viewController animated:YES completion:nil];
+    // [self presentViewController:viewController animated:YES completion:nil];
 }
 
 @end
