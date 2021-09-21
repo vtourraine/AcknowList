@@ -1,6 +1,6 @@
 {
   "name": "AcknowList",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "summary": "Ready to use “Acknowledgements”/“Licenses” view controller for CocoaPods.",
   "homepage": "https://github.com/vtourraine/AcknowList",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/vtourraine/AcknowList.git",
-    "tag": "2.0.2"
+    "tag": "2.0.3"
   },
   "source_files": "Sources/AcknowList/*.swift",
   "resource_bundles": {
