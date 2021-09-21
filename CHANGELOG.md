@@ -5,6 +5,11 @@
 - Add SwiftUI interface (supports iOS/tvOS/watchOS/macOS)
 
 
+## 2.0.3 (21 September 2021)
+
+- Update `AcknowListViewController` default initializer implementatoin to fix Xcode 13 support
+
+
 ## 2.0.2 (17 September 2021)
 
 - Update `AcknowListViewController` to remove Objective-C compatibility, fixing Xcode 13 support
