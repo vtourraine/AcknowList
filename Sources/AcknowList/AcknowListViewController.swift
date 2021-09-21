@@ -59,13 +59,16 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init() {
+    public init() {
+        self.acknowledgements = []
+
+        super.init(style: .grouped)
+
         if let path = AcknowListViewController.defaultAcknowledgementsPlistPath() {
-            self.init(plistPath: path)
+            load(from: path)
         }
-        else {
-            self.init(acknowledgements: [])
-        }
+
+        self.title = AcknowLocalization.localizedTitle()
     }
 
     /**
