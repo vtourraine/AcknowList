@@ -11,7 +11,7 @@ Acknowledgements screen displaying a list of licenses, for example from [CocoaPo
 
 _Also available in Objective-C with [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController)._
 
-![AcknowList screenshots](Images/AcknowList.png)
+![AcknowList screenshots](Sources/AcknowList/AcknowList.docc/Resources/acknowlist@2x.png)
 
 ## Features
 

@@ -26,6 +26,7 @@ import UIKit
 
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
 @available(iOS 9.0.0, tvOS 9.0.0, *)
+@available(iOSApplicationExtension, unavailable)
 open class AcknowListViewController: UITableViewController {
 
     /// The represented array of `Acknow`.

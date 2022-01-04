@@ -3,6 +3,9 @@
 ## 2.1.0 (work in progress)
 
 - Add SwiftUI interface (supports iOS/tvOS/watchOS/macOS)
+- Add DocC resources
+- Fix Xcode 13 support, by Thomas Mellenthin (@melle) and Francesc Bruguera (@ifrins)
+- Update Swift Package Manager support to require iOS 13/tvOS 13, necessary to support SwiftUI
 
 
 ## 2.0.3 (21 September 2021)

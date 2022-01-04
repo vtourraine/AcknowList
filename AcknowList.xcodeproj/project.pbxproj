@@ -20,6 +20,7 @@
 		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
 		D70473D225CC4DB0004F2BEC /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */; };
 		D70473E525CC530E004F2BEC /* AcknowListTestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */; };
+		D705FE2B268A0B0600B501D7 /* AcknowList.docc in Sources */ = {isa = PBXBuildFile; fileRef = D705FE2A268A0B0600B501D7 /* AcknowList.docc */; };
 		D70B427D212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */; };
 		D70B427F212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */; };
 		D70B4281212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt in Resources */ = {isa = PBXBuildFile; fileRef = D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */; };
@@ -58,6 +59,7 @@
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
 		D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListTestsHelpers.swift; sourceTree = "<group>"; };
+		D705FE2A268A0B0600B501D7 /* AcknowList.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AcknowList.docc; sourceTree = "<group>"; };
 		D70B427C212B2916007B6A81 /* RegexTesting-GroundTruth-Alamofire.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Alamofire.txt"; sourceTree = "<group>"; };
 		D70B427E212B2941007B6A81 /* RegexTesting-GroundTruth-Charts.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-Charts.txt"; sourceTree = "<group>"; };
 		D70B4280212B295B007B6A81 /* RegexTesting-GroundTruth-TPKeyboardAvoiding.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */,
 				D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */,
 				D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */,
+				D705FE2A268A0B0600B501D7 /* AcknowList.docc */,
 			);
 			name = Sources;
 			path = Sources/AcknowList;
@@ -255,7 +258,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = VTourraine;
 				TargetAttributes = {
 					1AA3C3731CAC35190071A7FD = {
@@ -335,6 +338,7 @@
 				32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */,
 				32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */,
 				32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */,
+				D705FE2B268A0B0600B501D7 /* AcknowList.docc in Sources */,
 				D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */,
 				D78335EF2628934800A380A3 /* AcknowSwiftUI.swift in Sources */,
 			);
