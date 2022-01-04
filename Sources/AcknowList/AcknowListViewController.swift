@@ -60,13 +60,16 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    public convenience init() {
+    public init() {
+        self.acknowledgements = []
+
+        super.init(style: .grouped)
+
         if let path = AcknowListViewController.defaultAcknowledgementsPlistPath() {
-            self.init(plistPath: path)
+            load(from: path)
         }
-        else {
-            self.init(acknowledgements: [])
-        }
+
+        self.title = AcknowLocalization.localizedTitle()
     }
 
     /**
@@ -77,7 +80,7 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    @objc public convenience init(fileNamed fileName: String) {
+    public convenience init(fileNamed fileName: String) {
         if let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName) {
             self.init(plistPath: path)
         }
@@ -95,7 +98,7 @@ open class AcknowListViewController: UITableViewController {
 
      - returns: The new `AcknowListViewController` instance.
      */
-    @objc public convenience init(plistPath: String, style: UITableView.Style = .grouped) {
+    public convenience init(plistPath: String, style: UITableView.Style = .grouped) {
         self.init(acknowledgements: [], style: style)
 
         load(from: plistPath)
