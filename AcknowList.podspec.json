@@ -25,8 +25,8 @@
     "AcknowListBundle": ["Sources/AcknowList/Resources/**/*.lproj"]
   },
   "platforms": {
-    "ios": "9.0",
-    "tvos": "9.0",
+    "ios": "13.0",
+    "tvos": "13.0",
     "watchos": "7.0",
     "osx": "10.15"
   },
