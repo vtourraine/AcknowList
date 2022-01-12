@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.1.0 (work in progress)
+## 2.1.0 (12 January 2022)
 
 - Add SwiftUI interface (supports iOS/tvOS/watchOS/macOS)
 - Add DocC resources
