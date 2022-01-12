@@ -2,9 +2,8 @@
 
 Acknowledgements screen displaying a list of licenses, for example from [CocoaPods](https://cocoapods.org) dependencies.
 
-![Platform iOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
+![Platform iOS tvOS watchOS macOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
 ![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
-[![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
 ![Swift Package Manager](https://img.shields.io/badge/support-Swift_Package_Manager-orange.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
@@ -97,7 +96,6 @@ AcknowList now offers a SwiftUI interface, which supports all the major platform
 
 Instantiate a `AcknowListSwiftUIView` with a path to the `plist` file, or with an array of `Acknow` instances, and present this view from a `NavigationView`.
 
-
 ## Platforms
 
 | Platform | UIKit | SwiftUI |
@@ -106,6 +104,8 @@ Instantiate a `AcknowListSwiftUIView` with a path to the `plist` file, or with a
 | 📺 | tvOS 9.0+ | tvOS 13.0+ |
 | ⌚️ | *not supported* | watchOS 7.0+ |
 | 💻 | *not supported* | macOS 10.15+ |
+
+⚠️ If you install AcknowList with CocoaPods or Swift Package Manager, it will require iOS 13 and tvOS 13. To support earlier versions, please import this library manually, and ignore the SwiftUI classes. Alternatively, use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController) instead.
 
 ## Requirements
 
