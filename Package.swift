@@ -20,16 +20,16 @@ let package = Package(
         .testTarget(
             name: "AcknowListTests",
             dependencies: ["AcknowList"],
-            exclude: ["Info.plist", "Resources"],
+            exclude: ["Info.plist"],
             resources: [
-                .copy("Pods-acknowledgements-RegexTesting.plist"),
-                .copy("Pods-acknowledgements.plist"),
-                .copy("RegexTesting-GroundTruth-Charts.txt"),
-                .copy("RegexTesting-GroundTruth-TYPFontAwesome.txt"),
-                .copy("Pods-acknowledgements-multi.plist"),
-                .copy("RegexTesting-GroundTruth-Alamofire.txt"),
-                .copy("RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"),
-                .copy("RegexTesting-GroundTruth-pop.txt")]
+                .copy("Resources/Pods-acknowledgements-RegexTesting.plist"),
+                .copy("Resources/Pods-acknowledgements.plist"),
+                .copy("Resources/RegexTesting-GroundTruth-Charts.txt"),
+                .copy("Resources/RegexTesting-GroundTruth-TYPFontAwesome.txt"),
+                .copy("Resources/Pods-acknowledgements-multi.plist"),
+                .copy("Resources/RegexTesting-GroundTruth-Alamofire.txt"),
+                .copy("Resources/RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"),
+                .copy("Resources/RegexTesting-GroundTruth-pop.txt")]
         ),
     ],
     swiftLanguageVersions: [.v5]
