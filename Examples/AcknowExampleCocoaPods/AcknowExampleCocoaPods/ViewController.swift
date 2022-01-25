@@ -18,17 +18,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func presentAcknowledgementsSwiftUI(_ sender: UIButton) {
-        // SwiftUI interface disabled for this release
-        /*
-        if #available(iOS 13.0, *) {
-            guard let path = Bundle.main.path(forResource: "Pods-AcknowExampleCocoaPods-acknowledgements", ofType: "plist") else {
-                return
-            }
-
-            let viewController = UIHostingController(rootView: AcknowNavigationSwiftUIView(plistPath: path))
-            present(viewController, animated: true)
+        guard let path = Bundle.main.path(forResource: "Pods-AcknowExampleCocoaPods-acknowledgements", ofType: "plist") else {
+            return
         }
-        */
+
+        let viewController = UIHostingController(rootView: NavigationView { AcknowListSwiftUIView(plistPath: path) })
+        present(viewController, animated: true)
     }
 }
 
