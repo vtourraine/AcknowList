@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.1 (work in progress)
+
+- Fix Swift Package Manager warning (exlude DocC folder)
+
+
 ## 2.1.0 (12 January 2022)
 
 - Add SwiftUI interface (supports iOS/tvOS/watchOS/macOS)

@@ -14,6 +14,7 @@ let package = Package(
     targets: [
         .target(
             name: "AcknowList",
+            exclude: ["AcknowList.docc"],
             resources: [.process("Resources")]
         ),
         .testTarget(
