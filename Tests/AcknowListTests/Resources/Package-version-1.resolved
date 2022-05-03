@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AcknowList",
+        "repositoryURL": "https://github.com/vtourraine/AcknowList.git",
+        "state": {
+          "branch": null,
+          "revision": "e66b9541c1902ced4979b3c214a5def2cf96f015",
+          "version": "2.1.0"
+        }
+      },
+      {
+        "package": "AMGAppButton",
+        "repositoryURL": "https://github.com/studioamanga/AMGAppButton.git",
+        "state": {
+          "branch": null,
+          "revision": "6044b277a3a4281afb1fdf6f651fa4829109d7d9",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "SVProgressHUD",
+        "repositoryURL": "https://github.com/epitonium/SVProgressHUD.git",
+        "state": {
+          "branch": null,
+          "revision": "3580cb55f351d83f861f52362aa38305f663f88d",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "TrackupCore",
+        "repositoryURL": "https://github.com/vtourraine/Trackup.git",
+        "state": {
+          "branch": null,
+          "revision": "513e0bf40b6d005354c844446e8e2334c450a863",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "TrackupVersionHistory",
+        "repositoryURL": "https://github.com/vtourraine/TrackupVersionHistory.git",
+        "state": {
+          "branch": null,
+          "revision": "7916b78a3cd5392b5807220277f3aa1d561c1658",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "VTAppButton",
+        "repositoryURL": "https://github.com/vtourraine/VTAppButton.git",
+        "state": {
+          "branch": null,
+          "revision": "3eeb59199d563d7e0ac35ebb0bf967defa878391",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

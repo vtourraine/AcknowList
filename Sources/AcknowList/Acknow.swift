@@ -21,18 +21,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+import Foundation
 
 /// Represents a single acknowledgement.
 public struct Acknow {
 
-    /// The acknowledgement title (for instance: the pod’s name).
+    /// The acknowledgement title (for instance: the pod or package’s name).
     public let title: String
 
     /// The acknowledgement body text (for instance: the pod’s license).
-    public let text: String
+    public let text: String?
 
     /// The acknowledgement license (for instance the pod’s license type).
     public let license: String?
+
+    /// The repository URL (for instance the package’s repository).
+    public let repository: URL?
 
     /// Returns an object initialized from the given parameters.
     ///
@@ -40,9 +44,10 @@ public struct Acknow {
     ///   - title: The acknowledgement title (for instance: the pod’s name).
     ///   - text: The acknowledgement body text (for instance: the pod’s license).
     ///   - license: The acknowledgement license (for instance the pod’s license type).
-    public init(title: String, text: String, license: String? = nil) {
+    public init(title: String, text: String? = nil, license: String? = nil, repository: URL? = nil) {
         self.title = title
         self.text = text
         self.license = license
+        self.repository = repository
     }
 }

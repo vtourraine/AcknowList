@@ -1,5 +1,5 @@
 //
-//  AcknowParserTests.swift
+//  AcknowPodParserTests.swift
 //  AcknowExampleTests
 //
 //  Created by Vincent Tourraine on 15/08/15.
@@ -10,12 +10,12 @@ import XCTest
 
 @testable import AcknowList
 
-class AcknowParserTests: XCTestCase {
+class AcknowPodParserTests: XCTestCase {
 
     func testHeaderFooter() throws {
         let bundle = resourcesBundle()
         let path = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
-        let parser = AcknowParser(plistPath: path)
+        let parser = AcknowPodParser(plistPath: path)
         XCTAssertNotNil(parser)
 
         let headerFooter = parser.parseHeaderAndFooter()
@@ -32,7 +32,7 @@ class AcknowParserTests: XCTestCase {
     func testAcknowledgements() throws {
         let bundle = resourcesBundle()
         let path = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
-        let parser = AcknowParser(plistPath: path)
+        let parser = AcknowPodParser(plistPath: path)
         XCTAssertNotNil(parser)
 
         let acknowledgements = parser.parseAcknowledgements()
@@ -41,7 +41,8 @@ class AcknowParserTests: XCTestCase {
         let acknow = acknowledgements.first
         if let acknow = acknow {
             XCTAssertEqual(acknow.title, "AcknowList (1)")
-            XCTAssertTrue(acknow.text.hasPrefix("Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)"))
+            let text = try XCTUnwrap(acknow.text)
+            XCTAssertTrue(text.hasPrefix("Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)"))
         }
         else {
             XCTAssert(false, "Acknowledgement not found")
@@ -67,7 +68,7 @@ class AcknowParserTests: XCTestCase {
         let bundle = resourcesBundle()
         let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements-RegexTesting", ofType: "plist"))
 
-        let parser = AcknowParser(plistPath: plistPath)
+        let parser = AcknowPodParser(plistPath: plistPath)
         XCTAssertNotNil(parser)
 
         let acknowledgements = parser.parseAcknowledgements()
@@ -91,26 +92,26 @@ class AcknowParserTests: XCTestCase {
         let path = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
 
         self.measure() {
-            let parser = AcknowParser(plistPath: path)
+            let parser = AcknowPodParser(plistPath: path)
             _ = parser.parseHeaderAndFooter()
             _ = parser.parseAcknowledgements()
         }
     }
 
     func testParseNonExistentFile() {
-        let parser = AcknowParser(plistPath: "/404")
+        let parser = AcknowPodParser(plistPath: "/404")
         XCTAssertNil(parser.parseHeaderAndFooter().header)
         XCTAssertNil(parser.parseHeaderAndFooter().footer)
         XCTAssertTrue(parser.parseAcknowledgements().isEmpty)
     }
 
     func testFindLink() throws {
-        let url = try XCTUnwrap(AcknowParser.firstLink(in: "test cocoapods.org"))
+        let url = try XCTUnwrap(AcknowPodParser.firstLink(in: "test cocoapods.org"))
         XCTAssertEqual(url, URL(string: "http://cocoapods.org"))
     }
 
     func testFindNoLink() {
-        let url = AcknowParser.firstLink(in: "test")
+        let url = AcknowPodParser.firstLink(in: "test")
         XCTAssertNil(url)
     }
 }

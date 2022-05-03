@@ -29,7 +29,9 @@ let package = Package(
                 .copy("Resources/Pods-acknowledgements-multi.plist"),
                 .copy("Resources/RegexTesting-GroundTruth-Alamofire.txt"),
                 .copy("Resources/RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"),
-                .copy("Resources/RegexTesting-GroundTruth-pop.txt")]
+                .copy("Resources/RegexTesting-GroundTruth-pop.txt"),
+                .copy("Resources/Package-version-1.resolved"),
+                .copy("Resources/Package-version-2.resolved")]
         ),
     ],
     swiftLanguageVersions: [.v5]

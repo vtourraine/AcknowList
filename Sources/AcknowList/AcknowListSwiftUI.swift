@@ -51,12 +51,12 @@ public struct AcknowListSwiftUIView: View {
     }
 
     public init(plistPath: String) {
-        let parser = AcknowParser(plistPath: plistPath)
+        let parser = AcknowPodParser(plistPath: plistPath)
         let headerFooter = parser.parseHeaderAndFooter()
         let header: String?
         let footer = headerFooter.footer
 
-        if headerFooter.header != AcknowParser.DefaultHeaderText {
+        if headerFooter.header != AcknowPodParser.DefaultHeaderText {
             header = headerFooter.header
         }
         else {

@@ -40,7 +40,7 @@ public struct AcknowSwiftUIView: View {
             Text(acknowledgement.title)
                 .font(.title)
                 .padding()
-            Text(acknowledgement.text)
+            Text(acknowledgement.text ?? "")
                 .font(.body)
                 .padding()
         }
