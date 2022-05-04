@@ -178,14 +178,14 @@ open class AcknowListViewController: UITableViewController {
     }
 
     func load(from acknowledgementsPlistPath: String) {
-        let parser = AcknowParser(plistPath: acknowledgementsPlistPath)
+        let parser = AcknowPodParser(plistPath: acknowledgementsPlistPath)
         let headerFooter = parser.parseHeaderAndFooter()
 
-        if let header = headerFooter.header, header != AcknowParser.DefaultHeaderText, !header.isEmpty {
+        if let header = headerFooter.header, header != AcknowPodParser.DefaultHeaderText, !header.isEmpty {
             headerText = header
         }
 
-        if headerFooter.footer == AcknowParser.DefaultFooterText, footerText == nil {
+        if headerFooter.footer == AcknowPodParser.DefaultFooterText, footerText == nil {
             footerText = AcknowLocalization.localizedCocoaPodsFooterText()
         }
         else if let footer = headerFooter.footer, !footer.isEmpty, footerText == nil {
@@ -289,7 +289,7 @@ open class AcknowListViewController: UITableViewController {
     @IBAction open func openLink(_ sender: UIGestureRecognizer) {
         guard let label = sender.view as? UILabel,
             let text = label.text,
-            let url = AcknowParser.firstLink(in: text) else {
+            let url = AcknowPodParser.firstLink(in: text) else {
             return
         }
 
@@ -332,7 +332,7 @@ open class AcknowListViewController: UITableViewController {
             label.adjustsFontForContentSizeCategory = true
         }
 
-        if let text = text, AcknowParser.firstLink(in: text) != nil {
+        if let text = text, AcknowPodParser.firstLink(in: text) != nil {
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openLink(_:)))
             label.addGestureRecognizer(tapGestureRecognizer)
             label.isUserInteractionEnabled = true

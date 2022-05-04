@@ -46,7 +46,7 @@ public struct AcknowSwiftUIView: View {
         }
         #else
         ScrollView {
-            Text(acknowledgement.text)
+            Text(acknowledgement.text ?? "")
                 .font(.body)
                 .padding()
         }
