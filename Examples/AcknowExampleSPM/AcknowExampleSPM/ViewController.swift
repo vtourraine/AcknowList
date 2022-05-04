@@ -18,5 +18,17 @@ class ViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: vc)
         present(navigationController, animated: true, completion: nil)
     }
+
+    @IBAction func presentPackageAcknowledgements(_ sender: UIButton) {
+        guard let url = Bundle.main.url(forResource: "Package-version-1", withExtension: "resolved"),
+              let parser = try? AcknowPackageParser(url: url) else {
+            return
+        }
+
+        let vc = AcknowListViewController()
+        vc.acknowledgements = parser.parseAcknowledgements()
+        let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true, completion: nil)
+    }
 }
 
