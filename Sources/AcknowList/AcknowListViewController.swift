@@ -23,6 +23,7 @@
 
 #if os(iOS) || os(tvOS)
 import UIKit
+import SafariServices
 
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
 @available(iOS 9.0.0, tvOS 9.0.0, *)
@@ -431,7 +432,14 @@ open class AcknowListViewController: UITableViewController {
         if let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
            let textLabel = cell.textLabel as UILabel? {
             textLabel.text = acknowledgement.title
-            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            if acknowledgement.text != nil || acknowledgement.repository != nil {
+                cell.accessoryType = .disclosureIndicator
+                cell.selectionStyle = .default
+            }
+            else {
+                cell.accessoryType = .none
+                cell.selectionStyle = .none
+            }
         }
 
         return cell
@@ -447,9 +455,15 @@ open class AcknowListViewController: UITableViewController {
      */
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
-           let navigationController = self.navigationController {
-            let viewController = AcknowViewController(acknowledgement: acknowledgement)
-            navigationController.pushViewController(viewController, animated: true)
+           let navigationController = navigationController {
+            if acknowledgement.text != nil {
+                let viewController = AcknowViewController(acknowledgement: acknowledgement)
+                navigationController.pushViewController(viewController, animated: true)
+            }
+            else if let repository = acknowledgement.repository {
+                let safariViewController = SFSafariViewController(url: repository)
+                present(safariViewController, animated: true)
+            }
         }
     }
 
