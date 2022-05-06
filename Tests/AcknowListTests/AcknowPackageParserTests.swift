@@ -15,7 +15,7 @@ class AcknowPackageParserTests: XCTestCase {
     func testParsePackageVersion1() throws {
         let bundle = resourcesBundle()
         let path = try XCTUnwrap(bundle.path(forResource: "Package-version-1", ofType: "resolved"))
-        let parser = try AcknowPackageParser(url: URL(fileURLWithPath: path))
+        let parser = try AcknowPackageParser(contentsOf: URL(fileURLWithPath: path))
         XCTAssertNotNil(parser)
 
         let acknowledgements = parser.parseAcknowledgements()
@@ -31,7 +31,7 @@ class AcknowPackageParserTests: XCTestCase {
     func testParsePackageVersion2() throws {
         let bundle = resourcesBundle()
         let path = try XCTUnwrap(bundle.path(forResource: "Package-version-2", ofType: "resolved"))
-        let parser = try AcknowPackageParser(url: URL(fileURLWithPath: path))
+        let parser = try AcknowPackageParser(contentsOf: URL(fileURLWithPath: path))
         XCTAssertNotNil(parser)
 
         let acknowledgements = parser.parseAcknowledgements()

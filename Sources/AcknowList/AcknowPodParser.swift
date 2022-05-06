@@ -39,7 +39,7 @@ open class AcknowPodParser {
 
      - returns: The new `AcknowPodParser` instance.
      */
-    public init(plistURL: URL) {
+    public init(contentsOf plistURL: URL) {
         if let data = try? Data(contentsOf: plistURL),
            let root = try? PropertyListSerialization.propertyList(from: data, format: nil) as? [String: AnyObject] {
             self.rootDictionary = root
@@ -57,7 +57,7 @@ open class AcknowPodParser {
      - returns: The new `AcknowPodParser` instance.
      */
     convenience public init(plistPath: String) {
-        self.init(plistURL: URL(fileURLWithPath: plistPath))
+        self.init(contentsOf: URL(fileURLWithPath: plistPath))
     }
 
     /**

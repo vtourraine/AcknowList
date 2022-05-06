@@ -40,7 +40,7 @@ open class AcknowPackageParser {
 
      - returns: The new `AcknowPackageParser` instance.
      */
-    public init(url: URL) throws {
+    public init(contentsOf url: URL) throws {
         self.fileData = try Data(contentsOf: url)
     }
     
@@ -51,7 +51,7 @@ open class AcknowPackageParser {
      */
     open class func defaultAcknowledgements() -> [Acknow]? {
         guard let url = Bundle.main.url(forResource: K.defaultFileName, withExtension: K.defaultFileExtension),
-              let parser = try? AcknowPackageParser(url: url) else {
+              let parser = try? AcknowPackageParser(contentsOf: url) else {
             print("** AcknowList Warning **")
             print("`\(K.defaultFileName).\(K.defaultFileExtension)` file not found.")
             print("Please add `[appName].xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved` to your main target.")
