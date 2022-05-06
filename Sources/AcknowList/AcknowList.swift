@@ -1,5 +1,5 @@
 //
-// AcknowParser.swift
+// AcknowList.swift
 //
 // Copyright (c) 2015-2022 Vincent Tourraine (https://www.vtourraine.net)
 //
@@ -21,30 +21,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
-
-public protocol AcknowFileDecoder {
-    func decode(from url: URL) throws -> AcknowList
-}
-
-/// Responsible for parsing acknowledgements files.
-open class AcknowParser {
+public struct AcknowList {
+    /**
+     Header text to be displayed above the list of the acknowledgements.
+     */
+    public let headerText: String?
 
     /**
-     Finds the first link (URL) in a given string.
-
-     @param text The string to parse.
-
-     @return The first link found, or `nil` if no link can be found.
+     List of acknowledgements.
      */
-    class func firstLink(in text: String) -> URL? {
-        let types: NSTextCheckingResult.CheckingType = [.link]
+    public let acknowledgements: [Acknow]
 
-        guard let linkDetector = try? NSDataDetector(types: types.rawValue),
-            let firstLink = linkDetector.firstMatch(in: text, options: [], range: NSMakeRange(0, text.count)) else {
-                return nil
-        }
-
-        return firstLink.url
-    }
+    /**
+     Footer text to be displayed below the list of the acknowledgements.
+     */
+    public let footerText: String?
 }

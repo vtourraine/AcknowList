@@ -1,5 +1,5 @@
 //
-// AcknowPackageParser.swift
+// AcknowPackageDecoder.swift
 //
 // Copyright (c) 2015-2022 Vincent Tourraine (https://www.vtourraine.net)
 //
@@ -24,9 +24,23 @@
 import Foundation
 
 /// Responsible for parsing a Swift Package Manager “resolved” package file.
-open class AcknowPackageParser {
+open class AcknowPackageDecoder: AcknowFileDecoder {
     
-    let fileData: Data
+    public init() {
+    }
+
+    public func decode(from url: URL) throws -> AcknowList {
+        let data = try Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        if let root = try? decoder.decode(JSONV1Root.self, from: data) {
+            let acknows = root.object.pins.map { Acknow(title: $0.package, repository: URL(string: $0.repositoryURL)) }
+            return AcknowList(headerText: nil, acknowledgements: acknows, footerText: nil)
+        }
+
+        let root = try decoder.decode(JSONV2Root.self, from: data)
+        let acknows =  root.pins.map { Acknow(title: $0.identity, repository: URL(string: $0.location)) }
+        return AcknowList(headerText: nil, acknowledgements: acknows, footerText: nil)
+    }
     
     struct K {
         static let defaultFileName = "Package"
@@ -34,49 +48,19 @@ open class AcknowPackageParser {
     }
 
     /**
-     Initializes the `AcknowPackageParser` instance with a “resolved” package file URL.
-
-     - parameter url: The URL to the package file.
-
-     - returns: The new `AcknowPackageParser` instance.
-     */
-    public init(contentsOf url: URL) throws {
-        self.fileData = try Data(contentsOf: url)
-    }
-    
-    /**
      Parses the acknowledgements from `Package.resolved`.
 
      - returns: an array of `Acknow` instances, or `nil` if no valid `Package.resolved` was found.
      */
-    open class func defaultAcknowledgements() -> [Acknow]? {
-        guard let url = Bundle.main.url(forResource: K.defaultFileName, withExtension: K.defaultFileExtension),
-              let parser = try? AcknowPackageParser(contentsOf: url) else {
+    open class func defaultAcknowledgements() -> AcknowList? {
+        guard let url = Bundle.main.url(forResource: K.defaultFileName, withExtension: K.defaultFileExtension) else {
             print("** AcknowList Warning **")
             print("`\(K.defaultFileName).\(K.defaultFileExtension)` file not found.")
             print("Please add `[appName].xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved` to your main target.")
             return nil
         }
 
-        return parser.parseAcknowledgements()
-    }
-    
-    /**
-     Parses the array of acknowledgements.
-
-     - returns: an array of `Acknow` instances.
-     */
-    open func parseAcknowledgements() -> [Acknow] {
-        let decoder = JSONDecoder()
-        if let root = try? decoder.decode(JSONV1Root.self, from: fileData) {
-            return root.object.pins.map { Acknow(title: $0.package, repository: URL(string: $0.repositoryURL)) }
-        }
-        else if let root = try? decoder.decode(JSONV2Root.self, from: fileData) {
-            return root.pins.map { Acknow(title: $0.identity, repository: URL(string: $0.location)) }
-        }
-        else {
-            return []
-        }
+        return try? AcknowPackageDecoder().decode(from: url)
     }
     
     // MARK: - JSON format

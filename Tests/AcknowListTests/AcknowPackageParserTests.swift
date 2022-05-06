@@ -14,14 +14,15 @@ class AcknowPackageParserTests: XCTestCase {
 
     func testParsePackageVersion1() throws {
         let bundle = resourcesBundle()
-        let path = try XCTUnwrap(bundle.path(forResource: "Package-version-1", ofType: "resolved"))
-        let parser = try AcknowPackageParser(contentsOf: URL(fileURLWithPath: path))
-        XCTAssertNotNil(parser)
+        let url = try XCTUnwrap(bundle.url(forResource: "Package-version-1", withExtension: "resolved"))
 
-        let acknowledgements = parser.parseAcknowledgements()
-        XCTAssertEqual(acknowledgements.count, 6)
-        
-        let first = try XCTUnwrap(acknowledgements.first)
+        let decoder = AcknowPackageDecoder()
+        let acknowList = try decoder.decode(from: url)
+        XCTAssertNil(acknowList.headerText)
+        XCTAssertNil(acknowList.footerText)
+        XCTAssertEqual(acknowList.acknowledgements.count, 6)
+
+        let first = try XCTUnwrap(acknowList.acknowledgements.first)
         XCTAssertEqual(first.title, "AcknowList")
         XCTAssertEqual(first.repository, URL(string: "https://github.com/vtourraine/AcknowList.git"))
         XCTAssertNil(first.text)
@@ -30,14 +31,13 @@ class AcknowPackageParserTests: XCTestCase {
 
     func testParsePackageVersion2() throws {
         let bundle = resourcesBundle()
-        let path = try XCTUnwrap(bundle.path(forResource: "Package-version-2", ofType: "resolved"))
-        let parser = try AcknowPackageParser(contentsOf: URL(fileURLWithPath: path))
-        XCTAssertNotNil(parser)
+        let url = try XCTUnwrap(bundle.url(forResource: "Package-version-2", withExtension: "resolved"))
+        
+        let decoder = AcknowPackageDecoder()
+        let acknowList = try decoder.decode(from: url)
+        XCTAssertEqual(acknowList.acknowledgements.count, 1)
 
-        let acknowledgements = parser.parseAcknowledgements()
-        XCTAssertEqual(acknowledgements.count, 1)
-
-        let first = try XCTUnwrap(acknowledgements.first)
+        let first = try XCTUnwrap(acknowList.acknowledgements.first)
         XCTAssertEqual(first.title, "thirdpartymailer")
         XCTAssertEqual(first.repository, URL(string: "https://github.com/vtourraine/ThirdPartyMailer.git"))
         XCTAssertNil(first.text)
