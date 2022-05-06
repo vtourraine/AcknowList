@@ -23,7 +23,7 @@
 
 import Foundation
 
-/// Responsible for parsing a Swift Package Manager `Package.resolved` file.
+/// Responsible for parsing a Swift Package Manager “resolved” package file.
 open class AcknowPackageParser {
     
     let fileData: Data
@@ -34,9 +34,9 @@ open class AcknowPackageParser {
     }
 
     /**
-     Initializes the `AcknowPackageParser` instance with a `Package.resolved` file path.
+     Initializes the `AcknowPackageParser` instance with a “resolved” package file URL.
 
-     - parameter url: The URL  to the `Package.resolved` file.
+     - parameter url: The URL to the package file.
 
      - returns: The new `AcknowPackageParser` instance.
      */
