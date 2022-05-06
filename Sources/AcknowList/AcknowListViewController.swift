@@ -290,7 +290,7 @@ open class AcknowListViewController: UITableViewController {
     @IBAction open func openLink(_ sender: UIGestureRecognizer) {
         guard let label = sender.view as? UILabel,
             let text = label.text,
-            let url = AcknowPodParser.firstLink(in: text) else {
+            let url = AcknowParser.firstLink(in: text) else {
             return
         }
 
@@ -333,7 +333,7 @@ open class AcknowListViewController: UITableViewController {
             label.adjustsFontForContentSizeCategory = true
         }
 
-        if let text = text, AcknowPodParser.firstLink(in: text) != nil {
+        if let text = text, AcknowParser.firstLink(in: text) != nil {
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openLink(_:)))
             label.addGestureRecognizer(tapGestureRecognizer)
             label.isUserInteractionEnabled = true

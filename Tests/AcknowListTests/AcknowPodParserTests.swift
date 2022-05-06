@@ -104,14 +104,4 @@ class AcknowPodParserTests: XCTestCase {
         XCTAssertNil(parser.parseHeaderAndFooter().footer)
         XCTAssertTrue(parser.parseAcknowledgements().isEmpty)
     }
-
-    func testFindLink() throws {
-        let url = try XCTUnwrap(AcknowPodParser.firstLink(in: "test cocoapods.org"))
-        XCTAssertEqual(url, URL(string: "http://cocoapods.org"))
-    }
-
-    func testFindNoLink() {
-        let url = AcknowPodParser.firstLink(in: "test")
-        XCTAssertNil(url)
-    }
 }
