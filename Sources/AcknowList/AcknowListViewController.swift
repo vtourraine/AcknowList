@@ -179,22 +179,23 @@ open class AcknowListViewController: UITableViewController {
     }
 
     func load(from acknowledgementsPlistPath: String) {
-        let parser = AcknowPodParser(plistPath: acknowledgementsPlistPath)
-        let headerFooter = parser.parseHeaderAndFooter()
-
-        if let header = headerFooter.header, header != AcknowPodParser.DefaultHeaderText, !header.isEmpty {
+        let decoder = AcknowPodDecoder()
+        guard let acknowList = try? decoder.decode(from: URL(fileURLWithPath: acknowledgementsPlistPath)) else {
+            return
+        }
+    
+        if let header = acknowList.headerText, header != AcknowPodDecoder.DefaultHeaderText, !header.isEmpty {
             headerText = header
         }
 
-        if headerFooter.footer == AcknowPodParser.DefaultFooterText, footerText == nil {
+        if acknowList.footerText == AcknowPodDecoder.DefaultFooterText, footerText == nil {
             footerText = AcknowLocalization.localizedCocoaPodsFooterText()
         }
-        else if let footer = headerFooter.footer, !footer.isEmpty, footerText == nil {
+        else if let footer = acknowList.footerText, !footer.isEmpty, footerText == nil {
             footerText = footer
         }
 
-        let acknowledgements = parser.parseAcknowledgements()
-        let sortedAcknowledgements = acknowledgements.sorted(by: {
+        let sortedAcknowledgements = acknowList.acknowledgements.sorted(by: {
             (ack1: Acknow, ack2: Acknow) -> Bool in
             let result = ack1.title.compare(ack2.title, options: [], range: nil, locale: Locale.current)
             return (result == ComparisonResult.orderedAscending)

@@ -50,20 +50,21 @@ public struct AcknowListSwiftUIView: View {
         self.footerText = footerText
     }
 
-    public init(plistPath: String) {
-        let parser = AcknowPodParser(plistPath: plistPath)
-        let headerFooter = parser.parseHeaderAndFooter()
-        let header: String?
-        let footer = headerFooter.footer
+    public init(plistFileURL: URL) {
+        guard let acknowList = try? AcknowPodDecoder().decode(from: plistFileURL) else {
+            self.init(acknowledgements: [], headerText: nil, footerText: nil)
+            return
+        }
 
-        if headerFooter.header != AcknowPodParser.DefaultHeaderText {
-            header = headerFooter.header
+        let header: String?
+        if acknowList.headerText != AcknowPodDecoder.DefaultHeaderText {
+            header = acknowList.headerText
         }
         else {
             header = nil
         }
 
-        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: header, footerText: footer)
+        self.init(acknowledgements: acknowList.acknowledgements, headerText: header, footerText: acknowList.footerText)
     }
 
     struct HeaderFooter: View {

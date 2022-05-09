@@ -24,6 +24,7 @@
 import Foundation
 
 public protocol AcknowFileDecoder {
+
     func decode(from url: URL) throws -> AcknowList
 }
 
