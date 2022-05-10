@@ -310,6 +310,12 @@ open class AcknowListViewController: UITableViewController {
     let LabelMargin: CGFloat = 20
     let FooterBottomMargin: CGFloat = 20
 
+    func configure(with acknowList: AcknowList) {
+        headerText = acknowList.headerText
+        acknowledgements = AcknowParser.sorted(acknowList.acknowledgements)
+        footerText = acknowList.footerText
+    }
+
     func headerFooterLabel(frame: CGRect, font: UIFont, text: String?) -> UILabel {
         let label = UILabel(frame: frame)
         label.text = text

@@ -34,9 +34,9 @@ open class AcknowParser {
     /**
      Finds the first link (URL) in a given string.
 
-     @param text The string to parse.
+     - parameter text: The string to parse.
 
-     @return The first link found, or `nil` if no link can be found.
+     - returns: The first link found, or `nil` if no link can be found.
      */
     class func firstLink(in text: String) -> URL? {
         let types: NSTextCheckingResult.CheckingType = [.link]
@@ -54,5 +54,30 @@ open class AcknowParser {
             let result = ack1.title.localizedCompare(ack2.title)
             return (result == ComparisonResult.orderedAscending)
         }
+    }
+
+    /**
+     Filters out all premature line breaks (i.e. removes manual wrapping).
+
+     - parameter text: The text to process.
+
+     - returns: The text without the premature line breaks.
+     */
+    class func filterOutPrematureLineBreaks(text: String) -> String {
+        // This regex replaces single newlines with spaces, while preserving multiple newlines used for formatting.
+        // This prevents issues such as https://github.com/vtourraine/AcknowList/issues/41
+        //
+        // The issue arises when licenses contain premature line breaks in the middle of a sentance, often used
+        // to limit license texts to 80 characters. When applied on an iPad, the resulting licenses are misaligned.
+        //
+        // The expression (?<=.)(\h)*(\R)(\h)*(?=.) can be broken down as:
+        //
+        //    (?<=.)  Positive lookbehind matching any non-newline character (matches but does not capture)
+        //    (\h)*   Matches and captures zero or more horizontal spaces (trailing newlines)
+        //    (\R)    Matches and captures any single Unicode-compliant newline character
+        //    (\h)*   Matches and captures zero or more horizontal spaces (leading newlines)
+        //    (?=.)   Positive lookahead matching any non-newline character (matches but does not capture)
+        let singleNewLineFinder = try! NSRegularExpression(pattern: "(?<=.)(\\h)*(\\R)(\\h)*(?=.)")
+        return singleNewLineFinder.stringByReplacingMatches(in: text, range: NSRange(0..<text.count), withTemplate: " ")
     }
 }
