@@ -48,4 +48,11 @@ open class AcknowParser {
 
         return firstLink.url
     }
+
+    open class func sorted(_ acknowledgements: [Acknow]) -> [Acknow] {
+        return acknowledgements.sorted { ack1, ack2 in
+            let result = ack1.title.localizedCompare(ack2.title)
+            return (result == ComparisonResult.orderedAscending)
+        }
+    }
 }

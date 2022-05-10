@@ -195,13 +195,7 @@ open class AcknowListViewController: UITableViewController {
             footerText = footer
         }
 
-        let sortedAcknowledgements = acknowList.acknowledgements.sorted(by: {
-            (ack1: Acknow, ack2: Acknow) -> Bool in
-            let result = ack1.title.compare(ack2.title, options: [], range: nil, locale: Locale.current)
-            return (result == ComparisonResult.orderedAscending)
-        })
-
-        self.acknowledgements = sortedAcknowledgements
+        acknowledgements = AcknowParser.sorted(acknowList.acknowledgements)
     }
 
     // MARK: - View life cycle
