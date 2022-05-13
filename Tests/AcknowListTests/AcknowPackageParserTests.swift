@@ -15,9 +15,10 @@ class AcknowPackageParserTests: XCTestCase {
     func testParsePackageVersion1() throws {
         let bundle = resourcesBundle()
         let url = try XCTUnwrap(bundle.url(forResource: "Package-version-1", withExtension: "resolved"))
+        let data = try Data(contentsOf: url)
 
         let decoder = AcknowPackageDecoder()
-        let acknowList = try decoder.decode(from: url)
+        let acknowList = try decoder.decode(from: data)
         XCTAssertNil(acknowList.headerText)
         XCTAssertNil(acknowList.footerText)
         XCTAssertEqual(acknowList.acknowledgements.count, 6)
@@ -32,9 +33,10 @@ class AcknowPackageParserTests: XCTestCase {
     func testParsePackageVersion2() throws {
         let bundle = resourcesBundle()
         let url = try XCTUnwrap(bundle.url(forResource: "Package-version-2", withExtension: "resolved"))
+        let data = try Data(contentsOf: url)
         
         let decoder = AcknowPackageDecoder()
-        let acknowList = try decoder.decode(from: url)
+        let acknowList = try decoder.decode(from: data)
         XCTAssertEqual(acknowList.acknowledgements.count, 1)
 
         let first = try XCTUnwrap(acknowList.acknowledgements.first)

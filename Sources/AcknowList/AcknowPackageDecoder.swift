@@ -24,13 +24,14 @@
 import Foundation
 
 /// Responsible for parsing a Swift Package Manager “resolved” package file.
-open class AcknowPackageDecoder: AcknowFileDecoder {
-    
-    public init() {
+open class AcknowPackageDecoder: AcknowDecoder {
+
+    struct K {
+        static let defaultFileName = "Package"
+        static let defaultFileExtension = "resolved"
     }
 
-    public func decode(from url: URL) throws -> AcknowList {
-        let data = try Data(contentsOf: url)
+    public func decode(from data: Data) throws -> AcknowList {
         let decoder = JSONDecoder()
         if let root = try? decoder.decode(JSONV1Root.self, from: data) {
             let acknows = root.object.pins.map { Acknow(title: $0.package, repository: URL(string: $0.repositoryURL)) }
@@ -41,11 +42,6 @@ open class AcknowPackageDecoder: AcknowFileDecoder {
         let acknows =  root.pins.map { Acknow(title: $0.identity, repository: URL(string: $0.location)) }
         return AcknowList(headerText: nil, acknowledgements: acknows, footerText: nil)
     }
-    
-    struct K {
-        static let defaultFileName = "Package"
-        static let defaultFileExtension = "resolved"
-    }
 
     /**
      Parses the acknowledgements from `Package.resolved`.
@@ -53,16 +49,17 @@ open class AcknowPackageDecoder: AcknowFileDecoder {
      - returns: an array of `Acknow` instances, or `nil` if no valid `Package.resolved` was found.
      */
     open class func defaultAcknowledgements() -> AcknowList? {
-        guard let url = Bundle.main.url(forResource: K.defaultFileName, withExtension: K.defaultFileExtension) else {
+        guard let url = Bundle.main.url(forResource: K.defaultFileName, withExtension: K.defaultFileExtension),
+              let data = try? Data(contentsOf: url) else {
             print("** AcknowList Warning **")
             print("`\(K.defaultFileName).\(K.defaultFileExtension)` file not found.")
             print("Please add `[appName].xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved` to your main target.")
             return nil
         }
 
-        return try? AcknowPackageDecoder().decode(from: url)
+        return try? AcknowPackageDecoder().decode(from: data)
     }
-    
+
     // MARK: - JSON format
 
     struct JSONV1Root: Codable {

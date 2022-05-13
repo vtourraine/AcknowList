@@ -51,7 +51,8 @@ public struct AcknowListSwiftUIView: View {
     }
 
     public init(plistFileURL: URL) {
-        guard let acknowList = try? AcknowPodDecoder().decode(from: plistFileURL) else {
+        guard let data = try? Data(contentsOf: plistFileURL),
+              let acknowList = try? AcknowPodDecoder().decode(from: data) else {
             self.init(acknowledgements: [], headerText: nil, footerText: nil)
             return
         }

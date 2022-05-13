@@ -23,9 +23,15 @@
 
 import Foundation
 
-public protocol AcknowFileDecoder {
+/// A type that decodes acknowledgements from structured objects.
+public protocol AcknowDecoder {
 
-    func decode(from url: URL) throws -> AcknowList
+    /**
+     Returns acknowledgements decoded from a structured object.
+     - Parameter data: The acknowledgements object to decode.
+     - Returns: A `AcknowList` value, if the decoder can parse the data.
+     */
+    func decode(from data: Data) throws -> AcknowList
 }
 
 /// Responsible for parsing acknowledgements files.

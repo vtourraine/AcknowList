@@ -180,7 +180,10 @@ open class AcknowListViewController: UITableViewController {
 
     func load(from acknowledgementsPlistPath: String) {
         let decoder = AcknowPodDecoder()
-        guard let acknowList = try? decoder.decode(from: URL(fileURLWithPath: acknowledgementsPlistPath)) else {
+        let url = URL(fileURLWithPath: acknowledgementsPlistPath)
+
+        guard let data = try? Data(contentsOf: url),
+              let acknowList = try? decoder.decode(from: data) else {
             return
         }
     
