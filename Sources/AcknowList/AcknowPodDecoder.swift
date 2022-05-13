@@ -23,9 +23,14 @@
 
 import Foundation
 
-/// Responsible for parsing a CocoaPods acknowledgements plist file.
+/// An object that decodes acknowledgements from CocoaPods acknowledgements plist file objects.
 open class AcknowPodDecoder: AcknowDecoder {
 
+    /**
+     Returns acknowledgements decoded from a CocoaPods acknowledgements plist file object.
+     - Parameter data: The CocoaPods acknowledgements plist file object to decode.
+     - Returns: A `AcknowList` value, if the decoder can parse the data.
+     */
     public func decode(from data: Data) throws -> AcknowList {
         let rootDictionary = try PropertyListSerialization.propertyList(from: data, format: nil) as? [String: AnyObject]
         let preferenceSpecifiers = rootDictionary?["PreferenceSpecifiers"] as? [AnyObject]

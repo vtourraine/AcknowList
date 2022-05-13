@@ -23,7 +23,7 @@
 
 import Foundation
 
-/// Responsible for parsing a Swift Package Manager “resolved” package file.
+/// An object that decodes acknowledgements from Swift Package Manager “resolved” file objects.
 open class AcknowPackageDecoder: AcknowDecoder {
 
     struct K {
@@ -31,6 +31,11 @@ open class AcknowPackageDecoder: AcknowDecoder {
         static let defaultFileExtension = "resolved"
     }
 
+    /**
+     Returns acknowledgements decoded from a Swift Package Manager “resolved” file object.
+     - Parameter data: The Swift Package Manager “resolved” file object to decode.
+     - Returns: A `AcknowList` value, if the decoder can parse the data.
+     */
     public func decode(from data: Data) throws -> AcknowList {
         let decoder = JSONDecoder()
         if let root = try? decoder.decode(JSONV1Root.self, from: data) {
@@ -44,7 +49,7 @@ open class AcknowPackageDecoder: AcknowDecoder {
     }
 
     /**
-     Parses the acknowledgements from `Package.resolved`.
+     Parses the acknowledgements from the `Package.resolved` file in the main bundle.
 
      - returns: an array of `Acknow` instances, or `nil` if no valid `Package.resolved` was found.
      */
