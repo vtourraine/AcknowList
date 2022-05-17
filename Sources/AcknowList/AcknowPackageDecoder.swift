@@ -26,11 +26,6 @@ import Foundation
 /// An object that decodes acknowledgements from Swift Package Manager “resolved” file objects.
 open class AcknowPackageDecoder: AcknowDecoder {
 
-    struct K {
-        static let defaultFileName = "Package"
-        static let defaultFileExtension = "resolved"
-    }
-
     /**
      Returns acknowledgements decoded from a Swift Package Manager “resolved” file object.
      - Parameter data: The Swift Package Manager “resolved” file object to decode.
@@ -46,23 +41,6 @@ open class AcknowPackageDecoder: AcknowDecoder {
         let root = try decoder.decode(JSONV2Root.self, from: data)
         let acknows =  root.pins.map { Acknow(title: $0.identity, repository: URL(string: $0.location)) }
         return AcknowList(headerText: nil, acknowledgements: acknows, footerText: nil)
-    }
-
-    /**
-     Parses the acknowledgements from the `Package.resolved` file in the main bundle.
-
-     - returns: an array of `Acknow` instances, or `nil` if no valid `Package.resolved` was found.
-     */
-    open class func defaultAcknowledgements() -> AcknowList? {
-        guard let url = Bundle.main.url(forResource: K.defaultFileName, withExtension: K.defaultFileExtension),
-              let data = try? Data(contentsOf: url) else {
-            print("** AcknowList Warning **")
-            print("`\(K.defaultFileName).\(K.defaultFileExtension)` file not found.")
-            print("Please add `[appName].xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved` to your main target.")
-            return nil
-        }
-
-        return try? AcknowPackageDecoder().decode(from: data)
     }
 
     // MARK: - JSON format

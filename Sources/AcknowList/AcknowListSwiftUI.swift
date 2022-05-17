@@ -58,7 +58,7 @@ public struct AcknowListSwiftUIView: View {
         }
 
         let header: String?
-        if acknowList.headerText != AcknowPodDecoder.DefaultHeaderText {
+        if acknowList.headerText != AcknowPodDecoder.K.DefaultHeaderText {
             header = acknowList.headerText
         }
         else {

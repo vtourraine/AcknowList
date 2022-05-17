@@ -37,12 +37,61 @@ public protocol AcknowDecoder {
 /// Responsible for parsing acknowledgements files.
 open class AcknowParser {
 
+    // MARK: - Pods
+
+    internal class func bundleName() -> String? {
+        let infoDictionary = Bundle.main.infoDictionary
+        if let cfBundleName = infoDictionary?["CFBundleName"] as? String {
+            return cfBundleName
+        }
+        else if let cfBundleExecutable = infoDictionary?["CFBundleExecutable"] as? String {
+            return cfBundleExecutable
+        }
+        else {
+            return nil
+        }
+    }
+
+    /**
+     Parses the acknowledgements from the `Pods-###-acknowledgements.plist` file in the main bundle.
+     - Returns: a `AcknowList` instance, or `nil` if no valid file was found.
+     */
+    open class func defaultPods() -> AcknowList? {
+        guard let bundleName = bundleName() else {
+            return nil
+        }
+
+        let plistName = "Pods-\(bundleName)-acknowledgements"
+
+        guard let url = Bundle.main.url(forResource: plistName, withExtension: K.DefaultPods.fileExtension),
+              let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+
+        return try? AcknowPodDecoder().decode(from: data)
+    }
+
+    // MARK: - Packages
+
+    /**
+     Parses the acknowledgements from the `Package.resolved` file in the main bundle.
+     - Returns: a `AcknowList` instance, or `nil` if no valid `Package.resolved` was found.
+     */
+    open class func defaultPackages() -> AcknowList? {
+        guard let url = Bundle.main.url(forResource: K.DefaultPackages.fileName, withExtension: K.DefaultPackages.fileExtension),
+              let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+
+        return try? AcknowPackageDecoder().decode(from: data)
+    }
+
+    // MARK: - Parse and format
+
     /**
      Finds the first link (URL) in a given string.
-
-     - parameter text: The string to parse.
-
-     - returns: The first link found, or `nil` if no link can be found.
+     - Parameter text: The string to parse.
+     - Returns: The first link found, or `nil` if no link can be found.
      */
     class func firstLink(in text: String) -> URL? {
         let types: NSTextCheckingResult.CheckingType = [.link]
@@ -55,6 +104,11 @@ open class AcknowParser {
         return firstLink.url
     }
 
+    /**
+     Returns an array of `Acknow`, sorted using localized comparison.
+     - Parameter acknowledgements: An array of `Acknow` to sort.
+     - Returns: A sorted array of `Acknow`.
+     */
     open class func sorted(_ acknowledgements: [Acknow]) -> [Acknow] {
         return acknowledgements.sorted { ack1, ack2 in
             let result = ack1.title.localizedCompare(ack2.title)
@@ -64,10 +118,8 @@ open class AcknowParser {
 
     /**
      Filters out all premature line breaks (i.e. removes manual wrapping).
-
-     - parameter text: The text to process.
-
-     - returns: The text without the premature line breaks.
+     - Parameter text: The text to process.
+     - Returns: The text without the premature line breaks.
      */
     class func filterOutPrematureLineBreaks(text: String) -> String {
         // This regex replaces single newlines with spaces, while preserving multiple newlines used for formatting.
@@ -85,5 +137,16 @@ open class AcknowParser {
         //    (?=.)   Positive lookahead matching any non-newline character (matches but does not capture)
         let singleNewLineFinder = try! NSRegularExpression(pattern: "(?<=.)(\\h)*(\\R)(\\h)*(?=.)")
         return singleNewLineFinder.stringByReplacingMatches(in: text, range: NSRange(0..<text.count), withTemplate: " ")
+    }
+
+    internal struct K {
+        struct DefaultPods {
+            static let fileExtension = "plist"
+        }
+
+        struct DefaultPackages {
+            static let fileName = "Package"
+            static let fileExtension = "resolved"
+        }
     }
 }
