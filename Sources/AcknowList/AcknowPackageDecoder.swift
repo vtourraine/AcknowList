@@ -26,6 +26,8 @@ import Foundation
 /// An object that decodes acknowledgements from Swift Package Manager “resolved” file objects.
 open class AcknowPackageDecoder: AcknowDecoder {
 
+    public init() {}
+
     /**
      Returns acknowledgements decoded from a Swift Package Manager “resolved” file object.
      - Parameter data: The Swift Package Manager “resolved” file object to decode.

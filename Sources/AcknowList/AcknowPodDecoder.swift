@@ -26,6 +26,8 @@ import Foundation
 /// An object that decodes acknowledgements from CocoaPods acknowledgements plist file objects.
 open class AcknowPodDecoder: AcknowDecoder {
 
+    public init() {}
+
     /**
      Returns acknowledgements decoded from a CocoaPods acknowledgements plist file object.
      - Parameter data: The CocoaPods acknowledgements plist file object to decode.

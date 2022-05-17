@@ -11,7 +11,7 @@ import XCTest
 extension XCTestCase {
 
     func resourcesBundle() -> Bundle {
-        let bundle = Bundle(for: AcknowPodDecoderTests.self)
+        let bundle = Bundle(for: AcknowParserTests.self)
 
         let spmTestBundlePath = bundle.bundlePath.appending("/../AcknowList_AcknowListTests.bundle")
         if let spmTestBundle = Bundle(path: spmTestBundlePath) {

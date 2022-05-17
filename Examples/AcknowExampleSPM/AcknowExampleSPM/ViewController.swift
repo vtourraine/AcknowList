@@ -21,7 +21,8 @@ class ViewController: UIViewController {
 
     @IBAction func presentPackageAcknowledgements(_ sender: UIButton) {
         guard let url = Bundle.main.url(forResource: "Package-version-1", withExtension: "resolved"),
-              let acknowList = try? AcknowPackageDecoder().decode(from: url) else {
+              let data = try? Data(contentsOf: url),
+              let acknowList = try? AcknowPackageDecoder().decode(from: data) else {
             return
         }
 

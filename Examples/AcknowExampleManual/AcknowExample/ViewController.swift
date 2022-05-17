@@ -60,11 +60,11 @@ class ViewController: UIViewController {
 
     @IBAction func pushAcknowListSwiftUI(_ sender: AnyObject) {
         if #available(iOS 13.0, *) {
-            guard let path = Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist") else {
+            guard let url = Bundle.main.url(forResource: "Pods-acknowledgements", withExtension: "plist") else {
                 return
             }
 
-            let viewController = UIHostingController(rootView: AcknowListSwiftUIView(plistPath: path))
+            let viewController = UIHostingController(rootView: AcknowListSwiftUIView(plistFileURL: url))
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
