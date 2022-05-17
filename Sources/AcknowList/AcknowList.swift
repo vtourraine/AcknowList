@@ -37,3 +37,13 @@ public struct AcknowList {
      */
     public let footerText: String?
 }
+
+extension AcknowList {
+    static func +(lhs: AcknowList, rhs: AcknowList) -> AcknowList {
+            return AcknowList(
+                headerText: lhs.headerText ?? rhs.headerText,
+                acknowledgements: lhs.acknowledgements + rhs.acknowledgements,
+                footerText: lhs.footerText ?? rhs.footerText
+            )
+        }
+}
