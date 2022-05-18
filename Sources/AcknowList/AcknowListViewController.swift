@@ -64,7 +64,7 @@ open class AcknowListViewController: UITableViewController {
         super.init(style: .grouped)
         title = AcknowLocalization.localizedTitle()
 
-        if let acknowList = AcknowParser.defaultPods() {
+        if let acknowList = AcknowParser.defaultAcknowList() {
             configure(with: acknowList)
         }
     }
@@ -136,7 +136,7 @@ open class AcknowListViewController: UITableViewController {
            let acknowList = try? AcknowPodDecoder().decode(from: data) {
             configure(with: acknowList)
         }
-        else if let defaultAcknowList = AcknowParser.defaultPods() {
+        else if let defaultAcknowList = AcknowParser.defaultAcknowList() {
             configure(with: defaultAcknowList)
         }
     }

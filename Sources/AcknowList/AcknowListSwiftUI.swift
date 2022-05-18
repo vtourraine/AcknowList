@@ -44,6 +44,12 @@ public struct AcknowListSwiftUIView: View {
     /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
 
+    public init(acknowList: AcknowList) {
+        acknowledgements = acknowList.acknowledgements
+        headerText = acknowList.headerText
+        footerText = acknowList.footerText
+    }
+
     public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
         self.acknowledgements = acknowledgements
         self.headerText = headerText

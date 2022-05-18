@@ -21,6 +21,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+/// A list of acknowledgements, with optional header and footer texts.
 public struct AcknowList {
     /**
      Header text to be displayed above the list of the acknowledgements.

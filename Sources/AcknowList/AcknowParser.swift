@@ -53,6 +53,21 @@ open class AcknowParser {
     }
 
     /**
+     Parses the acknowledgements from the `Pods-###-acknowledgements.plist` and `Package.resolved` files in the main bundle, and merges the result.
+     - Returns: a `AcknowList` instance, or `nil` if no valid file was found.
+     */
+    open class func defaultAcknowList() -> AcknowList? {
+        let pods = defaultPods()
+        let packages = defaultPackages()
+        if let pods = pods, let packages = packages {
+            return pods + packages
+        }
+        else {
+            return pods ?? packages
+        }
+    }
+
+    /**
      Parses the acknowledgements from the `Pods-###-acknowledgements.plist` file in the main bundle.
      - Returns: a `AcknowList` instance, or `nil` if no valid file was found.
      */
