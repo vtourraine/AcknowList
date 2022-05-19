@@ -1,6 +1,6 @@
 # AcknowList
 
-Acknowledgements screen displaying a list of licenses, for example from [CocoaPods](https://cocoapods.org) or Swift Package Manager dependencies.
+Acknowledgements screen displaying a list of licenses, for example from [CocoaPods](https://cocoapods.org) or [Swift Package Manager](https://swift.org/package-manager/) dependencies.
 
 ![Platform iOS tvOS watchOS macOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
 ![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
