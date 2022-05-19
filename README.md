@@ -15,7 +15,7 @@ _Also available in Objective-C with [VTAcknowledgementsViewController](https://g
 ## Features
 
 - Load acknowledgments from CocoaPods-generated files (`Pods-###-acknowledgements.plist`)
-- Load acknowledgments from Swift Package Manager file (`Package.resolved`)
+- Load acknowledgments from Swift Package Manager files (`Package.resolved`)
 - Remove unnecessary line breaks from licenses for better text wrapping
 - Optional list header and footer
 - Tappable links in header, footer, and acknowledgment text
