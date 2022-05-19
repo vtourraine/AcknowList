@@ -76,7 +76,7 @@ open class AcknowListViewController: UITableViewController {
      */
     public convenience init(fileNamed fileName: String) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: AcknowParser.K.DefaultPods.fileExtension) {
-            self.init(plistPath: url.path)
+            self.init(plistFileURL: url)
         }
         else {
             self.init()
@@ -86,16 +86,15 @@ open class AcknowListViewController: UITableViewController {
     /**
      Initializes the `AcknowListViewController` instance with the content of a plist file based on its path.
      - Parameters:
-        - plistPath: The path to the acknowledgements plist file.
+        - plistFileURL: The URL to the acknowledgements plist file.
         - style: `UITableView.Style` to apply to the table view. **Default:** `.grouped`
      - Returns: The new `AcknowListViewController` instance.
      */
-    public init(plistPath: String, style: UITableView.Style = .grouped) {
+    public init(plistFileURL: URL, style: UITableView.Style = .grouped) {
         super.init(style: style)
         title = AcknowLocalization.localizedTitle()
 
-        let url = URL(fileURLWithPath: plistPath)
-        if let data = try? Data(contentsOf: url),
+        if let data = try? Data(contentsOf: plistFileURL),
            let acknowList = try? AcknowPodDecoder().decode(from: data) {
             configure(with: acknowList)
         }

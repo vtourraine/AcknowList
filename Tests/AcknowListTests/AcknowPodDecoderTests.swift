@@ -60,14 +60,9 @@ class AcknowPodDecoderTests: XCTestCase {
 
         // For each acknowledgement, load the ground truth and compare...
         for acknowledgement in acknowList.acknowledgements {
-            let groundTruthPath = bundle.url(forResource: "RegexTesting-GroundTruth-\(acknowledgement.title)", withExtension: "txt")
-            do {
-                let groundTruth = try String(contentsOf: groundTruthPath!, encoding: .utf8)
-                XCTAssertEqual(acknowledgement.text, groundTruth)
-            }
-            catch {
-                XCTFail("Cannot load ground truth")
-            }
+            let groundTruthPath = try XCTUnwrap(bundle.url(forResource: "RegexTesting-GroundTruth-\(acknowledgement.title)", withExtension: "txt"))
+            let groundTruth = try String(contentsOf: groundTruthPath, encoding: .utf8)
+            XCTAssertEqual(acknowledgement.text, groundTruth)
         }
     }
     

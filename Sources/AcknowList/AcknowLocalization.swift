@@ -39,21 +39,21 @@ open class AcknowLocalization {
      - Returns: The resources bundle.
      */
     class func resourcesBundle() -> Bundle? {
-        #if SWIFT_PACKAGE
+#if SWIFT_PACKAGE
         // Preprocessor definition documented here:
         // https://github.com/apple/swift-package-manager/blob/main/Documentation/Usage.md#packaging-legacy-code
         return Bundle.module
-        #else
+#else
         let rootBundle = Bundle(for: AcknowLocalization.self)
 
         let CocoaPodsBundleName = "AcknowListBundle"
-        if let bundlePath = rootBundle.path(forResource: CocoaPodsBundleName, ofType: "bundle") {
-            return Bundle(path: bundlePath)
+        if let bundleURL = rootBundle.url(forResource: CocoaPodsBundleName, withExtension: "bundle") {
+            return Bundle(url: bundleURL)
         }
         else {
             return rootBundle
         }
-        #endif
+#endif
     }
 
     /**
