@@ -120,18 +120,6 @@ open class AcknowParser {
     }
 
     /**
-     Returns an array of `Acknow`, sorted using localized comparison.
-     - Parameter acknowledgements: An array of `Acknow` to sort.
-     - Returns: A sorted array of `Acknow`.
-     */
-    open class func sorted(_ acknowledgements: [Acknow]) -> [Acknow] {
-        return acknowledgements.sorted { ack1, ack2 in
-            let result = ack1.title.localizedCompare(ack2.title)
-            return (result == ComparisonResult.orderedAscending)
-        }
-    }
-
-    /**
      Filters out all premature line breaks (i.e. removes manual wrapping).
      - Parameter text: The text to process.
      - Returns: The text without the premature line breaks.

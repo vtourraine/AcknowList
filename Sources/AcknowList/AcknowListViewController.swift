@@ -230,7 +230,7 @@ open class AcknowListViewController: UITableViewController {
     let FooterBottomMargin: CGFloat = 20
 
     func configure(with acknowList: AcknowList) {
-        acknowledgements = AcknowParser.sorted(acknowList.acknowledgements)
+        acknowledgements = AcknowLocalization.sorted(acknowList.acknowledgements)
 
         if let header = acknowList.headerText, header != AcknowPodDecoder.K.DefaultHeaderText, !header.isEmpty {
             headerText = header

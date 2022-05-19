@@ -14,7 +14,8 @@ _Also available in Objective-C with [VTAcknowledgementsViewController](https://g
 
 ## Features
 
-- Automatically load acknowledgments from CocoaPods-generated file
+- Load acknowledgments from CocoaPods-generated files (`Pods-###-acknowledgements.plist`)
+- Load acknowledgments from Swift Package Manager file (`Package.resolved`)
 - Remove unnecessary line breaks from licenses for better text wrapping
 - Optional list header and footer
 - Tappable links in header, footer, and acknowledgment text
@@ -36,7 +37,7 @@ _Also available in Objective-C with [VTAcknowledgementsViewController](https://g
 
 AcknowList can be installed with the [Swift Package Manager](https://swift.org/package-manager/) (requires Xcode 12 for localized resources).
 
-1. Click on `File` → `Swift Packages` → `Add Package Dependency…`.
+1. Click on `File` → `Add Packages…`.
 2. Enter `https://github.com/vtourraine/AcknowList`.
 3. Select the version you’d like to use.
 
@@ -56,11 +57,11 @@ let viewController = AcknowListViewController(fileNamed: "Pods-AcknowExample-ack
 ```
 
 ``` swift
-let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", ofType: "plist")
-let viewController = AcknowListViewController(plistPath: path)
+let url = Bundle.main.url(forResource: "Pods-AcknowExample-acknowledgements", withExtension: "plist")
+let viewController = AcknowListViewController(plistFileURL: url)
 ```
 
-If you want to include licenses that are not part of a `.plist` file, you can create new `Acknow` instances, and use them for the acknowledgements array of the controller.
+If you want to include licenses that are not part of a `.plist` or `.resolved` file, you can create new `Acknow` instances, and use them for the acknowledgements array of the controller.
 
 ``` swift
 let acknow = Acknow(title: "...", text: "...")
@@ -73,7 +74,7 @@ The controller can also display a header and a footer. By default, they are load
 
 ``` swift
 viewController.headerText = "We love open source software."
-viewController.footerText = "Powered by CocoaPods.org"
+viewController.footerText = "Powered by CocoaPods and SPM"
 ```
 
 The controller title is a localized value for “acknowledgements”. You might want to use this localized value for the button presenting the controller.
@@ -85,7 +86,7 @@ button.setTitle(AcknowLocalization.localizedTitle(), for: .normal)
 By default, `AcknowListViewController` uses the “grouped” table view style. You can choose a different style:
 
 ``` swift
-let viewController = AcknowListViewController(plistPath: path, style: .plain)
+let viewController = AcknowListViewController(plistFileURL: url, style: .plain)
 ```
 
 If you need to further customize the appearance or behavior of this library, feel free to subclass its classes.
