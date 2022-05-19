@@ -51,7 +51,7 @@ let viewController = AcknowListViewController()
 navigationController.pushViewController(viewController, animated: true)
 ```
 
-By default, the controller will try to load acknowledgements from a CocoaPods plist file (by guessing its location from the bundle name), as well as from a `Package.resolved` file (if it exists in the main bundle).
+By default, the controller will try to load acknowledgements from a CocoaPods plist file (by guessing its location based on the bundle name), as well as from a `Package.resolved` file.
  
  You can also initialize the view controller with a custom file name or URL.
 
