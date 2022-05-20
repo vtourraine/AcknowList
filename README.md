@@ -3,6 +3,7 @@
 Acknowledgements screen displaying a list of licenses, for example from [CocoaPods](https://cocoapods.org) dependencies.
 
 ![Platform iOS tvOS watchOS macOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
+[![Build & Test](https://github.com/vtourraine/AcknowList/actions/workflows/ios.yml/badge.svg)](https://github.com/vtourraine/AcknowList/actions/workflows/ios.yml)
 ![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
 ![Swift Package Manager](https://img.shields.io/badge/support-Swift_Package_Manager-orange.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
