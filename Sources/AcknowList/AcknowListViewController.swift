@@ -358,7 +358,7 @@ open class AcknowListViewController: UITableViewController {
         if let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
            let textLabel = cell.textLabel as UILabel? {
             textLabel.text = acknowledgement.title
-            if acknowledgement.text != nil || acknowledgement.repository != nil {
+            if canOpen(acknowledgement) {
                 cell.accessoryType = .disclosureIndicator
                 cell.selectionStyle = .default
             }
@@ -386,7 +386,8 @@ open class AcknowListViewController: UITableViewController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
                 navigationController.pushViewController(viewController, animated: true)
             }
-            else if let repository = acknowledgement.repository {
+            else if canOpenRepository(for: acknowledgement),
+                    let repository = acknowledgement.repository {
                 let safariViewController = SFSafariViewController(url: repository)
                 present(safariViewController, animated: true)
             }
@@ -402,6 +403,20 @@ open class AcknowListViewController: UITableViewController {
      */
     open override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+
+    // MARK: - Navigation
+
+    private func canOpen(_ acknowledgement: Acknow) -> Bool {
+        return acknowledgement.text != nil || canOpenRepository(for: acknowledgement)
+    }
+
+    private func canOpenRepository(for acknowledgement: Acknow) -> Bool {
+        guard let scheme = acknowledgement.repository?.scheme else {
+            return false
+        }
+
+        return scheme == "http" || scheme == "https"
     }
 }
 
