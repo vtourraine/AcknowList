@@ -2,6 +2,7 @@
 
 ## 2.1.1 (work in progress)
 
+- Follow readable content guides
 - Fix Swift Package Manager warning (exlude DocC folder)
 
 
