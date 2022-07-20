@@ -10,8 +10,9 @@
 - Update `AcknowListViewController` to load acknowledgements from “Package.resolved” by default
 
 
-## 2.1.1 (work in progress)
+## 2.1.1 (15 June 2022)
 
+- Follow readable content guides
 - Fix Swift Package Manager warning (exlude DocC folder)
 
 

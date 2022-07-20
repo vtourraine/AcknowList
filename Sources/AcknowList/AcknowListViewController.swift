@@ -147,6 +147,7 @@ open class AcknowListViewController: UITableViewController {
         // Register the cell before use it
         let identifier = String(describing: UITableViewCell.self)
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
+        tableView.cellLayoutMarginsFollowReadableWidth = true
 
         if let navigationController = navigationController {
             if presentingViewController != nil && navigationController.viewControllers.first == self {
