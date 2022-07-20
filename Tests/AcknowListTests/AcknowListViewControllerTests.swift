@@ -15,8 +15,8 @@ class AcknowListViewControllerTests: XCTestCase {
 
     func testConfigureTableView() throws {
         let bundle = resourcesBundle()
-        let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
-        let viewController = AcknowListViewController(plistPath: plistPath)
+        let plistFileURL = try XCTUnwrap(bundle.url(forResource: "Pods-acknowledgements", withExtension: "plist"))
+        let viewController = AcknowListViewController(plistFileURL: plistFileURL)
 
         XCTAssertEqual(viewController.tableView.style, .grouped, "should use `.grouped` as the default table view style")
 
@@ -31,8 +31,8 @@ class AcknowListViewControllerTests: XCTestCase {
     @available (iOS 13.0, *)
     func testConfigureTableViewWithCustomStyle() throws {
         let bundle = resourcesBundle()
-        let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements", ofType: "plist"))
-        let viewController = AcknowListViewController(plistPath: plistPath, style: .insetGrouped)
+        let plistFileURL = try XCTUnwrap(bundle.url(forResource: "Pods-acknowledgements", withExtension: "plist"))
+        let viewController = AcknowListViewController(plistFileURL: plistFileURL, style: .insetGrouped)
 
         XCTAssertEqual(viewController.tableView.style, .insetGrouped)
     }
@@ -40,8 +40,8 @@ class AcknowListViewControllerTests: XCTestCase {
 
     func testSortsAcknowledgementsByTitle() throws {
         let bundle = resourcesBundle()
-        let plistPath = try XCTUnwrap(bundle.path(forResource: "Pods-acknowledgements-multi", ofType: "plist"))
-        let viewController = AcknowListViewController(plistPath: plistPath)
+        let plistFileURL = try XCTUnwrap(bundle.url(forResource: "Pods-acknowledgements-multi", withExtension: "plist"))
+        let viewController = AcknowListViewController(plistFileURL: plistFileURL)
 
         XCTAssertEqual(viewController.acknowledgements.count, 3)
         XCTAssertEqual(viewController.acknowledgements[0].title, "A title")

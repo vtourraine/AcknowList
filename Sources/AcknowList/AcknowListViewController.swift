@@ -23,6 +23,7 @@
 
 #if os(iOS) || os(tvOS)
 import UIKit
+import SafariServices
 
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
 @available(iOS 9.0.0, tvOS 9.0.0, *)
@@ -30,7 +31,7 @@ import UIKit
 open class AcknowListViewController: UITableViewController {
 
     /// The represented array of `Acknow`.
-    open var acknowledgements: [Acknow]
+    open var acknowledgements: [Acknow] = []
 
     /**
      Header text to be displayed above the list of the acknowledgements.
@@ -57,149 +58,69 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Initializes the `AcknowListViewController` instance based on default configuration.
-
-     - returns: The new `AcknowListViewController` instance.
+     - Returns: The new `AcknowListViewController` instance.
      */
     public init() {
-        self.acknowledgements = []
-
         super.init(style: .grouped)
+        title = AcknowLocalization.localizedTitle()
 
-        if let path = AcknowListViewController.defaultAcknowledgementsPlistPath() {
-            load(from: path)
+        if let acknowList = AcknowParser.defaultAcknowList() {
+            configure(with: acknowList)
         }
-
-        self.title = AcknowLocalization.localizedTitle()
     }
 
     /**
      Initializes the `AcknowListViewController` instance with the content of a plist file based on its name.
-
-     - Parameters:
-       - fileName: Name of the acknowledgements plist file
-
-     - returns: The new `AcknowListViewController` instance.
+     - Parameters fileName: Name of the acknowledgements plist file
+     - Returns: The new `AcknowListViewController` instance.
      */
     public convenience init(fileNamed fileName: String) {
-        if let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName) {
-            self.init(plistPath: path)
+        if let url = Bundle.main.url(forResource: fileName, withExtension: AcknowParser.K.DefaultPods.fileExtension) {
+            self.init(plistFileURL: url)
         }
         else {
-            self.init(acknowledgements: [])
+            self.init()
         }
     }
 
     /**
      Initializes the `AcknowListViewController` instance with the content of a plist file based on its path.
-
      - Parameters:
-        - plistPath: The path to the acknowledgements plist file.
+        - plistFileURL: The URL to the acknowledgements plist file.
         - style: `UITableView.Style` to apply to the table view. **Default:** `.grouped`
-
-     - returns: The new `AcknowListViewController` instance.
+     - Returns: The new `AcknowListViewController` instance.
      */
-    public convenience init(plistPath: String, style: UITableView.Style = .grouped) {
-        self.init(acknowledgements: [], style: style)
+    public init(plistFileURL: URL, style: UITableView.Style = .grouped) {
+        super.init(style: style)
+        title = AcknowLocalization.localizedTitle()
 
-        load(from: plistPath)
-    }
-
-    @available(*, unavailable, renamed: "init(plistPath:)")
-    public convenience init(acknowledgementsPlistPath: String) {
-        fatalError()
+        if let data = try? Data(contentsOf: plistFileURL),
+           let acknowList = try? AcknowPodDecoder().decode(from: data) {
+            configure(with: acknowList)
+        }
     }
 
     /**
      Initializes the `AcknowListViewController` instance with an array of `Acknow`.
-
      - Parameters:
         - acknowledgements: The array of `Acknow`.
         - style: `UITableView.Style` to apply to the table view. **Default:** `.grouped`
-
-     - returns: The new `AcknowListViewController` instance.
+     - Returns: The new `AcknowListViewController` instance.
      */
     public init(acknowledgements: [Acknow], style: UITableView.Style = .grouped) {
-        self.acknowledgements = acknowledgements
-
         super.init(style: style)
-
-        self.title = AcknowLocalization.localizedTitle()
+        title = AcknowLocalization.localizedTitle()
+        self.acknowledgements = acknowledgements
     }
 
     /**
      Initializes the `AcknowListViewController` instance with a coder.
-
-     - Parameters:
-        - coder: The archive coder.
-
-     - returns: The new `AcknowListViewController` instance.
+     - Parameter coder: The archive coder.
+     - Returns: The new `AcknowListViewController` instance.
      */
     public required init?(coder: NSCoder) {
-        self.acknowledgements = []
-
         super.init(coder: coder)
-
-        self.title = AcknowLocalization.localizedTitle()
-    }
-
-    // MARK: - Load data
-
-    class func acknowledgementsPlistPath(name:String) -> String? {
-        return Bundle.main.path(forResource: name, ofType: "plist")
-    }
-
-    class func bundleName() -> String? {
-        let infoDictionary = Bundle.main.infoDictionary
-
-        if let cfBundleName = infoDictionary?["CFBundleName"] as? String {
-            return cfBundleName
-        }
-        else if let cfBundleExecutable = infoDictionary?["CFBundleExecutable"] as? String {
-            return cfBundleExecutable
-        }
-        else {
-            return nil
-        }
-    }
-
-    class func defaultAcknowledgementsPlistPath() -> String? {
-        guard let bundleName = bundleName() else {
-            return nil
-        }
-
-        let plistName = "Pods-\(bundleName)-acknowledgements"
-
-        guard let plistPath = acknowledgementsPlistPath(name: plistName),
-            FileManager.default.fileExists(atPath: plistPath) else {
-            return nil
-        }
-
-        return plistPath
-    }
-
-    func load(from acknowledgementsPlistPath: String) {
-        let parser = AcknowParser(plistPath: acknowledgementsPlistPath)
-        let headerFooter = parser.parseHeaderAndFooter()
-
-        if let header = headerFooter.header, header != AcknowParser.DefaultHeaderText, !header.isEmpty {
-            headerText = header
-        }
-
-        if headerFooter.footer == AcknowParser.DefaultFooterText, footerText == nil {
-            footerText = AcknowLocalization.localizedCocoaPodsFooterText()
-        }
-        else if let footer = headerFooter.footer, !footer.isEmpty, footerText == nil {
-            footerText = footer
-        }
-
-        let acknowledgements = parser.parseAcknowledgements()
-        let sortedAcknowledgements = acknowledgements.sorted(by: {
-            (ack1: Acknow, ack2: Acknow) -> Bool in
-            let result = ack1.title.compare(ack2.title, options: [], range: nil, locale: Locale.current)
-            return (result == ComparisonResult.orderedAscending)
-        })
-
-        self.acknowledgements = sortedAcknowledgements
+        title = AcknowLocalization.localizedTitle()
     }
 
     // MARK: - View life cycle
@@ -208,16 +129,14 @@ open class AcknowListViewController: UITableViewController {
     override open func awakeFromNib() {
         super.awakeFromNib()
 
-        let path: String?
-        if let plistName = acknowledgementsPlistName {
-            path = AcknowListViewController.acknowledgementsPlistPath(name: plistName)
+        if let plistName = acknowledgementsPlistName,
+           let url = Bundle.main.url(forResource: plistName, withExtension: AcknowParser.K.DefaultPods.fileExtension),
+           let data = try? Data(contentsOf: url),
+           let acknowList = try? AcknowPodDecoder().decode(from: data) {
+            configure(with: acknowList)
         }
-        else {
-            path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        }
-
-        if let path = path {
-            load(from: path)
+        else if let defaultAcknowList = AcknowParser.defaultAcknowList() {
+            configure(with: defaultAcknowList)
         }
     }
 
@@ -230,7 +149,7 @@ open class AcknowListViewController: UITableViewController {
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
         tableView.cellLayoutMarginsFollowReadableWidth = true
 
-        if let navigationController = self.navigationController {
+        if let navigationController = navigationController {
             if presentingViewController != nil && navigationController.viewControllers.first == self {
                 let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
                 navigationItem.leftBarButtonItem = item
@@ -240,8 +159,7 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Notifies the view controller that its view is about to be added to a view hierarchy.
-
-     - parameter animated: If `YES`, the view is being added to the window using an animation.
+     - Parameter animated: If `YES`, the view is being added to the window using an animation.
      */
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -256,8 +174,7 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Notifies the view controller that its view was added to a view hierarchy.
-
-     - parameter animated: If `YES`, the view is being added to the window using an animation.
+     - Parameter animated: If `YES`, the view is being added to the window using an animation.
      */
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -266,7 +183,7 @@ open class AcknowListViewController: UITableViewController {
             print(
                 "** AcknowList Warning **\n" +
                 "No acknowledgements found.\n" +
-                "This probably means that you didn’t import the `Pods-acknowledgements.plist` to your main target.\n" +
+                "This probably means that you didn’t import the `Pods-###-acknowledgements.plist` to your main target.\n" +
                 "Please take a look at https://github.com/vtourraine/AcknowList for instructions.", terminator: "\n")
         }
     }
@@ -284,8 +201,7 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Opens a link with Safari.
-
-     - parameter sender: The event sender, a gesture recognizer attached to the label containing the link URL.
+     - Parameter sender: The event sender, a gesture recognizer attached to the label containing the link URL.
      */
     @IBAction open func openLink(_ sender: UIGestureRecognizer) {
         guard let label = sender.view as? UILabel,
@@ -303,8 +219,7 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Dismisses the view controller.
-
-     - parameter sender: The event sender.
+     - Parameter sender: The event sender.
      */
     @IBAction open func dismissViewController(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
@@ -314,6 +229,21 @@ open class AcknowListViewController: UITableViewController {
 
     let LabelMargin: CGFloat = 20
     let FooterBottomMargin: CGFloat = 20
+
+    func configure(with acknowList: AcknowList) {
+        acknowledgements = AcknowLocalization.sorted(acknowList.acknowledgements)
+
+        if let header = acknowList.headerText, header != AcknowPodDecoder.K.DefaultHeaderText, !header.isEmpty {
+            headerText = header
+        }
+
+        if acknowList.footerText == AcknowPodDecoder.K.DefaultFooterText, footerText == nil {
+            footerText = AcknowLocalization.localizedCocoaPodsFooterText()
+        }
+        else if let footer = acknowList.footerText, !footer.isEmpty, footerText == nil {
+            footerText = footer
+        }
+    }
 
     func headerFooterLabel(frame: CGRect, font: UIFont, text: String?) -> UILabel {
         let label = UILabel(frame: frame)
@@ -408,10 +338,8 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Asks the data source to return the number of sections in the table view.
-
-     - parameter tableView: An object representing the table view requesting this information.
-
-     - returns: The number of sections in `tableView`. The default value is 1.
+     - Parameter tableView: An object representing the table view requesting this information.
+     - Returns: The number of sections in `tableView`. The default value is 1.
      */
     open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return acknowledgements.count
@@ -419,11 +347,10 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Asks the data source for a cell to insert in a particular location of the table view.
-
-     - parameter tableView: The table-view object requesting the cell.
-     - parameter indexPath: An index path that locates a row in `tableView`.
-
-     - returns: An object inheriting from `UITableViewCell` that the table view can use for the specified row. An assertion is raised if you return `nil`.
+     - Parameters:
+        - tableView: The table-view object requesting the cell.
+        - indexPath: An index path that locates a row in `tableView`.
+     - Returns: An object inheriting from `UITableViewCell` that the table view can use for the specified row. An assertion is raised if you return `nil`.
      */
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = String(describing: UITableViewCell.self)
@@ -432,7 +359,14 @@ open class AcknowListViewController: UITableViewController {
         if let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
            let textLabel = cell.textLabel as UILabel? {
             textLabel.text = acknowledgement.title
-            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            if canOpen(acknowledgement) {
+                cell.accessoryType = .disclosureIndicator
+                cell.selectionStyle = .default
+            }
+            else {
+                cell.accessoryType = .none
+                cell.selectionStyle = .none
+            }
         }
 
         return cell
@@ -442,28 +376,48 @@ open class AcknowListViewController: UITableViewController {
 
     /**
      Tells the delegate that the specified row is now selected.
-
-     - parameter tableView: A table-view object informing the delegate about the new row selection.
-     - parameter indexPath: An index path locating the new selected row in `tableView`.
+     - Parameters:
+        - tableView: A table-view object informing the delegate about the new row selection.
+        - indexPath: An index path locating the new selected row in `tableView`.
      */
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
-           let navigationController = self.navigationController {
-            let viewController = AcknowViewController(acknowledgement: acknowledgement)
-            navigationController.pushViewController(viewController, animated: true)
+           let navigationController = navigationController {
+            if acknowledgement.text != nil {
+                let viewController = AcknowViewController(acknowledgement: acknowledgement)
+                navigationController.pushViewController(viewController, animated: true)
+            }
+            else if canOpenRepository(for: acknowledgement),
+                    let repository = acknowledgement.repository {
+                let safariViewController = SFSafariViewController(url: repository)
+                present(safariViewController, animated: true)
+            }
         }
     }
 
     /**
      Asks the delegate for the estimated height of a row in a specified location.
-
-     - parameter tableView: The table-view object requesting this information.
-     - parameter indexPath: An index path that locates a row in `tableView`.
-
-     - returns: A nonnegative floating-point value that estimates the height (in points) that `row` should be. Return `UITableViewAutomaticDimension` if you have no estimate.
+     - Parameters:
+        - tableView: The table-view object requesting this information.
+        - indexPath: An index path that locates a row in `tableView`.
+     - Returns: A nonnegative floating-point value that estimates the height (in points) that `row` should be. Return `UITableViewAutomaticDimension` if you have no estimate.
      */
     open override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+
+    // MARK: - Navigation
+
+    private func canOpen(_ acknowledgement: Acknow) -> Bool {
+        return acknowledgement.text != nil || canOpenRepository(for: acknowledgement)
+    }
+
+    private func canOpenRepository(for acknowledgement: Acknow) -> Bool {
+        guard let scheme = acknowledgement.repository?.scheme else {
+            return false
+        }
+
+        return scheme == "http" || scheme == "https"
     }
 }
 

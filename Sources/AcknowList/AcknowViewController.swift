@@ -36,10 +36,8 @@ open class AcknowViewController: UIViewController {
 
     /**
      Initializes the `AcknowViewController` instance with an acknowledgement.
-
-     - parameter acknowledgement: The represented acknowledgement.
-
-     - returns: The new `AcknowViewController` instance.
+     - Parameter acknowledgement: The represented acknowledgement.
+     - Returns: The new `AcknowViewController` instance.
      */
     public init(acknowledgement: Acknow) {
         super.init(nibName: nil, bundle: nil)
@@ -50,10 +48,8 @@ open class AcknowViewController: UIViewController {
 
     /**
      Initializes the `AcknowViewController` instance with a coder.
-
-     - parameter aDecoder: The archive coder.
-
-     - returns: The new `AcknowViewController` instance.
+     - Parameter aDecoder: The archive coder.
+     - Returns: The new `AcknowViewController` instance.
      */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

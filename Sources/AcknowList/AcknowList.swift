@@ -1,5 +1,5 @@
 //
-// Acknow.swift
+// AcknowList.swift
 //
 // Copyright (c) 2015-2022 Vincent Tourraine (https://www.vtourraine.net)
 //
@@ -21,33 +21,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+/// A list of acknowledgements, with optional header and footer texts.
+public struct AcknowList {
+    /**
+     Header text to be displayed above the list of the acknowledgements.
+     */
+    public let headerText: String?
 
-/// Represents a single acknowledgement.
-public struct Acknow {
+    /**
+     List of acknowledgements.
+     */
+    public let acknowledgements: [Acknow]
 
-    /// The acknowledgement title (for instance: the pod or package’s name).
-    public let title: String
+    /**
+     Footer text to be displayed below the list of the acknowledgements.
+     */
+    public let footerText: String?
+}
 
-    /// The acknowledgement body text (for instance: the pod’s license).
-    public let text: String?
-
-    /// The acknowledgement license (for instance the pod’s license type).
-    public let license: String?
-
-    /// The repository URL (for instance the package’s repository).
-    public let repository: URL?
-
-    /// Returns an object initialized from the given parameters.
-    ///
-    /// - Parameters:
-    ///   - title: The acknowledgement title (for instance: the pod’s name).
-    ///   - text: The acknowledgement body text (for instance: the pod’s license).
-    ///   - license: The acknowledgement license (for instance the pod’s license type).
-    public init(title: String, text: String? = nil, license: String? = nil, repository: URL? = nil) {
-        self.title = title
-        self.text = text
-        self.license = license
-        self.repository = repository
-    }
+extension AcknowList {
+    static func +(lhs: AcknowList, rhs: AcknowList) -> AcknowList {
+            return AcknowList(
+                headerText: lhs.headerText ?? rhs.headerText,
+                acknowledgements: lhs.acknowledgements + rhs.acknowledgements,
+                footerText: lhs.footerText ?? rhs.footerText
+            )
+        }
 }

@@ -18,11 +18,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func presentAcknowledgementsSwiftUI(_ sender: UIButton) {
-        guard let path = Bundle.main.path(forResource: "Pods-AcknowExampleCocoaPods-acknowledgements", ofType: "plist") else {
+        guard let url = Bundle.main.url(forResource: "Pods-AcknowExampleCocoaPods-acknowledgements", withExtension: "plist") else {
             return
         }
 
-        let viewController = UIHostingController(rootView: NavigationView { AcknowListSwiftUIView(plistPath: path) })
+        let viewController = UIHostingController(rootView: NavigationView { AcknowListSwiftUIView(plistFileURL: url) })
         present(viewController, animated: true)
     }
 }

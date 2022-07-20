@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB29000228230B37002FF5C4 /* Package-version-1.resolved in Resources */ = {isa = PBXBuildFile; fileRef = BB29000128230B37002FF5C4 /* Package-version-1.resolved */; };
 		D7527E2125CADE4E00378FB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7527E2025CADE4E00378FB8 /* AppDelegate.swift */; };
 		D7527E2325CADE4E00378FB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7527E2225CADE4E00378FB8 /* SceneDelegate.swift */; };
 		D7527E2525CADE4E00378FB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7527E2425CADE4E00378FB8 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB29000128230B37002FF5C4 /* Package-version-1.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Package-version-1.resolved"; path = "../../../Tests/AcknowListTests/Resources/Package-version-1.resolved"; sourceTree = "<group>"; };
 		D7527E1D25CADE4E00378FB8 /* AcknowExampleSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcknowExampleSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7527E2025CADE4E00378FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7527E2225CADE4E00378FB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				D7527E2925CADE5000378FB8 /* Assets.xcassets */,
 				D7527E2B25CADE5000378FB8 /* LaunchScreen.storyboard */,
 				D7527E2E25CADE5000378FB8 /* Info.plist */,
+				BB29000128230B37002FF5C4 /* Package-version-1.resolved */,
 			);
 			path = AcknowExampleSPM;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7527E2D25CADE5000378FB8 /* LaunchScreen.storyboard in Resources */,
+				BB29000228230B37002FF5C4 /* Package-version-1.resolved in Resources */,
 				D7527E2A25CADE5000378FB8 /* Assets.xcassets in Resources */,
 				D7527E2825CADE4E00378FB8 /* Main.storyboard in Resources */,
 			);

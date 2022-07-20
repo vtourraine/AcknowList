@@ -44,26 +44,34 @@ public struct AcknowListSwiftUIView: View {
     /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
 
+    public init(acknowList: AcknowList) {
+        acknowledgements = acknowList.acknowledgements
+        headerText = acknowList.headerText
+        footerText = acknowList.footerText
+    }
+
     public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
         self.acknowledgements = acknowledgements
         self.headerText = headerText
         self.footerText = footerText
     }
 
-    public init(plistPath: String) {
-        let parser = AcknowParser(plistPath: plistPath)
-        let headerFooter = parser.parseHeaderAndFooter()
-        let header: String?
-        let footer = headerFooter.footer
+    public init(plistFileURL: URL) {
+        guard let data = try? Data(contentsOf: plistFileURL),
+              let acknowList = try? AcknowPodDecoder().decode(from: data) else {
+            self.init(acknowledgements: [], headerText: nil, footerText: nil)
+            return
+        }
 
-        if headerFooter.header != AcknowParser.DefaultHeaderText {
-            header = headerFooter.header
+        let header: String?
+        if acknowList.headerText != AcknowPodDecoder.K.DefaultHeaderText {
+            header = acknowList.headerText
         }
         else {
             header = nil
         }
 
-        self.init(acknowledgements: parser.parseAcknowledgements(), headerText: header, footerText: footer)
+        self.init(acknowledgements: acknowList.acknowledgements, headerText: header, footerText: acknowList.footerText)
     }
 
     struct HeaderFooter: View {

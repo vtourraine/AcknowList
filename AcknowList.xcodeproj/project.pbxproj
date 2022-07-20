@@ -29,6 +29,9 @@
 		D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */; };
 		D7527EE425CAFDB000378FB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7527EE225CAFDB000378FB8 /* Localizable.strings */; };
 		D78335EF2628934800A380A3 /* AcknowSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */; };
+		D7A68B452833C2C90064C2C0 /* AcknowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A68B442833C2C90064C2C0 /* AcknowList.swift */; };
+		D7A68B482833C2D30064C2C0 /* AcknowPodDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A68B462833C2D30064C2C0 /* AcknowPodDecoder.swift */; };
+		D7A68B492833C2D30064C2C0 /* AcknowPackageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A68B472833C2D30064C2C0 /* AcknowPackageDecoder.swift */; };
 		D7CCBD131D22624B0013F696 /* Pods-acknowledgements-multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		D7527EF225CAFE0000378FB8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D7527EF325CAFE0700378FB8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowSwiftUI.swift; sourceTree = "<group>"; };
+		D7A68B442833C2C90064C2C0 /* AcknowList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowList.swift; sourceTree = "<group>"; };
+		D7A68B462833C2D30064C2C0 /* AcknowPodDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowPodDecoder.swift; sourceTree = "<group>"; };
+		D7A68B472833C2D30064C2C0 /* AcknowPackageDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowPackageDecoder.swift; sourceTree = "<group>"; };
 		D7CCBD121D22624B0013F696 /* Pods-acknowledgements-multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-multi.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,13 +172,16 @@
 			isa = PBXGroup;
 			children = (
 				32A5DE3A25C7DD3D00ED11BB /* Resources */,
-				32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */,
 				32A5DE3D25C7DD3D00ED11BB /* Acknow.swift */,
-				32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */,
+				D7A68B442833C2C90064C2C0 /* AcknowList.swift */,
+				D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */,
 				32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */,
 				32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */,
+				D7A68B472833C2D30064C2C0 /* AcknowPackageDecoder.swift */,
+				32A5DE3C25C7DD3D00ED11BB /* AcknowParser.swift */,
+				D7A68B462833C2D30064C2C0 /* AcknowPodDecoder.swift */,
 				D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */,
-				D738F2AD2640342B001BA008 /* AcknowListSwiftUI.swift */,
+				32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */,
 				D705FE2A268A0B0600B501D7 /* AcknowList.docc */,
 			);
 			name = Sources;
@@ -338,8 +347,11 @@
 				32A5DE4425C7DD3D00ED11BB /* Acknow.swift in Sources */,
 				32A5DE4325C7DD3D00ED11BB /* AcknowParser.swift in Sources */,
 				32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */,
+				D7A68B482833C2D30064C2C0 /* AcknowPodDecoder.swift in Sources */,
 				D705FE2B268A0B0600B501D7 /* AcknowList.docc in Sources */,
 				D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */,
+				D7A68B452833C2C90064C2C0 /* AcknowList.swift in Sources */,
+				D7A68B492833C2D30064C2C0 /* AcknowPackageDecoder.swift in Sources */,
 				D78335EF2628934800A380A3 /* AcknowSwiftUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
