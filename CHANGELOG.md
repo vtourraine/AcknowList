@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0 (work in progress)
+
+- Add `AcknowList` struct to represent list model
+- Add `AcknowPackageDecoder` to parse “Package.resolved” files (Swift Package Manager)
+- Refactor plist file parser into `AcknowPodDecoder`
+- Refactor `AcknowParser` to manage parsing different file types
+- Refactor file paths parameters (`String`) into file URLs (`URL`) instead
+- Update `AcknowListViewController` to load acknowledgements from “Package.resolved” by default
+
+
 ## 2.1.1 (work in progress)
 
 - Fix Swift Package Manager warning (exlude DocC folder)
