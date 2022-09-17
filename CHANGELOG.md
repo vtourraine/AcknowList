@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 (work in progress)
+## 3.0.0 (17 September 2022)
 
 - Add `AcknowList` struct to represent list model
 - Add `AcknowPackageDecoder` to parse “Package.resolved” files (Swift Package Manager)
