@@ -23,8 +23,12 @@
 
 #if os(iOS) || os(tvOS)
 import UIKit
+#endif
+#if os(iOS)
 import SafariServices
+#endif
 
+#if os(iOS) || os(tvOS)
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
 @available(iOS 9.0.0, tvOS 9.0.0, *)
 @available(iOSApplicationExtension, unavailable)
@@ -389,8 +393,10 @@ open class AcknowListViewController: UITableViewController {
             }
             else if canOpenRepository(for: acknowledgement),
                     let repository = acknowledgement.repository {
+#if !os(tvOS)
                 let safariViewController = SFSafariViewController(url: repository)
                 present(safariViewController, animated: true)
+#endif
             }
         }
     }
