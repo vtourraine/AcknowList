@@ -64,7 +64,10 @@ class ViewController: UIViewController {
                 return
             }
 
-            let viewController = UIHostingController(rootView: AcknowListSwiftUIView(plistFileURL: url))
+            var listViewController = AcknowListSwiftUIView(plistFileURL: url)
+            // Add custom acknowledgement with a repository URL but no text, like a SPM package:
+            listViewController.acknowledgements.append(Acknow(title: "Test", repository: URL(string: "https://developer.apple.com")))
+            let viewController = UIHostingController(rootView: listViewController)
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
