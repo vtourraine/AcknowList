@@ -92,9 +92,7 @@ public struct AcknowListSwiftUIView: View {
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
                 ForEach (acknowledgements) { acknowledgement in
-                    NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
-                        Text(acknowledgement.title)
-                    }
+                    AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
                 }
             }
         }
@@ -104,13 +102,47 @@ public struct AcknowListSwiftUIView: View {
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
                 ForEach (acknowledgements) { acknowledgement in
-                    NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
-                        Text(acknowledgement.title)
-                    }
+                    AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
                 }
             }
         }
         #endif
+    }
+}
+
+/// View that displays a row in a list of acknowledgements.
+@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
+public struct AcknowListRowSwiftUIView: View {
+
+    /// The represented `Acknow`.
+    public var acknowledgement: Acknow
+
+    public var body: some View {
+        if acknowledgement.text != nil {
+            NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
+                Text(acknowledgement.title)
+            }
+        }
+        else if let repository = acknowledgement.repository,
+                canOpenRepository(for: repository) {
+            Button(action: {
+                UIApplication.shared.open(repository)
+            }) {
+                Text(acknowledgement.title)
+                    .foregroundColor(.primary)
+            }
+        }
+        else {
+            Text(acknowledgement.title)
+        }
+    }
+
+    private func canOpenRepository(for url: URL) -> Bool {
+        guard let scheme = url.scheme else {
+            return false
+        }
+
+        return scheme == "http" || scheme == "https"
     }
 }
 

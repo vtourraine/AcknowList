@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1 (work in progress)
+
+- Update `AcknowListSwiftUIView` to support link to repository URL
+- Add `AcknowListRowSwiftUIView`
+
+
 ## 3.0.0 (17 September 2022)
 
 - Add `AcknowList` struct to represent list model
