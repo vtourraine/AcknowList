@@ -1,8 +1,8 @@
 # Changelog
 
-## 3.1 (work in progress)
+## 3.0.1 (work in progress)
 
-- Update `AcknowListSwiftUIView` to support link to repository URL
+- Update `AcknowListSwiftUIView` to fix navigation to repository URL
 - Add `AcknowListRowSwiftUIView`
 
 
