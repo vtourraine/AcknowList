@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.1 (work in progress)
+## 3.0.1 (24 November 2022)
 
 - Update `AcknowListSwiftUIView` to fix navigation to repository URL
 - Add `AcknowListRowSwiftUIView`
