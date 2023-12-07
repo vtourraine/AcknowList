@@ -24,7 +24,7 @@
 import Foundation
 
 /// An object that interacts with the GitHub API.
-public class GitHubAPI {
+open class GitHubAPI {
 
     /**
      Gets the repository license.
