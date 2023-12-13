@@ -18,6 +18,8 @@
 		32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */; };
 		32A5DE4825C7DD3D00ED11BB /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */; };
 		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
+		BB8545732B227D39001BF421 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8545722B227D39001BF421 /* GitHubAPI.swift */; };
+		BB8545752B227D49001BF421 /* GitHubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8545742B227D49001BF421 /* GitHubAPITests.swift */; };
 		D70473D225CC4DB0004F2BEC /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */; };
 		D70473E525CC530E004F2BEC /* AcknowListTestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */; };
 		D705FE2B268A0B0600B501D7 /* AcknowList.docc in Sources */ = {isa = PBXBuildFile; fileRef = D705FE2A268A0B0600B501D7 /* AcknowList.docc */; };
@@ -60,6 +62,8 @@
 		32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
 		32A5DE5225C7E2FB00ED11BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
+		BB8545722B227D39001BF421 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		BB8545742B227D49001BF421 /* GitHubAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPITests.swift; sourceTree = "<group>"; };
 		D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		D70473E425CC530E004F2BEC /* AcknowListTestsHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListTestsHelpers.swift; sourceTree = "<group>"; };
 		D705FE2A268A0B0600B501D7 /* AcknowList.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AcknowList.docc; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				1420A2E31CAEC92200D98F9C /* AcknowLocalizationTests.swift */,
 				1A7421731CAC3685007E44FD /* AcknowParserTests.swift */,
 				1A7421741CAC3685007E44FD /* AcknowViewControllerTests.swift */,
+				BB8545742B227D49001BF421 /* GitHubAPITests.swift */,
 				D70B4286212B2EFF007B6A81 /* Resources */,
 				1AD73B8F1CAC3AEB0084F8CA /* Supporting Files */,
 			);
@@ -182,6 +187,7 @@
 				D7A68B462833C2D30064C2C0 /* AcknowPodDecoder.swift */,
 				D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */,
 				32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */,
+				BB8545722B227D39001BF421 /* GitHubAPI.swift */,
 				D705FE2A268A0B0600B501D7 /* AcknowList.docc */,
 			);
 			name = Sources;
@@ -349,6 +355,7 @@
 				32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */,
 				D7A68B482833C2D30064C2C0 /* AcknowPodDecoder.swift in Sources */,
 				D705FE2B268A0B0600B501D7 /* AcknowList.docc in Sources */,
+				BB8545732B227D39001BF421 /* GitHubAPI.swift in Sources */,
 				D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */,
 				D7A68B452833C2C90064C2C0 /* AcknowList.swift in Sources */,
 				D7A68B492833C2D30064C2C0 /* AcknowPackageDecoder.swift in Sources */,
@@ -363,6 +370,7 @@
 				1A7421771CAC3685007E44FD /* AcknowViewControllerTests.swift in Sources */,
 				1A7421751CAC3685007E44FD /* AcknowListViewControllerTests.swift in Sources */,
 				D70473E525CC530E004F2BEC /* AcknowListTestsHelpers.swift in Sources */,
+				BB8545752B227D49001BF421 /* GitHubAPITests.swift in Sources */,
 				1A7421761CAC3685007E44FD /* AcknowParserTests.swift in Sources */,
 				1420A2E41CAEC92200D98F9C /* AcknowLocalizationTests.swift in Sources */,
 			);
