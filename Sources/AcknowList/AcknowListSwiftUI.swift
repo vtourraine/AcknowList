@@ -126,7 +126,9 @@ public struct AcknowListRowSwiftUIView: View {
         else if let repository = acknowledgement.repository,
                 canOpenRepository(for: repository) {
             Button(action: {
-#if os(iOS)
+#if os(macOS)
+                NSWorkspace.shared.open(repository)
+#elseif os(iOS)
                 UIApplication.shared.open(repository)
 #endif
             }) {
