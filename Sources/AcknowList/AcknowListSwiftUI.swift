@@ -117,8 +117,11 @@ public struct AcknowListRowSwiftUIView: View {
     /// The represented `Acknow`.
     public var acknowledgement: Acknow
 
+    /// Indicates if the view controller should try to fetch missing licenses from the GitHub API.
+    public var canFetchLicenseFromGitHub = true
+
     public var body: some View {
-        if acknowledgement.text != nil {
+        if acknowledgement.text != nil || canFetchLicenseFromGitHubAndIsGitHubRepository(acknowledgement) {
             NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
                 Text(acknowledgement.title)
             }
@@ -145,6 +148,16 @@ public struct AcknowListRowSwiftUIView: View {
         }
 
         return scheme == "http" || scheme == "https"
+    }
+
+    private func canFetchLicenseFromGitHubAndIsGitHubRepository(_ acknowledgement: Acknow) -> Bool {
+        if canFetchLicenseFromGitHub,
+           let repository = acknowledgement.repository {
+            return GitHubAPI.isGitHubRepository(repository)
+        }
+        else {
+            return false
+        }
     }
 }
 

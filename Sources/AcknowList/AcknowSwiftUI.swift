@@ -28,11 +28,7 @@ import SwiftUI
 public struct AcknowSwiftUIView: View {
 
     /// The represented acknowledgement.
-    public var acknowledgement: Acknow
-
-    public init(acknowledgement: Acknow) {
-        self.acknowledgement = acknowledgement
-    }
+    @State public var acknowledgement: Acknow
 
     public var body: some View {
         #if os(macOS)
@@ -44,6 +40,9 @@ public struct AcknowSwiftUIView: View {
                 .font(.body)
                 .padding()
         }
+        .onAppear {
+            fetchLicenseIfNecessary()
+        }
         #else
         ScrollView {
             Text(acknowledgement.text ?? "")
@@ -51,7 +50,30 @@ public struct AcknowSwiftUIView: View {
                 .padding()
         }
         .navigationBarTitle(acknowledgement.title)
+        .onAppear {
+            fetchLicenseIfNecessary()
+        }
         #endif
+    }
+
+    private func fetchLicenseIfNecessary() {
+        guard acknowledgement.text == nil,
+              let repository = acknowledgement.repository,
+              GitHubAPI.isGitHubRepository(repository) else {
+            return
+        }
+
+        GitHubAPI.getLicense(for: repository) { result in
+            switch result {
+            case .success(let text):
+                acknowledgement = Acknow(title: acknowledgement.title, text: text, license: acknowledgement.license, repository: acknowledgement.repository)
+
+            case .failure:
+#if os(iOS)
+                UIApplication.shared.open(repository)
+#endif
+            }
+        }
     }
 }
 
