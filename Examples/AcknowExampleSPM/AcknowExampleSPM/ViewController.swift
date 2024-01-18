@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import AcknowList
 
 class ViewController: UIViewController {
@@ -29,6 +30,17 @@ class ViewController: UIViewController {
         let vc = AcknowListViewController()
         vc.acknowledgements = acknowList.acknowledgements
         let navigationController = UINavigationController(rootViewController: vc)
+        present(navigationController, animated: true, completion: nil)
+    }
+
+    @IBAction func presentAcknowledgementsSwiftUI(_ sender: AnyObject) {
+        let listViewController = AcknowListSwiftUIView(acknowledgements: [
+            Acknow(title: "Test", text: "Bla bla"),
+            Acknow(title: "Test URL", repository: URL(string: "https://developer.apple.com")),
+            Acknow(title: "Test GitHub", repository: URL(string: "https://github.com/vtourraine/AcknowList.git"))
+        ])
+        let viewController = UIHostingController(rootView: listViewController)
+        let navigationController = UINavigationController(rootViewController: viewController)
         present(navigationController, animated: true, completion: nil)
     }
 }
