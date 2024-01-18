@@ -3,7 +3,7 @@
 //  AcknowExample
 //
 //  Created by Vincent Tourraine on 04/12/
-//  Copyright © 2015-2023 Vincent Tourraine. All rights reserved.
+//  Copyright © 2015-2024 Vincent Tourraine. All rights reserved.
 //
 
 import XCTest
