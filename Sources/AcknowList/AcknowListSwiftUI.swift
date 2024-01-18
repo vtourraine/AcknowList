@@ -129,11 +129,7 @@ public struct AcknowListRowSwiftUIView: View {
         else if let repository = acknowledgement.repository,
                 canOpenRepository(for: repository) {
             Button(action: {
-#if os(macOS)
-                NSWorkspace.shared.open(repository)
-#elseif os(iOS)
-                UIApplication.shared.open(repository)
-#endif
+                repository.openWithDefaultBrowser()
             }) {
                 Text(acknowledgement.title)
                     .foregroundColor(.primary)

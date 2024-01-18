@@ -69,9 +69,7 @@ public struct AcknowSwiftUIView: View {
                 acknowledgement = Acknow(title: acknowledgement.title, text: text, license: acknowledgement.license, repository: acknowledgement.repository)
 
             case .failure:
-#if os(iOS)
-                UIApplication.shared.open(repository)
-#endif
+                repository.openWithDefaultBrowser()
             }
         }
     }
