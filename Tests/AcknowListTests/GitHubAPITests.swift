@@ -25,7 +25,7 @@ class GitHubAPITests: XCTestCase {
         let request = GitHubAPI.getLicenseRequest(for: repoURL)
 
         XCTAssertEqual(request.url?.absoluteString, "https://api.github.com/repos/vtourraine/AcknowList/license")
-        XCTAssertEqual(request.allHTTPHeaderFields, ["Accept": "application/vnd.github.raw"])
+        XCTAssertEqual(request.allHTTPHeaderFields, ["Accept": "application/vnd.github.raw", "X-GitHub-Api-Version": "2022-11-28"])
         XCTAssertEqual(request.httpMethod, "GET")
     }
 }

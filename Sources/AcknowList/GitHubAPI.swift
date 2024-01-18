@@ -66,7 +66,9 @@ open class GitHubAPI {
         let path = pathWithoutExtension(for: repository)
         let url  = "https://api.github.com/repos\(path)/license"
         var request = URLRequest(url: URL(string: url)!)
-        request.allHTTPHeaderFields = ["Accept": "application/vnd.github.raw"]
+        request.allHTTPHeaderFields = [
+            "Accept": "application/vnd.github.raw",
+            "X-GitHub-Api-Version": "2022-11-28"]
         return request
     }
 
