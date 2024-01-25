@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.1 (work in progress)
+## 3.1.0 (25 January 2024)
 
 - Add `GitHubAPI` to get licenses from GitHub API
 - Update `AcknowListViewController` and `AcknowListSwiftUIView` to get missing licenses from GitHub API, with new `canFetchLicenseFromGitHub` property to disable this behavior
