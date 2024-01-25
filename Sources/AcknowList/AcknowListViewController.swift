@@ -21,9 +21,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+import Foundation
+
 #if os(iOS) || os(tvOS)
 import UIKit
+#elseif os(macOS)
+import AppKit
 #endif
+
 #if os(iOS)
 import SafariServices
 #endif
