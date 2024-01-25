@@ -1,7 +1,7 @@
 {
   "name": "AcknowList",
-  "version": "2.1.0",
-  "summary": "Ready to use “Acknowledgements”/“Licenses” view controller for CocoaPods.",
+  "version": "3.1.0",
+  "summary": "Acknowledgements screen displaying a list of licenses, for example from CocoaPods and Swift Package Manager dependencies.",
   "homepage": "https://github.com/vtourraine/AcknowList",
   "license": {
     "type": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/vtourraine/AcknowList.git",
-    "tag": "2.1.0"
+    "tag": "3.1.0"
   },
   "source_files": "Sources/AcknowList/*.swift",
   "osx": {
