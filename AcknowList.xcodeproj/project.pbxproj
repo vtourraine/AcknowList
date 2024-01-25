@@ -18,6 +18,7 @@
 		32A5DE4625C7DD3D00ED11BB /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE3F25C7DD3D00ED11BB /* AcknowListViewController.swift */; };
 		32A5DE4825C7DD3D00ED11BB /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */; };
 		503E61E9212997CE00322F6C /* Pods-acknowledgements-RegexTesting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */; };
+		BB818EA02B62B72F0057B23E /* AcknowListURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB818E9F2B62B72F0057B23E /* AcknowListURL.swift */; };
 		BB8545732B227D39001BF421 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8545722B227D39001BF421 /* GitHubAPI.swift */; };
 		BB8545752B227D49001BF421 /* GitHubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8545742B227D49001BF421 /* GitHubAPITests.swift */; };
 		D70473D225CC4DB0004F2BEC /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */; };
@@ -62,6 +63,7 @@
 		32A5DE4125C7DD3D00ED11BB /* AcknowLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowLocalization.swift; sourceTree = "<group>"; };
 		32A5DE5225C7E2FB00ED11BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		503E61E8212997CD00322F6C /* Pods-acknowledgements-RegexTesting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements-RegexTesting.plist"; sourceTree = "<group>"; };
+		BB818E9F2B62B72F0057B23E /* AcknowListURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowListURL.swift; sourceTree = "<group>"; };
 		BB8545722B227D39001BF421 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		BB8545742B227D49001BF421 /* GitHubAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPITests.swift; sourceTree = "<group>"; };
 		D70473D125CC4DB0004F2BEC /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				D7A68B462833C2D30064C2C0 /* AcknowPodDecoder.swift */,
 				D78335EE2628934800A380A3 /* AcknowSwiftUI.swift */,
 				32A5DE3E25C7DD3D00ED11BB /* AcknowViewController.swift */,
+				BB818E9F2B62B72F0057B23E /* AcknowListURL.swift */,
 				BB8545722B227D39001BF421 /* GitHubAPI.swift */,
 				D705FE2A268A0B0600B501D7 /* AcknowList.docc */,
 			);
@@ -357,6 +360,7 @@
 				D705FE2B268A0B0600B501D7 /* AcknowList.docc in Sources */,
 				BB8545732B227D39001BF421 /* GitHubAPI.swift in Sources */,
 				D738F2AE2640342B001BA008 /* AcknowListSwiftUI.swift in Sources */,
+				BB818EA02B62B72F0057B23E /* AcknowListURL.swift in Sources */,
 				D7A68B452833C2C90064C2C0 /* AcknowList.swift in Sources */,
 				D7A68B492833C2D30064C2C0 /* AcknowPackageDecoder.swift in Sources */,
 				D78335EF2628934800A380A3 /* AcknowSwiftUI.swift in Sources */,

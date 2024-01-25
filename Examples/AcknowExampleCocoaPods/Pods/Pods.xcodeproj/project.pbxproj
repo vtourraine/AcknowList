@@ -8,101 +8,103 @@
 
 /* Begin PBXBuildFile section */
 		0231C956A35D79A335C423A37D618BD4 /* Pods-AcknowExampleCocoaPods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C889BF4A098FD946F9AD0EE895FEF8D5 /* Pods-AcknowExampleCocoaPods-dummy.m */; };
-		03A7AB053D6C75F74EB3B96613FEE279 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B467A2B7A0178AD6AC5B2F908E2A1E71 /* pt-PT.lproj */; };
-		181107EB4F012D68BC71632077F2B1F5 /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD64F82F7CC965C1A839A1F24D991E3 /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2D2B168D50B5A72C9863B3F3EF875A30 /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E74777CFEC96A43BD762FB475F040A /* AcknowViewController.swift */; };
-		320222129763ECCA3FAC8BEBFBE0FE27 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B807324DF14AC505BB50E94880827765 /* sv.lproj */; };
-		38F538FFDC6B9D1B77DAA61A24652739 /* AcknowPodDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B6FFC50BC09D62F8BEB83D7059671F /* AcknowPodDecoder.swift */; };
-		3F85677905E62165C3CDC5E4A9001FF7 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5F309C597032AACC7F9F8D3974AC3E01 /* pt-BR.lproj */; };
-		41793CAF6D61330C13BE3835F5C35A4C /* AcknowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013DBDC7F2202A31535A204A4137385C /* AcknowList.swift */; };
-		4A29F981C9DEB292022FAE4D22CC0FA6 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B6E6EBC781E7C96D86BBF8CC528D2BBC /* da.lproj */; };
-		5B570BEC76D0EEA53C3920F1E38B1EC8 /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C6BEB11D23B020B38DE7EEE65E6E4 /* Acknow.swift */; };
-		5E8197FE2F57ED84E8B3FAA5633A6180 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C581502BAF9F7D62ACCFB0F30A60842D /* zh-Hans.lproj */; };
-		6D908D7F9CCB99674F9BB0FD12422CC0 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ACDE48D1448A5EE3AD80973E9B2A349B /* ja.lproj */; };
-		74CF76C3EE7F707919059027536E43D4 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 886C04B1D2D11C3C3C9E6E67010B9C12 /* nl.lproj */; };
-		780F1FEA7A3AADCF177FB7222F66175C /* AcknowListSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF6BE8F0CAA2109A3541B6D10A6D37 /* AcknowListSwiftUI.swift */; };
-		82677EA98C813BBFD3903747E6E4EB18 /* AcknowPackageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F83FE795697ACE42895044C239F00E7 /* AcknowPackageDecoder.swift */; };
-		92566213EBF7453BB956266CCBC68F8C /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CB173AF425E926183EED1E5E447973 /* AcknowParser.swift */; };
-		92C18BDD3D1A57FA817802264E74C2B7 /* AcknowSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFEA5310B7B394C7CF903B7DEA28392 /* AcknowSwiftUI.swift */; };
-		959DEA75A4CDAE70AEA50F238DB38E5C /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C384CB1479162AC87C3A6F98652E734A /* de.lproj */; };
-		978F3C4E9A169ED07961D6C1ECA68448 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F7FC4851B89C059E56625F9593F0D745 /* it.lproj */; };
-		A16894AA69DE058AD420E480712E67E9 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4EE2EAFFC2FCCF02975F99078FA4DE98 /* en.lproj */; };
-		A2FA6651FB5C7F70549BD61E8A768AFE /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2E485F096D92FD4579B1190B5D518 /* AcknowListViewController.swift */; };
-		A3E4197ABD8CD654C06027085C5648B1 /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 393681A099311C759C0DB14719129D14 /* AcknowList-dummy.m */; };
-		A67A36A62E3AA6C71AFE7011B23FBE97 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06E9BC3054A526ECD8B18819E678CE /* GitHubAPI.swift */; };
-		A7203D3F8CEB8708A3C40A24853CD7F5 /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682EB788BF8D6509F1CBA06A9B0B117 /* AcknowLocalization.swift */; };
-		A773D5D89342C88E875127FBA02FEB60 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 39C0C724E3EDEB0846D80F9D3E7CEC6B /* es.lproj */; };
-		A9A5CF1B7566E2B072C5E9DB60740180 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 58C43A04C44AC57B7CF1333A1228A2CE /* Base.lproj */; };
-		B0BEFA7B21861558798512A1F26A8EF5 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4B96127C819B050325736C961C591055 /* zh-Hant.lproj */; };
+		048D9FAA96F2DEEEFC04E75E0C0021ED /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 556E11FBA9F8F1619DC5AD13D54E2FA9 /* pt-PT.lproj */; };
+		0550D7CB50C242EA874174CF1BD4373C /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 32692E8C09AB17BFDA5D155BFA34D250 /* ja.lproj */; };
+		18EDD189D990B15017B405823112677D /* AcknowSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FE92F0D74139D64C0C5C80F0E362F3 /* AcknowSwiftUI.swift */; };
+		215AA585860E7A3420364CABFBC36DF3 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F179E75588AF68A1FE8F8DCF0E37AC9C /* pt-BR.lproj */; };
+		21648122A25F29FE5C7C8DE94FAB09FD /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 60811B5A3854C06187DC95427B58B619 /* da.lproj */; };
+		2A86D261E1694BD7AB6D8411D7E41524 /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F464CA9060EB145A724FE1E4332FDB2 /* AcknowListViewController.swift */; };
+		4CE204FDB18760B02DC58A75F576D326 /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F924BADF24F70B286BB07DEA572237D7 /* AcknowParser.swift */; };
+		50194636A503B5D4C0784BB950BF0FF8 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 219A517A86A989B2E2E76581416ED9B0 /* zh-Hant.lproj */; };
+		5FE141FB909D3151B465DDCEA0CCF08D /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E0F91CAB5F24F5F1015F68FD91147511 /* zh-Hans.lproj */; };
+		6EFA839609D47766594835AE29A7B744 /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2518F129A2F8C6705EC14FDEFE02D14 /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B326E0F9387ACCD2DF527379A5B0355 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B4B76C871C2B9489130C452D3CD2B5B4 /* en.lproj */; };
+		83E063225FE6288DE658F4C7EE9B7840 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0EE9C4019D0BB7A742F8DCD0116BF0B9 /* es.lproj */; };
+		873F5C347E78A6CB0D7532A0E6C57FC7 /* AcknowPackageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2312193D6EE4C3FDC7E53AE22454FE4 /* AcknowPackageDecoder.swift */; };
+		886D13EC465B89CA12AD4AF71545FFD1 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C29756C288ADC1FEEAA7FDD4E84A87AA /* nl.lproj */; };
+		94F0EF1A23547AA48A3D2D06A750F5CA /* AcknowPodDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACE14C73A050B7AE3B19FD6BDF4CDF1 /* AcknowPodDecoder.swift */; };
+		982651B30D023391B27A97430F6AC65F /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AF28B87A0ED1BEE463347814FF797EAB /* de.lproj */; };
+		9BAE6011F209D56D580D97AE3BFC16EF /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F4CF4A6903BE1D09AA4FCA5BF059B /* AcknowList-dummy.m */; };
+		A5F5E65E00E213B56353C1F99C624C38 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2427ADAB46B59E4164F96DE4333A3724 /* it.lproj */; };
+		A6411DEB7737AA646AD64191EA8838FB /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A075A57E30C4E4E1B62AC73592FAC /* AcknowViewController.swift */; };
+		AC614F6F6290B4E861340FFA01B0711C /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3AD116DFDCDC15923EE7D35C6433871E /* fr.lproj */; };
+		B3BE4F1FECFAF66C06DEEDD327F909D0 /* AcknowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62BE33F5DA50B2AE99D751935A373D /* AcknowList.swift */; };
+		C485B7C894EAB5EFDDB6D31326BCB6F5 /* AcknowListURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33660B5B43AD8B3A293AE8D6998F9808 /* AcknowListURL.swift */; };
 		C667B075A7F792FBCC62694622867FC3 /* Pods-AcknowExampleCocoaPods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 080CE83B1F7BD6BA45FCA7723B8A04E6 /* Pods-AcknowExampleCocoaPods-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E971E6D49733FE7F56EBAEFDC8773E14 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 93B10F677A9DCEAB6F34D6C5ED420ED1 /* fr.lproj */; };
+		CDC8D475E632528249A0BA3B29616E58 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7B0DB3E4079DAE5DAE096D472B5CAC92 /* sv.lproj */; };
+		D53FC9C1FEAEBFEF8A16074C805B6435 /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF05E728EADB38F8008D0FC1F67BD2 /* Acknow.swift */; };
+		D71823B8C738224E6FC835492F019BE9 /* AcknowListSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49771B6517C1EFD9F150259815E474B6 /* AcknowListSwiftUI.swift */; };
+		D82DF7CBC8B4AA4D4E4620193441A17B /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB75E34FD35BD409403C9B13CF26DD /* AcknowLocalization.swift */; };
+		E27058870A640001080A7C2B7EC841F6 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983DABD9ACB94153A6FDD621F940331D /* GitHubAPI.swift */; };
+		F12EE332A012141F7B10ED1D0872B47F /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5F2B6FD05DC75CF61C3CA7A6731512C4 /* Base.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		81D7F13245500BB4D3593A2770D67047 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C0E617BBD9377CD4302B4AA63EA4739;
-			remoteInfo = "AcknowList-AcknowListBundle";
-		};
-		94E1A8EDD8AA18EE57F28DCC45B2A149 /* PBXContainerItemProxy */ = {
+		207CF0E166B51BE3DE80792173BEB0AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 51691F4311958691BD98F5F26E2D77D4;
 			remoteInfo = AcknowList;
 		};
+		70F6C7786BF5EC8D39C2D7EE95C00645 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C0E617BBD9377CD4302B4AA63EA4739;
+			remoteInfo = "AcknowList-AcknowListBundle";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		013DBDC7F2202A31535A204A4137385C /* AcknowList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowList.swift; path = Sources/AcknowList/AcknowList.swift; sourceTree = "<group>"; };
+		050A075A57E30C4E4E1B62AC73592FAC /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Sources/AcknowList/AcknowViewController.swift; sourceTree = "<group>"; };
 		080CE83B1F7BD6BA45FCA7723B8A04E6 /* Pods-AcknowExampleCocoaPods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AcknowExampleCocoaPods-umbrella.h"; sourceTree = "<group>"; };
-		0FFEA5310B7B394C7CF903B7DEA28392 /* AcknowSwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowSwiftUI.swift; path = Sources/AcknowList/AcknowSwiftUI.swift; sourceTree = "<group>"; };
+		0ACE14C73A050B7AE3B19FD6BDF4CDF1 /* AcknowPodDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowPodDecoder.swift; path = Sources/AcknowList/AcknowPodDecoder.swift; sourceTree = "<group>"; };
+		0EE9C4019D0BB7A742F8DCD0116BF0B9 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Sources/AcknowList/Resources/es.lproj; sourceTree = "<group>"; };
 		1AB292DEC0B08C071C47375988B3366E /* AcknowList */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AcknowList; path = libAcknowList.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		391A6C1A733FF2500BE8330B386E24F9 /* AcknowList.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.podspec.json; sourceTree = "<group>"; };
-		393681A099311C759C0DB14719129D14 /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
-		39C0C724E3EDEB0846D80F9D3E7CEC6B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Sources/AcknowList/Resources/es.lproj; sourceTree = "<group>"; };
-		3AC55D633A6A217DEE10C96ED0517D61 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		3F83FE795697ACE42895044C239F00E7 /* AcknowPackageDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowPackageDecoder.swift; path = Sources/AcknowList/AcknowPackageDecoder.swift; sourceTree = "<group>"; };
+		1F464CA9060EB145A724FE1E4332FDB2 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Sources/AcknowList/AcknowListViewController.swift; sourceTree = "<group>"; };
+		219A517A86A989B2E2E76581416ED9B0 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Sources/AcknowList/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		2427ADAB46B59E4164F96DE4333A3724 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Sources/AcknowList/Resources/it.lproj; sourceTree = "<group>"; };
+		32692E8C09AB17BFDA5D155BFA34D250 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Sources/AcknowList/Resources/ja.lproj; sourceTree = "<group>"; };
+		32A64766D91084B32391208024C4E727 /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AcknowListBundle-AcknowList-Info.plist"; sourceTree = "<group>"; };
+		33660B5B43AD8B3A293AE8D6998F9808 /* AcknowListURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListURL.swift; path = Sources/AcknowList/AcknowListURL.swift; sourceTree = "<group>"; };
+		34FB75E34FD35BD409403C9B13CF26DD /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Sources/AcknowList/AcknowLocalization.swift; sourceTree = "<group>"; };
+		3632B03A9AD5D8DF537F75EBAB5A84E0 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
+		3AD116DFDCDC15923EE7D35C6433871E /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Sources/AcknowList/Resources/fr.lproj; sourceTree = "<group>"; };
+		3C717B6ED2E52FD0C4F7A089B8ECB3C3 /* AcknowList.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.podspec.json; sourceTree = "<group>"; };
 		441E3FC6CC751557B8E19986B323A91D /* Pods-AcknowExampleCocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AcknowExampleCocoaPods.release.xcconfig"; sourceTree = "<group>"; };
-		4682EB788BF8D6509F1CBA06A9B0B117 /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Sources/AcknowList/AcknowLocalization.swift; sourceTree = "<group>"; };
+		48A468616FA91F2A64F0DCD4F7AD0591 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		48E4A9CA91C4803509BC7DA270768A6E /* Pods-AcknowExampleCocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AcknowExampleCocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
-		4B96127C819B050325736C961C591055 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Sources/AcknowList/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		49771B6517C1EFD9F150259815E474B6 /* AcknowListSwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListSwiftUI.swift; path = Sources/AcknowList/AcknowListSwiftUI.swift; sourceTree = "<group>"; };
 		4CF6147E87DCC980E822638152021990 /* Pods-AcknowExampleCocoaPods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AcknowExampleCocoaPods.modulemap"; sourceTree = "<group>"; };
-		4EE2EAFFC2FCCF02975F99078FA4DE98 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/AcknowList/Resources/en.lproj; sourceTree = "<group>"; };
+		526204BCD4909A7EE143970F33E38C03 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 		52D10AC1C8FE5D394605C6DEA6AF6523 /* Pods-AcknowExampleCocoaPods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AcknowExampleCocoaPods-resources.sh"; sourceTree = "<group>"; };
-		58C43A04C44AC57B7CF1333A1228A2CE /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Sources/AcknowList/Resources/Base.lproj; sourceTree = "<group>"; };
-		5E42C4C7542366084CBB07BB791D81E5 /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
-		5F309C597032AACC7F9F8D3974AC3E01 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Sources/AcknowList/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		556E11FBA9F8F1619DC5AD13D54E2FA9 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Sources/AcknowList/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		5B8F4CF4A6903BE1D09AA4FCA5BF059B /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
+		5F2B6FD05DC75CF61C3CA7A6731512C4 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = Sources/AcknowList/Resources/Base.lproj; sourceTree = "<group>"; };
+		60811B5A3854C06187DC95427B58B619 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Sources/AcknowList/Resources/da.lproj; sourceTree = "<group>"; };
 		647BF7F14986EE0FB8498F91FDAFA222 /* Pods-AcknowExampleCocoaPods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AcknowExampleCocoaPods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		68E74777CFEC96A43BD762FB475F040A /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Sources/AcknowList/AcknowViewController.swift; sourceTree = "<group>"; };
+		6CEF05E728EADB38F8008D0FC1F67BD2 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Sources/AcknowList/Acknow.swift; sourceTree = "<group>"; };
 		75F3BB162DB2498A25F00ACD64A58C69 /* AcknowList-AcknowListBundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "AcknowList-AcknowListBundle"; path = AcknowListBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BED4A1293E0FEAE5CBA269186E6BEA9 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
-		868C6BEB11D23B020B38DE7EEE65E6E4 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Sources/AcknowList/Acknow.swift; sourceTree = "<group>"; };
-		886C04B1D2D11C3C3C9E6E67010B9C12 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Sources/AcknowList/Resources/nl.lproj; sourceTree = "<group>"; };
-		93B10F677A9DCEAB6F34D6C5ED420ED1 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Sources/AcknowList/Resources/fr.lproj; sourceTree = "<group>"; };
-		96A2E485F096D92FD4579B1190B5D518 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Sources/AcknowList/AcknowListViewController.swift; sourceTree = "<group>"; };
+		7B0DB3E4079DAE5DAE096D472B5CAC92 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Sources/AcknowList/Resources/sv.lproj; sourceTree = "<group>"; };
+		956BAB681C6F3FFBD33480B645489A9D /* AcknowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.debug.xcconfig; sourceTree = "<group>"; };
+		983DABD9ACB94153A6FDD621F940331D /* GitHubAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GitHubAPI.swift; path = Sources/AcknowList/GitHubAPI.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A7428E46EC4810FA3D3F9B6D6B1D85CF /* AcknowList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.debug.xcconfig; sourceTree = "<group>"; };
 		A92B29D5A4EF27490AA146C192865E8D /* Pods-AcknowExampleCocoaPods */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-AcknowExampleCocoaPods"; path = "libPods-AcknowExampleCocoaPods.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACDE48D1448A5EE3AD80973E9B2A349B /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Sources/AcknowList/Resources/ja.lproj; sourceTree = "<group>"; };
-		B467A2B7A0178AD6AC5B2F908E2A1E71 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Sources/AcknowList/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
-		B4FF6BE8F0CAA2109A3541B6D10A6D37 /* AcknowListSwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListSwiftUI.swift; path = Sources/AcknowList/AcknowListSwiftUI.swift; sourceTree = "<group>"; };
-		B6E6EBC781E7C96D86BBF8CC528D2BBC /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Sources/AcknowList/Resources/da.lproj; sourceTree = "<group>"; };
-		B807324DF14AC505BB50E94880827765 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Sources/AcknowList/Resources/sv.lproj; sourceTree = "<group>"; };
-		C384CB1479162AC87C3A6F98652E734A /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Sources/AcknowList/Resources/de.lproj; sourceTree = "<group>"; };
-		C581502BAF9F7D62ACCFB0F30A60842D /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Sources/AcknowList/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		AF28B87A0ED1BEE463347814FF797EAB /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Sources/AcknowList/Resources/de.lproj; sourceTree = "<group>"; };
+		B2518F129A2F8C6705EC14FDEFE02D14 /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
+		B4B76C871C2B9489130C452D3CD2B5B4 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Sources/AcknowList/Resources/en.lproj; sourceTree = "<group>"; };
+		BA3CD49B9194E39A70B9D86A5391E2D7 /* AcknowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.release.xcconfig; sourceTree = "<group>"; };
+		C29756C288ADC1FEEAA7FDD4E84A87AA /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Sources/AcknowList/Resources/nl.lproj; sourceTree = "<group>"; };
 		C889BF4A098FD946F9AD0EE895FEF8D5 /* Pods-AcknowExampleCocoaPods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AcknowExampleCocoaPods-dummy.m"; sourceTree = "<group>"; };
-		CAD64F82F7CC965C1A839A1F24D991E3 /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
-		CF28C0316121C3B3AE91975AD0171DD9 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
-		E24CA13771494FA7330577F0A7DD8EF4 /* AcknowList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.release.xcconfig; sourceTree = "<group>"; };
-		E847D10E165EFD0B871301CC70C1C2AA /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AcknowListBundle-AcknowList-Info.plist"; sourceTree = "<group>"; };
+		DB8D46D3E054D55FBF0FC15E404C4F83 /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
+		E0F91CAB5F24F5F1015F68FD91147511 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Sources/AcknowList/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		E2312193D6EE4C3FDC7E53AE22454FE4 /* AcknowPackageDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowPackageDecoder.swift; path = Sources/AcknowList/AcknowPackageDecoder.swift; sourceTree = "<group>"; };
 		E90C49C8F1F34C88C963AE3E103825CC /* Pods-AcknowExampleCocoaPods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AcknowExampleCocoaPods-acknowledgements.plist"; sourceTree = "<group>"; };
-		EC06E9BC3054A526ECD8B18819E678CE /* GitHubAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GitHubAPI.swift; path = Sources/AcknowList/GitHubAPI.swift; sourceTree = "<group>"; };
-		F6CB173AF425E926183EED1E5E447973 /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Sources/AcknowList/AcknowParser.swift; sourceTree = "<group>"; };
-		F7FC4851B89C059E56625F9593F0D745 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Sources/AcknowList/Resources/it.lproj; sourceTree = "<group>"; };
-		F8B6FFC50BC09D62F8BEB83D7059671F /* AcknowPodDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowPodDecoder.swift; path = Sources/AcknowList/AcknowPodDecoder.swift; sourceTree = "<group>"; };
+		F179E75588AF68A1FE8F8DCF0E37AC9C /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Sources/AcknowList/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		F6FE92F0D74139D64C0C5C80F0E362F3 /* AcknowSwiftUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowSwiftUI.swift; path = Sources/AcknowList/AcknowSwiftUI.swift; sourceTree = "<group>"; };
+		F924BADF24F70B286BB07DEA572237D7 /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Sources/AcknowList/AcknowParser.swift; sourceTree = "<group>"; };
+		FB62BE33F5DA50B2AE99D751935A373D /* AcknowList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowList.swift; path = Sources/AcknowList/AcknowList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +115,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FBA0C15BC88DA667D0E9381A70FAF2 /* Frameworks */ = {
+		1E2097358C57F13DAEC64A78EACA2793 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BCCE1594F6D5A9EFCB5518B1B79B081 /* Frameworks */ = {
+		C82913CD3313C87BF3B6CFBF8A3E76A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,57 +148,58 @@
 			path = "Target Support Files/Pods-AcknowExampleCocoaPods";
 			sourceTree = "<group>";
 		};
-		38909AC03B5F33CE535494E0965987B0 /* Pod */ = {
+		210963A582598F304C93D3E5E52B5389 /* AcknowList */ = {
 			isa = PBXGroup;
 			children = (
-				391A6C1A733FF2500BE8330B386E24F9 /* AcknowList.podspec.json */,
-				7BED4A1293E0FEAE5CBA269186E6BEA9 /* LICENSE.txt */,
-				3AC55D633A6A217DEE10C96ED0517D61 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		638CE8E4F14F406C5B8D9CE519D126EB /* AcknowList */ = {
-			isa = PBXGroup;
-			children = (
-				868C6BEB11D23B020B38DE7EEE65E6E4 /* Acknow.swift */,
-				013DBDC7F2202A31535A204A4137385C /* AcknowList.swift */,
-				B4FF6BE8F0CAA2109A3541B6D10A6D37 /* AcknowListSwiftUI.swift */,
-				96A2E485F096D92FD4579B1190B5D518 /* AcknowListViewController.swift */,
-				4682EB788BF8D6509F1CBA06A9B0B117 /* AcknowLocalization.swift */,
-				3F83FE795697ACE42895044C239F00E7 /* AcknowPackageDecoder.swift */,
-				F6CB173AF425E926183EED1E5E447973 /* AcknowParser.swift */,
-				F8B6FFC50BC09D62F8BEB83D7059671F /* AcknowPodDecoder.swift */,
-				0FFEA5310B7B394C7CF903B7DEA28392 /* AcknowSwiftUI.swift */,
-				68E74777CFEC96A43BD762FB475F040A /* AcknowViewController.swift */,
-				58C43A04C44AC57B7CF1333A1228A2CE /* Base.lproj */,
-				B6E6EBC781E7C96D86BBF8CC528D2BBC /* da.lproj */,
-				C384CB1479162AC87C3A6F98652E734A /* de.lproj */,
-				4EE2EAFFC2FCCF02975F99078FA4DE98 /* en.lproj */,
-				39C0C724E3EDEB0846D80F9D3E7CEC6B /* es.lproj */,
-				93B10F677A9DCEAB6F34D6C5ED420ED1 /* fr.lproj */,
-				EC06E9BC3054A526ECD8B18819E678CE /* GitHubAPI.swift */,
-				F7FC4851B89C059E56625F9593F0D745 /* it.lproj */,
-				ACDE48D1448A5EE3AD80973E9B2A349B /* ja.lproj */,
-				886C04B1D2D11C3C3C9E6E67010B9C12 /* nl.lproj */,
-				5F309C597032AACC7F9F8D3974AC3E01 /* pt-BR.lproj */,
-				B467A2B7A0178AD6AC5B2F908E2A1E71 /* pt-PT.lproj */,
-				B807324DF14AC505BB50E94880827765 /* sv.lproj */,
-				C581502BAF9F7D62ACCFB0F30A60842D /* zh-Hans.lproj */,
-				4B96127C819B050325736C961C591055 /* zh-Hant.lproj */,
-				38909AC03B5F33CE535494E0965987B0 /* Pod */,
-				D64CDC4D6C37F9CCCB901939FA1EA410 /* Support Files */,
+				6CEF05E728EADB38F8008D0FC1F67BD2 /* Acknow.swift */,
+				FB62BE33F5DA50B2AE99D751935A373D /* AcknowList.swift */,
+				49771B6517C1EFD9F150259815E474B6 /* AcknowListSwiftUI.swift */,
+				33660B5B43AD8B3A293AE8D6998F9808 /* AcknowListURL.swift */,
+				1F464CA9060EB145A724FE1E4332FDB2 /* AcknowListViewController.swift */,
+				34FB75E34FD35BD409403C9B13CF26DD /* AcknowLocalization.swift */,
+				E2312193D6EE4C3FDC7E53AE22454FE4 /* AcknowPackageDecoder.swift */,
+				F924BADF24F70B286BB07DEA572237D7 /* AcknowParser.swift */,
+				0ACE14C73A050B7AE3B19FD6BDF4CDF1 /* AcknowPodDecoder.swift */,
+				F6FE92F0D74139D64C0C5C80F0E362F3 /* AcknowSwiftUI.swift */,
+				050A075A57E30C4E4E1B62AC73592FAC /* AcknowViewController.swift */,
+				5F2B6FD05DC75CF61C3CA7A6731512C4 /* Base.lproj */,
+				60811B5A3854C06187DC95427B58B619 /* da.lproj */,
+				AF28B87A0ED1BEE463347814FF797EAB /* de.lproj */,
+				B4B76C871C2B9489130C452D3CD2B5B4 /* en.lproj */,
+				0EE9C4019D0BB7A742F8DCD0116BF0B9 /* es.lproj */,
+				3AD116DFDCDC15923EE7D35C6433871E /* fr.lproj */,
+				983DABD9ACB94153A6FDD621F940331D /* GitHubAPI.swift */,
+				2427ADAB46B59E4164F96DE4333A3724 /* it.lproj */,
+				32692E8C09AB17BFDA5D155BFA34D250 /* ja.lproj */,
+				C29756C288ADC1FEEAA7FDD4E84A87AA /* nl.lproj */,
+				F179E75588AF68A1FE8F8DCF0E37AC9C /* pt-BR.lproj */,
+				556E11FBA9F8F1619DC5AD13D54E2FA9 /* pt-PT.lproj */,
+				7B0DB3E4079DAE5DAE096D472B5CAC92 /* sv.lproj */,
+				E0F91CAB5F24F5F1015F68FD91147511 /* zh-Hans.lproj */,
+				219A517A86A989B2E2E76581416ED9B0 /* zh-Hant.lproj */,
+				88BA412DD3C5FE40F17545A17569395D /* Pod */,
+				D4EBEE0F854FB560BA9CB76449849C1C /* Support Files */,
 			);
 			name = AcknowList;
 			path = ../../..;
 			sourceTree = "<group>";
 		};
-		7F9F160A95FEF3CD56810F4F8845214A /* Development Pods */ = {
+		2F43A165B2B7C5C75F316C8BD3AE8370 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				638CE8E4F14F406C5B8D9CE519D126EB /* AcknowList */,
+				210963A582598F304C93D3E5E52B5389 /* AcknowList */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		88BA412DD3C5FE40F17545A17569395D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3C717B6ED2E52FD0C4F7A089B8ECB3C3 /* AcknowList.podspec.json */,
+				526204BCD4909A7EE143970F33E38C03 /* LICENSE.txt */,
+				48A468616FA91F2A64F0DCD4F7AD0591 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		939249473D1FEFA5C5FE29F8651A2AED /* Targets Support Files */ = {
@@ -211,23 +214,23 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				7F9F160A95FEF3CD56810F4F8845214A /* Development Pods */,
+				2F43A165B2B7C5C75F316C8BD3AE8370 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				EB2021FEAAB07ECA1DB203CA920B1B02 /* Products */,
 				939249473D1FEFA5C5FE29F8651A2AED /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D64CDC4D6C37F9CCCB901939FA1EA410 /* Support Files */ = {
+		D4EBEE0F854FB560BA9CB76449849C1C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF28C0316121C3B3AE91975AD0171DD9 /* AcknowList.modulemap */,
-				393681A099311C759C0DB14719129D14 /* AcknowList-dummy.m */,
-				5E42C4C7542366084CBB07BB791D81E5 /* AcknowList-prefix.pch */,
-				CAD64F82F7CC965C1A839A1F24D991E3 /* AcknowList-umbrella.h */,
-				A7428E46EC4810FA3D3F9B6D6B1D85CF /* AcknowList.debug.xcconfig */,
-				E24CA13771494FA7330577F0A7DD8EF4 /* AcknowList.release.xcconfig */,
-				E847D10E165EFD0B871301CC70C1C2AA /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */,
+				3632B03A9AD5D8DF537F75EBAB5A84E0 /* AcknowList.modulemap */,
+				5B8F4CF4A6903BE1D09AA4FCA5BF059B /* AcknowList-dummy.m */,
+				DB8D46D3E054D55FBF0FC15E404C4F83 /* AcknowList-prefix.pch */,
+				B2518F129A2F8C6705EC14FDEFE02D14 /* AcknowList-umbrella.h */,
+				956BAB681C6F3FFBD33480B645489A9D /* AcknowList.debug.xcconfig */,
+				BA3CD49B9194E39A70B9D86A5391E2D7 /* AcknowList.release.xcconfig */,
+				32A64766D91084B32391208024C4E727 /* ResourceBundle-AcknowListBundle-AcknowList-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Examples/AcknowExampleCocoaPods/Pods/Target Support Files/AcknowList";
@@ -253,11 +256,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		96D549F405AFFE8519695FBF0EA26E87 /* Headers */ = {
+		474E4DB202C2AACCC4E723758AA4CAE8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181107EB4F012D68BC71632077F2B1F5 /* AcknowList-umbrella.h in Headers */,
+				6EFA839609D47766594835AE29A7B744 /* AcknowList-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +286,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9C0A98C7AD9D3EC6C0A4D888555B3FB7 /* PBXTargetDependency */,
+				78B72451C704A87858D55C8734D452B2 /* PBXTargetDependency */,
 			);
 			name = "Pods-AcknowExampleCocoaPods";
 			productName = "Pods-AcknowExampleCocoaPods";
@@ -292,17 +295,17 @@
 		};
 		51691F4311958691BD98F5F26E2D77D4 /* AcknowList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E414839052353EEDDC57221C3B1548B /* Build configuration list for PBXNativeTarget "AcknowList" */;
+			buildConfigurationList = A97EC52A930D3F49C542D2B6D2D98873 /* Build configuration list for PBXNativeTarget "AcknowList" */;
 			buildPhases = (
-				96D549F405AFFE8519695FBF0EA26E87 /* Headers */,
-				1A16DAF68E8BC6D52F3F7ADEE6B24F26 /* Sources */,
-				20FBA0C15BC88DA667D0E9381A70FAF2 /* Frameworks */,
-				807FEA13E73B900DB0032C90B1C28C2D /* Copy generated compatibility header */,
+				474E4DB202C2AACCC4E723758AA4CAE8 /* Headers */,
+				EEADB4C65F6744748DA48183325E18B3 /* Sources */,
+				1E2097358C57F13DAEC64A78EACA2793 /* Frameworks */,
+				A926470BF4466510915FEC37B46D1055 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F7CD00B2E0BA23FE98353C49343FB1D0 /* PBXTargetDependency */,
+				C704CAD31600C8C3B945F3BA24DA7980 /* PBXTargetDependency */,
 			);
 			name = AcknowList;
 			productName = AcknowList;
@@ -311,11 +314,11 @@
 		};
 		6C0E617BBD9377CD4302B4AA63EA4739 /* AcknowList-AcknowListBundle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F593C6D83F84CF51A6E80E43D1BC523 /* Build configuration list for PBXNativeTarget "AcknowList-AcknowListBundle" */;
+			buildConfigurationList = AF3D20C822F8A8FE73ECE38696BBD387 /* Build configuration list for PBXNativeTarget "AcknowList-AcknowListBundle" */;
 			buildPhases = (
-				FC73DC27554C320087DED99CDC5E95A7 /* Sources */,
-				7BCCE1594F6D5A9EFCB5518B1B79B081 /* Frameworks */,
-				ABFA9B48C45C81EBEB963A29C19C4D70 /* Resources */,
+				D0C327D3A2E2EFE8F378D6C79D4D3608 /* Sources */,
+				C82913CD3313C87BF3B6CFBF8A3E76A6 /* Frameworks */,
+				3CDCF7A15F5D6E5CCE5FF2B4A5830ED0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -368,31 +371,31 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ABFA9B48C45C81EBEB963A29C19C4D70 /* Resources */ = {
+		3CDCF7A15F5D6E5CCE5FF2B4A5830ED0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A5CF1B7566E2B072C5E9DB60740180 /* Base.lproj in Resources */,
-				4A29F981C9DEB292022FAE4D22CC0FA6 /* da.lproj in Resources */,
-				959DEA75A4CDAE70AEA50F238DB38E5C /* de.lproj in Resources */,
-				A16894AA69DE058AD420E480712E67E9 /* en.lproj in Resources */,
-				A773D5D89342C88E875127FBA02FEB60 /* es.lproj in Resources */,
-				E971E6D49733FE7F56EBAEFDC8773E14 /* fr.lproj in Resources */,
-				978F3C4E9A169ED07961D6C1ECA68448 /* it.lproj in Resources */,
-				6D908D7F9CCB99674F9BB0FD12422CC0 /* ja.lproj in Resources */,
-				74CF76C3EE7F707919059027536E43D4 /* nl.lproj in Resources */,
-				3F85677905E62165C3CDC5E4A9001FF7 /* pt-BR.lproj in Resources */,
-				03A7AB053D6C75F74EB3B96613FEE279 /* pt-PT.lproj in Resources */,
-				320222129763ECCA3FAC8BEBFBE0FE27 /* sv.lproj in Resources */,
-				5E8197FE2F57ED84E8B3FAA5633A6180 /* zh-Hans.lproj in Resources */,
-				B0BEFA7B21861558798512A1F26A8EF5 /* zh-Hant.lproj in Resources */,
+				F12EE332A012141F7B10ED1D0872B47F /* Base.lproj in Resources */,
+				21648122A25F29FE5C7C8DE94FAB09FD /* da.lproj in Resources */,
+				982651B30D023391B27A97430F6AC65F /* de.lproj in Resources */,
+				7B326E0F9387ACCD2DF527379A5B0355 /* en.lproj in Resources */,
+				83E063225FE6288DE658F4C7EE9B7840 /* es.lproj in Resources */,
+				AC614F6F6290B4E861340FFA01B0711C /* fr.lproj in Resources */,
+				A5F5E65E00E213B56353C1F99C624C38 /* it.lproj in Resources */,
+				0550D7CB50C242EA874174CF1BD4373C /* ja.lproj in Resources */,
+				886D13EC465B89CA12AD4AF71545FFD1 /* nl.lproj in Resources */,
+				215AA585860E7A3420364CABFBC36DF3 /* pt-BR.lproj in Resources */,
+				048D9FAA96F2DEEEFC04E75E0C0021ED /* pt-PT.lproj in Resources */,
+				CDC8D475E632528249A0BA3B29616E58 /* sv.lproj in Resources */,
+				5FE141FB909D3151B465DDCEA0CCF08D /* zh-Hans.lproj in Resources */,
+				50194636A503B5D4C0784BB950BF0FF8 /* zh-Hant.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		807FEA13E73B900DB0032C90B1C28C2D /* Copy generated compatibility header */ = {
+		A926470BF4466510915FEC37B46D1055 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,25 +422,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A16DAF68E8BC6D52F3F7ADEE6B24F26 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5B570BEC76D0EEA53C3920F1E38B1EC8 /* Acknow.swift in Sources */,
-				41793CAF6D61330C13BE3835F5C35A4C /* AcknowList.swift in Sources */,
-				A3E4197ABD8CD654C06027085C5648B1 /* AcknowList-dummy.m in Sources */,
-				780F1FEA7A3AADCF177FB7222F66175C /* AcknowListSwiftUI.swift in Sources */,
-				A2FA6651FB5C7F70549BD61E8A768AFE /* AcknowListViewController.swift in Sources */,
-				A7203D3F8CEB8708A3C40A24853CD7F5 /* AcknowLocalization.swift in Sources */,
-				82677EA98C813BBFD3903747E6E4EB18 /* AcknowPackageDecoder.swift in Sources */,
-				92566213EBF7453BB956266CCBC68F8C /* AcknowParser.swift in Sources */,
-				38F538FFDC6B9D1B77DAA61A24652739 /* AcknowPodDecoder.swift in Sources */,
-				92C18BDD3D1A57FA817802264E74C2B7 /* AcknowSwiftUI.swift in Sources */,
-				2D2B168D50B5A72C9863B3F3EF875A30 /* AcknowViewController.swift in Sources */,
-				A67A36A62E3AA6C71AFE7011B23FBE97 /* GitHubAPI.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A88128A71D5B40EFDDC9DA344B55B419 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,31 +430,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC73DC27554C320087DED99CDC5E95A7 /* Sources */ = {
+		D0C327D3A2E2EFE8F378D6C79D4D3608 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EEADB4C65F6744748DA48183325E18B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53FC9C1FEAEBFEF8A16074C805B6435 /* Acknow.swift in Sources */,
+				B3BE4F1FECFAF66C06DEEDD327F909D0 /* AcknowList.swift in Sources */,
+				9BAE6011F209D56D580D97AE3BFC16EF /* AcknowList-dummy.m in Sources */,
+				D71823B8C738224E6FC835492F019BE9 /* AcknowListSwiftUI.swift in Sources */,
+				C485B7C894EAB5EFDDB6D31326BCB6F5 /* AcknowListURL.swift in Sources */,
+				2A86D261E1694BD7AB6D8411D7E41524 /* AcknowListViewController.swift in Sources */,
+				D82DF7CBC8B4AA4D4E4620193441A17B /* AcknowLocalization.swift in Sources */,
+				873F5C347E78A6CB0D7532A0E6C57FC7 /* AcknowPackageDecoder.swift in Sources */,
+				4CE204FDB18760B02DC58A75F576D326 /* AcknowParser.swift in Sources */,
+				94F0EF1A23547AA48A3D2D06A750F5CA /* AcknowPodDecoder.swift in Sources */,
+				18EDD189D990B15017B405823112677D /* AcknowSwiftUI.swift in Sources */,
+				A6411DEB7737AA646AD64191EA8838FB /* AcknowViewController.swift in Sources */,
+				E27058870A640001080A7C2B7EC841F6 /* GitHubAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9C0A98C7AD9D3EC6C0A4D888555B3FB7 /* PBXTargetDependency */ = {
+		78B72451C704A87858D55C8734D452B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AcknowList;
 			target = 51691F4311958691BD98F5F26E2D77D4 /* AcknowList */;
-			targetProxy = 94E1A8EDD8AA18EE57F28DCC45B2A149 /* PBXContainerItemProxy */;
+			targetProxy = 207CF0E166B51BE3DE80792173BEB0AF /* PBXContainerItemProxy */;
 		};
-		F7CD00B2E0BA23FE98353C49343FB1D0 /* PBXTargetDependency */ = {
+		C704CAD31600C8C3B945F3BA24DA7980 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "AcknowList-AcknowListBundle";
 			target = 6C0E617BBD9377CD4302B4AA63EA4739 /* AcknowList-AcknowListBundle */;
-			targetProxy = 81D7F13245500BB4D3593A2770D67047 /* PBXContainerItemProxy */;
+			targetProxy = 70F6C7786BF5EC8D39C2D7EE95C00645 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		06DC6323D075E1FF40F351547A029996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA3CD49B9194E39A70B9D86A5391E2D7 /* AcknowList.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULEMAP_FILE = Headers/Public/AcknowList/AcknowList.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AcknowList;
+				PRODUCT_NAME = AcknowList;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F1139EE4653D80039C0E676E74DAC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 956BAB681C6F3FFBD33480B645489A9D /* AcknowList.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULEMAP_FILE = Headers/Public/AcknowList/AcknowList.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AcknowList;
+				PRODUCT_NAME = AcknowList;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		3AC5CAAD19197EF2547A5461AD21A277 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 441E3FC6CC751557B8E19986B323A91D /* Pods-AcknowExampleCocoaPods.release.xcconfig */;
@@ -515,32 +570,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		65613012B6B62A34F634B5E8DB00F05C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24CA13771494FA7330577F0A7DD8EF4 /* AcknowList.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MODULEMAP_FILE = Headers/Public/AcknowList/AcknowList.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AcknowList;
-				PRODUCT_NAME = AcknowList;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -608,6 +637,23 @@
 			};
 			name = Debug;
 		};
+		9C926046C0E2B7DE69D3B17CD1917647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 956BAB681C6F3FFBD33480B645489A9D /* AcknowList.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AcknowList";
+				IBSC_MODULE = AcknowList;
+				INFOPLIST_FILE = "Target Support Files/AcknowList/ResourceBundle-AcknowListBundle-AcknowList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = AcknowListBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -670,26 +716,9 @@
 			};
 			name = Release;
 		};
-		D08346549C3B4E589F46A9EE40D21130 /* Debug */ = {
+		FCAE5542ED4F14369BF5FAAF13B92E76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7428E46EC4810FA3D3F9B6D6B1D85CF /* AcknowList.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AcknowList";
-				IBSC_MODULE = AcknowList;
-				INFOPLIST_FILE = "Target Support Files/AcknowList/ResourceBundle-AcknowListBundle-AcknowList-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_NAME = AcknowListBundle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		E01A1E4ECAD633B8C99E701DC3241DB9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24CA13771494FA7330577F0A7DD8EF4 /* AcknowList.release.xcconfig */;
+			baseConfigurationReference = BA3CD49B9194E39A70B9D86A5391E2D7 /* AcknowList.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AcknowList";
@@ -704,31 +733,6 @@
 			};
 			name = Release;
 		};
-		FB8FE7E22A7DC6906E7A63A98C840373 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7428E46EC4810FA3D3F9B6D6B1D85CF /* AcknowList.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MODULEMAP_FILE = Headers/Public/AcknowList/AcknowList.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AcknowList;
-				PRODUCT_NAME = AcknowList;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -741,29 +745,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E414839052353EEDDC57221C3B1548B /* Build configuration list for PBXNativeTarget "AcknowList" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB8FE7E22A7DC6906E7A63A98C840373 /* Debug */,
-				65613012B6B62A34F634B5E8DB00F05C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8F593C6D83F84CF51A6E80E43D1BC523 /* Build configuration list for PBXNativeTarget "AcknowList-AcknowListBundle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D08346549C3B4E589F46A9EE40D21130 /* Debug */,
-				E01A1E4ECAD633B8C99E701DC3241DB9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9E1EFF90C89E0AD681752CBA1DFCA370 /* Build configuration list for PBXNativeTarget "Pods-AcknowExampleCocoaPods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55711E9DF6E24EB3F9E827036ED806CE /* Debug */,
 				3AC5CAAD19197EF2547A5461AD21A277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A97EC52A930D3F49C542D2B6D2D98873 /* Build configuration list for PBXNativeTarget "AcknowList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F1139EE4653D80039C0E676E74DAC89 /* Debug */,
+				06DC6323D075E1FF40F351547A029996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF3D20C822F8A8FE73ECE38696BBD387 /* Build configuration list for PBXNativeTarget "AcknowList-AcknowListBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C926046C0E2B7DE69D3B17CD1917647 /* Debug */,
+				FCAE5542ED4F14369BF5FAAF13B92E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -25,8 +25,6 @@ import Foundation
 
 #if os(iOS) || os(tvOS)
 import UIKit
-#elseif os(macOS)
-import AppKit
 #endif
 
 #if os(iOS)
@@ -461,18 +459,3 @@ open class AcknowListViewController: UITableViewController {
 }
 
 #endif
-
-internal extension URL {
-    func openWithDefaultBrowser() {
-#if os(macOS)
-        NSWorkspace.shared.open(self)
-#elseif os(iOS)
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(self)
-        }
-        else {
-            UIApplication.shared.openURL(self)
-        }
-#endif
-    }
-}

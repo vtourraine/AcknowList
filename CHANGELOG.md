@@ -4,7 +4,7 @@
 
 - Add `GitHubAPI` to get licenses from GitHub API
 - Update `AcknowListViewController` and `AcknowListSwiftUIView` to get missing licenses from GitHub API, with new `canFetchLicenseFromGitHub` property to disable this behavior
-- Fix open URL on macOS with SwiftUI
+- Add `URL` extension with `openWithDefaultBrowser()` function to fix opening URLs on macOS with SwiftUI
 
 
 ## 3.0.1 (24 November 2022)
