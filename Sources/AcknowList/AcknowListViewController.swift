@@ -23,15 +23,15 @@
 
 import Foundation
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 #endif
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
 import SafariServices
 #endif
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
 @available(iOS 9.0.0, tvOS 9.0.0, *)
 @available(iOSApplicationExtension, unavailable)

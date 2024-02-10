@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.1 (work in progress)
+
+- [x] Update `AcknowListViewController` and `AcknowViewController` to enable native visionOS support
+
+
 ## 3.1.0 (25 January 2024)
 
 - Add `GitHubAPI` to get licenses from GitHub API
