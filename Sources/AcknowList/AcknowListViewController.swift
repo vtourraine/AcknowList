@@ -23,7 +23,7 @@
 
 import Foundation
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 #endif
 
@@ -31,9 +31,9 @@ import UIKit
 import SafariServices
 #endif
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
-@available(iOS 9.0.0, tvOS 9.0.0, *)
+@available(iOS 9.0.0, tvOS 9.0.0, visionOS 1.0.0, *)
 @available(iOSApplicationExtension, unavailable)
 open class AcknowListViewController: UITableViewController {
 
@@ -449,12 +449,14 @@ open class AcknowListViewController: UITableViewController {
     }
 
     private func openRepository(_ repository: URL) {
-#if !os(tvOS)
         if canOpenRepository(repository) {
+#if os(visionOS)
+            UIApplication.shared.open(repository)
+#elseif !os(tvOS)
             let safariViewController = SFSafariViewController(url: repository)
             present(safariViewController, animated: true)
-        }
 #endif
+        }
     }
 }
 

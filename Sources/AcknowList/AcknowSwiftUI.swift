@@ -24,7 +24,7 @@
 import SwiftUI
 
 /// View that displays a single acknowledgement.
-@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
+@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, visionOS 1.0.0, *)
 public struct AcknowSwiftUIView: View {
 
     /// The represented acknowledgement.
@@ -75,7 +75,7 @@ public struct AcknowSwiftUIView: View {
     }
 }
 
-@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
+@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, visionOS 1.0.0, *)
 struct AcknowSwiftUI_Previews: PreviewProvider {
     static let license = """
     Copyright (c) 2015-2024 Vincent Tourraine (https://www.vtourraine.net)
