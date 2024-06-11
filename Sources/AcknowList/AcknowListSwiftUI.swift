@@ -32,7 +32,7 @@ extension Acknow: Identifiable {
 }
 
 /// View that displays a list of acknowledgements.
-@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
+@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, visionOS 1.0.0, *)
 public struct AcknowListSwiftUIView: View {
 
     /// The represented array of `Acknow`.
@@ -111,7 +111,7 @@ public struct AcknowListSwiftUIView: View {
 }
 
 /// View that displays a row in a list of acknowledgements.
-@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
+@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, visionOS 1.0.0, *)
 public struct AcknowListRowSwiftUIView: View {
 
     /// The represented `Acknow`.
@@ -159,7 +159,7 @@ public struct AcknowListRowSwiftUIView: View {
     }
 }
 
-@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
+@available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, visionOS 1.0.0, *)
 struct AcknowListSwiftUI_Previews: PreviewProvider {
     static let license = """
         Copyright (c) 2015-2024 Vincent Tourraine (https://www.vtourraine.net)

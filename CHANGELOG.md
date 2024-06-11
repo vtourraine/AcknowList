@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.2.0 (work in progress)
+
+- Add visionOS support
+
+
 ## 3.1.0 (25 January 2024)
 
 - Add `GitHubAPI` to get licenses from GitHub API

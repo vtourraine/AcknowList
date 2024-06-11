@@ -110,6 +110,7 @@ Instantiate a `AcknowListSwiftUIView` with a path to the `plist` file, or with a
 |:--|:--|:--|
 | 📱 | iOS 9.0+ | iOS 13.0+ |
 | 📺 | tvOS 9.0+ | tvOS 13.0+ |
+| 🥽 | visionOS 1.0+ | visionOS 1.0+ |
 | ⌚️ | *not supported* | watchOS 7.0+ |
 | 💻 | *not supported* | macOS 10.15+ |
 
