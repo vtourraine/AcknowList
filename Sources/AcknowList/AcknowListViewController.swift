@@ -27,7 +27,7 @@ import Foundation
 import UIKit
 #endif
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
 import SafariServices
 #endif
 
