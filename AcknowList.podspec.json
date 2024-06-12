@@ -1,6 +1,6 @@
 {
   "name": "AcknowList",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "summary": "Acknowledgements screen displaying a list of licenses, for example from CocoaPods and Swift Package Manager dependencies.",
   "homepage": "https://github.com/vtourraine/AcknowList",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/vtourraine/AcknowList.git",
-    "tag": "3.1.0"
+    "tag": "3.2.0"
   },
   "source_files": "Sources/AcknowList/*.swift",
   "osx": {
@@ -28,7 +28,8 @@
     "ios": "13.0",
     "tvos": "13.0",
     "watchos": "7.0",
-    "osx": "10.15"
+    "osx": "10.15",
+    "visionos": "1.0"
   },
   "swift_version": "5.0"
 }

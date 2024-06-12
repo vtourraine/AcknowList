@@ -23,17 +23,17 @@
 
 import Foundation
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 import UIKit
 #endif
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
 import SafariServices
 #endif
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 /// Subclass of `UITableViewController` that displays a list of acknowledgements.
-@available(iOS 9.0.0, tvOS 9.0.0, *)
+@available(iOS 9.0.0, tvOS 9.0.0, visionOS 1.0.0, *)
 @available(iOSApplicationExtension, unavailable)
 open class AcknowListViewController: UITableViewController {
 
@@ -135,6 +135,7 @@ open class AcknowListViewController: UITableViewController {
 
     // MARK: - View life cycle
 
+#if !os(visionOS)
     /// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
     override open func awakeFromNib() {
         super.awakeFromNib()
@@ -149,6 +150,7 @@ open class AcknowListViewController: UITableViewController {
             configure(with: defaultAcknowList)
         }
     }
+#endif
 
     /// Called after the controller's view is loaded into memory.
     open override func viewDidLoad() {
@@ -449,12 +451,14 @@ open class AcknowListViewController: UITableViewController {
     }
 
     private func openRepository(_ repository: URL) {
-#if !os(tvOS)
         if canOpenRepository(repository) {
+#if os(visionOS)
+            UIApplication.shared.open(repository)
+#elseif !os(tvOS)
             let safariViewController = SFSafariViewController(url: repository)
             present(safariViewController, animated: true)
-        }
 #endif
+        }
     }
 }
 
