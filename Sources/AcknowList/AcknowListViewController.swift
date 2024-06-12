@@ -135,6 +135,7 @@ open class AcknowListViewController: UITableViewController {
 
     // MARK: - View life cycle
 
+#if !os(visionOS)
     /// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
     override open func awakeFromNib() {
         super.awakeFromNib()
@@ -149,6 +150,7 @@ open class AcknowListViewController: UITableViewController {
             configure(with: defaultAcknowList)
         }
     }
+#endif
 
     /// Called after the controller's view is loaded into memory.
     open override func viewDidLoad() {
