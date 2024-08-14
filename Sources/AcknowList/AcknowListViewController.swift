@@ -64,6 +64,9 @@ open class AcknowListViewController: UITableViewController {
     @IBInspectable var acknowledgementsPlistName: String?
 
 
+    @IBInspectable open var navigationTitle: String?
+
+    
     // MARK: - Initialization
 
     /**
@@ -106,7 +109,11 @@ open class AcknowListViewController: UITableViewController {
 
         if let data = try? Data(contentsOf: plistFileURL),
            let acknowList = try? AcknowPodDecoder().decode(from: data) {
-            configure(with: acknowList)
+            if let defaultList = AcknowParser.defaultAcknowList() {
+                configure(with: acknowList + defaultList)
+            } else {
+                configure(with: acknowList)
+            }
         }
     }
 
@@ -156,6 +163,10 @@ open class AcknowListViewController: UITableViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let navigationTitle = self.navigationTitle {
+            self.title = navigationTitle
+        }
+        
         // Register the cell before use it
         let identifier = String(describing: UITableViewCell.self)
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
