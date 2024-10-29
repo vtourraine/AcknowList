@@ -34,6 +34,7 @@ extension Acknow: Identifiable {
 /// View that displays a list of acknowledgements.
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, *)
 public struct AcknowListSwiftUIView: View {
+    @Environment(\._isAcknowListSwiftUIViewNavigationTitleHidden) private var isAcknowListSwiftUIViewNavigationTitleHidden
 
     /// The represented array of `Acknow`.
     public var acknowledgements: [Acknow] = []
@@ -81,19 +82,21 @@ public struct AcknowListSwiftUIView: View {
 
     public var body: some View {
         #if os(iOS) || os(tvOS)
-        List {
-
-            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
-                ForEach (acknowledgements) { acknowledgement in
-                    NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
-                        Text(acknowledgement.title)
-                    }
-                }
-            }
+        if isAcknowListSwiftUIViewNavigationTitleHidden {
+            list
+            .listStyle(GroupedListStyle())
+        } else {
+            list
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
         }
-        .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
         #else
+        list
+        #endif
+    }
+
+    @ViewBuilder
+    private var list: some View {
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
                 ForEach (acknowledgements) { acknowledgement in
@@ -103,7 +106,11 @@ public struct AcknowListSwiftUIView: View {
                 }
             }
         }
-        #endif
+    }
+
+    @ViewBuilder
+    public func navigationTitle(isHidden: Bool) -> some View {
+        environment(\._isAcknowListSwiftUIViewNavigationTitleHidden, isHidden)
     }
 }
 
@@ -147,5 +154,17 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
             AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }
         .previewDevice(PreviewDevice(rawValue: "Mac"))
+    }
+}
+
+// MARK: - Style
+private struct _IsAcknowListSwiftUIViewNavigationTitleHiddenEnvironmentKey: EnvironmentKey {
+    fileprivate static let defaultValue: Bool = false
+}
+
+extension EnvironmentValues {
+    fileprivate var _isAcknowListSwiftUIViewNavigationTitleHidden: Bool {
+        get { self[_IsAcknowListSwiftUIViewNavigationTitleHiddenEnvironmentKey.self] }
+        set { self[_IsAcknowListSwiftUIViewNavigationTitleHiddenEnvironmentKey.self] = newValue }
     }
 }
