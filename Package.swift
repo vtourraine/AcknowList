@@ -31,7 +31,9 @@ let package = Package(
                 .copy("Resources/RegexTesting-GroundTruth-TPKeyboardAvoiding.txt"),
                 .copy("Resources/RegexTesting-GroundTruth-pop.txt"),
                 .copy("Resources/Package-version-1.resolved"),
-                .copy("Resources/Package-version-2.resolved")]
+                .copy("Resources/Package-version-2.resolved"),
+                .copy("Resources/Package.resolved"),
+            ]
         ),
     ],
     swiftLanguageVersions: [.v5]
