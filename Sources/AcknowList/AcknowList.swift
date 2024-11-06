@@ -36,7 +36,7 @@ public struct AcknowList {
     /**
      Footer text to be displayed below the list of the acknowledgements.
      */
-    public let footerText: String?
+    public var footerText: String?
 }
 
 extension AcknowList {

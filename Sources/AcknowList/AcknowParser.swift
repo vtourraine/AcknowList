@@ -60,7 +60,10 @@ open class AcknowParser {
         let pods = defaultPods()
         let packages = defaultPackages()
         if let pods = pods, let packages = packages {
-            return pods + packages
+            var acknowList = pods + packages
+            // If have both pods and packages libraries, remove the footer text from the pods.
+            acknowList.footerText = nil
+            return acknowList
         }
         else {
             return pods ?? packages
