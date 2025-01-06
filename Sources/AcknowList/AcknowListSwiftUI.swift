@@ -193,26 +193,22 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
 
         NavigationView {
-            AcknowListSwiftUIView(
-                acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
 
         NavigationView {
-            AcknowListSwiftUIView(
-                acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }
         .previewDevice(PreviewDevice(rawValue: "Apple TV 4K"))
 
         NavigationView {
-            AcknowListSwiftUIView(
-                acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }
         .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 6 - 44mm"))
 
         NavigationView {
-            AcknowListSwiftUIView(
-                acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+            AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }
         .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
