@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		031D42892CDA828C00C803B8 /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = /Users/tisfeng/Documents/Code/Github/AcknowList/Tests/AcknowListTests/Resources/Package.resolved; sourceTree = "<absolute>"; };
+		031D42892CDA828C00C803B8 /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = "../../../Tests/AcknowListTests/Resources/Package.resolved"; sourceTree = "<group>"; };
 		BB29000128230B37002FF5C4 /* Package-version-1.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Package-version-1.resolved"; path = "../../../Tests/AcknowListTests/Resources/Package-version-1.resolved"; sourceTree = "<group>"; };
 		D7527E1D25CADE4E00378FB8 /* AcknowExampleSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcknowExampleSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7527E2025CADE4E00378FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
