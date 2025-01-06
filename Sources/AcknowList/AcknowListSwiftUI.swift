@@ -25,9 +25,7 @@ import SwiftUI
 
 extension Acknow: Identifiable {
     public var id: String {
-        get {
-            title
-        }
+        title
     }
 }
 
@@ -43,6 +41,19 @@ public struct AcknowListSwiftUIView: View {
 
     /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
+
+    public init() {
+        if let acknowList = AcknowParser.defaultAcknowList() {
+            self.init(acknowList: acknowList)
+        }
+        else {
+            print(
+                "** AcknowList Warning **\n" +
+                "No acknowledgements found.\n" +
+                "Please take a look at https://github.com/vtourraine/AcknowList for instructions.", terminator: "\n")
+            self.init(acknowledgements: [])
+        }
+    }
 
     public init(acknowList: AcknowList) {
         acknowledgements = acknowList.acknowledgements
@@ -88,25 +99,25 @@ public struct AcknowListSwiftUIView: View {
     }
 
     public var body: some View {
-        #if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS)
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
-                ForEach (acknowledgements) { acknowledgement in
+                ForEach(acknowledgements) { acknowledgement in
                     AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
                 }
             }
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
-        #else
+#else
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
-                ForEach (acknowledgements) { acknowledgement in
+                ForEach(acknowledgements) { acknowledgement in
                     AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
                 }
             }
         }
-        #endif
+#endif
     }
 }
 
@@ -170,9 +181,11 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
 
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     """
-    static let acks = [Acknow(title: "Title 1", text: license),
-                       Acknow(title: "Title 2", text: license),
-                       Acknow(title: "Title 3", text: license)]
+    static let acks = [
+        Acknow(title: "Title 1", text: license),
+        Acknow(title: "Title 2", text: license),
+        Acknow(title: "Title 3", text: license),
+    ]
 
     static var previews: some View {
         NavigationView {
@@ -184,7 +197,7 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
             AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
-        
+
         NavigationView {
             AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
         }

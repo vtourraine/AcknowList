@@ -34,11 +34,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func presentAcknowledgementsSwiftUI(_ sender: AnyObject) {
-        let listViewController = AcknowListSwiftUIView(acknowledgements: [
-            Acknow(title: "Test", text: "Bla bla"),
-            Acknow(title: "Test URL", repository: URL(string: "https://developer.apple.com")),
-            Acknow(title: "Test GitHub", repository: URL(string: "https://github.com/vtourraine/AcknowList.git"))
-        ])
+        // Load default acknowledgements from CocoaPods and Swift Package Manager
+        let listViewController = AcknowListSwiftUIView()
         let viewController = UIHostingController(rootView: listViewController)
         let navigationController = UINavigationController(rootViewController: viewController)
         present(navigationController, animated: true, completion: nil)
