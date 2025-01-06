@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.3.0 (work in progress)
+
+- Add initializer to `AcknowListSwiftUI` to load default acknow list, by Tisfeng (@tisfeng)
+
+
 ## 3.2.0 (11 June 2024)
 
 - Add visionOS support
