@@ -42,11 +42,23 @@ public struct AcknowListSwiftUIView: View {
     /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
 
-    public init(acknowList: AcknowList? = AcknowParser.defaultAcknowList()) {
-        self.init(
-            acknowledgements: acknowList?.acknowledgements ?? [],
-            headerText: acknowList?.headerText,
-            footerText: acknowList?.footerText)
+    public init() {
+        if let acknowList = AcknowParser.defaultAcknowList() {
+            self.init(acknowList: acknowList)
+        }
+        else {
+            print(
+                "** AcknowList Warning **\n" +
+                "No acknowledgements found.\n" +
+                "Please take a look at https://github.com/vtourraine/AcknowList for instructions.", terminator: "\n")
+            self.init(acknowledgements: [])
+        }
+    }
+
+    public init(acknowList: AcknowList) {
+        acknowledgements = acknowList.acknowledgements
+        headerText = acknowList.headerText
+        footerText = acknowList.footerText
     }
 
     public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
