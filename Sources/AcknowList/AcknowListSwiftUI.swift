@@ -42,14 +42,6 @@ public struct AcknowListSwiftUIView: View {
     /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
 
-    public init(acknowledgements: [Acknow],
-                headerText: String? = nil,
-                footerText: String? = nil) {
-        self.acknowledgements = acknowledgements
-        self.headerText = headerText
-        self.footerText = footerText
-    }
-
     public init(acknowList: AcknowList? = AcknowParser.defaultAcknowList()) {
         self.init(
             acknowledgements: acknowList?.acknowledgements ?? [],
@@ -57,27 +49,28 @@ public struct AcknowListSwiftUIView: View {
             footerText: acknowList?.footerText)
     }
 
+    public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
+        self.acknowledgements = acknowledgements
+        self.headerText = headerText
+        self.footerText = footerText
+    }
+
     public init(plistFileURL: URL) {
         guard let data = try? Data(contentsOf: plistFileURL),
-              let acknowList = try? AcknowPodDecoder().decode(from: data)
-        else {
-            self.init(acknowledgements: [],
-                      headerText: nil,
-                      footerText: nil)
+              let acknowList = try? AcknowPodDecoder().decode(from: data) else {
+            self.init(acknowledgements: [], headerText: nil, footerText: nil)
             return
         }
 
         let header: String?
         if acknowList.headerText != AcknowPodDecoder.K.DefaultHeaderText {
             header = acknowList.headerText
-        } else {
+        }
+        else {
             header = nil
         }
 
-        self.init(
-            acknowledgements: acknowList.acknowledgements,
-            headerText: header,
-            footerText: acknowList.footerText)
+        self.init(acknowledgements: acknowList.acknowledgements, headerText: header, footerText: acknowList.footerText)
     }
 
     struct HeaderFooter: View {
@@ -86,7 +79,8 @@ public struct AcknowListSwiftUIView: View {
         var body: some View {
             if let text = text {
                 Text(text)
-            } else {
+            }
+            else {
                 EmptyView()
             }
         }
@@ -95,9 +89,7 @@ public struct AcknowListSwiftUIView: View {
     public var body: some View {
 #if os(iOS) || os(tvOS)
         List {
-            Section(
-                header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)
-            ) {
+            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
                 ForEach(acknowledgements) { acknowledgement in
                     AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
                 }
@@ -107,9 +99,7 @@ public struct AcknowListSwiftUIView: View {
         .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
 #else
         List {
-            Section(
-                header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)
-            ) {
+            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
                 ForEach(acknowledgements) { acknowledgement in
                     AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
                 }
@@ -130,22 +120,21 @@ public struct AcknowListRowSwiftUIView: View {
     public var canFetchLicenseFromGitHub = true
 
     public var body: some View {
-        if acknowledgement.text != nil
-            || canFetchLicenseFromGitHubAndIsGitHubRepository(acknowledgement)
-        {
+        if acknowledgement.text != nil || canFetchLicenseFromGitHubAndIsGitHubRepository(acknowledgement) {
             NavigationLink(destination: AcknowSwiftUIView(acknowledgement: acknowledgement)) {
                 Text(acknowledgement.title)
             }
-        } else if let repository = acknowledgement.repository,
-                  canOpenRepository(for: repository)
-        {
+        }
+        else if let repository = acknowledgement.repository,
+                canOpenRepository(for: repository) {
             Button(action: {
                 repository.openWithDefaultBrowser()
             }) {
                 Text(acknowledgement.title)
                     .foregroundColor(.primary)
             }
-        } else {
+        }
+        else {
             Text(acknowledgement.title)
         }
     }
@@ -160,10 +149,10 @@ public struct AcknowListRowSwiftUIView: View {
 
     private func canFetchLicenseFromGitHubAndIsGitHubRepository(_ acknowledgement: Acknow) -> Bool {
         if canFetchLicenseFromGitHub,
-           let repository = acknowledgement.repository
-        {
+           let repository = acknowledgement.repository {
             return GitHubAPI.isGitHubRepository(repository)
-        } else {
+        }
+        else {
             return false
         }
     }
