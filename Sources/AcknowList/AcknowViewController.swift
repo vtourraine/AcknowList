@@ -32,7 +32,7 @@ open class AcknowViewController: UIViewController {
     open var textView: UITextView?
 
     /// The represented acknowledgement.
-    var acknowledgement: Acknow?
+    open var acknowledgement: Acknow?
 
     /**
      Initializes the `AcknowViewController` instance with an acknowledgement.
