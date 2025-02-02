@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.3.0 (work in progress)
+## 3.3.0 (2 February 2025)
 
 - Add initializer to `AcknowListSwiftUI` to load default acknow list, by Tisfeng (@tisfeng)
 - Update `AcknowViewController.acknowledgement` to `open` access level for customizability, by cheshire (@cheshire0105)
