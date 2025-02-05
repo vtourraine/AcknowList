@@ -35,6 +35,9 @@ public struct AcknowListSwiftUIView: View {
 
     /// The represented array of `Acknow`.
     public var acknowledgements: [Acknow] = []
+    
+    /// Page title to be displayed on top of the page.
+    public var pageTitle: String?
 
     /// Header text to be displayed above the list of the acknowledgements.
     public var headerText: String?
@@ -61,8 +64,12 @@ public struct AcknowListSwiftUIView: View {
         footerText = acknowList.footerText
     }
 
-    public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
+    public init(acknowledgements: [Acknow],
+                pageTitle: String? = nil,
+                headerText: String? = nil,
+                footerText: String? = nil) {
         self.acknowledgements = acknowledgements
+        self.pageTitle = pageTitle
         self.headerText = headerText
         self.footerText = footerText
     }
@@ -108,7 +115,7 @@ public struct AcknowListSwiftUIView: View {
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
+        .navigationBarTitle(Text(pageTitle ?? AcknowLocalization.localizedTitle()))
 #else
         List {
             Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
@@ -195,6 +202,11 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
 
         NavigationView {
             AcknowListSwiftUIView(acknowledgements: acks, headerText: "Test Header", footerText: "Test Footer")
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+        
+        NavigationView {
+            AcknowListSwiftUIView(acknowledgements: acks, pageTitle: "Test Title")
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
 
