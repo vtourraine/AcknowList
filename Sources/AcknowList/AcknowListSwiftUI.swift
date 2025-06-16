@@ -211,4 +211,3 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
 }
-
