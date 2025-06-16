@@ -111,7 +111,6 @@ public struct AcknowListSwiftUIView: View {
     public var body: some View {
 #if os(iOS) || os(tvOS)
         acknowListContent
-            .listStyle(GroupedListStyle())
             .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
 #else
         acknowListContent
