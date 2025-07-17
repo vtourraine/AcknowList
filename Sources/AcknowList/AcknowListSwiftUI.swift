@@ -98,25 +98,22 @@ public struct AcknowListSwiftUIView: View {
         }
     }
 
+    private var acknowListContent: some View {
+        List {
+            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
+                ForEach(acknowledgements) { acknowledgement in
+                    AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
+                }
+            }
+        }
+    }
+    
     public var body: some View {
 #if os(iOS) || os(tvOS)
-        List {
-            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
-                ForEach(acknowledgements) { acknowledgement in
-                    AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
-                }
-            }
-        }
-        .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
+        acknowListContent
+            .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
 #else
-        List {
-            Section(header: HeaderFooter(text: headerText), footer: HeaderFooter(text: footerText)) {
-                ForEach(acknowledgements) { acknowledgement in
-                    AcknowListRowSwiftUIView(acknowledgement: acknowledgement)
-                }
-            }
-        }
+        acknowListContent
 #endif
     }
 }
