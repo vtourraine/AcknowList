@@ -43,11 +43,13 @@ open class AcknowPodDecoder: AcknowDecoder {
 
         // Remove the header and footer
         let ackPreferenceSpecifiers = preferenceSpecifiers?.filter { item in
-            guard let headerItem = headerItem, let footerItem = footerItem else {
+            guard let headerItem = headerItem,
+                  let footerItem = footerItem,
+                  let item = item as? [String: String] else {
                 return false
             }
 
-            return !item.isEqual(to: headerItem) && !item.isEqual(to: footerItem)
+            return item != headerItem && item != footerItem
         } ?? []
 
         let acknowledgements: [Acknow] = ackPreferenceSpecifiers.compactMap { preferenceSpecifier in
