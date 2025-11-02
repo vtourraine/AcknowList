@@ -21,6 +21,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if canImport(SwiftUI)
 import SwiftUI
 
 extension Acknow: Identifiable {
@@ -211,3 +212,4 @@ struct AcknowListSwiftUI_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
 }
+#endif

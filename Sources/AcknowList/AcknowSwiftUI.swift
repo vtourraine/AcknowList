@@ -21,6 +21,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if canImport(SwiftUI)
 import SwiftUI
 
 /// View that displays a single acknowledgement.
@@ -110,3 +111,4 @@ struct AcknowSwiftUI_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: "Mac"))
     }
 }
+#endif
