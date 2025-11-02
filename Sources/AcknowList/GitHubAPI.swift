@@ -22,6 +22,9 @@
 // THE SOFTWARE.
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// An object that interacts with the GitHub API.
 open class GitHubAPI {
