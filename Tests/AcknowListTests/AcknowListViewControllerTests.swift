@@ -28,7 +28,7 @@ class AcknowListViewControllerTests: XCTestCase {
     }
 
     #if os(iOS)
-    @available (iOS 13.0, *)
+    @available(iOS 13.0, *)
     func testConfigureTableViewWithCustomStyle() throws {
         let bundle = resourcesBundle()
         let plistFileURL = try XCTUnwrap(bundle.url(forResource: "Pods-acknowledgements", withExtension: "plist"))

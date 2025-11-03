@@ -163,6 +163,7 @@ open class AcknowListViewController: UITableViewController {
 
         if let navigationController = navigationController {
             if presentingViewController != nil && navigationController.viewControllers.first == self {
+#if os(iOS)
                 if #available(iOS 13.0, *) {
                     let item = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
                     navigationItem.leftBarButtonItem = item
@@ -171,6 +172,10 @@ open class AcknowListViewController: UITableViewController {
                     let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
                     navigationItem.leftBarButtonItem = item
                 }
+#else
+                let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
+                navigationItem.leftBarButtonItem = item
+#endif
             }
         }
     }
