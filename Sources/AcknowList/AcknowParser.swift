@@ -109,6 +109,7 @@ open class AcknowParser {
      - Returns: The first link found, or `nil` if no link can be found.
      */
     class func firstLink(in text: String) -> URL? {
+#if os(iOS) || os(macOS) || os(watchOS) || os(tvOS) || os(visionOS)
         let types: NSTextCheckingResult.CheckingType = [.link]
 
         guard let linkDetector = try? NSDataDetector(types: types.rawValue),
@@ -117,6 +118,9 @@ open class AcknowParser {
         }
 
         return firstLink.url
+#else
+        return nil
+#endif
     }
 
     /**
