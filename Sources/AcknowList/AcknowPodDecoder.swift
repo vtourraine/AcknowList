@@ -35,31 +35,33 @@ open class AcknowPodDecoder: AcknowDecoder {
      */
     public func decode(from data: Data) throws -> AcknowList {
         let rootDictionary = try PropertyListSerialization.propertyList(from: data, format: nil) as? [String: AnyObject]
-        let preferenceSpecifiers = rootDictionary?["PreferenceSpecifiers"] as? [AnyObject]
-        let headerItem = preferenceSpecifiers?.first as? [String: String]
-        let footerItem = preferenceSpecifiers?.last as? [String: String]
+        guard let preferenceSpecifiers = rootDictionary?["PreferenceSpecifiers"] as? [[String: String]] else {
+            return AcknowList(headerText: nil, acknowledgements: [], footerText: nil)
+        }
+
+        let headerItem = preferenceSpecifiers.first
+        let footerItem = preferenceSpecifiers.last
         let headerText = headerItem?["FooterText"]
         let footerText = footerItem?["FooterText"]
 
         // Remove the header and footer
-        let ackPreferenceSpecifiers = preferenceSpecifiers?.filter { item in
+        let ackPreferenceSpecifiers = preferenceSpecifiers.filter { item in
             guard let headerItem = headerItem,
-                  let footerItem = footerItem,
-                  let item = item as? [String: String] else {
+                  let footerItem = footerItem else {
                 return false
             }
 
             return item != headerItem && item != footerItem
-        } ?? []
+        }
 
         let acknowledgements: [Acknow] = ackPreferenceSpecifiers.compactMap { preferenceSpecifier in
-            guard let title = preferenceSpecifier["Title"] as! String?,
-                  let text = preferenceSpecifier["FooterText"] as! String? else {
+            guard let title = preferenceSpecifier["Title"],
+                  let text = preferenceSpecifier["FooterText"] else {
                 return nil
             }
 
             let textWithoutNewlines = AcknowParser.filterOutPrematureLineBreaks(text: text)
-            return Acknow(title: title, text: textWithoutNewlines, license: preferenceSpecifier["License"] as? String)
+            return Acknow(title: title, text: textWithoutNewlines, license: preferenceSpecifier["License"])
         }
 
         return AcknowList(headerText: headerText, acknowledgements: acknowledgements, footerText: footerText)
