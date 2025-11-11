@@ -26,6 +26,7 @@ import Foundation
 import FoundationNetworking
 #endif
 
+#if !os(WASI)
 /// An object that interacts with the GitHub API.
 open class GitHubAPI {
 
@@ -79,3 +80,4 @@ open class GitHubAPI {
         return repository.path.replacingOccurrences(of: ".git", with: "")
     }
 }
+#endif
