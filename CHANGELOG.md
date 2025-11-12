@@ -1,9 +1,9 @@
 # Changelog
 
-## 3.3.1 (work in progress)
+## 3.4.0 (12 November 2025)
 
 - Update `AcknowListSwiftUIView` to use default list style, by Manuel Sánchez (@manasv)
-- Fix compilation when SwiftUI is not available
+- Improve support for Linux, Android, and Wasm
 
 
 ## 3.3.0 (2 February 2025)
