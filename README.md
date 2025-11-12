@@ -2,9 +2,10 @@
 
 Acknowledgements screen displaying a list of licenses, for example from [CocoaPods](https://cocoapods.org) and [Swift Package Manager](https://swift.org/package-manager/) dependencies.
 
-![Platform iOS tvOS watchOS macOS visionOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fvtourraine%2FAcknowList%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/vtourraine/AcknowList)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fvtourraine%2FAcknowList%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/vtourraine/AcknowList)
+
 [![Build & Test](https://github.com/vtourraine/AcknowList/actions/workflows/ios.yml/badge.svg)](https://github.com/vtourraine/AcknowList/actions/workflows/ios.yml)
-![Swift 5](https://img.shields.io/badge/Swift-5-blue.svg)
 ![Swift Package Manager](https://img.shields.io/badge/support-Swift_Package_Manager-orange.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
