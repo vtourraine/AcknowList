@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.4.1 (3 March 2026)
+
+- Fixed warning in Package declaration
+
+
 ## 3.4.0 (12 November 2025)
 
 - Update `AcknowListSwiftUIView` to use default list style, by Manuel Sánchez (@manasv)
