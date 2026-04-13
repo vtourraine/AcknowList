@@ -33,6 +33,9 @@ extension Acknow: Identifiable {
 /// View that displays a list of acknowledgements.
 @available(iOS 13.0.0, macOS 10.15.0, watchOS 7.0.0, tvOS 13.0.0, visionOS 1.0.0, *)
 public struct AcknowListSwiftUIView: View {
+    
+    /// Navigation title
+    public var navigationTitle: String = AcknowLocalization.localizedTitle()
 
     /// The represented array of `Acknow`.
     public var acknowledgements: [Acknow] = []
@@ -43,35 +46,42 @@ public struct AcknowListSwiftUIView: View {
     /// Footer text to be displayed below the list of the acknowledgements.
     public var footerText: String?
 
-    public init() {
+    public init(navigationTitle: String = AcknowLocalization.localizedTitle()) {
         if let acknowList = AcknowParser.defaultAcknowList() {
-            self.init(acknowList: acknowList)
+            self.init(navigationTitle: navigationTitle, acknowList: acknowList)
         }
         else {
             print(
                 "** AcknowList Warning **\n" +
                 "No acknowledgements found.\n" +
                 "Please take a look at https://github.com/vtourraine/AcknowList for instructions.", terminator: "\n")
-            self.init(acknowledgements: [])
+            self.init(navigationTitle: navigationTitle, acknowledgements: [])
         }
     }
 
-    public init(acknowList: AcknowList) {
+    public init(navigationTitle: String = AcknowLocalization.localizedTitle(),
+                acknowList: AcknowList) {
+        self.navigationTitle = navigationTitle
         acknowledgements = acknowList.acknowledgements
         headerText = acknowList.headerText
         footerText = acknowList.footerText
     }
 
-    public init(acknowledgements: [Acknow], headerText: String? = nil, footerText: String? = nil) {
+    public init(navigationTitle: String = AcknowLocalization.localizedTitle(),
+                acknowledgements: [Acknow],
+                headerText: String? = nil,
+                footerText: String? = nil) {
+        self.navigationTitle = navigationTitle
         self.acknowledgements = acknowledgements
         self.headerText = headerText
         self.footerText = footerText
     }
 
-    public init(plistFileURL: URL) {
+    public init(navigationTitle: String = AcknowLocalization.localizedTitle(),
+                plistFileURL: URL) {
         guard let data = try? Data(contentsOf: plistFileURL),
               let acknowList = try? AcknowPodDecoder().decode(from: data) else {
-            self.init(acknowledgements: [], headerText: nil, footerText: nil)
+            self.init(navigationTitle: navigationTitle, acknowledgements: [], headerText: nil, footerText: nil)
             return
         }
 
@@ -83,7 +93,7 @@ public struct AcknowListSwiftUIView: View {
             header = nil
         }
 
-        self.init(acknowledgements: acknowList.acknowledgements, headerText: header, footerText: acknowList.footerText)
+        self.init(navigationTitle: navigationTitle, acknowledgements: acknowList.acknowledgements, headerText: header, footerText: acknowList.footerText)
     }
 
     struct HeaderFooter: View {
@@ -112,7 +122,7 @@ public struct AcknowListSwiftUIView: View {
     public var body: some View {
 #if os(iOS) || os(tvOS)
         acknowListContent
-            .navigationBarTitle(Text(AcknowLocalization.localizedTitle()))
+            .navigationBarTitle(Text(navigationTitle))
 #else
         acknowListContent
 #endif
