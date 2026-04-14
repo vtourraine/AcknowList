@@ -1,5 +1,11 @@
 # Changelog
 
+
+## 3.4.2 (work in progress)
+
+- Update `AcknowList` to make the initializer and `+` operator public, by Andreas Ganske (@ChaosCoder)
+
+
 ## 3.4.1 (3 March 2026)
 
 - Fixed warning in Package declaration
