@@ -37,14 +37,20 @@ public struct AcknowList {
      Footer text to be displayed below the list of the acknowledgements.
      */
     public let footerText: String?
+    
+    public init(headerText: String? = nil, acknowledgements: [Acknow], footerText: String? = nil) {
+        self.headerText = headerText
+        self.acknowledgements = acknowledgements
+        self.footerText = footerText
+    }
 }
 
 extension AcknowList {
-    static func +(lhs: AcknowList, rhs: AcknowList) -> AcknowList {
-            return AcknowList(
-                headerText: lhs.headerText ?? rhs.headerText,
-                acknowledgements: lhs.acknowledgements + rhs.acknowledgements,
-                footerText: lhs.footerText ?? rhs.footerText
-            )
-        }
+    public static func +(lhs: AcknowList, rhs: AcknowList) -> AcknowList {
+        return AcknowList(
+            headerText: lhs.headerText ?? rhs.headerText,
+            acknowledgements: lhs.acknowledgements + rhs.acknowledgements,
+            footerText: lhs.footerText ?? rhs.footerText
+        )
+    }
 }
