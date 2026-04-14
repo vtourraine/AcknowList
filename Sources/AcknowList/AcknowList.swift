@@ -23,21 +23,20 @@
 
 /// A list of acknowledgements, with optional header and footer texts.
 public struct AcknowList {
-    /**
-     Header text to be displayed above the list of the acknowledgements.
-     */
+    /// Header text to be displayed above the list of the acknowledgements.
     public let headerText: String?
 
-    /**
-     List of acknowledgements.
-     */
+    /// List of acknowledgements.
     public let acknowledgements: [Acknow]
 
-    /**
-     Footer text to be displayed below the list of the acknowledgements.
-     */
+    /// Footer text to be displayed below the list of the acknowledgements.
     public let footerText: String?
-    
+
+    /// Returns an object describing a list of acknowledgements.
+    /// - Parameters:
+    ///   - headerText: The text to be displayed at the top of the list (optional).
+    ///   - acknowledgements: The list of acknowledgements.
+    ///   - footerText: The text to be displayed at the bottom of the list (optional).
     public init(headerText: String? = nil, acknowledgements: [Acknow], footerText: String? = nil) {
         self.headerText = headerText
         self.acknowledgements = acknowledgements
