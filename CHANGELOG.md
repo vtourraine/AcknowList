@@ -1,7 +1,6 @@
 # Changelog
 
-
-## 3.4.2 (work in progress)
+## 3.4.2 (18 April 2026)
 
 - Update `AcknowList` to make the initializer and `+` operator public, by Andreas Ganske (@ChaosCoder)
 
