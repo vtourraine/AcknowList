@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.4.3 (work in progress)
+## 3.4.3 (22 June 2026)
 
 - Update `AcknowListViewController` to pass `hidesBottomBarWhenPushed` value to child controllers, by Maxim V. Potapov (@max-potapov)
 
