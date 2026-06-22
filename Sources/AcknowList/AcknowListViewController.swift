@@ -404,7 +404,9 @@ open class AcknowListViewController: UITableViewController {
            let navigationController = navigationController {
             if acknowledgement.text != nil {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
+#if !os(tvOS)
                 viewController.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
+#endif
                 navigationController.pushViewController(viewController, animated: true)
             }
             else if canFetchLicenseFromGitHub,
@@ -416,7 +418,9 @@ open class AcknowListViewController: UITableViewController {
                         let updatedAcknowledgement = Acknow(title: acknowledgement.title, text: text, license: acknowledgement.license, repository: acknowledgement.repository)
                         self?.acknowledgements[indexPath.row] = updatedAcknowledgement
                         let viewController = AcknowViewController(acknowledgement: updatedAcknowledgement)
+#if !os(tvOS)
                         viewController.hidesBottomBarWhenPushed = self?.hidesBottomBarWhenPushed ?? false
+#endif
                         navigationController.pushViewController(viewController, animated: true)
 
                     case .failure:
